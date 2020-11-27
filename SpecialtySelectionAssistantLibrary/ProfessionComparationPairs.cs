@@ -8,7 +8,7 @@ namespace SpecialtySelectionAssistantLibrary
 {
 	public class ProfessionComparationPairs
 	{
-		string jsonString = File.ReadAllText("professions.json", Encoding.UTF8);
+        readonly string jsonString = File.ReadAllText("professions.json", Encoding.UTF8);
 		ProfessionStrorage profesionStrorage = new ProfessionStrorage();
 		
 		public ProfessionComparationPairs()
@@ -32,14 +32,13 @@ namespace SpecialtySelectionAssistantLibrary
 						anotherArrNum++)
 
                     {
-						ProfesionPair tempPair = new ProfesionPair();
+                        ProfesionPair tempPair = new ProfesionPair
+                        {
+                            firstProfession = getProfession(mainArrNum),
+                            secondProfession = getProfession(anotherArrNum)
+                        };
 
-
-						tempPair.firstProfession = getProfession(mainArrNum);
-						tempPair.secondProfession = getProfession(anotherArrNum);
-
-
-						ProfessionPairStorage.pairs[pairNum] =  tempPair;
+                        ProfessionPairStorage.pairs[pairNum] =  tempPair;
 
 						pairNum++;
 					}

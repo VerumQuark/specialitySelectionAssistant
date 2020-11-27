@@ -9,6 +9,8 @@ namespace SpecialtySelectionAssistantLibrary
     public static class HollandTest
     {
         static int currentQuestion;
+        static public bool isLastQuestion = false;
+        static UserHollandTestResult UserCharacteristics = new UserHollandTestResult();
 
         static ProfessionComparationPairs professionPairs { get; set; } = new ProfessionComparationPairs();
 
@@ -21,12 +23,20 @@ namespace SpecialtySelectionAssistantLibrary
 
             set
             {
-                if (value > Constants.QUESTION_COUNT)
+                if(value > Constants.QUESTION_COUNT)
                 {
-                    //переход на форму результатов
+                    //error
                 }
 
-                else currentQuestion = value;
+                else
+                {
+                    if (value == Constants.QUESTION_COUNT + 1)
+                    {
+                        isLastQuestion = true;
+                    }
+
+                    currentQuestion = value;
+                }
             }
         }
 

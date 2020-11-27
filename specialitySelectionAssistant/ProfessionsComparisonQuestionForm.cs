@@ -25,39 +25,52 @@ namespace specialitySelectionAssistant
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange300, Primary.Orange400, Primary.Orange100, Accent.LightBlue200, TextShade.BLACK);
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void ProfessionsComparisonQuestionForm_Load(object sender, EventArgs e)
         {
             HollandTest.Init();
 
             ProfesionPair question = HollandTest.getQuestion();
 
-            materialLabel1.Text = question.firstProfession.name;
-            materialLabel2.Text = question.secondProfession.name;
+            leftProffesionMaterialLabel.Text = question.firstProfession.name;
+            rightProffesionMaterialLabel.Text = question.secondProfession.name;
+
+            tempQuestionNumLabel.Text = $"Питання №{HollandTest.CurrentQuestion}";
         }
-        public void OpenF1()
+        public void OpenRegistrationForm()
         {
             Application.Run(new RegistrationForm());
         }
-        public void OpenF3()
+        public void OpenListQuestionForm()
         {
             Application.Run(new ListQuestionForm());
         }
 
-        private void materialFlatButton3_Click(object sender, EventArgs e)
+        private void BackMaterialFlatButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            new Thread(OpenF1).Start();
+            new Thread(OpenRegistrationForm).Start();
         }
 
-        private void materialFlatButton1_Click(object sender, EventArgs e)
+        private void nextFormMaterialFlatButton_Click(object sender, EventArgs e)
         {
+            if (HollandTest.isLastQuestion)     //REWORK///////////////////////////////////////
+            {
+                this.Close();
+                new Thread(OpenListQuestionForm).Start();
+            }
+
             ProfesionPair question = HollandTest.getQuestion();
 
-            materialLabel1.Text = question.firstProfession.name;
-            materialLabel2.Text = question.secondProfession.name;
+            leftProffesionMaterialLabel.Text = question.firstProfession.name;
+            rightProffesionMaterialLabel.Text = question.secondProfession.name;
 
-            //this.Close();
-            //new Thread(OpenF3).Start();
+            
+            tempQuestionNumLabel.Text = $"Питання №{HollandTest.CurrentQuestion}";
+        }
+
+        private void leftProffesionButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

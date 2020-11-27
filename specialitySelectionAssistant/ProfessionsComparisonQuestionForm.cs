@@ -66,9 +66,15 @@ namespace specialitySelectionAssistant
 
             
             tempQuestionNumLabel.Text = $"Питання №{HollandTest.CurrentQuestion}";
+            this.Text = $"Питання №{HollandTest.CurrentQuestion}";
         }
 
         private void leftProffesionButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HelpMaterialFlatButton_Click(object sender, EventArgs e)
         {
 
         }

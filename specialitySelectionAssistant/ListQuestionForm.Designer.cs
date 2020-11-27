@@ -153,6 +153,7 @@ namespace specialitySelectionAssistant
             // materialFlatButton1
             // 
             this.materialFlatButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialFlatButton1.AutoSize = true;
             this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton1.BackColor = System.Drawing.SystemColors.Window;
             this.materialFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -170,6 +171,7 @@ namespace specialitySelectionAssistant
             // 
             // materialFlatButton2
             // 
+            this.materialFlatButton2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.materialFlatButton2.AutoSize = true;
             this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialFlatButton2.Depth = 0;
@@ -186,6 +188,7 @@ namespace specialitySelectionAssistant
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.CausesValidation = false;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(49, 102);
             this.label1.Name = "label1";
@@ -193,7 +196,7 @@ namespace specialitySelectionAssistant
             this.label1.TabIndex = 22;
             this.label1.Text = "Чи подобається вам тестувати продукт перед відправкою?";
             // 
-            // Form3
+            // ListQuestionForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
@@ -208,9 +211,9 @@ namespace specialitySelectionAssistant
             this.Controls.Add(this.materialRadioButton2);
             this.Controls.Add(this.materialRadioButton1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1000, 562);
-            this.Name = "Form3";
+            this.Name = "ListQuestionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Питання №2";
             this.Load += new System.EventHandler(this.Form3_Load);

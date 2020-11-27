@@ -73,5 +73,10 @@ namespace specialitySelectionAssistant
         {
 
         }
+
+        private void HelpMaterialFlatButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

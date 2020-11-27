@@ -78,5 +78,10 @@ namespace specialitySelectionAssistant
         {
 
         }
+
+        private void rightProffesionMaterialLabel_Click(object sender, EventArgs e)
+        {
+            ///тест
+        }
     }
 }

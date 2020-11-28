@@ -51,5 +51,47 @@ namespace SpecialtySelectionAssistantLibrary
         {
             return ProfessionPairStorage.pairs[CurrentQuestion++];
         }
+
+        static public void addCharacteristicsPoint(profesion chosenProfesion)
+        {
+            switch (chosenProfesion.type)
+            {
+                case "realistic":
+                    {
+                        UserCharacteristics.realistic += 1;
+                        break;
+                    }
+                case "intelligent":
+                    {
+                        UserCharacteristics.intelligent += 1;
+                        break;
+                    }
+                case "social":
+                    {
+                        UserCharacteristics.social += 1;
+                        break;
+                    }
+                case "conventional":
+                    {
+                        UserCharacteristics.conventional += 1;
+                        break;
+                    }
+                case "enterprising":
+                    {
+                        UserCharacteristics.enterprising += 1;
+                        break;
+                    }
+                case "artistic":
+                    {
+                        UserCharacteristics.artistic += 1;
+                        break;
+                    }
+                default:
+                    {
+                        /////////UNDER CONSTRUCTION////////////
+                        break;
+                    }
+            }
+        }
     }
 }

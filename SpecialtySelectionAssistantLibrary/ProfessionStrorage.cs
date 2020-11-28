@@ -14,6 +14,8 @@ namespace SpecialtySelectionAssistantLibrary
         public string name;
         [JsonInclude]
         public string type;
+        [JsonInclude]
+        public string img;
     }
 
     class ProfessionStrorage

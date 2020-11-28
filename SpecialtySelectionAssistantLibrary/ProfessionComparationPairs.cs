@@ -8,17 +8,17 @@ namespace SpecialtySelectionAssistantLibrary
 {
 	public class ProfessionComparationPairs
 	{
-        readonly string jsonString = File.ReadAllText("professions.json", Encoding.UTF8);
+        readonly string jsonString = File.ReadAllText("../../Properties/professions.json", Encoding.UTF8);
 		ProfessionStrorage profesionStrorage = new ProfessionStrorage();
 		
 		public ProfessionComparationPairs()
 		{
-			profesionStrorage = JsonSerializer.Deserialize<ProfessionStrorage>(jsonString);
 
 		}
 
 		public void generatePairs()
 		{
+			profesionStrorage = JsonSerializer.Deserialize<ProfessionStrorage>(jsonString);
 
 			for (int pairNum = 0;  pairNum < Constants.QUESTION_COUNT; pairNum++)
             {
@@ -57,14 +57,9 @@ namespace SpecialtySelectionAssistantLibrary
 
 			profesionElem = profesionStrorage.professionArr[arrNum][randValue];
 
-			//profesionStrorage.swapProfession(arrNum, randValue, arrLenght);
-
 			profesionStrorage.professionArr[arrNum].RemoveAt(randValue);
 
 			return profesionElem;
         }
 	}
-}/*
-string fileName = ".."
-jsonString = File.ReadAllText(fileName);
-weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(jsonString);*/
+}

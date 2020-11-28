@@ -52,7 +52,7 @@ namespace specialitySelectionAssistant
             this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRadioButton1.Name = "materialRadioButton1";
             this.materialRadioButton1.Ripple = true;
-            this.materialRadioButton1.Size = new System.Drawing.Size(183, 30);
+            this.materialRadioButton1.Size = new System.Drawing.Size(151, 30);
             this.materialRadioButton1.TabIndex = 0;
             this.materialRadioButton1.TabStop = true;
             this.materialRadioButton1.Text = "Дуже подобається";
@@ -70,7 +70,7 @@ namespace specialitySelectionAssistant
             this.materialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRadioButton2.Name = "materialRadioButton2";
             this.materialRadioButton2.Ripple = true;
-            this.materialRadioButton2.Size = new System.Drawing.Size(120, 30);
+            this.materialRadioButton2.Size = new System.Drawing.Size(101, 30);
             this.materialRadioButton2.TabIndex = 1;
             this.materialRadioButton2.TabStop = true;
             this.materialRadioButton2.Text = "Скоріш так";
@@ -88,7 +88,7 @@ namespace specialitySelectionAssistant
             this.materialRadioButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRadioButton3.Name = "materialRadioButton3";
             this.materialRadioButton3.Ripple = true;
-            this.materialRadioButton3.Size = new System.Drawing.Size(107, 30);
+            this.materialRadioButton3.Size = new System.Drawing.Size(91, 30);
             this.materialRadioButton3.TabIndex = 3;
             this.materialRadioButton3.TabStop = true;
             this.materialRadioButton3.Text = "Скоріш ні";
@@ -106,7 +106,7 @@ namespace specialitySelectionAssistant
             this.materialRadioButton4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRadioButton4.Name = "materialRadioButton4";
             this.materialRadioButton4.Ripple = true;
-            this.materialRadioButton4.Size = new System.Drawing.Size(191, 30);
+            this.materialRadioButton4.Size = new System.Drawing.Size(158, 30);
             this.materialRadioButton4.TabIndex = 2;
             this.materialRadioButton4.TabStop = true;
             this.materialRadioButton4.Text = "Не можу відповісти";
@@ -124,7 +124,7 @@ namespace specialitySelectionAssistant
             this.materialRadioButton5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRadioButton5.Name = "materialRadioButton5";
             this.materialRadioButton5.Ripple = true;
-            this.materialRadioButton5.Size = new System.Drawing.Size(44, 30);
+            this.materialRadioButton5.Size = new System.Drawing.Size(40, 30);
             this.materialRadioButton5.TabIndex = 4;
             this.materialRadioButton5.TabStop = true;
             this.materialRadioButton5.Text = "ні";
@@ -144,7 +144,7 @@ namespace specialitySelectionAssistant
             this.materialFlatButton3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton3.Name = "materialFlatButton3";
             this.materialFlatButton3.Primary = false;
-            this.materialFlatButton3.Size = new System.Drawing.Size(71, 36);
+            this.materialFlatButton3.Size = new System.Drawing.Size(59, 36);
             this.materialFlatButton3.TabIndex = 12;
             this.materialFlatButton3.Text = "Назад";
             this.materialFlatButton3.UseVisualStyleBackColor = false;
@@ -164,7 +164,7 @@ namespace specialitySelectionAssistant
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
             this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(54, 36);
+            this.materialFlatButton1.Size = new System.Drawing.Size(45, 36);
             this.materialFlatButton1.TabIndex = 11;
             this.materialFlatButton1.Text = "Далі";
             this.materialFlatButton1.UseVisualStyleBackColor = false;
@@ -180,10 +180,11 @@ namespace specialitySelectionAssistant
             this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton2.Name = "materialFlatButton2";
             this.materialFlatButton2.Primary = false;
-            this.materialFlatButton2.Size = new System.Drawing.Size(21, 36);
+            this.materialFlatButton2.Size = new System.Drawing.Size(19, 36);
             this.materialFlatButton2.TabIndex = 17;
             this.materialFlatButton2.Text = "?";
             this.materialFlatButton2.UseVisualStyleBackColor = true;
+            this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
             // 
             // label1
             // 
@@ -192,7 +193,7 @@ namespace specialitySelectionAssistant
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(49, 102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(762, 29);
+            this.label1.Size = new System.Drawing.Size(620, 25);
             this.label1.TabIndex = 22;
             this.label1.Text = "Чи подобається вам тестувати продукт перед відправкою?";
             // 

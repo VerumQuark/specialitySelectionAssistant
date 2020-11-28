@@ -11,11 +11,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using SpecialtySelectionAssistantLibrary;
+using System.Resources;
 
 namespace specialitySelectionAssistant
 {
     public partial class ProfessionsComparisonQuestionForm : MaterialForm
     {
+        bool isProfessionChosen = false;
+        profesion chosenProfesion = new profesion();
+        ProfesionPair question;
+
         public ProfessionsComparisonQuestionForm()
         {
             InitializeComponent();
@@ -29,12 +34,7 @@ namespace specialitySelectionAssistant
         {
             HollandTest.Init();
 
-            ProfesionPair question = HollandTest.getQuestion();
-
-            leftProffesionMaterialLabel.Text = question.firstProfession.name;
-            rightProffesionMaterialLabel.Text = question.secondProfession.name;
-
-            tempQuestionNumLabel.Text = $"Питання №{HollandTest.CurrentQuestion}";
+            changeQuestion();
         }
         public void OpenRegistrationForm()
         {
@@ -47,36 +47,75 @@ namespace specialitySelectionAssistant
 
         private void BackMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();/////////////////////////////////REWORK///////////////////////////////////////
             new Thread(OpenRegistrationForm).Start();
         }
 
         private void nextFormMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            if (HollandTest.isLastQuestion)     //REWORK///////////////////////////////////////
+            if (isProfessionChosen)
             {
-                this.Close();
-                new Thread(OpenListQuestionForm).Start();
+                isProfessionChosen = false;
+
+                HollandTest.addCharacteristicsPoint(chosenProfesion);
+
+                if (HollandTest.isLastQuestion)     //REWORK///////////////////////////////////////
+                {
+                    this.Close();
+                    new Thread(OpenListQuestionForm).Start();
+                }
+
+                changeQuestion();
+
+                chosenProfesion = new profesion();
             }
 
-            ProfesionPair question = HollandTest.getQuestion();
+            else
+            {
+                MessageBox.Show("Оберіть одну з професій");
+            }
+        }
 
-            leftProffesionMaterialLabel.Text = question.firstProfession.name;
-            rightProffesionMaterialLabel.Text = question.secondProfession.name;
+        private void changeQuestion ()
+        {
+            question = HollandTest.getQuestion();
 
-            
+            changeProfessions(question.firstProfession, leftProffesionMaterialLabel, leftProffesionButton);
+            changeProfessions(question.secondProfession, rightProffesionMaterialLabel, rightProfessionButton);
+
             tempQuestionNumLabel.Text = $"Питання №{HollandTest.CurrentQuestion}";
-            this.Text = $"Питання №{HollandTest.CurrentQuestion}";
+        }
+
+        private void changeProfessions(profesion profesion, MaterialLabel proffesionLabel, Button proffesionButton)
+        {
+            ResourceManager rm = Properties.Resources.ResourceManager;
+            Image proffesionImg = (Image)rm.GetObject(profesion.img);
+
+            proffesionLabel.Text = profesion.name;
+            proffesionButton.BackgroundImage = proffesionImg;
         }
 
         private void leftProffesionButton_Click(object sender, EventArgs e)
         {
-
+            isProfessionChosen = true;
+            chosenProfesion = question.firstProfession;
         }
 
         private void HelpMaterialFlatButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void leftProfessionButton_Click(object sender, EventArgs e)
+        {
+            isProfessionChosen = true;
+            chosenProfesion = question.firstProfession;
+        }
+
+        private void rightProfessionButton_Click(object sender, EventArgs e)
+        {
+            isProfessionChosen = true;
+            chosenProfesion = question.secondProfession;
         }
     }
 }

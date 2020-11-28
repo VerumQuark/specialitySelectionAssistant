@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace SpecialtySelectionAssistantLibrary
 {
-    class UserHollandTestResult
+    public class UserHollandTestResult
     {
-        int realistic { get; set; } = 0;
-        int intelligent { get; set; } = 0;
-        int social { get; set; } = 0;
-        int conventional { get; set; } = 0;
-        int enterprising { get; set; } = 0;
-        int artistic { get; set; } = 0;
+        public int realistic { get; set; } = 0;
+        public int intelligent { get; set; } = 0;
+        public int social { get; set; } = 0;
+        public int conventional { get; set; } = 0;
+        public int enterprising { get; set; } = 0;
+        public int artistic { get; set; } = 0;
     }
 }

@@ -123,8 +123,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\professions.json" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -143,6 +145,57 @@
       <Project>{eaf84b75-1f35-4858-8db1-6934747827c5}</Project>
       <Name>SpecialtySelectionAssistantLibrary</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

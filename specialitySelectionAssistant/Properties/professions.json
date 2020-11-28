@@ -1,0 +1,173 @@
+{
+	"professionArr": [
+
+		[
+			{
+				"name" : "r1",
+				"type" : "realistic",
+				"img" : "p1"
+			},
+			{
+				"name" : "r2",
+				"type" : "realistic",
+				"img" : "p2"
+			},
+			{
+				"name" : "r3",
+				"type" : "realistic",
+				"img" : "p3"
+			},
+			{
+				"name" : "r4",
+				"type" : "realistic",
+				"img" : "p4"
+			},
+			{
+				"name" : "r5",
+				"type" : "realistic",
+				"img" : "p5"
+			}
+		],
+
+		[
+			{
+				"name" : "i1",
+				"type" : "intelligent",
+				"img" : "p6"
+			},
+			{
+				"name" : "i2",
+				"type" : "intelligent",
+				"img" : "p7"
+			},
+			{
+				"name" : "i3",
+				"type" : "intelligent",
+				"img" : "p8"
+			},
+			{
+				"name" : "i4",
+				"type" : "intelligent",
+				"img" : "p9"
+			},
+			{
+				"name" : "i5",
+				"type" : "intelligent",
+				"img" : "p10"
+			}
+		],
+
+		[
+			{
+				"name" : "s1",
+				"type" : "social",
+				"img" : "p11"
+			},
+			{
+				"name" : "s2",
+				"type" : "social",
+				"img" : "p12"
+			},
+			{
+				"name" : "s3",
+				"type" : "social",
+				"img" : "p13"
+			},
+			{
+				"name" : "s4",
+				"type" : "social",
+				"img" : "p14"
+			},
+			{
+				"name" : "s5",
+				"type" : "social",
+				"img" : "p15"
+			}
+		],
+
+		[
+			{
+				"name" : "c1",
+				"type" : "conventional",
+				"img" : "p16"
+			},
+			{
+				"name" : "c2",
+				"type" : "conventional",
+				"img" : "p1"
+			},
+			{
+				"name" : "c3",
+				"type" : "conventional",
+				"img" : "p2"
+			},
+			{
+				"name" : "c4",
+				"type" : "conventional",
+				"img" : "p3"
+			},
+			{
+				"name" : "c5",
+				"type" : "conventional",
+				"img" : "p4"
+			}
+		],
+
+		[
+			{
+				"name" : "e1",
+				"type" : "enterprising",
+				"img" : "p5"
+			},
+			{
+				"name" : "e2",
+				"type" : "enterprising",
+				"img" : "p6"
+			},
+			{
+				"name" : "e3",
+				"type" : "enterprising",
+				"img" : "p7"
+			},
+			{
+				"name" : "e4",
+				"type" : "enterprising",
+				"img" : "p8"
+			},
+			{
+				"name" : "e5",
+				"type" : "enterprising",
+				"img" : "p9"
+			}
+		],
+
+		[
+			{
+				"name" : "a1",
+				"type" : "artistic",
+				"img" : "p10"
+			},
+			{
+				"name" : "a2",
+				"type" : "artistic",
+				"img" : "p11"
+			},
+			{
+				"name" : "a3",
+				"type" : "artistic",
+				"img" : "p12"
+			},
+			{
+				"name" : "a4",
+				"type" : "artistic",
+				"img" : "p13"
+			},
+			{
+				"name" : "a5",
+				"type" : "artistic",
+				"img" : "p14"
+			}
+		]
+
+	]
+}

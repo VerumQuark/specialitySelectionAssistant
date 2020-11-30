@@ -19,7 +19,7 @@ namespace specialitySelectionAssistant
     {
         bool isProfessionChosen = false;
         profesion chosenProfesion = new profesion();
-        ProfesionPair question;
+        Question question;
 
         public ProfessionsComparisonQuestionForm()
         {
@@ -32,7 +32,7 @@ namespace specialitySelectionAssistant
 
         private void ProfessionsComparisonQuestionForm_Load(object sender, EventArgs e)
         {
-            HollandTest.Init();
+            //HollandTest.Init();
 
             changeQuestion();
         }
@@ -53,26 +53,58 @@ namespace specialitySelectionAssistant
 
         private void nextFormMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            if (isProfessionChosen)
+            // question = HollandTest.getQuestion();
+
+            if (question.isListQuestion)
             {
+                if(isProfessionChosen)
+                {
+                    isProfessionChosen = false;
+
+                    HollandTest.addCharacteristicsPoint(chosenProfesion);
+
+                    /*if (HollandTest.CurrentQuestion == 14)     //REWORK///////////////////////////////////////
+                    {
+                        this.Close();
+                        new Thread(OpenListQuestionForm).Start();
+                    }*/
+            
+                    this.Close();
+                    new Thread(OpenListQuestionForm).Start();
+
+                    chosenProfesion = new profesion();
+                }
+
+                else
+                {
+                    MessageBox.Show("Оберіть одну з професій");
+                }
+
+            }
+            else
+            {
+
+                if (isProfessionChosen)
+                {
                 isProfessionChosen = false;
 
                 HollandTest.addCharacteristicsPoint(chosenProfesion);
 
-                if (HollandTest.isLastQuestion)     //REWORK///////////////////////////////////////
-                {
-                    this.Close();
-                    new Thread(OpenListQuestionForm).Start();
-                }
-
-                changeQuestion();
+                    /*if (HollandTest.CurrentQuestion == 14)     //REWORK///////////////////////////////////////
+                    {
+                        this.Close();
+                        new Thread(OpenListQuestionForm).Start();
+                    }*/
+                    
+                    changeQuestion();
 
                 chosenProfesion = new profesion();
-            }
+                }
 
-            else
-            {
-                MessageBox.Show("Оберіть одну з професій");
+                else
+                {
+                    MessageBox.Show("Оберіть одну з професій");
+                }
             }
         }
 
@@ -80,8 +112,8 @@ namespace specialitySelectionAssistant
         {
             question = HollandTest.getQuestion();
 
-            changeProfessions(question.firstProfession, leftProffesionMaterialLabel, leftProffesionButton);
-            changeProfessions(question.secondProfession, rightProffesionMaterialLabel, rightProfessionButton);
+            changeProfessions(question.profesionPair.firstProfession, leftProffesionMaterialLabel, leftProffesionButton);
+            changeProfessions(question.profesionPair.secondProfession, rightProffesionMaterialLabel, rightProfessionButton);
 
             tempQuestionNumLabel.Text = $"Питання №{HollandTest.CurrentQuestion}";
         }
@@ -98,7 +130,7 @@ namespace specialitySelectionAssistant
         private void leftProffesionButton_Click(object sender, EventArgs e)
         {
             isProfessionChosen = true;
-            chosenProfesion = question.firstProfession;
+            chosenProfesion = question.profesionPair.firstProfession;
         }
 
         private void HelpMaterialFlatButton_Click(object sender, EventArgs e)
@@ -109,13 +141,13 @@ namespace specialitySelectionAssistant
         private void leftProfessionButton_Click(object sender, EventArgs e)
         {
             isProfessionChosen = true;
-            chosenProfesion = question.firstProfession;
+            chosenProfesion = question.profesionPair.firstProfession;
         }
 
         private void rightProfessionButton_Click(object sender, EventArgs e)
         {
             isProfessionChosen = true;
-            chosenProfesion = question.secondProfession;
+            chosenProfesion = question.profesionPair.secondProfession;
         }
     }
 }

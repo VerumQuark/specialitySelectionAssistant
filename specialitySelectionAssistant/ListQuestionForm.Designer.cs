@@ -29,106 +29,106 @@ namespace specialitySelectionAssistant
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialRadioButton1 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialRadioButton2 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialRadioButton3 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialRadioButton4 = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialRadioButton5 = new MaterialSkin.Controls.MaterialRadioButton();
+            this.veryLikeMaterialRadioButton = new MaterialSkin.Controls.MaterialRadioButton();
+            this.ratherSoMaterialRadioButton = new MaterialSkin.Controls.MaterialRadioButton();
+            this.ratherNotMaterialRadioButton = new MaterialSkin.Controls.MaterialRadioButton();
+            this.cantAnswerMaterialRadioButton = new MaterialSkin.Controls.MaterialRadioButton();
+            this.veryDislikeMaterialRadioButton = new MaterialSkin.Controls.MaterialRadioButton();
             this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.listQuestionQuestionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // materialRadioButton1
+            // veryLikeMaterialRadioButton
             // 
-            this.materialRadioButton1.AutoSize = true;
-            this.materialRadioButton1.BackColor = System.Drawing.SystemColors.Window;
-            this.materialRadioButton1.Depth = 0;
-            this.materialRadioButton1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton1.Location = new System.Drawing.Point(54, 155);
-            this.materialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton1.Name = "materialRadioButton1";
-            this.materialRadioButton1.Ripple = true;
-            this.materialRadioButton1.Size = new System.Drawing.Size(151, 30);
-            this.materialRadioButton1.TabIndex = 0;
-            this.materialRadioButton1.TabStop = true;
-            this.materialRadioButton1.Text = "Дуже подобається";
-            this.materialRadioButton1.UseVisualStyleBackColor = false;
+            this.veryLikeMaterialRadioButton.AutoSize = true;
+            this.veryLikeMaterialRadioButton.BackColor = System.Drawing.SystemColors.Window;
+            this.veryLikeMaterialRadioButton.Depth = 0;
+            this.veryLikeMaterialRadioButton.Font = new System.Drawing.Font("Roboto", 10F);
+            this.veryLikeMaterialRadioButton.Location = new System.Drawing.Point(54, 155);
+            this.veryLikeMaterialRadioButton.Margin = new System.Windows.Forms.Padding(0);
+            this.veryLikeMaterialRadioButton.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.veryLikeMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.veryLikeMaterialRadioButton.Name = "veryLikeMaterialRadioButton";
+            this.veryLikeMaterialRadioButton.Ripple = true;
+            this.veryLikeMaterialRadioButton.Size = new System.Drawing.Size(151, 30);
+            this.veryLikeMaterialRadioButton.TabIndex = 0;
+            this.veryLikeMaterialRadioButton.TabStop = true;
+            this.veryLikeMaterialRadioButton.Text = "Дуже подобається";
+            this.veryLikeMaterialRadioButton.UseVisualStyleBackColor = false;
             // 
-            // materialRadioButton2
+            // ratherSoMaterialRadioButton
             // 
-            this.materialRadioButton2.AutoSize = true;
-            this.materialRadioButton2.BackColor = System.Drawing.SystemColors.Window;
-            this.materialRadioButton2.Depth = 0;
-            this.materialRadioButton2.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton2.Location = new System.Drawing.Point(54, 205);
-            this.materialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton2.Name = "materialRadioButton2";
-            this.materialRadioButton2.Ripple = true;
-            this.materialRadioButton2.Size = new System.Drawing.Size(101, 30);
-            this.materialRadioButton2.TabIndex = 1;
-            this.materialRadioButton2.TabStop = true;
-            this.materialRadioButton2.Text = "Скоріш так";
-            this.materialRadioButton2.UseVisualStyleBackColor = false;
+            this.ratherSoMaterialRadioButton.AutoSize = true;
+            this.ratherSoMaterialRadioButton.BackColor = System.Drawing.SystemColors.Window;
+            this.ratherSoMaterialRadioButton.Depth = 0;
+            this.ratherSoMaterialRadioButton.Font = new System.Drawing.Font("Roboto", 10F);
+            this.ratherSoMaterialRadioButton.Location = new System.Drawing.Point(54, 205);
+            this.ratherSoMaterialRadioButton.Margin = new System.Windows.Forms.Padding(0);
+            this.ratherSoMaterialRadioButton.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.ratherSoMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ratherSoMaterialRadioButton.Name = "ratherSoMaterialRadioButton";
+            this.ratherSoMaterialRadioButton.Ripple = true;
+            this.ratherSoMaterialRadioButton.Size = new System.Drawing.Size(101, 30);
+            this.ratherSoMaterialRadioButton.TabIndex = 1;
+            this.ratherSoMaterialRadioButton.TabStop = true;
+            this.ratherSoMaterialRadioButton.Text = "Скоріш так";
+            this.ratherSoMaterialRadioButton.UseVisualStyleBackColor = false;
             // 
-            // materialRadioButton3
+            // ratherNotMaterialRadioButton
             // 
-            this.materialRadioButton3.AutoSize = true;
-            this.materialRadioButton3.BackColor = System.Drawing.SystemColors.Window;
-            this.materialRadioButton3.Depth = 0;
-            this.materialRadioButton3.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton3.Location = new System.Drawing.Point(54, 305);
-            this.materialRadioButton3.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton3.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton3.Name = "materialRadioButton3";
-            this.materialRadioButton3.Ripple = true;
-            this.materialRadioButton3.Size = new System.Drawing.Size(91, 30);
-            this.materialRadioButton3.TabIndex = 3;
-            this.materialRadioButton3.TabStop = true;
-            this.materialRadioButton3.Text = "Скоріш ні";
-            this.materialRadioButton3.UseVisualStyleBackColor = false;
+            this.ratherNotMaterialRadioButton.AutoSize = true;
+            this.ratherNotMaterialRadioButton.BackColor = System.Drawing.SystemColors.Window;
+            this.ratherNotMaterialRadioButton.Depth = 0;
+            this.ratherNotMaterialRadioButton.Font = new System.Drawing.Font("Roboto", 10F);
+            this.ratherNotMaterialRadioButton.Location = new System.Drawing.Point(54, 305);
+            this.ratherNotMaterialRadioButton.Margin = new System.Windows.Forms.Padding(0);
+            this.ratherNotMaterialRadioButton.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.ratherNotMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ratherNotMaterialRadioButton.Name = "ratherNotMaterialRadioButton";
+            this.ratherNotMaterialRadioButton.Ripple = true;
+            this.ratherNotMaterialRadioButton.Size = new System.Drawing.Size(91, 30);
+            this.ratherNotMaterialRadioButton.TabIndex = 3;
+            this.ratherNotMaterialRadioButton.TabStop = true;
+            this.ratherNotMaterialRadioButton.Text = "Скоріш ні";
+            this.ratherNotMaterialRadioButton.UseVisualStyleBackColor = false;
             // 
-            // materialRadioButton4
+            // cantAnswerMaterialRadioButton
             // 
-            this.materialRadioButton4.AutoSize = true;
-            this.materialRadioButton4.BackColor = System.Drawing.SystemColors.Window;
-            this.materialRadioButton4.Depth = 0;
-            this.materialRadioButton4.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton4.Location = new System.Drawing.Point(54, 255);
-            this.materialRadioButton4.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton4.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton4.Name = "materialRadioButton4";
-            this.materialRadioButton4.Ripple = true;
-            this.materialRadioButton4.Size = new System.Drawing.Size(158, 30);
-            this.materialRadioButton4.TabIndex = 2;
-            this.materialRadioButton4.TabStop = true;
-            this.materialRadioButton4.Text = "Не можу відповісти";
-            this.materialRadioButton4.UseVisualStyleBackColor = false;
+            this.cantAnswerMaterialRadioButton.AutoSize = true;
+            this.cantAnswerMaterialRadioButton.BackColor = System.Drawing.SystemColors.Window;
+            this.cantAnswerMaterialRadioButton.Depth = 0;
+            this.cantAnswerMaterialRadioButton.Font = new System.Drawing.Font("Roboto", 10F);
+            this.cantAnswerMaterialRadioButton.Location = new System.Drawing.Point(54, 255);
+            this.cantAnswerMaterialRadioButton.Margin = new System.Windows.Forms.Padding(0);
+            this.cantAnswerMaterialRadioButton.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.cantAnswerMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cantAnswerMaterialRadioButton.Name = "cantAnswerMaterialRadioButton";
+            this.cantAnswerMaterialRadioButton.Ripple = true;
+            this.cantAnswerMaterialRadioButton.Size = new System.Drawing.Size(158, 30);
+            this.cantAnswerMaterialRadioButton.TabIndex = 2;
+            this.cantAnswerMaterialRadioButton.TabStop = true;
+            this.cantAnswerMaterialRadioButton.Text = "Не можу відповісти";
+            this.cantAnswerMaterialRadioButton.UseVisualStyleBackColor = false;
             // 
-            // materialRadioButton5
+            // veryDislikeMaterialRadioButton
             // 
-            this.materialRadioButton5.AutoSize = true;
-            this.materialRadioButton5.BackColor = System.Drawing.SystemColors.Window;
-            this.materialRadioButton5.Depth = 0;
-            this.materialRadioButton5.Font = new System.Drawing.Font("Roboto", 10F);
-            this.materialRadioButton5.Location = new System.Drawing.Point(54, 355);
-            this.materialRadioButton5.Margin = new System.Windows.Forms.Padding(0);
-            this.materialRadioButton5.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialRadioButton5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRadioButton5.Name = "materialRadioButton5";
-            this.materialRadioButton5.Ripple = true;
-            this.materialRadioButton5.Size = new System.Drawing.Size(40, 30);
-            this.materialRadioButton5.TabIndex = 4;
-            this.materialRadioButton5.TabStop = true;
-            this.materialRadioButton5.Text = "ні";
-            this.materialRadioButton5.UseVisualStyleBackColor = false;
+            this.veryDislikeMaterialRadioButton.AutoSize = true;
+            this.veryDislikeMaterialRadioButton.BackColor = System.Drawing.SystemColors.Window;
+            this.veryDislikeMaterialRadioButton.Depth = 0;
+            this.veryDislikeMaterialRadioButton.Font = new System.Drawing.Font("Roboto", 10F);
+            this.veryDislikeMaterialRadioButton.Location = new System.Drawing.Point(54, 355);
+            this.veryDislikeMaterialRadioButton.Margin = new System.Windows.Forms.Padding(0);
+            this.veryDislikeMaterialRadioButton.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.veryDislikeMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.veryDislikeMaterialRadioButton.Name = "veryDislikeMaterialRadioButton";
+            this.veryDislikeMaterialRadioButton.Ripple = true;
+            this.veryDislikeMaterialRadioButton.Size = new System.Drawing.Size(170, 30);
+            this.veryDislikeMaterialRadioButton.TabIndex = 4;
+            this.veryDislikeMaterialRadioButton.TabStop = true;
+            this.veryDislikeMaterialRadioButton.Text = "Дуже не подобається";
+            this.veryDislikeMaterialRadioButton.UseVisualStyleBackColor = false;
             // 
             // materialFlatButton3
             // 
@@ -168,6 +168,7 @@ namespace specialitySelectionAssistant
             this.materialFlatButton1.TabIndex = 11;
             this.materialFlatButton1.Text = "Далі";
             this.materialFlatButton1.UseVisualStyleBackColor = false;
+            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // materialFlatButton2
             // 
@@ -186,31 +187,31 @@ namespace specialitySelectionAssistant
             this.materialFlatButton2.UseVisualStyleBackColor = true;
             this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
             // 
-            // label1
+            // listQuestionQuestionLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.CausesValidation = false;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(49, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(620, 25);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Чи подобається вам тестувати продукт перед відправкою?";
+            this.listQuestionQuestionLabel.AutoSize = true;
+            this.listQuestionQuestionLabel.CausesValidation = false;
+            this.listQuestionQuestionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listQuestionQuestionLabel.Location = new System.Drawing.Point(49, 102);
+            this.listQuestionQuestionLabel.Name = "listQuestionQuestionLabel";
+            this.listQuestionQuestionLabel.Size = new System.Drawing.Size(620, 25);
+            this.listQuestionQuestionLabel.TabIndex = 22;
+            this.listQuestionQuestionLabel.Text = "Чи подобається вам тестувати продукт перед відправкою?";
             // 
             // ListQuestionForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1000, 562);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.listQuestionQuestionLabel);
             this.Controls.Add(this.materialFlatButton2);
             this.Controls.Add(this.materialFlatButton3);
             this.Controls.Add(this.materialFlatButton1);
-            this.Controls.Add(this.materialRadioButton5);
-            this.Controls.Add(this.materialRadioButton3);
-            this.Controls.Add(this.materialRadioButton4);
-            this.Controls.Add(this.materialRadioButton2);
-            this.Controls.Add(this.materialRadioButton1);
+            this.Controls.Add(this.veryDislikeMaterialRadioButton);
+            this.Controls.Add(this.ratherNotMaterialRadioButton);
+            this.Controls.Add(this.cantAnswerMaterialRadioButton);
+            this.Controls.Add(this.ratherSoMaterialRadioButton);
+            this.Controls.Add(this.veryLikeMaterialRadioButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1000, 562);
@@ -225,14 +226,14 @@ namespace specialitySelectionAssistant
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton1;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton2;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton3;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton4;
-        private MaterialSkin.Controls.MaterialRadioButton materialRadioButton5;
+        private MaterialSkin.Controls.MaterialRadioButton veryLikeMaterialRadioButton;
+        private MaterialSkin.Controls.MaterialRadioButton ratherSoMaterialRadioButton;
+        private MaterialSkin.Controls.MaterialRadioButton ratherNotMaterialRadioButton;
+        private MaterialSkin.Controls.MaterialRadioButton cantAnswerMaterialRadioButton;
+        private MaterialSkin.Controls.MaterialRadioButton veryDislikeMaterialRadioButton;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label listQuestionQuestionLabel;
     }
 }

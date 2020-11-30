@@ -3,13 +3,14 @@ using System.Text;
 using System.IO;
 using System;
 using System.Text.RegularExpressions;
+using System.Resources;
 
 namespace SpecialtySelectionAssistantLibrary
 {
 	public class ProfessionComparationPairs
 	{
-        readonly string jsonString = File.ReadAllText("../../Properties/professions.json", Encoding.UTF8);
-		ProfessionStrorage profesionStrorage = new ProfessionStrorage();
+		string jsonString = Encoding.UTF8.GetString(Properties.Resources.professions);
+		public ProfessionStrorage professionStrorage = new ProfessionStrorage();
 		
 		public ProfessionComparationPairs()
 		{
@@ -18,9 +19,9 @@ namespace SpecialtySelectionAssistantLibrary
 
 		public void generatePairs()
 		{
-			profesionStrorage = JsonSerializer.Deserialize<ProfessionStrorage>(jsonString);
+			professionStrorage = JsonSerializer.Deserialize<ProfessionStrorage>(jsonString);
 
-			for (int pairNum = 0;  pairNum < Constants.QUESTION_COUNT; pairNum++)
+			for (int pairNum = 0;  pairNum < Constants.COMPARATION_QUESTION_COUNT; pairNum++)
             {
 				for (int mainArrNum = 0, anotherArrCountIndex = 6, anotherArrStartNum = 1;
 					mainArrNum < 5;
@@ -38,7 +39,7 @@ namespace SpecialtySelectionAssistantLibrary
                             secondProfession = getProfession(anotherArrNum)
                         };
 
-                        ProfessionPairStorage.pairs[pairNum] =  tempPair;
+                        ProfessionPairStorage.pairs.Add( tempPair );
 
 						pairNum++;
 					}
@@ -47,17 +48,16 @@ namespace SpecialtySelectionAssistantLibrary
 		}
 		private profesion getProfession (int arrNum)
         {
+			profesion profesionElem;
 			var rand = new Random();
 
-			int arrLenght = profesionStrorage.professionArr[arrNum].Count - 1;
+			int arrLenght = professionStrorage.professionArr[arrNum].Count - 1;
 
-			profesion profesionElem;
+			int professionIndex = rand.Next(0, arrLenght);
 
-			int randValue = rand.Next(0, arrLenght);
+			profesionElem = professionStrorage.professionArr[arrNum][professionIndex];
 
-			profesionElem = profesionStrorage.professionArr[arrNum][randValue];
-
-			profesionStrorage.professionArr[arrNum].RemoveAt(randValue);
+			professionStrorage.professionArr[arrNum].RemoveAt(professionIndex);
 
 			return profesionElem;
         }

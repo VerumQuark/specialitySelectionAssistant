@@ -3,24 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace SpecialtySelectionAssistantLibrary
 {
-    public struct profesion
+    public struct ListQuestion
     {
         [JsonInclude]
-        public string name;
+        public string question;
         [JsonInclude]
         public string type;
-        [JsonInclude]
-        public string img;
     }
 
-    public struct ProfessionStrorage
+    struct ListQuestionStorage
     {
         [JsonInclude]
-        public List<List<profesion>> professionArr;
+        public List<ListQuestion> listQuestionsArr;
     }
 }

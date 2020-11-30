@@ -10,11 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using SpecialtySelectionAssistantLibrary;
 
 namespace specialitySelectionAssistant
 {
     public partial class ListQuestionForm : MaterialForm
     {
+        Question question;
         public ListQuestionForm()
         {
             InitializeComponent();
@@ -26,6 +28,8 @@ namespace specialitySelectionAssistant
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            question = HollandTest.getQuestion();
+
 
         }
 
@@ -48,6 +52,19 @@ namespace specialitySelectionAssistant
         private void materialFlatButton2_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void materialFlatButton1_Click(object sender, EventArgs e)
+        {
+            if (question.isListQuestion)
+            {
+                /////////////////
+            }
+            else
+            {
+                this.Close();
+                new Thread(OpenF2).Start();
+            }
         }
     }
 }

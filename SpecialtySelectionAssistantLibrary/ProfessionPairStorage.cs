@@ -15,10 +15,7 @@ namespace SpecialtySelectionAssistantLibrary
 
     public class ProfessionPairStorage
     {
-        private int PairCount = Constants.QUESTION_COUNT;
-
-        public static ProfesionPair[] pairs = new ProfesionPair[Constants.QUESTION_COUNT];
-
+        public static List<ProfesionPair> pairs = new List<ProfesionPair>();
     }
 }
     

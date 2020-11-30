@@ -1,0 +1,33 @@
+{
+	"listQuestionsArr": [
+			{
+				"question" : "Q1R",
+				"type" : "realistic"
+			},
+
+			{
+				"question" : "Q2I",
+				"type" : "intelligent"
+			},
+
+			{
+				"question" : "Q1S",
+				"type" : "social"
+			},
+
+			{
+				"question" : "Q1C",
+				"type" : "conventional"
+			},
+
+			{
+				"question" : "Q1E",
+				"type" : "enterprising"
+			},
+
+			{
+				"question" : "Q1",
+				"type" : "artistic"
+			}
+	]
+}

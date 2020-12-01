@@ -15,9 +15,15 @@ namespace SpecialtySelectionAssistantLibrary
         public string type;
     }
 
-    struct ListQuestionStorage
+    public struct ListQuestionsStorage
     {
         [JsonInclude]
         public List<ListQuestion> listQuestionsArr;
+
+        public ListQuestion this[int i]
+        {
+            get { return listQuestionsArr[i]; }
+            set { listQuestionsArr[i] = value; }
+        }
     }
 }

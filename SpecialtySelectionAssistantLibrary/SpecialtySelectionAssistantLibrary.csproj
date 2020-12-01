@@ -73,8 +73,8 @@
     <Compile Include="Constants.cs" />
     <Compile Include="HollandTest.cs" />
     <Compile Include="ListQuestions.cs" />
-    <Compile Include="ListQuestionStorage.cs" />
-    <Compile Include="ProfessionComparationPairs.cs" />
+    <Compile Include="ListQuestionsGenerator.cs" />
+    <Compile Include="ListQuestionsStorage.cs" />
     <Compile Include="ProfessionPairGenerator.cs" />
     <Compile Include="ProfessionPairStorage.cs" />
     <Compile Include="ProfessionStrorage.cs" />
@@ -84,7 +84,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Questions.cs" />
+    <Compile Include="QuestionsGenerator.cs" />
+    <Compile Include="QuestionsStorage.cs" />
     <Compile Include="UserHollandTestResult.cs" />
   </ItemGroup>
   <ItemGroup>

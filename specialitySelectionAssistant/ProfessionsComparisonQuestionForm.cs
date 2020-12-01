@@ -32,7 +32,7 @@ namespace specialitySelectionAssistant
 
         private void ProfessionsComparisonQuestionForm_Load(object sender, EventArgs e)
         {
-            //HollandTest.Init();
+            HollandTest.Init();
 
             changeQuestion();
         }
@@ -109,13 +109,13 @@ namespace specialitySelectionAssistant
         }
 
         private void changeQuestion ()
-        {
+        {/*
             question = HollandTest.getQuestion();
 
             changeProfessions(question.profesionPair.firstProfession, leftProffesionMaterialLabel, leftProffesionButton);
             changeProfessions(question.profesionPair.secondProfession, rightProffesionMaterialLabel, rightProfessionButton);
 
-            tempQuestionNumLabel.Text = $"Питання №{HollandTest.CurrentQuestion}";
+            tempQuestionNumLabel.Text = $"Питання №{HollandTest.CurrentQuestion}";*/
         }
 
         private void changeProfessions(profesion profesion, MaterialLabel proffesionLabel, Button proffesionButton)

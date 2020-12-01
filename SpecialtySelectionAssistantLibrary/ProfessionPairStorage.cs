@@ -15,7 +15,13 @@ namespace SpecialtySelectionAssistantLibrary
 
     public class ProfessionPairStorage
     {
-        public static List<ProfesionPair> pairs = new List<ProfesionPair>();
+        public List<ProfesionPair> pairs = new List<ProfesionPair>();
+
+        public ProfesionPair this[int i]
+        {
+            get { return pairs[i]; }
+            set { pairs[i] = value; }
+        }
     }
 }
     

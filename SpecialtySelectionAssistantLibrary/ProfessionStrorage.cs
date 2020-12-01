@@ -21,6 +21,18 @@ namespace SpecialtySelectionAssistantLibrary
     public struct ProfessionStrorage
     {
         [JsonInclude]
-        public List<List<profesion>> professionArr;
+        public List<List<profesion>> professions;
+
+        public List<profesion> this[int i]
+        {
+            get { return professions[i]; }
+            set { professions[i] = value; }
+        }
+
+        public profesion this[int i, int j]
+        {
+            get { return professions[i][j]; }
+            set { professions[i][j] = value; }
+        }
     }
 }

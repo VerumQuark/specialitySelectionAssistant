@@ -27,9 +27,9 @@ namespace specialitySelectionAssistant
         }
 
         private void Form3_Load(object sender, EventArgs e)
-        {
+        {/*
             question = HollandTest.getQuestion();
-
+            */
 
         }
 

@@ -10,5 +10,6 @@ namespace SpecialtySelectionAssistantLibrary
     {
         static public int QUESTION_COUNT = 20;
         static public int COMPARATION_QUESTION_COUNT = 15;
+        static public int LIST_QUESTION_COUNT = 5;
     }
 }

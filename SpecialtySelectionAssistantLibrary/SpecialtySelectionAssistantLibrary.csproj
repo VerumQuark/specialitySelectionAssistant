@@ -69,7 +69,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ButtonMethods.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="HollandTest.cs" />
     <Compile Include="ListQuestions.cs" />
@@ -86,7 +85,7 @@
     </Compile>
     <Compile Include="QuestionsGenerator.cs" />
     <Compile Include="QuestionsStorage.cs" />
-    <Compile Include="UserHollandTestResult.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

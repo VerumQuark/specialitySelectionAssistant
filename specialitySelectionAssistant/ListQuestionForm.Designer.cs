@@ -34,8 +34,8 @@ namespace specialitySelectionAssistant
             this.ratherNotMaterialRadioButton = new MaterialSkin.Controls.MaterialRadioButton();
             this.cantAnswerMaterialRadioButton = new MaterialSkin.Controls.MaterialRadioButton();
             this.veryDislikeMaterialRadioButton = new MaterialSkin.Controls.MaterialRadioButton();
-            this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.backMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
+            this.nextMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
             this.listQuestionQuestionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -130,45 +130,45 @@ namespace specialitySelectionAssistant
             this.veryDislikeMaterialRadioButton.Text = "Дуже не подобається";
             this.veryDislikeMaterialRadioButton.UseVisualStyleBackColor = false;
             // 
-            // materialFlatButton3
+            // backMaterialFlatButton
             // 
-            this.materialFlatButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.materialFlatButton3.AutoSize = true;
-            this.materialFlatButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton3.BackColor = System.Drawing.SystemColors.Window;
-            this.materialFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.materialFlatButton3.Depth = 0;
-            this.materialFlatButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.materialFlatButton3.Location = new System.Drawing.Point(15, 509);
-            this.materialFlatButton3.Margin = new System.Windows.Forms.Padding(6, 10, 6, 10);
-            this.materialFlatButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton3.Name = "materialFlatButton3";
-            this.materialFlatButton3.Primary = false;
-            this.materialFlatButton3.Size = new System.Drawing.Size(59, 36);
-            this.materialFlatButton3.TabIndex = 12;
-            this.materialFlatButton3.Text = "Назад";
-            this.materialFlatButton3.UseVisualStyleBackColor = false;
-            this.materialFlatButton3.Click += new System.EventHandler(this.materialFlatButton3_Click);
+            this.backMaterialFlatButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.backMaterialFlatButton.AutoSize = true;
+            this.backMaterialFlatButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.backMaterialFlatButton.BackColor = System.Drawing.SystemColors.Window;
+            this.backMaterialFlatButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.backMaterialFlatButton.Depth = 0;
+            this.backMaterialFlatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.backMaterialFlatButton.Location = new System.Drawing.Point(15, 509);
+            this.backMaterialFlatButton.Margin = new System.Windows.Forms.Padding(6, 10, 6, 10);
+            this.backMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.backMaterialFlatButton.Name = "backMaterialFlatButton";
+            this.backMaterialFlatButton.Primary = false;
+            this.backMaterialFlatButton.Size = new System.Drawing.Size(59, 36);
+            this.backMaterialFlatButton.TabIndex = 12;
+            this.backMaterialFlatButton.Text = "Назад";
+            this.backMaterialFlatButton.UseVisualStyleBackColor = false;
+            this.backMaterialFlatButton.Click += new System.EventHandler(this.materialFlatButton3_Click);
             // 
-            // materialFlatButton1
+            // nextMaterialFlatButton
             // 
-            this.materialFlatButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialFlatButton1.AutoSize = true;
-            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton1.BackColor = System.Drawing.SystemColors.Window;
-            this.materialFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.materialFlatButton1.Location = new System.Drawing.Point(912, 509);
-            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(6, 10, 6, 10);
-            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton1.Name = "materialFlatButton1";
-            this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(45, 36);
-            this.materialFlatButton1.TabIndex = 11;
-            this.materialFlatButton1.Text = "Далі";
-            this.materialFlatButton1.UseVisualStyleBackColor = false;
-            this.materialFlatButton1.Click += new System.EventHandler(this.materialFlatButton1_Click);
+            this.nextMaterialFlatButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.nextMaterialFlatButton.AutoSize = true;
+            this.nextMaterialFlatButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.nextMaterialFlatButton.BackColor = System.Drawing.SystemColors.Window;
+            this.nextMaterialFlatButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.nextMaterialFlatButton.Depth = 0;
+            this.nextMaterialFlatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.nextMaterialFlatButton.Location = new System.Drawing.Point(912, 509);
+            this.nextMaterialFlatButton.Margin = new System.Windows.Forms.Padding(6, 10, 6, 10);
+            this.nextMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.nextMaterialFlatButton.Name = "nextMaterialFlatButton";
+            this.nextMaterialFlatButton.Primary = false;
+            this.nextMaterialFlatButton.Size = new System.Drawing.Size(45, 36);
+            this.nextMaterialFlatButton.TabIndex = 11;
+            this.nextMaterialFlatButton.Text = "Далі";
+            this.nextMaterialFlatButton.UseVisualStyleBackColor = false;
+            this.nextMaterialFlatButton.Click += new System.EventHandler(this.materialFlatButton1_Click);
             // 
             // materialFlatButton2
             // 
@@ -205,8 +205,8 @@ namespace specialitySelectionAssistant
             this.ClientSize = new System.Drawing.Size(1000, 562);
             this.Controls.Add(this.listQuestionQuestionLabel);
             this.Controls.Add(this.materialFlatButton2);
-            this.Controls.Add(this.materialFlatButton3);
-            this.Controls.Add(this.materialFlatButton1);
+            this.Controls.Add(this.backMaterialFlatButton);
+            this.Controls.Add(this.nextMaterialFlatButton);
             this.Controls.Add(this.veryDislikeMaterialRadioButton);
             this.Controls.Add(this.ratherNotMaterialRadioButton);
             this.Controls.Add(this.cantAnswerMaterialRadioButton);
@@ -231,8 +231,8 @@ namespace specialitySelectionAssistant
         private MaterialSkin.Controls.MaterialRadioButton ratherNotMaterialRadioButton;
         private MaterialSkin.Controls.MaterialRadioButton cantAnswerMaterialRadioButton;
         private MaterialSkin.Controls.MaterialRadioButton veryDislikeMaterialRadioButton;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
+        private MaterialSkin.Controls.MaterialFlatButton backMaterialFlatButton;
+        private MaterialSkin.Controls.MaterialFlatButton nextMaterialFlatButton;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
         private System.Windows.Forms.Label listQuestionQuestionLabel;
     }

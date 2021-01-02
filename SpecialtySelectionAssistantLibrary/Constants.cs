@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpecialtySelectionAssistantLibrary
 {
-    static class Constants
+    static public class Constants
     {
         static public int QUESTION_COUNT = 20;
         static public int COMPARATION_QUESTION_COUNT = 15;

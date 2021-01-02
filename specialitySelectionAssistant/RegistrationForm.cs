@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Threading;
 using MaterialSkin.Controls;
 using MaterialSkin;
+using SpecialtySelectionAssistantLibrary;
 
 namespace specialitySelectionAssistant
 {
@@ -25,48 +26,18 @@ namespace specialitySelectionAssistant
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange300, Primary.Orange400, Primary.Orange100, Accent.LightBlue200, TextShade.BLACK);
         }
 
-
-        private FormWindowState windowState;
-
-        public FormWindowState GetWindowState()
+        private void nextMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            return windowState;
-        }
+            string name = NameMaterialSingleLineTextField.Text;
+            bool budget = BudgetMaterialCheckBox.Checked;
+            bool contract = ContractMaterialCheckBox.Checked;
 
-        public void SetWindowState(FormWindowState value)
-        {
-            windowState = value;
-        }
+            HollandTest.user = new User(name, budget, contract);
 
-        public void OpenF2()
-        {
-            Application.Run(new ProfessionsComparisonQuestionForm());
-        }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+            bool ZNO = ZNOMaterialCheckBox.Checked;
 
-        }
-
-        private void materialTabSelector1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialCheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialCheckBox3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void materialFlatButton1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            new Thread(OpenF2).Start();
+            Navigation.startTest(ZNO);
         }
     }
 }

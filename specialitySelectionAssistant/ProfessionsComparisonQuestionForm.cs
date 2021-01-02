@@ -32,90 +32,27 @@ namespace specialitySelectionAssistant
 
         private void ProfessionsComparisonQuestionForm_Load(object sender, EventArgs e)
         {
-            HollandTest.Init();
-
-            changeQuestion();
-        }
-        public void OpenRegistrationForm()
-        {
-            Application.Run(new RegistrationForm());
-        }
-        public void OpenListQuestionForm()
-        {
-            Application.Run(new ListQuestionForm());
+            loadQuestion();
         }
 
         private void BackMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            this.Close();/////////////////////////////////REWORK///////////////////////////////////////
-            new Thread(OpenRegistrationForm).Start();
+            /////////////////////////////////UNDER_CONSTRUCTION///////////////////////////////////////
         }
 
         private void nextFormMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            // question = HollandTest.getQuestion();
-
-            if (question.isListQuestion)
-            {
-                if(isProfessionChosen)
-                {
-                    isProfessionChosen = false;
-
-                    HollandTest.addCharacteristicsPoint(chosenProfesion);
-
-                    /*if (HollandTest.CurrentQuestion == 14)     //REWORK///////////////////////////////////////
-                    {
-                        this.Close();
-                        new Thread(OpenListQuestionForm).Start();
-                    }*/
-            
-                    this.Close();
-                    new Thread(OpenListQuestionForm).Start();
-
-                    chosenProfesion = new profesion();
-                }
-
-                else
-                {
-                    MessageBox.Show("Оберіть одну з професій");
-                }
-
-            }
-            else
-            {
-
-                if (isProfessionChosen)
-                {
-                isProfessionChosen = false;
-
-                HollandTest.addCharacteristicsPoint(chosenProfesion);
-
-                    /*if (HollandTest.CurrentQuestion == 14)     //REWORK///////////////////////////////////////
-                    {
-                        this.Close();
-                        new Thread(OpenListQuestionForm).Start();
-                    }*/
-                    
-                    changeQuestion();
-
-                chosenProfesion = new profesion();
-                }
-
-                else
-                {
-                    MessageBox.Show("Оберіть одну з професій");
-                }
-            }
+            Navigation.nextForm(this, isProfessionChosen);
         }
 
-        private void changeQuestion ()
-        {/*
-            question = HollandTest.getQuestion();
+        private void loadQuestion()
+        {
+            question = HollandTest.currentQuestion;
 
             changeProfessions(question.profesionPair.firstProfession, leftProffesionMaterialLabel, leftProffesionButton);
             changeProfessions(question.profesionPair.secondProfession, rightProffesionMaterialLabel, rightProfessionButton);
 
-            tempQuestionNumLabel.Text = $"Питання №{HollandTest.CurrentQuestion}";*/
+            tempQuestionNumLabel.Text = $"Питання №{HollandTest.CurrentQuestionIndex}";
         }
 
         private void changeProfessions(profesion profesion, MaterialLabel proffesionLabel, Button proffesionButton)
@@ -125,12 +62,6 @@ namespace specialitySelectionAssistant
 
             proffesionLabel.Text = profesion.name;
             proffesionButton.BackgroundImage = proffesionImg;
-        }
-
-        private void leftProffesionButton_Click(object sender, EventArgs e)
-        {
-            isProfessionChosen = true;
-            chosenProfesion = question.profesionPair.firstProfession;
         }
 
         private void HelpMaterialFlatButton_Click(object sender, EventArgs e)

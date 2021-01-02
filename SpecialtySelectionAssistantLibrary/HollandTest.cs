@@ -8,9 +8,46 @@ namespace SpecialtySelectionAssistantLibrary
 {
     public static class HollandTest
     {
-        static QuestionsStorage questionsStorage = generateQuestions();
+        static public User user = new User();
 
-       static QuestionsStorage generateQuestions()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        static QuestionsStorage questionsStorage = generateQuestions();
+        static public int currentQuestionIndex = 0;
+        static public Question currentQuestion = questionsStorage[currentQuestionIndex];
+
+        static QuestionsStorage generateQuestions()
         {
             ListQuestionsStorage listQuestionsStorage;
             ListQuestionsGenerator listQuestionsGenerator = new ListQuestionsGenerator();
@@ -28,9 +65,15 @@ namespace SpecialtySelectionAssistantLibrary
 
             return questionsGenerator.questionsGenerate(listQuestionsStorage, professionPairStorage);
         }
+
+        static public void nextQuestion()
+        {
+            currentQuestionIndex++;
+            currentQuestion = questionsStorage[currentQuestionIndex];
+        }
         
         
-        static int currentQuestion = 0;
+
         static public bool isLastQuestion = false;
         static UserHollandTestResult UserCharacteristics = new UserHollandTestResult();
         /*
@@ -39,11 +82,11 @@ namespace SpecialtySelectionAssistantLibrary
 
         static Questions questions = new Questions();
         */
-        static public int CurrentQuestion
+        static public int CurrentQuestionIndex
         {
             get
             {
-                return currentQuestion;
+                return currentQuestionIndex;
             }
 
             set
@@ -61,7 +104,7 @@ namespace SpecialtySelectionAssistantLibrary
                         isLastQuestion = true;
                     }
 
-                    currentQuestion = value;
+                    currentQuestionIndex = value;
                 }
             }
         }

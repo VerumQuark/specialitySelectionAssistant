@@ -56,15 +56,7 @@ namespace specialitySelectionAssistant
 
         private void materialFlatButton1_Click(object sender, EventArgs e)
         {
-            if (question.isListQuestion)
-            {
-                /////////////////
-            }
-            else
-            {
-                this.Close();
-                new Thread(OpenF2).Start();
-            }
+            Navigation.nextForm(this, true);/////////////////////////rework////////////
         }
     }
 }

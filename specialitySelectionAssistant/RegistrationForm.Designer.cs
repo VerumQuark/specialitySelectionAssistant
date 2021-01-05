@@ -29,7 +29,7 @@ namespace specialitySelectionAssistant
         /// </summary>
         private void InitializeComponent()
         {
-            this.ZNOMaterialCheckBox = new MaterialSkin.Controls.MaterialCheckBox();
+            this.ZnoMaterialCheckBox = new MaterialSkin.Controls.MaterialCheckBox();
             this.BudgetMaterialCheckBox = new MaterialSkin.Controls.MaterialCheckBox();
             this.ContractMaterialCheckBox = new MaterialSkin.Controls.MaterialCheckBox();
             this.NameMaterialSingleLineTextField = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -38,23 +38,23 @@ namespace specialitySelectionAssistant
             this.helpMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
-            // ZNOMaterialCheckBox
+            // ZnoMaterialCheckBox
             // 
-            this.ZNOMaterialCheckBox.AutoSize = true;
-            this.ZNOMaterialCheckBox.BackColor = System.Drawing.SystemColors.Window;
-            this.ZNOMaterialCheckBox.Depth = 0;
-            this.ZNOMaterialCheckBox.Font = new System.Drawing.Font("Roboto", 10F);
-            this.ZNOMaterialCheckBox.Location = new System.Drawing.Point(691, 173);
-            this.ZNOMaterialCheckBox.Margin = new System.Windows.Forms.Padding(0);
-            this.ZNOMaterialCheckBox.MinimumSize = new System.Drawing.Size(208, 30);
-            this.ZNOMaterialCheckBox.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.ZNOMaterialCheckBox.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ZNOMaterialCheckBox.Name = "ZNOMaterialCheckBox";
-            this.ZNOMaterialCheckBox.Ripple = true;
-            this.ZNOMaterialCheckBox.Size = new System.Drawing.Size(208, 30);
-            this.ZNOMaterialCheckBox.TabIndex = 1;
-            this.ZNOMaterialCheckBox.Text = "Маю результаты ЗНО";
-            this.ZNOMaterialCheckBox.UseVisualStyleBackColor = false;
+            this.ZnoMaterialCheckBox.AutoSize = true;
+            this.ZnoMaterialCheckBox.BackColor = System.Drawing.SystemColors.Window;
+            this.ZnoMaterialCheckBox.Depth = 0;
+            this.ZnoMaterialCheckBox.Font = new System.Drawing.Font("Roboto", 10F);
+            this.ZnoMaterialCheckBox.Location = new System.Drawing.Point(691, 173);
+            this.ZnoMaterialCheckBox.Margin = new System.Windows.Forms.Padding(0);
+            this.ZnoMaterialCheckBox.MinimumSize = new System.Drawing.Size(208, 30);
+            this.ZnoMaterialCheckBox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.ZnoMaterialCheckBox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ZnoMaterialCheckBox.Name = "ZnoMaterialCheckBox";
+            this.ZnoMaterialCheckBox.Ripple = true;
+            this.ZnoMaterialCheckBox.Size = new System.Drawing.Size(208, 30);
+            this.ZnoMaterialCheckBox.TabIndex = 1;
+            this.ZnoMaterialCheckBox.Text = "Маю результаты ЗНО";
+            this.ZnoMaterialCheckBox.UseVisualStyleBackColor = false;
             // 
             // BudgetMaterialCheckBox
             // 
@@ -169,7 +169,7 @@ namespace specialitySelectionAssistant
             this.Controls.Add(this.NameMaterialSingleLineTextField);
             this.Controls.Add(this.ContractMaterialCheckBox);
             this.Controls.Add(this.BudgetMaterialCheckBox);
-            this.Controls.Add(this.ZNOMaterialCheckBox);
+            this.Controls.Add(this.ZnoMaterialCheckBox);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1000, 562);
@@ -182,7 +182,7 @@ namespace specialitySelectionAssistant
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialCheckBox ZNOMaterialCheckBox;
+        private MaterialSkin.Controls.MaterialCheckBox ZnoMaterialCheckBox;
         private MaterialSkin.Controls.MaterialCheckBox BudgetMaterialCheckBox;
         private MaterialSkin.Controls.MaterialCheckBox ContractMaterialCheckBox;
         private MaterialSkin.Controls.MaterialSingleLineTextField NameMaterialSingleLineTextField;

@@ -31,13 +31,12 @@ namespace specialitySelectionAssistant
             string name = NameMaterialSingleLineTextField.Text;
             bool budget = BudgetMaterialCheckBox.Checked;
             bool contract = ContractMaterialCheckBox.Checked;
+            bool haveZno = ZnoMaterialCheckBox.Checked;
 
-            HollandTest.user = new User(name, budget, contract);
+            User.setName(name);
+            preferredSpecialtiesDeterminant.setEducationForm(budget, contract, haveZno);
 
-
-            bool ZNO = ZNOMaterialCheckBox.Checked;
-
-            Navigation.startTest(ZNO);
+            Navigation.startTest(haveZno, this);
         }
     }
 }

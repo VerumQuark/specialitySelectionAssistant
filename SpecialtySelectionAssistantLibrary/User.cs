@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpecialtySelectionAssistantLibrary
 {
-    struct HollandResult
+    public struct HollandResult
         {
             public int realistic { get; set; }
             public int intelligent { get; set; }
@@ -31,28 +31,21 @@ namespace SpecialtySelectionAssistantLibrary
         int scores;
     }
 
-    public class User
+    static public class User
     {
-        HollandResult hollandResult;
-        string name;
-        bool budget;
-        bool contract;
-        List<ZnoSubject> znoSubjects;
+        static public HollandResult hollandResult;
+        static string name;
 
-        public User()
+
+        static User()
         {
             hollandResult.init();
             name = "";
-            budget = false;
-            contract = false;
         }
 
-        public User(string nameF, bool budgetF, bool contractF)
+        static public void setName(string nameValue)
         {
-            hollandResult.init();
-            name = nameF;
-            budget = budgetF;
-            contract = contractF;
+            name = nameValue;
         }
     }
 }

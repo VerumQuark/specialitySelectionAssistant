@@ -30,10 +30,10 @@ namespace specialitySelectionAssistant
         private void InitializeComponent()
         {
             this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.titleLabel = new System.Windows.Forms.Label();
+            this.firstSpecialtyNameMaterialLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.secondSpecialtyNameMaterialLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.thirdSpecialtyNameMaterialLabel = new MaterialSkin.Controls.MaterialLabel();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
@@ -47,62 +47,62 @@ namespace specialitySelectionAssistant
             this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton2.Name = "materialFlatButton2";
             this.materialFlatButton2.Primary = false;
-            this.materialFlatButton2.Size = new System.Drawing.Size(21, 36);
+            this.materialFlatButton2.Size = new System.Drawing.Size(19, 36);
             this.materialFlatButton2.TabIndex = 17;
             this.materialFlatButton2.Text = "?";
             this.materialFlatButton2.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // titleLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(49, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(852, 29);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "За результатами тесту вам більш підходять такі спеціальності як:";
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleLabel.Location = new System.Drawing.Point(49, 102);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(703, 25);
+            this.titleLabel.TabIndex = 23;
+            this.titleLabel.Text = "За результатами тесту вам більш підходять такі спеціальності як:";
             // 
-            // materialLabel1
+            // firstSpecialtyNameMaterialLabel
             // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(54, 155);
-            this.materialLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(136, 24);
-            this.materialLabel1.TabIndex = 24;
-            this.materialLabel1.Text = "materialLabel1";
+            this.firstSpecialtyNameMaterialLabel.AutoSize = true;
+            this.firstSpecialtyNameMaterialLabel.Depth = 0;
+            this.firstSpecialtyNameMaterialLabel.Font = new System.Drawing.Font("Roboto", 11F);
+            this.firstSpecialtyNameMaterialLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.firstSpecialtyNameMaterialLabel.Location = new System.Drawing.Point(54, 155);
+            this.firstSpecialtyNameMaterialLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.firstSpecialtyNameMaterialLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.firstSpecialtyNameMaterialLabel.Name = "firstSpecialtyNameMaterialLabel";
+            this.firstSpecialtyNameMaterialLabel.Size = new System.Drawing.Size(108, 19);
+            this.firstSpecialtyNameMaterialLabel.TabIndex = 24;
+            this.firstSpecialtyNameMaterialLabel.Text = "materialLabel1";
             // 
-            // materialLabel2
+            // secondSpecialtyNameMaterialLabel
             // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(54, 205);
-            this.materialLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(136, 24);
-            this.materialLabel2.TabIndex = 25;
-            this.materialLabel2.Text = "materialLabel2";
+            this.secondSpecialtyNameMaterialLabel.AutoSize = true;
+            this.secondSpecialtyNameMaterialLabel.Depth = 0;
+            this.secondSpecialtyNameMaterialLabel.Font = new System.Drawing.Font("Roboto", 11F);
+            this.secondSpecialtyNameMaterialLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.secondSpecialtyNameMaterialLabel.Location = new System.Drawing.Point(54, 238);
+            this.secondSpecialtyNameMaterialLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.secondSpecialtyNameMaterialLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.secondSpecialtyNameMaterialLabel.Name = "secondSpecialtyNameMaterialLabel";
+            this.secondSpecialtyNameMaterialLabel.Size = new System.Drawing.Size(108, 19);
+            this.secondSpecialtyNameMaterialLabel.TabIndex = 25;
+            this.secondSpecialtyNameMaterialLabel.Text = "materialLabel2";
             // 
-            // materialLabel3
+            // thirdSpecialtyNameMaterialLabel
             // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(54, 255);
-            this.materialLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(136, 24);
-            this.materialLabel3.TabIndex = 26;
-            this.materialLabel3.Text = "materialLabel3";
+            this.thirdSpecialtyNameMaterialLabel.AutoSize = true;
+            this.thirdSpecialtyNameMaterialLabel.Depth = 0;
+            this.thirdSpecialtyNameMaterialLabel.Font = new System.Drawing.Font("Roboto", 11F);
+            this.thirdSpecialtyNameMaterialLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.thirdSpecialtyNameMaterialLabel.Location = new System.Drawing.Point(54, 317);
+            this.thirdSpecialtyNameMaterialLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.thirdSpecialtyNameMaterialLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.thirdSpecialtyNameMaterialLabel.Name = "thirdSpecialtyNameMaterialLabel";
+            this.thirdSpecialtyNameMaterialLabel.Size = new System.Drawing.Size(108, 19);
+            this.thirdSpecialtyNameMaterialLabel.TabIndex = 26;
+            this.thirdSpecialtyNameMaterialLabel.Text = "materialLabel3";
             // 
             // materialFlatButton1
             // 
@@ -118,24 +118,24 @@ namespace specialitySelectionAssistant
             this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialFlatButton1.Name = "materialFlatButton1";
             this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(117, 36);
+            this.materialFlatButton1.Size = new System.Drawing.Size(95, 36);
             this.materialFlatButton1.TabIndex = 27;
             this.materialFlatButton1.Text = "Завершити";
             this.materialFlatButton1.UseVisualStyleBackColor = false;
             // 
-            // Form4
+            // TestResultForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1000, 562);
             this.Controls.Add(this.materialFlatButton1);
-            this.Controls.Add(this.materialLabel3);
-            this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.materialLabel1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.thirdSpecialtyNameMaterialLabel);
+            this.Controls.Add(this.secondSpecialtyNameMaterialLabel);
+            this.Controls.Add(this.firstSpecialtyNameMaterialLabel);
+            this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.materialFlatButton2);
             this.MinimumSize = new System.Drawing.Size(1000, 562);
-            this.Name = "Form4";
+            this.Name = "TestResultForm";
             this.Text = "Результати!";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.ResumeLayout(false);
@@ -145,10 +145,10 @@ namespace specialitySelectionAssistant
 
         #endregion
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
-        private System.Windows.Forms.Label label1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private System.Windows.Forms.Label titleLabel;
+        private MaterialSkin.Controls.MaterialLabel firstSpecialtyNameMaterialLabel;
+        private MaterialSkin.Controls.MaterialLabel secondSpecialtyNameMaterialLabel;
+        private MaterialSkin.Controls.MaterialLabel thirdSpecialtyNameMaterialLabel;
         private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
     }
 }

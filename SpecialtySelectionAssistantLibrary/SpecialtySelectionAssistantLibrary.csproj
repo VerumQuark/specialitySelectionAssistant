@@ -70,10 +70,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Facultiy.cs" />
+    <Compile Include="FacultiesMinDeviation.cs" />
     <Compile Include="HollandTest.cs" />
-    <Compile Include="ListQuestions.cs" />
-    <Compile Include="ListQuestionsGenerator.cs" />
-    <Compile Include="ListQuestionsStorage.cs" />
+    <Compile Include="preferredSpecialtiesDeterminant.cs" />
     <Compile Include="ProfessionPairGenerator.cs" />
     <Compile Include="ProfessionPairStorage.cs" />
     <Compile Include="ProfessionStrorage.cs" />
@@ -83,13 +83,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="QuestionsGenerator.cs" />
-    <Compile Include="QuestionsStorage.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="UserPreferencesTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\faculties.json" />
     <None Include="Properties\listQuestions.json" />
     <None Include="Properties\professions.json" />
   </ItemGroup>

@@ -63,6 +63,16 @@ namespace SpecialtySelectionAssistantLibrary.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] faculties {
+            get {
+                object obj = ResourceManager.GetObject("faculties", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] listQuestions {
             get {
                 object obj = ResourceManager.GetObject("listQuestions", resourceCulture);

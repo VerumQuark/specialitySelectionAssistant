@@ -19,7 +19,7 @@ namespace specialitySelectionAssistant
     {
         bool isProfessionChosen = false;
         profesion chosenProfesion = new profesion();
-        Question question;
+        ProfesionPair pairQuestion;
 
         public ProfessionsComparisonQuestionForm()
         {
@@ -32,27 +32,72 @@ namespace specialitySelectionAssistant
 
         private void ProfessionsComparisonQuestionForm_Load(object sender, EventArgs e)
         {
+            if(HollandTest.isFirstQuestion)
+            {
+                HollandTest.CreateTest();
+            }
+            else
+            {
+                HollandTest.chosenProfessionsTypesStack.Pop();
+            }
+            
             loadQuestion();
         }
 
         private void BackMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            /////////////////////////////////UNDER_CONSTRUCTION///////////////////////////////////////
+            isProfessionChosen = false;
+
+            if (HollandTest.isFirstQuestion)
+            {
+                Navigation.backToRegistrationForm(this);
+            }
+            else
+            {
+                HollandTest.chosenProfessionsTypesStack.Pop();
+                HollandTest.prevComparisonQuestion();
+                loadQuestion();
+            }
         }
 
         private void nextFormMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            Navigation.nextForm(this, isProfessionChosen);
+            if (isProfessionChosen)
+            {
+                isProfessionChosen = false;
+                HollandTest.chosenProfessionsTypesStack.Push(chosenProfesion.type);
+
+                if (HollandTest.isLastQuestion)
+                {
+                    HollandTest.saveTestResult();
+                    Navigation.goToListQuestionsForm(this);
+                }
+                else
+                {
+                    HollandTest.nextComparisonQuestion();
+                    loadQuestion();
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Оберіть одну з професій");
+            }
         }
 
         private void loadQuestion()
         {
-            question = HollandTest.currentQuestion;
+            pairQuestion = HollandTest.currentComparisonQuestion;
 
-            changeProfessions(question.profesionPair.firstProfession, leftProffesionMaterialLabel, leftProffesionButton);
-            changeProfessions(question.profesionPair.secondProfession, rightProffesionMaterialLabel, rightProfessionButton);
-
-            tempQuestionNumLabel.Text = $"Питання №{HollandTest.CurrentQuestionIndex}";
+            changeProfessions(pairQuestion.firstProfession, leftProffesionMaterialLabel, leftProffesionButton);
+            changeProfessions(pairQuestion.secondProfession, rightProffesionMaterialLabel, rightProfessionButton);
+            //
+            //
+            //  REWORK
+            //
+            //
+            //
+            tempQuestionNumLabel.Text = $"Питання №{HollandTest.CurrentComparisonQuestionIndex}";
         }
 
         private void changeProfessions(profesion profesion, MaterialLabel proffesionLabel, Button proffesionButton)
@@ -66,19 +111,19 @@ namespace specialitySelectionAssistant
 
         private void HelpMaterialFlatButton_Click(object sender, EventArgs e)
         {
-
+            Navigation.openHelpForm(this);
         }
 
         private void leftProfessionButton_Click(object sender, EventArgs e)
         {
             isProfessionChosen = true;
-            chosenProfesion = question.profesionPair.firstProfession;
+            chosenProfesion = pairQuestion.firstProfession;
         }
 
         private void rightProfessionButton_Click(object sender, EventArgs e)
         {
             isProfessionChosen = true;
-            chosenProfesion = question.profesionPair.secondProfession;
+            chosenProfesion = pairQuestion.secondProfession;
         }
     }
 }

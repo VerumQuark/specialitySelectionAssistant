@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SpecialtySelectionAssistantLibrary;
 
 namespace specialitySelectionAssistant
 {
@@ -26,12 +27,12 @@ namespace specialitySelectionAssistant
 
         private void Form4_Load(object sender, EventArgs e)
         {
+            List<Specialty> specialties = preferredSpecialtiesDeterminant.getDetermineSpecialties();
 
+            firstSpecialtyNameMaterialLabel.Text  = specialties[0].name;
+            secondSpecialtyNameMaterialLabel.Text = specialties[1].name;
+            thirdSpecialtyNameMaterialLabel.Text  = specialties[2].name;
         }
 
-        private void materialLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

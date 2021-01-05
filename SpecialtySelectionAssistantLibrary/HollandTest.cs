@@ -8,161 +8,142 @@ namespace SpecialtySelectionAssistantLibrary
 {
     public static class HollandTest
     {
-        static public User user = new User();
+        static public bool isLastQuestion;
+        static public bool isFirstQuestion;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        static QuestionsStorage questionsStorage = generateQuestions();
-        static public int currentQuestionIndex = 0;
-        static public Question currentQuestion = questionsStorage[currentQuestionIndex];
-
-        static QuestionsStorage generateQuestions()
-        {
-            ListQuestionsStorage listQuestionsStorage;
-            ListQuestionsGenerator listQuestionsGenerator = new ListQuestionsGenerator();
-
-            listQuestionsStorage = listQuestionsGenerator.generateListQuestions();
-
-
-            ProfessionPairStorage professionPairStorage;
-            ProfessionPairGenerator professionPairGenerator = new ProfessionPairGenerator();
-
-            professionPairStorage = professionPairGenerator.generatePairs();
-
-
-            QuestionsGenerator questionsGenerator = new QuestionsGenerator();
-
-            return questionsGenerator.questionsGenerate(listQuestionsStorage, professionPairStorage);
-        }
-
-        static public void nextQuestion()
-        {
-            currentQuestionIndex++;
-            currentQuestion = questionsStorage[currentQuestionIndex];
-        }
+        static ProfessionPairStorage comparisonQuestionsStorage;
+        static public ProfesionPair currentComparisonQuestion;
         
-        
+        static public Stack<string> chosenProfessionsTypesStack;
 
-        static public bool isLastQuestion = false;
-        static UserHollandTestResult UserCharacteristics = new UserHollandTestResult();
-        /*
-        static ProfessionComparationPairs professionPairs { get; set; } = new ProfessionComparationPairs();
-        static ListQuestions listQuestions { get; set; } = new ListQuestions();
+        static private int currentComparisonQuestionIndex;
 
-        static Questions questions = new Questions();
-        */
-        static public int CurrentQuestionIndex
+        static public int CurrentComparisonQuestionIndex
         {
             get
             {
-                return currentQuestionIndex;
+                return currentComparisonQuestionIndex;
             }
 
             set
             {
-                if(value > Constants.QUESTION_COUNT)
+                if (value > Constants.COMPARATION_QUESTION_COUNT)
                 {
                     //error
                     //currentQuestion = 0;
                 }
-
                 else
                 {
-                    if (value == Constants.QUESTION_COUNT + 1)
+                    if (value == Constants.COMPARATION_QUESTION_COUNT - 1)
                     {
                         isLastQuestion = true;
                     }
+                    else if (value == 0)
+                    {
+                        isFirstQuestion = true;
+                    }
+                    else
+                    {
+                        isFirstQuestion = false;
+                        isLastQuestion = false;
+                    }
 
-                    currentQuestionIndex = value;
+
+                    currentComparisonQuestionIndex = value;
                 }
             }
         }
 
-        static public void Init()///////////createest
+        static public void nextComparisonQuestion()
         {
-            QuestionsStorage questionsStorage = generateQuestions();
+            CurrentComparisonQuestionIndex++;
+            currentComparisonQuestion = comparisonQuestionsStorage[CurrentComparisonQuestionIndex];
 
-            /*
-            CurrentQuestion = 0;
-            questions.generateQuestionsArr();*/
-
-            // professionPairs.generatePairs();
-            // listQuestions.generateQuestions();
+            if(CurrentComparisonQuestionIndex == Constants.COMPARATION_QUESTION_COUNT)
+            {
+                isLastQuestion = true;
+            }
         }
 
-        static public void getQuestion()///////////////////////
-        {/*
-            return questions.questions[CurrentQuestion++];*/
+        static public void prevComparisonQuestion()
+        {
+            CurrentComparisonQuestionIndex--;
+            currentComparisonQuestion = comparisonQuestionsStorage[CurrentComparisonQuestionIndex];
+
+            if (CurrentComparisonQuestionIndex == 0)
+            {
+                isFirstQuestion = true;
+            }
         }
 
-        static public void addCharacteristicsPoint(profesion chosenProfesion)
+        static HollandTest()
         {
-            switch (chosenProfesion.type)
+            isLastQuestion = false;
+            isFirstQuestion = false;
+            chosenProfessionsTypesStack = new Stack<string>();
+
+            CreateTest();
+        }
+
+        static public void CreateTest()
+        {
+            comparisonQuestionsStorage = generateComparisonQuestions();
+            CurrentComparisonQuestionIndex = 0;
+            currentComparisonQuestion = comparisonQuestionsStorage[CurrentComparisonQuestionIndex];
+            chosenProfessionsTypesStack.Clear();
+        }
+
+        static ProfessionPairStorage generateComparisonQuestions()
+        {
+            ProfessionPairGenerator professionPairGenerator = new ProfessionPairGenerator();
+            return professionPairGenerator.generatePairs();
+        }
+
+        static public void saveTestResult()
+        {
+            foreach(string type in chosenProfessionsTypesStack)
+            {
+                addCharacteristicsPoint(type);
+            }
+        }
+
+        static public void addCharacteristicsPoint(string type)
+        {
+            switch (type)
             {
                 case "realistic":
                     {
-                        UserCharacteristics.realistic += 1;
+                        User.hollandResult.realistic += 1;
                         break;
                     }
                 case "intelligent":
                     {
-                        UserCharacteristics.intelligent += 1;
+                        User.hollandResult.intelligent += 1;
                         break;
                     }
                 case "social":
                     {
-                        UserCharacteristics.social += 1;
+                        User.hollandResult.social += 1;
                         break;
                     }
                 case "conventional":
                     {
-                        UserCharacteristics.conventional += 1;
+                        User.hollandResult.conventional += 1;
                         break;
                     }
                 case "enterprising":
                     {
-                        UserCharacteristics.enterprising += 1;
+                        User.hollandResult.enterprising += 1;
                         break;
                     }
                 case "artistic":
                     {
-                        UserCharacteristics.artistic += 1;
+                        User.hollandResult.artistic += 1;
                         break;
                     }
                 default:
                     {
-                        /////////UNDER CONSTRUCTION////////////
+                        /////////UNDER CONSTRUCTION////////////REWORK
                         break;
                     }
             }

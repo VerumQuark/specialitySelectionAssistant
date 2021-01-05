@@ -36,7 +36,7 @@ namespace specialitySelectionAssistant
             this.veryDislikeMaterialRadioButton = new MaterialSkin.Controls.MaterialRadioButton();
             this.backMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.nextMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
-            this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.helpMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.listQuestionQuestionLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -57,6 +57,7 @@ namespace specialitySelectionAssistant
             this.veryLikeMaterialRadioButton.TabStop = true;
             this.veryLikeMaterialRadioButton.Text = "Дуже подобається";
             this.veryLikeMaterialRadioButton.UseVisualStyleBackColor = false;
+            this.veryLikeMaterialRadioButton.CheckedChanged += new System.EventHandler(this.veryLikeMaterialRadioButton_CheckedChanged);
             // 
             // ratherSoMaterialRadioButton
             // 
@@ -75,6 +76,7 @@ namespace specialitySelectionAssistant
             this.ratherSoMaterialRadioButton.TabStop = true;
             this.ratherSoMaterialRadioButton.Text = "Скоріш так";
             this.ratherSoMaterialRadioButton.UseVisualStyleBackColor = false;
+            this.ratherSoMaterialRadioButton.CheckedChanged += new System.EventHandler(this.ratherSoMaterialRadioButton_CheckedChanged);
             // 
             // ratherNotMaterialRadioButton
             // 
@@ -93,6 +95,7 @@ namespace specialitySelectionAssistant
             this.ratherNotMaterialRadioButton.TabStop = true;
             this.ratherNotMaterialRadioButton.Text = "Скоріш ні";
             this.ratherNotMaterialRadioButton.UseVisualStyleBackColor = false;
+            this.ratherNotMaterialRadioButton.CheckedChanged += new System.EventHandler(this.ratherNotMaterialRadioButton_CheckedChanged);
             // 
             // cantAnswerMaterialRadioButton
             // 
@@ -111,6 +114,7 @@ namespace specialitySelectionAssistant
             this.cantAnswerMaterialRadioButton.TabStop = true;
             this.cantAnswerMaterialRadioButton.Text = "Не можу відповісти";
             this.cantAnswerMaterialRadioButton.UseVisualStyleBackColor = false;
+            this.cantAnswerMaterialRadioButton.CheckedChanged += new System.EventHandler(this.cantAnswerMaterialRadioButton_CheckedChanged);
             // 
             // veryDislikeMaterialRadioButton
             // 
@@ -129,6 +133,7 @@ namespace specialitySelectionAssistant
             this.veryDislikeMaterialRadioButton.TabStop = true;
             this.veryDislikeMaterialRadioButton.Text = "Дуже не подобається";
             this.veryDislikeMaterialRadioButton.UseVisualStyleBackColor = false;
+            this.veryDislikeMaterialRadioButton.CheckedChanged += new System.EventHandler(this.veryDislikeMaterialRadioButton_CheckedChanged);
             // 
             // backMaterialFlatButton
             // 
@@ -148,7 +153,7 @@ namespace specialitySelectionAssistant
             this.backMaterialFlatButton.TabIndex = 12;
             this.backMaterialFlatButton.Text = "Назад";
             this.backMaterialFlatButton.UseVisualStyleBackColor = false;
-            this.backMaterialFlatButton.Click += new System.EventHandler(this.materialFlatButton3_Click);
+            this.backMaterialFlatButton.Click += new System.EventHandler(this.backMaterialFlatButton_Click);
             // 
             // nextMaterialFlatButton
             // 
@@ -168,24 +173,24 @@ namespace specialitySelectionAssistant
             this.nextMaterialFlatButton.TabIndex = 11;
             this.nextMaterialFlatButton.Text = "Далі";
             this.nextMaterialFlatButton.UseVisualStyleBackColor = false;
-            this.nextMaterialFlatButton.Click += new System.EventHandler(this.materialFlatButton1_Click);
+            this.nextMaterialFlatButton.Click += new System.EventHandler(this.nextMaterialFlatButton_Click);
             // 
-            // materialFlatButton2
+            // helpMaterialFlatButton
             // 
-            this.materialFlatButton2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.materialFlatButton2.AutoSize = true;
-            this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton2.Depth = 0;
-            this.materialFlatButton2.Location = new System.Drawing.Point(479, 508);
-            this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton2.Name = "materialFlatButton2";
-            this.materialFlatButton2.Primary = false;
-            this.materialFlatButton2.Size = new System.Drawing.Size(19, 36);
-            this.materialFlatButton2.TabIndex = 17;
-            this.materialFlatButton2.Text = "?";
-            this.materialFlatButton2.UseVisualStyleBackColor = true;
-            this.materialFlatButton2.Click += new System.EventHandler(this.materialFlatButton2_Click);
+            this.helpMaterialFlatButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.helpMaterialFlatButton.AutoSize = true;
+            this.helpMaterialFlatButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.helpMaterialFlatButton.Depth = 0;
+            this.helpMaterialFlatButton.Location = new System.Drawing.Point(479, 508);
+            this.helpMaterialFlatButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.helpMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.helpMaterialFlatButton.Name = "helpMaterialFlatButton";
+            this.helpMaterialFlatButton.Primary = false;
+            this.helpMaterialFlatButton.Size = new System.Drawing.Size(19, 36);
+            this.helpMaterialFlatButton.TabIndex = 17;
+            this.helpMaterialFlatButton.Text = "?";
+            this.helpMaterialFlatButton.UseVisualStyleBackColor = true;
+            this.helpMaterialFlatButton.Click += new System.EventHandler(this.helpMaterialFlatButton_Click);
             // 
             // listQuestionQuestionLabel
             // 
@@ -204,7 +209,7 @@ namespace specialitySelectionAssistant
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1000, 562);
             this.Controls.Add(this.listQuestionQuestionLabel);
-            this.Controls.Add(this.materialFlatButton2);
+            this.Controls.Add(this.helpMaterialFlatButton);
             this.Controls.Add(this.backMaterialFlatButton);
             this.Controls.Add(this.nextMaterialFlatButton);
             this.Controls.Add(this.veryDislikeMaterialRadioButton);
@@ -218,7 +223,7 @@ namespace specialitySelectionAssistant
             this.Name = "ListQuestionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Питання №2";
-            this.Load += new System.EventHandler(this.Form3_Load);
+            this.Load += new System.EventHandler(this.ListQuestionForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,7 +238,7 @@ namespace specialitySelectionAssistant
         private MaterialSkin.Controls.MaterialRadioButton veryDislikeMaterialRadioButton;
         private MaterialSkin.Controls.MaterialFlatButton backMaterialFlatButton;
         private MaterialSkin.Controls.MaterialFlatButton nextMaterialFlatButton;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
+        private MaterialSkin.Controls.MaterialFlatButton helpMaterialFlatButton;
         private System.Windows.Forms.Label listQuestionQuestionLabel;
     }
 }

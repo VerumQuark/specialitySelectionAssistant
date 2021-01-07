@@ -125,5 +125,10 @@ namespace specialitySelectionAssistant
             isProfessionChosen = true;
             chosenProfesion = pairQuestion.secondProfession;
         }
+
+        private void rightProffesionMaterialLabel_Click(object sender, EventArgs e)
+        {
+            ///тест
+        }
     }
 }

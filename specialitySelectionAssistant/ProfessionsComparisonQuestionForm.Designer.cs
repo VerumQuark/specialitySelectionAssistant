@@ -109,6 +109,7 @@ namespace specialitySelectionAssistant
             this.rightProffesionMaterialLabel.Size = new System.Drawing.Size(108, 19);
             this.rightProffesionMaterialLabel.TabIndex = 13;
             this.rightProffesionMaterialLabel.Text = "materialLabel2";
+            this.rightProffesionMaterialLabel.Click += new System.EventHandler(this.rightProffesionMaterialLabel_Click);
             // 
             // leftProffesionButton
             // 

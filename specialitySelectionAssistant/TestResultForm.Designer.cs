@@ -29,28 +29,29 @@ namespace specialitySelectionAssistant
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialFlatButton2 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.helpMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.titleLabel = new System.Windows.Forms.Label();
             this.firstSpecialtyNameMaterialLabel = new MaterialSkin.Controls.MaterialLabel();
             this.secondSpecialtyNameMaterialLabel = new MaterialSkin.Controls.MaterialLabel();
             this.thirdSpecialtyNameMaterialLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.closeMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
-            // materialFlatButton2
+            // helpMaterialFlatButton
             // 
-            this.materialFlatButton2.AutoSize = true;
-            this.materialFlatButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton2.Depth = 0;
-            this.materialFlatButton2.Location = new System.Drawing.Point(479, 508);
-            this.materialFlatButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialFlatButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton2.Name = "materialFlatButton2";
-            this.materialFlatButton2.Primary = false;
-            this.materialFlatButton2.Size = new System.Drawing.Size(19, 36);
-            this.materialFlatButton2.TabIndex = 17;
-            this.materialFlatButton2.Text = "?";
-            this.materialFlatButton2.UseVisualStyleBackColor = true;
+            this.helpMaterialFlatButton.AutoSize = true;
+            this.helpMaterialFlatButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.helpMaterialFlatButton.Depth = 0;
+            this.helpMaterialFlatButton.Location = new System.Drawing.Point(479, 508);
+            this.helpMaterialFlatButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.helpMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.helpMaterialFlatButton.Name = "helpMaterialFlatButton";
+            this.helpMaterialFlatButton.Primary = false;
+            this.helpMaterialFlatButton.Size = new System.Drawing.Size(19, 36);
+            this.helpMaterialFlatButton.TabIndex = 17;
+            this.helpMaterialFlatButton.Text = "?";
+            this.helpMaterialFlatButton.UseVisualStyleBackColor = true;
+            this.helpMaterialFlatButton.Click += new System.EventHandler(this.helpMaterialFlatButton_Click);
             // 
             // titleLabel
             // 
@@ -104,51 +105,52 @@ namespace specialitySelectionAssistant
             this.thirdSpecialtyNameMaterialLabel.TabIndex = 26;
             this.thirdSpecialtyNameMaterialLabel.Text = "materialLabel3";
             // 
-            // materialFlatButton1
+            // closeMaterialFlatButton
             // 
-            this.materialFlatButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialFlatButton1.AutoSize = true;
-            this.materialFlatButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton1.BackColor = System.Drawing.SystemColors.Window;
-            this.materialFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.materialFlatButton1.Depth = 0;
-            this.materialFlatButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.materialFlatButton1.Location = new System.Drawing.Point(868, 509);
-            this.materialFlatButton1.Margin = new System.Windows.Forms.Padding(6, 10, 6, 10);
-            this.materialFlatButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton1.Name = "materialFlatButton1";
-            this.materialFlatButton1.Primary = false;
-            this.materialFlatButton1.Size = new System.Drawing.Size(95, 36);
-            this.materialFlatButton1.TabIndex = 27;
-            this.materialFlatButton1.Text = "Завершити";
-            this.materialFlatButton1.UseVisualStyleBackColor = false;
+            this.closeMaterialFlatButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.closeMaterialFlatButton.AutoSize = true;
+            this.closeMaterialFlatButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.closeMaterialFlatButton.BackColor = System.Drawing.SystemColors.Window;
+            this.closeMaterialFlatButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.closeMaterialFlatButton.Depth = 0;
+            this.closeMaterialFlatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.closeMaterialFlatButton.Location = new System.Drawing.Point(868, 509);
+            this.closeMaterialFlatButton.Margin = new System.Windows.Forms.Padding(6, 10, 6, 10);
+            this.closeMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.closeMaterialFlatButton.Name = "closeMaterialFlatButton";
+            this.closeMaterialFlatButton.Primary = false;
+            this.closeMaterialFlatButton.Size = new System.Drawing.Size(95, 36);
+            this.closeMaterialFlatButton.TabIndex = 27;
+            this.closeMaterialFlatButton.Text = "Завершити";
+            this.closeMaterialFlatButton.UseVisualStyleBackColor = false;
+            this.closeMaterialFlatButton.Click += new System.EventHandler(this.closeMaterialFlatButton_Click);
             // 
             // TestResultForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1000, 562);
-            this.Controls.Add(this.materialFlatButton1);
+            this.Controls.Add(this.closeMaterialFlatButton);
             this.Controls.Add(this.thirdSpecialtyNameMaterialLabel);
             this.Controls.Add(this.secondSpecialtyNameMaterialLabel);
             this.Controls.Add(this.firstSpecialtyNameMaterialLabel);
             this.Controls.Add(this.titleLabel);
-            this.Controls.Add(this.materialFlatButton2);
+            this.Controls.Add(this.helpMaterialFlatButton);
             this.MinimumSize = new System.Drawing.Size(1000, 562);
             this.Name = "TestResultForm";
             this.Text = "Результати!";
-            this.Load += new System.EventHandler(this.Form4_Load);
+            this.Load += new System.EventHandler(this.testResultForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton2;
+        private MaterialSkin.Controls.MaterialFlatButton helpMaterialFlatButton;
         private System.Windows.Forms.Label titleLabel;
         private MaterialSkin.Controls.MaterialLabel firstSpecialtyNameMaterialLabel;
         private MaterialSkin.Controls.MaterialLabel secondSpecialtyNameMaterialLabel;
         private MaterialSkin.Controls.MaterialLabel thirdSpecialtyNameMaterialLabel;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton1;
+        private MaterialSkin.Controls.MaterialFlatButton closeMaterialFlatButton;
     }
 }

@@ -156,6 +156,7 @@ namespace specialitySelectionAssistant
             this.helpMaterialFlatButton.TabIndex = 7;
             this.helpMaterialFlatButton.Text = "?";
             this.helpMaterialFlatButton.UseVisualStyleBackColor = true;
+            this.helpMaterialFlatButton.Click += new System.EventHandler(this.helpMaterialFlatButton_Click);
             // 
             // RegistrationForm
             // 

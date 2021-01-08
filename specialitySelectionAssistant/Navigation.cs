@@ -11,6 +11,8 @@ namespace specialitySelectionAssistant
 {
     static class Navigation
     {
+        static Form prevForm;
+
         static public void startTest(bool haveResult, Form form)
         {
             if (haveResult)
@@ -23,6 +25,13 @@ namespace specialitySelectionAssistant
                 form.Close();
                 Program.Context.MainForm.Show();
             }
+        }
+
+        static public void backToPrevForm(Form form)
+        {
+            Program.Context.MainForm = prevForm;
+            form.Close();
+            Program.Context.MainForm.Show();
         }
 
         static public void backToRegistrationForm(Form form)
@@ -55,8 +64,10 @@ namespace specialitySelectionAssistant
         
         static public void openHelpForm(Form form)
         {
-            //Program.Context.MainForm = new HelpForm();
-            form.Close();
+            prevForm = form;
+
+            Program.Context.MainForm = new HelpForm();
+            prevForm.Hide();
             Program.Context.MainForm.Show();
         }
         

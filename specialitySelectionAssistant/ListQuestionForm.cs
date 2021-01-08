@@ -94,7 +94,7 @@ namespace specialitySelectionAssistant
 
         private void helpMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            //REWORK
+            Navigation.openHelpForm(this);
         }
 
         private void veryLikeMaterialRadioButton_CheckedChanged(object sender, EventArgs e)

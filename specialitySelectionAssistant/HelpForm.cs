@@ -9,13 +9,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SpecialtySelectionAssistantLibrary;
 
 namespace specialitySelectionAssistant
 {
-    public partial class TestResultForm : MaterialForm
+    public partial class HelpForm : MaterialForm
     {
-        public TestResultForm()
+        public HelpForm()
         {
             InitializeComponent();
 
@@ -25,23 +24,14 @@ namespace specialitySelectionAssistant
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange300, Primary.Orange400, Primary.Orange100, Accent.LightBlue200, TextShade.BLACK);
         }
 
-        private void testResultForm_Load(object sender, EventArgs e)
+        private void HelpForm_Load(object sender, EventArgs e)
         {
-            List<Specialty> specialties = preferredSpecialtiesDeterminant.getDetermineSpecialties();
 
-            firstSpecialtyNameMaterialLabel.Text = specialties[0].name;
-            secondSpecialtyNameMaterialLabel.Text = specialties[1].name;
-            thirdSpecialtyNameMaterialLabel.Text = specialties[2].name;
         }
 
-        private void helpMaterialFlatButton_Click(object sender, EventArgs e)
+        private void backMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            Navigation.openHelpForm(this);
-        }
-
-        private void closeMaterialFlatButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            Navigation.backToPrevForm(this);
         }
     }
 }

@@ -38,5 +38,10 @@ namespace specialitySelectionAssistant
 
             Navigation.startTest(haveZno, this);
         }
+
+        private void helpMaterialFlatButton_Click(object sender, EventArgs e)
+        {
+            Navigation.openHelpForm(this);
+        }
     }
 }

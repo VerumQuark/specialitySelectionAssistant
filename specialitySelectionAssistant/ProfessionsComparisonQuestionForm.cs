@@ -50,7 +50,7 @@ namespace specialitySelectionAssistant
 
             if (HollandTest.isFirstQuestion)
             {
-                Navigation.backToRegistrationForm(this);
+                Navigation.toRegistrationForm(this);
             }
             else
             {
@@ -70,7 +70,7 @@ namespace specialitySelectionAssistant
                 if (HollandTest.isLastQuestion)
                 {
                     HollandTest.saveTestResult();
-                    Navigation.goToListQuestionsForm(this);
+                    Navigation.toListQuestionsForm(this);
                 }
                 else
                 {
@@ -111,7 +111,7 @@ namespace specialitySelectionAssistant
 
         private void HelpMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            Navigation.openHelpForm(this);
+            Navigation.toHelpForm(this);
         }
 
         private void leftProfessionButton_Click(object sender, EventArgs e)

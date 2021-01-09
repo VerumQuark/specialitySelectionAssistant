@@ -41,7 +41,7 @@ namespace specialitySelectionAssistant
 
         private void helpMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            Navigation.openHelpForm(this);
+            Navigation.toHelpForm(this);
         }
     }
 }

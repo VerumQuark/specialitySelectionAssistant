@@ -31,7 +31,7 @@ namespace specialitySelectionAssistant
 
         private void backMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            Navigation.backToPrevForm(this);
+            Navigation.toPrevForm(this);
         }
     }
 }

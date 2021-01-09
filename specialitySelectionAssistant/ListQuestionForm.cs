@@ -56,7 +56,7 @@ namespace specialitySelectionAssistant
  
             if (UserPreferencesTest.isFirstQuestion)
             {
-                Navigation.backToComparisonQuestionForm(this);
+                Navigation.toComparisonQuestionForm(this);
             }
             else
             {
@@ -77,7 +77,7 @@ namespace specialitySelectionAssistant
                 {
                     UserPreferencesTest.saveTestResult();
                     preferredSpecialtiesDeterminant.setSpecialties(UserPreferencesTest.resultSpecialties);
-                    Navigation.goToResultForm(this);
+                    Navigation.toResultForm(this);
                 }
                 else
                 {
@@ -94,7 +94,7 @@ namespace specialitySelectionAssistant
 
         private void helpMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            Navigation.openHelpForm(this);
+            Navigation.toHelpForm(this);
         }
 
         private void veryLikeMaterialRadioButton_CheckedChanged(object sender, EventArgs e)

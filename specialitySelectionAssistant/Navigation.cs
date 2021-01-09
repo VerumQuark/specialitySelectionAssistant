@@ -11,13 +11,15 @@ namespace specialitySelectionAssistant
 {
     static class Navigation
     {
-        static Form prevForm;
+        static System.Windows.Forms.Form prevForm;
 
         static public void startTest(bool haveResult, Form form)
         {
             if (haveResult)
             {
-                //new Thread(OpenZnoForm).Start();
+                Program.Context.MainForm = new ZnoForm();
+                form.Close();
+                Program.Context.MainForm.Show();
             }
             else
             {
@@ -27,42 +29,42 @@ namespace specialitySelectionAssistant
             }
         }
 
-        static public void backToPrevForm(Form form)
+        static public void toPrevForm(System.Windows.Forms.Form form)
         {
             Program.Context.MainForm = prevForm;
             form.Close();
             Program.Context.MainForm.Show();
         }
 
-        static public void backToRegistrationForm(Form form)
+        static public void toRegistrationForm(System.Windows.Forms.Form form)
         {
             Program.Context.MainForm = new RegistrationForm();
             form.Close();
             Program.Context.MainForm.Show();
         }
 
-        static public void goToListQuestionsForm(Form form)
+        static public void toListQuestionsForm(System.Windows.Forms.Form form)
         {
             Program.Context.MainForm = new ListQuestionForm();
             form.Close();
             Program.Context.MainForm.Show();
         }
 
-        static public void backToComparisonQuestionForm(Form form)
+        static public void toComparisonQuestionForm(System.Windows.Forms.Form form)
         {
             Program.Context.MainForm = new ProfessionsComparisonQuestionForm();
             form.Close();
             Program.Context.MainForm.Show();
         }
 
-        static public void goToResultForm(Form form)
+        static public void toResultForm(System.Windows.Forms.Form form)
         {
             Program.Context.MainForm = new TestResultForm();
             form.Close();
             Program.Context.MainForm.Show();
         }
         
-        static public void openHelpForm(Form form)
+        static public void toHelpForm(System.Windows.Forms.Form form)
         {
             prevForm = form;
 

@@ -26,11 +26,6 @@ namespace SpecialtySelectionAssistantLibrary
             }
         }
 
-    struct ZnoSubject {
-        string name;
-        int scores;
-    }
-
     static public class User
     {
         static public HollandResult hollandResult;

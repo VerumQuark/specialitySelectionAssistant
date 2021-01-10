@@ -15,6 +15,13 @@ namespace specialitySelectionAssistant
 {
     public partial class ZnoForm : MaterialForm
     {
+        List<ZnoSubject> znoSubjects;
+
+        bool isMandatoryComboboxsEmpty = false;
+
+        ComboBox[] comboBoxesArr;
+        NumericUpDown[] numericUpDownsArr;
+
         public ZnoForm()
         {
             InitializeComponent();
@@ -25,19 +32,12 @@ namespace specialitySelectionAssistant
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange300, Primary.Orange400, Primary.Orange100, Accent.LightBlue200, TextShade.BLACK);
         }
 
-        private void backMaterialFlatButton_Click(object sender, EventArgs e)
-        {
-            Navigation.toRegistrationForm(this);
-        }
-
-        private void nextMaterialFlatButton_Click(object sender, EventArgs e)
-        {
-
-            Navigation.toComparisonQuestionForm(this);
-        }
-
         private void ZnoForm_Load(object sender, EventArgs e)
         {
+            isMandatoryComboboxsEmpty = false;
+
+            znoSubjects = new List<ZnoSubject>();
+
             firstSubjectComboBox.Items.AddRange(Constants.FIRST_ZNO_SUBJECTS);
             secondSubjectComboBox.Items.AddRange(Constants.SECOND_ZNO_SUBJECTS);
             thirdSubjectComboBox.Items.AddRange(Constants.THIRD_ZNO_SUBJECTS);
@@ -50,6 +50,110 @@ namespace specialitySelectionAssistant
                 numericUpDown.Minimum = 100;
                 ((TextBox)numericUpDown.Controls[1]).MaxLength = 3;
             }
+
+            comboBoxesArr = new[]
+            {
+                firstSubjectComboBox,
+                secondSubjectComboBox,
+                thirdSubjectComboBox,
+                fourthSubjectComboBox,
+                fifthSubjectComboBox
+            };
+
+            numericUpDownsArr = new[]
+            {
+                firstSubjectPotintsNumericUpDown,
+                secondSubjectPotintsNumericUpDown,
+                thirdSubjectPotintsNumericUpDown,
+                fourthSubjectPotintsNumericUpDown,
+                fifthSubjectPotintsNumericUpDown
+            };
+        }
+
+        private void backMaterialFlatButton_Click(object sender, EventArgs e)
+        {
+            Navigation.toRegistrationForm(this);
+        }
+
+        private void helpMaterialFlatButton_Click(object sender, EventArgs e)
+        {
+            Navigation.toHelpForm(this);
+        }
+
+        private void nextMaterialFlatButton_Click(object sender, EventArgs e)
+        {
+            saveZnoSubjects();
+
+            if (isMandatoryComboboxsEmpty)
+            {
+                MessageBox.Show("Оберіть три обов'язкових предмети");
+                isMandatoryComboboxsEmpty = false;
+            }
+            else
+            {
+                preferredSpecialtiesDeterminant.setZnoSubjects(znoSubjects);
+                Navigation.toComparisonQuestionForm(this);
+            }
+        }
+
+        private void saveZnoSubjects()
+        {
+            znoSubjects = new List<ZnoSubject>();
+
+            for (int i = 0; i < 3; i++)
+            {
+                checkIsComboBoxEmpty(comboBoxesArr[i]);
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                saveZnoSubject(comboBoxesArr[i], numericUpDownsArr[i]);
+            }
+
+        }
+
+        private void checkIsComboBoxEmpty(ComboBox comboBox)
+        {
+            if (comboBox.Text == "")
+            {
+                addBorder(comboBox);
+
+                isMandatoryComboboxsEmpty = true;
+            }
+        }
+
+        private void addBorder(Control comboBox)
+        {
+            Graphics formGraphics;
+            formGraphics = this.CreateGraphics();
+
+            formGraphics.DrawRectangle(
+            Pens.Red,
+            comboBox.Left - 1,
+            comboBox.Top - 1,
+            comboBox.Width + 1,
+            comboBox.Height + 1);
+        }
+
+        private void saveZnoSubject(ComboBox comboBox, NumericUpDown numericUpDown)
+        {
+            ZnoSubject znoSubject = new ZnoSubject();
+
+            znoSubject.name = comboBox.Text;
+            znoSubject.points = (int)numericUpDown.Value;
+
+            znoSubjects.Add(znoSubject);
+        }
+
+        private void subjectComboBox_Click(object sender, EventArgs e)
+        {
+            ComboBox comboBox = (ComboBox)sender;
+            comboBox.DroppedDown = true;
+        }
+
+        private void subjectComboBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
 
         private void subjectPotintsNumericUpDown_KeyUp(object sender, KeyEventArgs e)
@@ -65,15 +169,13 @@ namespace specialitySelectionAssistant
             }
         }
 
-        private void helpMaterialFlatButton_Click(object sender, EventArgs e)
+        private void subjectPotintsNumericUpDown_Leave(object sender, EventArgs e)
         {
-            Navigation.toHelpForm(this);
-        }
-
-        private void subjectComboBox_Click(object sender, EventArgs e)
-        {
-            ComboBox comboBox = (ComboBox)sender;
-            comboBox.DroppedDown = true;
+            NumericUpDown numericUpDown = (NumericUpDown)sender;
+            if(numericUpDown.Value < 100)
+            {
+                numericUpDown.Value = 100;
+            }
         }
     }
 }

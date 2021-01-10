@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace SpecialtySelectionAssistantLibrary
 {
+    public struct ZnoSubject
+    {
+        public string name;
+        public int points;
+    }
+
     static public class preferredSpecialtiesDeterminant
     {
         static List<Specialty> specialties;
@@ -33,6 +39,11 @@ namespace SpecialtySelectionAssistantLibrary
             tune();
             specialtiesCheking?.Invoke();
             return determinedSpecialties;
+        }
+
+        static public void setZnoSubjects(List<ZnoSubject> znoSubjectsArr)
+        {
+            znoSubjects = new List<ZnoSubject>(znoSubjectsArr);
         }
 
         static public void setSpecialties(Specialty[] specialtiesArr)

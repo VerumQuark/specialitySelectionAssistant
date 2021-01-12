@@ -14,29 +14,34 @@ namespace SpecialtySelectionAssistantLibrary
 
     static public class preferredSpecialtiesDeterminant
     {
-        static List<Specialty> specialties;
-
         static bool isBudget;
         static bool isContract;
-        static bool haveZno;
+        static bool isHaveZno;
+
         static List<ZnoSubject> znoSubjects;
+        static List<Specialty> specialties;
+        static List<Specialty> defaultCheckedSpecialties;
+        static List<Specialty> determinedSpecialties;
 
         delegate void SpecialtiesCheking();
         static SpecialtiesCheking specialtiesCheking;
 
-        static List<Specialty> determinedSpecialties;
 
         static preferredSpecialtiesDeterminant()
         {
             isBudget = false;
             isContract = false;
-            haveZno = false;
+            isHaveZno = false;
+
+            znoSubjects = new List<ZnoSubject>();
+            specialties = new List<Specialty>();
             determinedSpecialties = new List<Specialty>();
+            defaultCheckedSpecialties = new List<Specialty>();
         }
 
         static public List<Specialty> getDetermineSpecialties()
         {
-            tune();
+            configureCheck();
             specialtiesCheking?.Invoke();
             return determinedSpecialties;
         }
@@ -51,59 +56,104 @@ namespace SpecialtySelectionAssistantLibrary
             specialties = new List<Specialty>(specialtiesArr);
         }
 
-        static public void setEducationForm(bool isBudgetValue, bool isContractValue, bool haveZnoValue)
+        static public void setEducationForm(bool isBudgetValue, bool isContractValue, bool isHaveZnoValue)
         {
             isBudget = isBudgetValue;
             isContract = isContractValue;
-            haveZno = haveZnoValue;
+            isHaveZno = isHaveZnoValue;
         }
 
-        static void tune()
+        static void configureCheck()
         {
+            specialtiesCheking = defaultCheck;
+
             if (isBudget == true && isContract == false)
                 specialtiesCheking += budgetCheck;
-            else
-                specialtiesCheking -= budgetCheck;
 
-            if (haveZno)
+            if (isHaveZno)
                 specialtiesCheking += znoCheck;
-            else
-                specialtiesCheking -= znoCheck;
 
-            specialtiesCheking += defaultCheck;
+            specialtiesCheking += fillingCheck;
         }
-
         static void defaultCheck()
         {
-            List<Specialty> checkedSpecialties = new List<Specialty>();
-
             specialties.Sort((x, y) => x.userLikes.CompareTo(y.userLikes));
 
-            if(specialties.Count >= 3)
-            {
-                for(int i = 0; i < 3; i++)
-                {
-                    determinedSpecialties.Add(specialties[i]);
-                }
-            }
-
-        }
-
-        static void znoCheck()
-        {
-
+            defaultCheckedSpecialties = specialties;
         }
 
         static void budgetCheck()
         {
             List<Specialty> checkedSpecialties = new List<Specialty>();
 
-            foreach(Specialty specialty in specialties)
+            foreach (Specialty specialty in specialties)
             {
                 if (specialty.budget) checkedSpecialties.Add(specialty);
             }
 
             specialties = checkedSpecialties;
         }
+
+        static void znoCheck()
+        {
+            List<Specialty> checkedSpecialties = new List<Specialty>();
+
+            foreach (Specialty specialty in specialties)
+            {
+                double totalPoints = 0;
+                List<double> optionalPoints = new List<double>();
+
+                foreach(Subject subject in specialty.subjects)
+                {
+                    if (znoSubjects.Exists(x => x.name == subject.name))
+                    {
+                        ZnoSubject znoSubject = znoSubjects.Find(x => x.name.Contains(subject.name));
+
+                        if (subject.isMandatory)
+                        {
+                            totalPoints += znoSubject.points * subject.coefficient;
+                        }
+                        else
+                        {
+                            optionalPoints.Add(znoSubject.points * subject.coefficient);
+                        }
+                    }
+                    else
+                    {
+                        if (subject.isMandatory) break;
+                    }
+                }
+                if(optionalPoints.Count != 0) totalPoints += optionalPoints.Max();
+
+                if (totalPoints * 1.05 >= specialty.ZNO_points)
+                {
+                    checkedSpecialties.Add(specialty);
+                }
+            }
+
+            specialties = checkedSpecialties;
+        }
+
+        static void fillingCheck()
+        {
+            if (specialties.Count >= 3)
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    determinedSpecialties.Add(specialties[i]);
+                }
+            }
+            else
+            {
+                int i = 0;
+                while (determinedSpecialties.Count <= 3)
+                {
+                    determinedSpecialties.Add(defaultCheckedSpecialties[i]);
+
+                    i++;
+                }
+            }
+        }
+
     }
 }

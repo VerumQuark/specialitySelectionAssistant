@@ -1,11 +1,11 @@
-   [
+[
       {
          "name":"Faculty of Engineering Physics",
          "hollandCharacteristics":{
-            "realistic":9,
+            "realistic":11,
             "intelligent":0,
             "social":0,
-            "conventional":5,
+            "conventional":7,
             "enterprising":0,
             "artistic":0
          },
@@ -16,22 +16,22 @@
                "ZNO_points":127,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.25,
                      "isMandatory":true
                   },
                   {
-                     "name":"hist",
+                     "name":"\u0406\u0441\u0442\u043E\u0440\u0456\u044F \u0423\u043A\u0440\u0430\u0457\u043D\u0438",
                      "coefficient":0.25,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   }
@@ -54,22 +54,22 @@
                "ZNO_points":131,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.25,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -92,22 +92,22 @@
                "ZNO_points":119,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.35,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -129,10 +129,10 @@
       {
          "name":"Faculty of Electrical Engineering",
          "hollandCharacteristics":{
-            "realistic":5,
+            "realistic":7,
             "intelligent":1,
             "social":0,
-            "conventional":8,
+            "conventional":10,
             "enterprising":1,
             "artistic":0
          },
@@ -143,22 +143,22 @@
                "ZNO_points":127,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.45,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   }
@@ -181,22 +181,22 @@
                "ZNO_points":105,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.45,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   }
@@ -219,22 +219,22 @@
                "ZNO_points":140,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.35,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   }
@@ -257,22 +257,22 @@
                "ZNO_points":105,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.35,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -294,10 +294,10 @@
       {
          "name":"Faculty of Computer Science and Technology",
          "hollandCharacteristics":{
-            "realistic":3,
-            "intelligent":10,
+            "realistic":5,
+            "intelligent":12,
             "social":0,
-            "conventional":6,
+            "conventional":8,
             "enterprising":2,
             "artistic":0
          },
@@ -308,22 +308,22 @@
                "ZNO_points":174,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.5,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   }
@@ -346,22 +346,22 @@
                "ZNO_points":163,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.5,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   }
@@ -384,22 +384,22 @@
                "ZNO_points":168,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.4,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -422,22 +422,22 @@
                "ZNO_points":164,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.4,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   }
@@ -459,10 +459,10 @@
       {
          "name":"Faculty of Radio Electronics and Telecommunications",
          "hollandCharacteristics":{
-            "realistic":4,
-            "intelligent":7,
-            "social":1,
-            "conventional":7,
+            "realistic":6,
+            "intelligent":9,
+            "social":3,
+            "conventional":9,
             "enterprising":1,
             "artistic":0
          },
@@ -473,22 +473,22 @@
                "ZNO_points":168,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.4,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -510,22 +510,22 @@
                "ZNO_points":140,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.35,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -547,22 +547,22 @@
                "ZNO_points":146,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.35,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -584,22 +584,22 @@
                "ZNO_points":151,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.35,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -621,22 +621,22 @@
                "ZNO_points":139,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.4,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.25,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.25,
                      "isMandatory":false
                   }
@@ -657,11 +657,11 @@
       {
          "name":"Faculty of Mechanical Engineering",
          "hollandCharacteristics":{
-            "realistic":10,
-            "intelligent":2,
+            "realistic":12,
+            "intelligent":4,
             "social":0,
-            "conventional":9,
-            "enterprising":1,
+            "conventional":11,
+            "enterprising":3,
             "artistic":0
          },
          "specialties":[
@@ -671,22 +671,22 @@
                "ZNO_points":119,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   }
@@ -709,22 +709,22 @@
                "ZNO_points":122,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   }
@@ -747,22 +747,22 @@
                "ZNO_points":125,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   }
@@ -784,12 +784,12 @@
       {
          "name":"Faculty of Construction, Architecture and Design",
          "hollandCharacteristics":{
-            "realistic":2,
-            "intelligent":3,
-            "social":6,
-            "conventional":7,
-            "enterprising":6,
-            "artistic":10
+            "realistic":4,
+            "intelligent":5,
+            "social":8,
+            "conventional":9,
+            "enterprising":8,
+            "artistic":12
          },
          "specialties":[
             {
@@ -798,7 +798,7 @@
                "ZNO_points":150,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
@@ -808,12 +808,12 @@
                      "isMandatory":true
                   },
                   {
-                     "name":"hist",
+                     "name":"\u0406\u0441\u0442\u043E\u0440\u0456\u044F \u0423\u043A\u0440\u0430\u0457\u043D\u0438",
                      "coefficient":0.2,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   }
@@ -835,22 +835,22 @@
                "ZNO_points":176,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.4,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.25,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.25,
                      "isMandatory":false
                   },
                   {
-                     "name":"geogr",
+                     "name":"\u0413\u0435\u043E\u0433\u0440\u0430\u0444\u0456\u044F",
                      "coefficient":0.25,
                      "isMandatory":false
                   }
@@ -872,22 +872,22 @@
                "ZNO_points":105,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.35,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.25,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -909,22 +909,22 @@
                "ZNO_points":127,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.25,
                      "isMandatory":true
                   },
                   {
-                     "name":"hist",
+                     "name":"\u0406\u0441\u0442\u043E\u0440\u0456\u044F \u0423\u043A\u0440\u0430\u0457\u043D\u0438",
                      "coefficient":0.25,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   }
@@ -946,12 +946,12 @@
                "ZNO_points":166,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
@@ -978,22 +978,22 @@
                "ZNO_points":129,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.35,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   }
@@ -1014,11 +1014,11 @@
       {
          "name":"Faculty of Transport",
          "hollandCharacteristics":{
-            "realistic":2,
-            "intelligent":8,
-            "social":4,
-            "conventional":10,
-            "enterprising":2,
+            "realistic":4,
+            "intelligent":10,
+            "social":6,
+            "conventional":12,
+            "enterprising":4,
             "artistic":0
          },
          "specialties":[
@@ -1028,22 +1028,22 @@
                "ZNO_points":122,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   }
@@ -1066,22 +1066,22 @@
                "ZNO_points":122,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   }
@@ -1104,22 +1104,22 @@
                "ZNO_points":128,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   },
                   {
-                     "name":"phys",
+                     "name":"\u0424\u0456\u0437\u0438\u043A\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   }
@@ -1142,10 +1142,10 @@
          "name":"Faculty of Economics and Management",
          "hollandCharacteristics":{
             "realistic":0,
-            "intelligent":2,
-            "social":6,
-            "conventional":9,
-            "enterprising":10,
+            "intelligent":4,
+            "social":8,
+            "conventional":11,
+            "enterprising":12,
             "artistic":0
          },
          "specialties":[
@@ -1155,22 +1155,22 @@
                "ZNO_points":105,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.25,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   },
                   {
-                     "name":"geogr",
+                     "name":"\u0413\u0435\u043E\u0433\u0440\u0430\u0444\u0456\u044F",
                      "coefficient":0.35,
                      "isMandatory":false
                   }
@@ -1192,22 +1192,22 @@
                "ZNO_points":146,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.35,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.25,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"geogr",
+                     "name":"\u0413\u0435\u043E\u0433\u0440\u0430\u0444\u0456\u044F",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -1229,22 +1229,22 @@
                "ZNO_points":176,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.4,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.25,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.25,
                      "isMandatory":false
                   },
                   {
-                     "name":"geogr",
+                     "name":"\u0413\u0435\u043E\u0433\u0440\u0430\u0444\u0456\u044F",
                      "coefficient":0.25,
                      "isMandatory":false
                   }
@@ -1266,22 +1266,22 @@
                "ZNO_points":105,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.5,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.35,
                      "isMandatory":false
                   },
                   {
-                     "name":"geogr",
+                     "name":"\u0413\u0435\u043E\u0433\u0440\u0430\u0444\u0456\u044F",
                      "coefficient":0.35,
                      "isMandatory":false
                   }
@@ -1303,22 +1303,22 @@
                "ZNO_points":105,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.35,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.25,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"geogr",
+                     "name":"\u0413\u0435\u043E\u0433\u0440\u0430\u0444\u0456\u044F",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -1340,22 +1340,22 @@
                "ZNO_points":105,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.4,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.25,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.25,
                      "isMandatory":false
                   },
                   {
-                     "name":"hist",
+                     "name":"\u0406\u0441\u0442\u043E\u0440\u0456\u044F \u0423\u043A\u0440\u0430\u0457\u043D\u0438",
                      "coefficient":0.25,
                      "isMandatory":false
                   }
@@ -1377,11 +1377,11 @@
          "name":"Faculty of Humanities / Faculty of Social Sciences",
          "hollandCharacteristics":{
             "realistic":0,
-            "intelligent":7,
-            "social":10,
-            "conventional":1,
-            "enterprising":10,
-            "artistic":3
+            "intelligent":9,
+            "social":12,
+            "conventional":3,
+            "enterprising":11,
+            "artistic":5
          },
          "specialties":[
             {
@@ -1390,22 +1390,22 @@
                "ZNO_points":188,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.2,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.5,
                      "isMandatory":true
                   },
                   {
-                     "name":"hist",
+                     "name":"\u0406\u0441\u0442\u043E\u0440\u0456\u044F \u0423\u043A\u0440\u0430\u0457\u043D\u0438",
                      "coefficient":0.2,
                      "isMandatory":false
                   },
                   {
-                     "name":"geogr",
+                     "name":"\u0413\u0435\u043E\u0433\u0440\u0430\u0444\u0456\u044F",
                      "coefficient":0.2,
                      "isMandatory":false
                   }
@@ -1427,22 +1427,22 @@
                "ZNO_points":190,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"geogr",
+                     "name":"\u0413\u0435\u043E\u0433\u0440\u0430\u0444\u0456\u044F",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -1464,22 +1464,22 @@
                "ZNO_points":105,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.35,
                      "isMandatory":true
                   },
                   {
-                     "name":"hist",
+                     "name":"\u0406\u0441\u0442\u043E\u0440\u0456\u044F \u0423\u043A\u0440\u0430\u0457\u043D\u0438",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.25,
                      "isMandatory":false
                   },
                   {
-                     "name":"bio",
+                     "name":"\u0411\u0456\u043E\u043B\u043E\u0433\u0456\u044F",
                      "coefficient":0.25,
                      "isMandatory":false
                   }
@@ -1501,22 +1501,22 @@
                "ZNO_points":105,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.35,
                      "isMandatory":true
                   },
                   {
-                     "name":"hist",
+                     "name":"\u0406\u0441\u0442\u043E\u0440\u0456\u044F \u0423\u043A\u0440\u0430\u0457\u043D\u0438",
                      "coefficient":0.35,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   }
@@ -1538,22 +1538,22 @@
                "ZNO_points":105,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.35,
                      "isMandatory":true
                   },
                   {
-                     "name":"hist",
+                     "name":"\u0406\u0441\u0442\u043E\u0440\u0456\u044F \u0423\u043A\u0440\u0430\u0457\u043D\u0438",
                      "coefficient":0.35,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.2,
                      "isMandatory":false
                   }
@@ -1576,7 +1576,7 @@
          "hollandCharacteristics":{
             "realistic":1,
             "intelligent":0,
-            "social":8,
+            "social":10,
             "conventional":1,
             "enterprising":2,
             "artistic":1
@@ -1588,22 +1588,22 @@
                "ZNO_points":167,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"bio",
+                     "name":"\u0411\u0456\u043E\u043B\u043E\u0433\u0456\u044F",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"hist",
+                     "name":"\u0406\u0441\u0442\u043E\u0440\u0456\u044F \u0423\u043A\u0440\u0430\u0457\u043D\u0438",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -1626,12 +1626,12 @@
                "ZNO_points":152,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"bio",
+                     "name":"\u0411\u0456\u043E\u043B\u043E\u0433\u0456\u044F",
                      "coefficient":0.35,
                      "isMandatory":true
                   },
@@ -1659,22 +1659,22 @@
                "ZNO_points":167,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"bio",
+                     "name":"\u0411\u0456\u043E\u043B\u043E\u0433\u0456\u044F",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"hist",
+                     "name":"\u0406\u0441\u0442\u043E\u0440\u0456\u044F \u0423\u043A\u0440\u0430\u0457\u043D\u0438",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -1698,9 +1698,9 @@
          "hollandCharacteristics":{
             "realistic":0,
             "intelligent":0,
-            "social":10,
+            "social":12,
             "conventional":1,
-            "enterprising":10,
+            "enterprising":12,
             "artistic":0
          },
          "specialties":[
@@ -1710,22 +1710,22 @@
                "ZNO_points":105,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"hist",
+                     "name":"\u0406\u0441\u0442\u043E\u0440\u0456\u044F \u0423\u043A\u0440\u0430\u0457\u043D\u0438",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"geogr",
+                     "name":"\u0413\u0435\u043E\u0433\u0440\u0430\u0444\u0456\u044F",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -1748,22 +1748,22 @@
                "ZNO_points":105,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"hist",
+                     "name":"\u0406\u0441\u0442\u043E\u0440\u0456\u044F \u0423\u043A\u0440\u0430\u0457\u043D\u0438",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -1786,12 +1786,12 @@
                "ZNO_points":105,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.35,
                      "isMandatory":true
                   },
                   {
-                     "name":"hist",
+                     "name":"\u0406\u0441\u0442\u043E\u0440\u0456\u044F \u0423\u043A\u0440\u0430\u0457\u043D\u0438",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
@@ -1819,10 +1819,10 @@
          "name":"Faculty of International Tourism and Economics",
          "hollandCharacteristics":{
             "realistic":0,
-            "intelligent":3,
-            "social":8,
-            "conventional":6,
-            "enterprising":10,
+            "intelligent":5,
+            "social":10,
+            "conventional":8,
+            "enterprising":12,
             "artistic":0
          },
          "specialties":[
@@ -1832,22 +1832,22 @@
                "ZNO_points":184,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"geogr",
+                     "name":"\u0413\u0435\u043E\u0433\u0440\u0430\u0444\u0456\u044F",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -1870,22 +1870,22 @@
                "ZNO_points":105,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"hist",
+                     "name":"\u0406\u0441\u0442\u043E\u0440\u0456\u044F \u0423\u043A\u0440\u0430\u0457\u043D\u0438",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"geogr",
+                     "name":"\u0413\u0435\u043E\u0433\u0440\u0430\u0444\u0456\u044F",
                      "coefficient":0.3,
                      "isMandatory":false
                   }
@@ -1908,22 +1908,22 @@
                "ZNO_points":105,
                "subjects":[
                   {
-                     "name":"ukr",
+                     "name":"\u0423\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430 \u0456 \u043B\u0456\u0442\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"eng",
+                     "name":"\u0410\u043D\u0433\u043B\u0456\u0439\u0441\u044C\u043A\u0430 \u043C\u043E\u0432\u0430",
                      "coefficient":0.3,
                      "isMandatory":true
                   },
                   {
-                     "name":"math",
+                     "name":"\u041C\u0430\u0442\u0435\u043C\u0430\u0442\u0438\u043A\u0430",
                      "coefficient":0.3,
                      "isMandatory":false
                   },
                   {
-                     "name":"geogr",
+                     "name":"\u0413\u0435\u043E\u0433\u0440\u0430\u0444\u0456\u044F",
                      "coefficient":0.3,
                      "isMandatory":false
                   }

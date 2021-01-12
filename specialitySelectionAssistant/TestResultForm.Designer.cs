@@ -35,6 +35,12 @@ namespace specialitySelectionAssistant
             this.secondSpecialtyNameMaterialLabel = new MaterialSkin.Controls.MaterialLabel();
             this.thirdSpecialtyNameMaterialLabel = new MaterialSkin.Controls.MaterialLabel();
             this.closeMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
+            this.firstSpecialtyDescriptionLabel = new System.Windows.Forms.Label();
+            this.secondSpecialtyDescriptionLabel = new System.Windows.Forms.Label();
+            this.thirdSpecialtyDescriptionLabel = new System.Windows.Forms.Label();
+            this.firstSpecialtyProfessionsLabel = new System.Windows.Forms.Label();
+            this.secondSpecialtyProfessionsLabel = new System.Windows.Forms.Label();
+            this.thirdSpecialtyProfessionsLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // helpMaterialFlatButton
@@ -83,7 +89,7 @@ namespace specialitySelectionAssistant
             this.secondSpecialtyNameMaterialLabel.Depth = 0;
             this.secondSpecialtyNameMaterialLabel.Font = new System.Drawing.Font("Roboto", 11F);
             this.secondSpecialtyNameMaterialLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.secondSpecialtyNameMaterialLabel.Location = new System.Drawing.Point(54, 238);
+            this.secondSpecialtyNameMaterialLabel.Location = new System.Drawing.Point(54, 291);
             this.secondSpecialtyNameMaterialLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.secondSpecialtyNameMaterialLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.secondSpecialtyNameMaterialLabel.Name = "secondSpecialtyNameMaterialLabel";
@@ -97,7 +103,7 @@ namespace specialitySelectionAssistant
             this.thirdSpecialtyNameMaterialLabel.Depth = 0;
             this.thirdSpecialtyNameMaterialLabel.Font = new System.Drawing.Font("Roboto", 11F);
             this.thirdSpecialtyNameMaterialLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.thirdSpecialtyNameMaterialLabel.Location = new System.Drawing.Point(54, 317);
+            this.thirdSpecialtyNameMaterialLabel.Location = new System.Drawing.Point(54, 420);
             this.thirdSpecialtyNameMaterialLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.thirdSpecialtyNameMaterialLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.thirdSpecialtyNameMaterialLabel.Name = "thirdSpecialtyNameMaterialLabel";
@@ -125,11 +131,71 @@ namespace specialitySelectionAssistant
             this.closeMaterialFlatButton.UseVisualStyleBackColor = false;
             this.closeMaterialFlatButton.Click += new System.EventHandler(this.closeMaterialFlatButton_Click);
             // 
+            // firstSpecialtyDescriptionLabel
+            // 
+            this.firstSpecialtyDescriptionLabel.AutoSize = true;
+            this.firstSpecialtyDescriptionLabel.Location = new System.Drawing.Point(78, 200);
+            this.firstSpecialtyDescriptionLabel.Name = "firstSpecialtyDescriptionLabel";
+            this.firstSpecialtyDescriptionLabel.Size = new System.Drawing.Size(35, 13);
+            this.firstSpecialtyDescriptionLabel.TabIndex = 28;
+            this.firstSpecialtyDescriptionLabel.Text = "label1";
+            // 
+            // secondSpecialtyDescriptionLabel
+            // 
+            this.secondSpecialtyDescriptionLabel.AutoSize = true;
+            this.secondSpecialtyDescriptionLabel.Location = new System.Drawing.Point(78, 332);
+            this.secondSpecialtyDescriptionLabel.Name = "secondSpecialtyDescriptionLabel";
+            this.secondSpecialtyDescriptionLabel.Size = new System.Drawing.Size(35, 13);
+            this.secondSpecialtyDescriptionLabel.TabIndex = 29;
+            this.secondSpecialtyDescriptionLabel.Text = "label2";
+            // 
+            // thirdSpecialtyDescriptionLabel
+            // 
+            this.thirdSpecialtyDescriptionLabel.AutoSize = true;
+            this.thirdSpecialtyDescriptionLabel.Location = new System.Drawing.Point(78, 472);
+            this.thirdSpecialtyDescriptionLabel.Name = "thirdSpecialtyDescriptionLabel";
+            this.thirdSpecialtyDescriptionLabel.Size = new System.Drawing.Size(35, 13);
+            this.thirdSpecialtyDescriptionLabel.TabIndex = 30;
+            this.thirdSpecialtyDescriptionLabel.Text = "label3";
+            // 
+            // firstSpecialtyProfessionsLabel
+            // 
+            this.firstSpecialtyProfessionsLabel.AutoSize = true;
+            this.firstSpecialtyProfessionsLabel.Location = new System.Drawing.Point(78, 239);
+            this.firstSpecialtyProfessionsLabel.Name = "firstSpecialtyProfessionsLabel";
+            this.firstSpecialtyProfessionsLabel.Size = new System.Drawing.Size(35, 13);
+            this.firstSpecialtyProfessionsLabel.TabIndex = 31;
+            this.firstSpecialtyProfessionsLabel.Text = "label1";
+            // 
+            // secondSpecialtyProfessionsLabel
+            // 
+            this.secondSpecialtyProfessionsLabel.AutoSize = true;
+            this.secondSpecialtyProfessionsLabel.Location = new System.Drawing.Point(78, 383);
+            this.secondSpecialtyProfessionsLabel.Name = "secondSpecialtyProfessionsLabel";
+            this.secondSpecialtyProfessionsLabel.Size = new System.Drawing.Size(35, 13);
+            this.secondSpecialtyProfessionsLabel.TabIndex = 32;
+            this.secondSpecialtyProfessionsLabel.Text = "label2";
+            // 
+            // thirdSpecialtyProfessionsLabel
+            // 
+            this.thirdSpecialtyProfessionsLabel.AutoSize = true;
+            this.thirdSpecialtyProfessionsLabel.Location = new System.Drawing.Point(78, 508);
+            this.thirdSpecialtyProfessionsLabel.Name = "thirdSpecialtyProfessionsLabel";
+            this.thirdSpecialtyProfessionsLabel.Size = new System.Drawing.Size(35, 13);
+            this.thirdSpecialtyProfessionsLabel.TabIndex = 33;
+            this.thirdSpecialtyProfessionsLabel.Text = "label3";
+            // 
             // TestResultForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.Controls.Add(this.thirdSpecialtyProfessionsLabel);
+            this.Controls.Add(this.secondSpecialtyProfessionsLabel);
+            this.Controls.Add(this.firstSpecialtyProfessionsLabel);
+            this.Controls.Add(this.thirdSpecialtyDescriptionLabel);
+            this.Controls.Add(this.secondSpecialtyDescriptionLabel);
+            this.Controls.Add(this.firstSpecialtyDescriptionLabel);
             this.Controls.Add(this.closeMaterialFlatButton);
             this.Controls.Add(this.thirdSpecialtyNameMaterialLabel);
             this.Controls.Add(this.secondSpecialtyNameMaterialLabel);
@@ -152,5 +218,11 @@ namespace specialitySelectionAssistant
         private MaterialSkin.Controls.MaterialLabel secondSpecialtyNameMaterialLabel;
         private MaterialSkin.Controls.MaterialLabel thirdSpecialtyNameMaterialLabel;
         private MaterialSkin.Controls.MaterialFlatButton closeMaterialFlatButton;
+        private System.Windows.Forms.Label firstSpecialtyDescriptionLabel;
+        private System.Windows.Forms.Label secondSpecialtyDescriptionLabel;
+        private System.Windows.Forms.Label thirdSpecialtyDescriptionLabel;
+        private System.Windows.Forms.Label firstSpecialtyProfessionsLabel;
+        private System.Windows.Forms.Label secondSpecialtyProfessionsLabel;
+        private System.Windows.Forms.Label thirdSpecialtyProfessionsLabel;
     }
 }

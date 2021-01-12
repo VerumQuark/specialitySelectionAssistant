@@ -29,9 +29,28 @@ namespace specialitySelectionAssistant
         {
             List<Specialty> specialties = preferredSpecialtiesDeterminant.getDetermineSpecialties();
 
+            //REWORK
             firstSpecialtyNameMaterialLabel.Text = specialties[0].name;
+            firstSpecialtyDescriptionLabel.Text = specialties[0].description;
+            firstSpecialtyProfessionsLabel.Text = getProfessionsStr(specialties[0].professions);
+
             secondSpecialtyNameMaterialLabel.Text = specialties[1].name;
+            secondSpecialtyDescriptionLabel.Text = specialties[1].description;
+            secondSpecialtyProfessionsLabel.Text = getProfessionsStr(specialties[1].professions);
+
             thirdSpecialtyNameMaterialLabel.Text = specialties[2].name;
+            thirdSpecialtyDescriptionLabel.Text = specialties[2].description;
+            thirdSpecialtyProfessionsLabel.Text = getProfessionsStr(specialties[2].professions);
+        }
+
+        private string getProfessionsStr(string[] professions)
+        {
+            string specialtyProffesions = "";
+            foreach (string profesion in professions)
+            {
+                specialtyProffesions += profesion + ", ";
+            }
+            return specialtyProffesions;
         }
 
         private void helpMaterialFlatButton_Click(object sender, EventArgs e)

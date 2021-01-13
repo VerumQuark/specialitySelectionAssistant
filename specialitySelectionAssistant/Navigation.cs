@@ -11,60 +11,48 @@ namespace specialitySelectionAssistant
 {
     static class Navigation
     {
-        static System.Windows.Forms.Form prevForm;
+        static Form prevForm;
 
         static public void startTest(bool haveResult, Form form)
         {
             if (haveResult)
             {
-                Program.Context.MainForm = new ZnoForm();
-                form.Close();
-                Program.Context.MainForm.Show();
+                changeForm(new ZnoForm(), form);
             }
             else
             {
-                Program.Context.MainForm = new ProfessionsComparisonQuestionForm();
-                form.Close();
-                Program.Context.MainForm.Show();
+                toComparisonQuestionForm(form);
             }
         }
 
-        static public void toPrevForm(System.Windows.Forms.Form form)
+        static public void toPrevForm(Form form)
         {
             Program.Context.MainForm = prevForm;
             form.Close();
             Program.Context.MainForm.Show();
         }
 
-        static public void toRegistrationForm(System.Windows.Forms.Form form)
+        static public void toRegistrationForm(Form form)
         {
-            Program.Context.MainForm = new RegistrationForm();
-            form.Close();
-            Program.Context.MainForm.Show();
+            changeForm(new RegistrationForm(), form);
         }
 
-        static public void toListQuestionsForm(System.Windows.Forms.Form form)
+        static public void toListQuestionsForm(Form form)
         {
-            Program.Context.MainForm = new ListQuestionForm();
-            form.Close();
-            Program.Context.MainForm.Show();
+            changeForm(new ListQuestionForm(), form);
         }
 
-        static public void toComparisonQuestionForm(System.Windows.Forms.Form form)
+        static public void toComparisonQuestionForm(Form form)
         {
-            Program.Context.MainForm = new ProfessionsComparisonQuestionForm();
-            form.Close();
-            Program.Context.MainForm.Show();
+            changeForm(new ProfessionsComparisonQuestionForm(), form);
         }
 
-        static public void toResultForm(System.Windows.Forms.Form form)
+        static public void toResultForm(Form form)
         {
-            Program.Context.MainForm = new TestResultForm();
-            form.Close();
-            Program.Context.MainForm.Show();
+            changeForm(new TestResultForm(), form);
         }
         
-        static public void toHelpForm(System.Windows.Forms.Form form)
+        static public void toHelpForm(Form form)
         {
             prevForm = form;
 
@@ -72,6 +60,13 @@ namespace specialitySelectionAssistant
             prevForm.Hide();
             Program.Context.MainForm.Show();
         }
-        
+
+        private static void changeForm(Form formToOpen, Form formToClose)
+        {
+            Program.Context.MainForm = formToOpen;
+            formToClose.Close();
+            Program.Context.MainForm.Show();
+        }
+
     }/////////REWORK
 }

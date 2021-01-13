@@ -107,6 +107,20 @@ namespace SpecialtySelectionAssistantLibrary
             }
         }
 
+        static public void skipTest()
+        {
+            HollandResult t = new HollandResult();
+
+            t.artistic = 10;
+            t.conventional = 6;
+            t.enterprising = 8;
+            t.intelligent = 2;
+            t.realistic = 0;
+            t.social = 4;
+
+            User.hollandResult = t;
+        }
+
         static public void addCharacteristicsPoint(string type)
         {
             switch (type)

@@ -45,7 +45,7 @@ namespace specialitySelectionAssistant
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(49, 102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(331, 50);
+            this.label1.Size = new System.Drawing.Size(403, 58);
             this.label1.TabIndex = 23;
             this.label1.Text = "Програму розробили студенты\r\nдругого курсу КНТ-139:";
             // 
@@ -59,7 +59,7 @@ namespace specialitySelectionAssistant
             this.materialLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(120, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(149, 24);
             this.materialLabel1.TabIndex = 24;
             this.materialLabel1.Text = "Іван Бровченко";
             // 
@@ -73,7 +73,7 @@ namespace specialitySelectionAssistant
             this.materialLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(135, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(167, 24);
             this.materialLabel2.TabIndex = 25;
             this.materialLabel2.Text = "Констянтин Чічук";
             // 
@@ -87,7 +87,7 @@ namespace specialitySelectionAssistant
             this.materialLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(145, 19);
+            this.materialLabel3.Size = new System.Drawing.Size(179, 24);
             this.materialLabel3.TabIndex = 26;
             this.materialLabel3.Text = "Ангеліна Карпенко";
             // 
@@ -105,7 +105,7 @@ namespace specialitySelectionAssistant
             this.backMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.backMaterialFlatButton.Name = "backMaterialFlatButton";
             this.backMaterialFlatButton.Primary = false;
-            this.backMaterialFlatButton.Size = new System.Drawing.Size(59, 36);
+            this.backMaterialFlatButton.Size = new System.Drawing.Size(71, 36);
             this.backMaterialFlatButton.TabIndex = 71;
             this.backMaterialFlatButton.Text = "Назад";
             this.backMaterialFlatButton.UseVisualStyleBackColor = false;
@@ -117,7 +117,7 @@ namespace specialitySelectionAssistant
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(552, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(250, 25);
+            this.label2.Size = new System.Drawing.Size(310, 29);
             this.label2.TabIndex = 72;
             this.label2.Text = "Правило користування:";
             // 
@@ -131,7 +131,7 @@ namespace specialitySelectionAssistant
             this.materialLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(110, 19);
+            this.materialLabel4.Size = new System.Drawing.Size(136, 24);
             this.materialLabel4.TabIndex = 73;
             this.materialLabel4.Text = "Микита Зайко";
             // 
@@ -145,7 +145,7 @@ namespace specialitySelectionAssistant
             this.materialLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(300, 76);
+            this.materialLabel5.Size = new System.Drawing.Size(375, 96);
             this.materialLabel5.TabIndex = 74;
             this.materialLabel5.Text = "Для переходу на наступный тест,\r\nтисніть кнопку \"далі\".\r\nДля повернення на попере" +
     "дню сторінку,\r\nтисніть кнопку \"назад\".\r\n";
@@ -165,6 +165,7 @@ namespace specialitySelectionAssistant
             this.Controls.Add(this.label1);
             this.MinimumSize = new System.Drawing.Size(1000, 562);
             this.Name = "HelpForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Довідка";
             this.Load += new System.EventHandler(this.HelpForm_Load);
             this.ResumeLayout(false);

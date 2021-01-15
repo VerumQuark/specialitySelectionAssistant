@@ -8,21 +8,21 @@ namespace SpecialtySelectionAssistantLibrary
 {
     static public class Constants
     {
-        static public int COMPARATION_QUESTION_COUNT = 30;
-        static public string[] FIRST_ZNO_SUBJECTS = new string[] {
+        static public readonly int COMPARATION_QUESTION_COUNT = 30;
+        static public readonly string[] FIRST_ZNO_SUBJECTS = new string[] {
             "Українська мова і література"
         };
-        static public string[] SECOND_ZNO_SUBJECTS = new string[] {
+        static public readonly string[] SECOND_ZNO_SUBJECTS = new string[] {
             "Математика"
         };
-        static public string[] THIRD_ZNO_SUBJECTS = new string[] {
+        static public readonly string[] THIRD_ZNO_SUBJECTS = new string[] {
             "Історія України",
             "Англійська мова",
             "Німецька мова",
             "Французька мова",
             "Іспанська мова"
         };
-        static public string[] OTHER_ZNO_SUBJECTS = new string[] {
+        static public readonly string[] OTHER_ZNO_SUBJECTS = new string[] {
             "Історія України",
             "Географія",
             "Біологія",
@@ -33,5 +33,10 @@ namespace SpecialtySelectionAssistantLibrary
             "Французька мова",
             "Іспанська мова"
         };
+        static public readonly int MAX_ZNO_POINTS = 200;
+        static public readonly int MIN_ZNO_POINTS = 100;
+        static public readonly int MAX_ZNO_POINTS_DIGIT_COUNT = MAX_ZNO_POINTS.ToString().Length;
+        static public readonly int SUBJECT_COUNT = 5;
+        static public readonly int MANDATORY_SUBJECTS_COUNT = 3;
     }
 }

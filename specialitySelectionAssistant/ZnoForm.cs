@@ -46,9 +46,9 @@ namespace specialitySelectionAssistant
 
             foreach (NumericUpDown numericUpDown in this.Controls.OfType<NumericUpDown>())
             {
-                numericUpDown.Maximum = 200;
-                numericUpDown.Minimum = 100;
-                ((TextBox)numericUpDown.Controls[1]).MaxLength = 3;
+                numericUpDown.Maximum = Constants.MAX_ZNO_POINTS;
+                numericUpDown.Minimum = Constants.MIN_ZNO_POINTS;
+                ((TextBox)numericUpDown.Controls[1]).MaxLength = Constants.MAX_ZNO_POINTS_DIGIT_COUNT;
             }
 
             comboBoxesArr = new[]
@@ -86,7 +86,7 @@ namespace specialitySelectionAssistant
 
             if (isMandatoryComboboxsEmpty)
             {
-                MessageBox.Show("Оберіть три обов'язкових предмети");
+                MessageBox.Show($"Оберіть {Constants.MANDATORY_SUBJECTS_COUNT} обов'язкових предмети");
                 isMandatoryComboboxsEmpty = false;
             }
             else
@@ -99,15 +99,25 @@ namespace specialitySelectionAssistant
         private void saveZnoSubjects()
         {
             znoSubjects = new List<ZnoSubject>();
-
-            for (int i = 0; i < 3; i++)
+            try
             {
-                checkIsComboBoxEmpty(comboBoxesArr[i]);
+                for (int i = 0; i < Constants.MANDATORY_SUBJECTS_COUNT; i++)
+                {
+                    checkIsComboBoxEmpty(comboBoxesArr[i]);
+                }
+
+                for (int i = 0; i < Constants.SUBJECT_COUNT; i++)
+                {
+                    saveZnoSubject(comboBoxesArr[i], numericUpDownsArr[i]);
+                }
             }
-
-            for (int i = 0; i < 5; i++)
+            catch(IndexOutOfRangeException)
             {
-                saveZnoSubject(comboBoxesArr[i], numericUpDownsArr[i]);
+
+            }
+            catch
+            {
+
             }
 
         }

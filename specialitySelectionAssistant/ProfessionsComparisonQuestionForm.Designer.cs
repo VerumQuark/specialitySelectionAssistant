@@ -39,6 +39,7 @@ namespace specialitySelectionAssistant
             this.HelpMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.label1 = new System.Windows.Forms.Label();
             this.tempQuestionNumLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nextFormMaterialFlatButton
@@ -174,6 +175,16 @@ namespace specialitySelectionAssistant
             this.tempQuestionNumLabel.TabIndex = 22;
             this.tempQuestionNumLabel.Text = "label2";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(443, 307);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ProfessionsComparisonQuestionForm
             // 
             this.AccessibleName = "";
@@ -181,6 +192,7 @@ namespace specialitySelectionAssistant
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tempQuestionNumLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.HelpMaterialFlatButton);
@@ -213,5 +225,6 @@ namespace specialitySelectionAssistant
         private MaterialSkin.Controls.MaterialFlatButton HelpMaterialFlatButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label tempQuestionNumLabel;
+        private System.Windows.Forms.Button button1;
     }
 }

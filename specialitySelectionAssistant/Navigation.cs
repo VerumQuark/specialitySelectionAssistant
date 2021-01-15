@@ -25,13 +25,6 @@ namespace specialitySelectionAssistant
             }
         }
 
-        static public void toPrevForm(Form form)
-        {
-            Program.Context.MainForm = prevForm;
-            form.Close();
-            Program.Context.MainForm.Show();
-        }
-
         static public void toRegistrationForm(Form form)
         {
             changeForm(new RegistrationForm(), form);
@@ -59,6 +52,11 @@ namespace specialitySelectionAssistant
             Program.Context.MainForm = new HelpForm();
             prevForm.Hide();
             Program.Context.MainForm.Show();
+        }
+
+        static public void toPrevForm(Form form)
+        {
+            changeForm(prevForm, form);
         }
 
         private static void changeForm(Form formToOpen, Form formToClose)

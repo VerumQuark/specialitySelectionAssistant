@@ -38,6 +38,7 @@ namespace specialitySelectionAssistant
             this.nextMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.helpMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.listQuestionQuestionLabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // veryLikeMaterialRadioButton
@@ -203,11 +204,22 @@ namespace specialitySelectionAssistant
             this.listQuestionQuestionLabel.TabIndex = 22;
             this.listQuestionQuestionLabel.Text = "Чи подобається вам тестувати продукт перед відправкою?";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(257, 447);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // ListQuestionForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.listQuestionQuestionLabel);
             this.Controls.Add(this.helpMaterialFlatButton);
             this.Controls.Add(this.backMaterialFlatButton);
@@ -240,5 +252,6 @@ namespace specialitySelectionAssistant
         private MaterialSkin.Controls.MaterialFlatButton nextMaterialFlatButton;
         private MaterialSkin.Controls.MaterialFlatButton helpMaterialFlatButton;
         private System.Windows.Forms.Label listQuestionQuestionLabel;
+        private System.Windows.Forms.Button button1;
     }
 }

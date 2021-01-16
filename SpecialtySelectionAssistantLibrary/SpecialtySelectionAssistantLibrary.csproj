@@ -70,11 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
-    <Compile Include="exceptionHandler.cs" />
+    <Compile Include="ExceptionHandler.cs" />
     <Compile Include="Facultiy.cs" />
     <Compile Include="FacultiesMinDeviation.cs" />
     <Compile Include="HollandTest.cs" />
-    <Compile Include="internalCodeException.cs" />
+    <Compile Include="InternalCodeException.cs" />
     <Compile Include="preferredSpecialtiesDeterminant.cs" />
     <Compile Include="ProfessionPairGenerator.cs" />
     <Compile Include="ProfessionPairStorage.cs" />

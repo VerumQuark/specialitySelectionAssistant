@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SpecialtySelectionAssistantLibrary
 {
-    class exceptionHandler
+    class ExceptionHandler
     {
     }
 }

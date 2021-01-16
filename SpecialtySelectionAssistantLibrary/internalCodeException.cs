@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace SpecialtySelectionAssistantLibrary
 {
-    class internalCodeException : Exception
+    class InternalCodeException : Exception
     {
-        public internalCodeException(string message)
-            : base(message)
-        { }
+        public InternalCodeException()
+        {
+        }
+        public InternalCodeException(string message)
+        : base(message)
+        {
+        }
+
+        public InternalCodeException(string message, Exception inner)
+            : base(message, inner)
+        {
+        }
     }
 }

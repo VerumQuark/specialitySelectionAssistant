@@ -37,9 +37,9 @@ namespace specialitySelectionAssistant
             this.leftProffesionButton = new System.Windows.Forms.Button();
             this.rightProfessionButton = new System.Windows.Forms.Button();
             this.HelpMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tempQuestionNumLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.tempQuestionNumLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // nextFormMaterialFlatButton
@@ -171,19 +171,18 @@ namespace specialitySelectionAssistant
             this.tempQuestionNumLabel.AutoSize = true;
             this.tempQuestionNumLabel.Location = new System.Drawing.Point(29, 73);
             this.tempQuestionNumLabel.Name = "tempQuestionNumLabel";
-            this.tempQuestionNumLabel.Size = new System.Drawing.Size(46, 17);
+            this.tempQuestionNumLabel.Size = new System.Drawing.Size(70, 25);
             this.tempQuestionNumLabel.TabIndex = 22;
             this.tempQuestionNumLabel.Text = "label2";
             // 
-            // button1
+            // label1
             // 
-            this.button1.Location = new System.Drawing.Point(443, 307);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(362, 516);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 20);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "label1";
             // 
             // ProfessionsComparisonQuestionForm
             // 
@@ -226,5 +225,7 @@ namespace specialitySelectionAssistant
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label tempQuestionNumLabel;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label tempQuestionNumLabel;
+        private System.Windows.Forms.Label label1;
     }
 }

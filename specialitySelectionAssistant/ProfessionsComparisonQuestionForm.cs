@@ -97,7 +97,7 @@ namespace specialitySelectionAssistant
             //
             //
             //
-            tempQuestionNumLabel.Text = $"Питання №{HollandTest.CurrentComparisonQuestionIndex}";
+            tempQuestionNumLabel.Text = $"Питання №{HollandTest.CurrentComparisonQuestionIndex + 1}";
         }
 
         private void changeProfessions(profesion profesion, MaterialLabel proffesionLabel, Button proffesionButton)

@@ -68,7 +68,7 @@ namespace specialitySelectionAssistant
             this.BudgetMaterialCheckBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.BudgetMaterialCheckBox.Name = "BudgetMaterialCheckBox";
             this.BudgetMaterialCheckBox.Ripple = true;
-            this.BudgetMaterialCheckBox.Size = new System.Drawing.Size(99, 30);
+            this.BudgetMaterialCheckBox.Size = new System.Drawing.Size(117, 30);
             this.BudgetMaterialCheckBox.TabIndex = 2;
             this.BudgetMaterialCheckBox.Text = "Бюджетна";
             this.BudgetMaterialCheckBox.UseVisualStyleBackColor = false;
@@ -85,7 +85,7 @@ namespace specialitySelectionAssistant
             this.ContractMaterialCheckBox.MouseState = MaterialSkin.MouseState.HOVER;
             this.ContractMaterialCheckBox.Name = "ContractMaterialCheckBox";
             this.ContractMaterialCheckBox.Ripple = true;
-            this.ContractMaterialCheckBox.Size = new System.Drawing.Size(106, 30);
+            this.ContractMaterialCheckBox.Size = new System.Drawing.Size(126, 30);
             this.ContractMaterialCheckBox.TabIndex = 3;
             this.ContractMaterialCheckBox.Text = "Контрактна";
             this.ContractMaterialCheckBox.UseVisualStyleBackColor = false;
@@ -103,7 +103,7 @@ namespace specialitySelectionAssistant
             this.NameMaterialSingleLineTextField.SelectedText = "";
             this.NameMaterialSingleLineTextField.SelectionLength = 0;
             this.NameMaterialSingleLineTextField.SelectionStart = 0;
-            this.NameMaterialSingleLineTextField.Size = new System.Drawing.Size(495, 23);
+            this.NameMaterialSingleLineTextField.Size = new System.Drawing.Size(495, 28);
             this.NameMaterialSingleLineTextField.TabIndex = 4;
             this.NameMaterialSingleLineTextField.UseSystemPasswordChar = false;
             // 
@@ -117,7 +117,7 @@ namespace specialitySelectionAssistant
             this.NameMaterialLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NameMaterialLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.NameMaterialLabel.Name = "NameMaterialLabel";
-            this.NameMaterialLabel.Size = new System.Drawing.Size(92, 19);
+            this.NameMaterialLabel.Size = new System.Drawing.Size(117, 24);
             this.NameMaterialLabel.TabIndex = 5;
             this.NameMaterialLabel.Text = "Вкажіть ПІБ";
             // 
@@ -135,7 +135,7 @@ namespace specialitySelectionAssistant
             this.nextMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.nextMaterialFlatButton.Name = "nextMaterialFlatButton";
             this.nextMaterialFlatButton.Primary = false;
-            this.nextMaterialFlatButton.Size = new System.Drawing.Size(45, 36);
+            this.nextMaterialFlatButton.Size = new System.Drawing.Size(54, 36);
             this.nextMaterialFlatButton.TabIndex = 6;
             this.nextMaterialFlatButton.Text = "Далі";
             this.nextMaterialFlatButton.UseVisualStyleBackColor = false;
@@ -152,7 +152,7 @@ namespace specialitySelectionAssistant
             this.helpMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.helpMaterialFlatButton.Name = "helpMaterialFlatButton";
             this.helpMaterialFlatButton.Primary = false;
-            this.helpMaterialFlatButton.Size = new System.Drawing.Size(19, 36);
+            this.helpMaterialFlatButton.Size = new System.Drawing.Size(21, 36);
             this.helpMaterialFlatButton.TabIndex = 7;
             this.helpMaterialFlatButton.Text = "?";
             this.helpMaterialFlatButton.UseVisualStyleBackColor = true;

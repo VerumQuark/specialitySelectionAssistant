@@ -212,6 +212,8 @@ namespace specialitySelectionAssistant
             this.button1.TabIndex = 23;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // ListQuestionForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;

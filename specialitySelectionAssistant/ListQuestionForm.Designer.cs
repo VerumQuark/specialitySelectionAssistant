@@ -53,7 +53,7 @@ namespace specialitySelectionAssistant
             this.veryLikeMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.veryLikeMaterialRadioButton.Name = "veryLikeMaterialRadioButton";
             this.veryLikeMaterialRadioButton.Ripple = true;
-            this.veryLikeMaterialRadioButton.Size = new System.Drawing.Size(183, 30);
+            this.veryLikeMaterialRadioButton.Size = new System.Drawing.Size(151, 30);
             this.veryLikeMaterialRadioButton.TabIndex = 0;
             this.veryLikeMaterialRadioButton.TabStop = true;
             this.veryLikeMaterialRadioButton.Text = "Дуже подобається";
@@ -72,7 +72,7 @@ namespace specialitySelectionAssistant
             this.ratherSoMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.ratherSoMaterialRadioButton.Name = "ratherSoMaterialRadioButton";
             this.ratherSoMaterialRadioButton.Ripple = true;
-            this.ratherSoMaterialRadioButton.Size = new System.Drawing.Size(120, 30);
+            this.ratherSoMaterialRadioButton.Size = new System.Drawing.Size(101, 30);
             this.ratherSoMaterialRadioButton.TabIndex = 1;
             this.ratherSoMaterialRadioButton.TabStop = true;
             this.ratherSoMaterialRadioButton.Text = "Скоріш так";
@@ -91,7 +91,7 @@ namespace specialitySelectionAssistant
             this.ratherNotMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.ratherNotMaterialRadioButton.Name = "ratherNotMaterialRadioButton";
             this.ratherNotMaterialRadioButton.Ripple = true;
-            this.ratherNotMaterialRadioButton.Size = new System.Drawing.Size(107, 30);
+            this.ratherNotMaterialRadioButton.Size = new System.Drawing.Size(91, 30);
             this.ratherNotMaterialRadioButton.TabIndex = 3;
             this.ratherNotMaterialRadioButton.TabStop = true;
             this.ratherNotMaterialRadioButton.Text = "Скоріш ні";
@@ -110,7 +110,7 @@ namespace specialitySelectionAssistant
             this.cantAnswerMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.cantAnswerMaterialRadioButton.Name = "cantAnswerMaterialRadioButton";
             this.cantAnswerMaterialRadioButton.Ripple = true;
-            this.cantAnswerMaterialRadioButton.Size = new System.Drawing.Size(191, 30);
+            this.cantAnswerMaterialRadioButton.Size = new System.Drawing.Size(158, 30);
             this.cantAnswerMaterialRadioButton.TabIndex = 2;
             this.cantAnswerMaterialRadioButton.TabStop = true;
             this.cantAnswerMaterialRadioButton.Text = "Не можу відповісти";
@@ -129,7 +129,7 @@ namespace specialitySelectionAssistant
             this.veryDislikeMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.veryDislikeMaterialRadioButton.Name = "veryDislikeMaterialRadioButton";
             this.veryDislikeMaterialRadioButton.Ripple = true;
-            this.veryDislikeMaterialRadioButton.Size = new System.Drawing.Size(207, 30);
+            this.veryDislikeMaterialRadioButton.Size = new System.Drawing.Size(170, 30);
             this.veryDislikeMaterialRadioButton.TabIndex = 4;
             this.veryDislikeMaterialRadioButton.TabStop = true;
             this.veryDislikeMaterialRadioButton.Text = "Дуже не подобається";
@@ -150,7 +150,7 @@ namespace specialitySelectionAssistant
             this.backMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.backMaterialFlatButton.Name = "backMaterialFlatButton";
             this.backMaterialFlatButton.Primary = false;
-            this.backMaterialFlatButton.Size = new System.Drawing.Size(71, 36);
+            this.backMaterialFlatButton.Size = new System.Drawing.Size(59, 36);
             this.backMaterialFlatButton.TabIndex = 12;
             this.backMaterialFlatButton.Text = "Назад";
             this.backMaterialFlatButton.UseVisualStyleBackColor = false;
@@ -170,7 +170,7 @@ namespace specialitySelectionAssistant
             this.nextMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.nextMaterialFlatButton.Name = "nextMaterialFlatButton";
             this.nextMaterialFlatButton.Primary = false;
-            this.nextMaterialFlatButton.Size = new System.Drawing.Size(54, 36);
+            this.nextMaterialFlatButton.Size = new System.Drawing.Size(45, 36);
             this.nextMaterialFlatButton.TabIndex = 11;
             this.nextMaterialFlatButton.Text = "Далі";
             this.nextMaterialFlatButton.UseVisualStyleBackColor = false;
@@ -187,7 +187,7 @@ namespace specialitySelectionAssistant
             this.helpMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.helpMaterialFlatButton.Name = "helpMaterialFlatButton";
             this.helpMaterialFlatButton.Primary = false;
-            this.helpMaterialFlatButton.Size = new System.Drawing.Size(21, 36);
+            this.helpMaterialFlatButton.Size = new System.Drawing.Size(19, 36);
             this.helpMaterialFlatButton.TabIndex = 17;
             this.helpMaterialFlatButton.Text = "?";
             this.helpMaterialFlatButton.UseVisualStyleBackColor = true;
@@ -200,7 +200,7 @@ namespace specialitySelectionAssistant
             this.listQuestionQuestionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listQuestionQuestionLabel.Location = new System.Drawing.Point(49, 102);
             this.listQuestionQuestionLabel.Name = "listQuestionQuestionLabel";
-            this.listQuestionQuestionLabel.Size = new System.Drawing.Size(762, 29);
+            this.listQuestionQuestionLabel.Size = new System.Drawing.Size(620, 25);
             this.listQuestionQuestionLabel.TabIndex = 22;
             this.listQuestionQuestionLabel.Text = "Чи подобається вам тестувати продукт перед відправкою?";
             // 
@@ -212,6 +212,8 @@ namespace specialitySelectionAssistant
             this.button1.TabIndex = 23;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // ListQuestionForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;

@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace SpecialtySelectionAssistantLibrary
 {
-    class InternalCodeException : Exception
+    class JsonSerializationException : Exception
     {
-        public InternalCodeException()
+        public JsonSerializationException()
         {
         }
-        public InternalCodeException(string message)
+
+        public JsonSerializationException(string message)
         : base(message)
         {
         }
 
-        public InternalCodeException(string message, Exception inner)
+        public JsonSerializationException(string message, Exception inner)
             : base(message, inner)
         {
         }

@@ -18,7 +18,7 @@ namespace specialitySelectionAssistant
     public partial class ProfessionsComparisonQuestionForm : MaterialForm
     {
         bool isProfessionChosen = false;
-        profesion chosenProfesion = new profesion();
+        Profesion chosenProfesion = new Profesion();
         ProfesionPair pairQuestion;
 
         public ProfessionsComparisonQuestionForm()
@@ -91,16 +91,11 @@ namespace specialitySelectionAssistant
 
             changeProfessions(pairQuestion.firstProfession, leftProffesionMaterialLabel, leftProffesionButton);
             changeProfessions(pairQuestion.secondProfession, rightProffesionMaterialLabel, rightProfessionButton);
-            //
-            //
-            //  REWORK
-            //
-            //
-            //
-            tempQuestionNumLabel.Text = $"Питання №{HollandTest.CurrentComparisonQuestionIndex + 1}";
+
+            questionNumLabel.Text = $"Питання №{HollandTest.CurrentComparisonQuestionIndex + 1}";
         }
 
-        private void changeProfessions(profesion profesion, MaterialLabel proffesionLabel, Button proffesionButton)
+        private void changeProfessions(Profesion profesion, MaterialLabel proffesionLabel, Button proffesionButton)
         {
             ResourceManager rm = Properties.Resources.ResourceManager;
             Image proffesionImg = (Image)rm.GetObject(profesion.img);
@@ -126,12 +121,7 @@ namespace specialitySelectionAssistant
             chosenProfesion = pairQuestion.secondProfession;
         }
 
-        private void rightProffesionMaterialLabel_Click(object sender, EventArgs e)
-        {
-            ///тест
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void skipButton_Click(object sender, EventArgs e)
         {
             HollandTest.skipTest();
             Navigation.toListQuestionsForm(this);

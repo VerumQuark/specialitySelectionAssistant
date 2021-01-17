@@ -27,52 +27,83 @@ namespace SpecialtySelectionAssistantLibrary
 
             set
             {
-                if (value > Constants.COMPARATION_QUESTION_COUNT)
+                try
                 {
-                    //error
-                    //currentQuestion = 0;
-                }
-                else
-                {
-                    if (value == Constants.COMPARATION_QUESTION_COUNT - 1)
+                    if (value >= Constants.COMPARATION_QUESTION_COUNT)
                     {
                         isLastQuestion = true;
+                        currentComparisonQuestionIndex = Constants.COMPARATION_QUESTION_COUNT - 1;
+
+                        throw new RangeException();
                     }
-                    else if (value == 0)
+                    else if(value < 0)
                     {
                         isFirstQuestion = true;
+                        currentComparisonQuestionIndex = 0;
+
+                        throw new RangeException();
                     }
                     else
                     {
-                        isFirstQuestion = false;
-                        isLastQuestion = false;
+                        if (value == Constants.COMPARATION_QUESTION_COUNT - 1)
+                        {
+                            isLastQuestion = true;
+                        }
+                        else if (value == 0)
+                        {
+                            isFirstQuestion = true;
+                        }
+                        else
+                        {
+                            isFirstQuestion = false;
+                            isLastQuestion = false;
+                        }
+
+                        currentComparisonQuestionIndex = value;
                     }
-
-
-                    currentComparisonQuestionIndex = value;
+                }
+                catch(RangeException)
+                {
+                    Console.WriteLine("Holland test.Index assignment error.");
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
                 }
             }
         }
 
         static public void nextComparisonQuestion()
         {
-            CurrentComparisonQuestionIndex++;
-            currentComparisonQuestion = comparisonQuestionsStorage[CurrentComparisonQuestionIndex];
-
-            if(CurrentComparisonQuestionIndex == Constants.COMPARATION_QUESTION_COUNT)
+            try
             {
-                isLastQuestion = true;
+                CurrentComparisonQuestionIndex++;
+                currentComparisonQuestion = comparisonQuestionsStorage[CurrentComparisonQuestionIndex];
+            }
+            catch (IndexOutOfRangeException)
+            {
+                Console.WriteLine("Holland test. Comparison index error.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
 
         static public void prevComparisonQuestion()
         {
-            CurrentComparisonQuestionIndex--;
-            currentComparisonQuestion = comparisonQuestionsStorage[CurrentComparisonQuestionIndex];
-
-            if (CurrentComparisonQuestionIndex == 0)
+            try
             {
-                isFirstQuestion = true;
+                CurrentComparisonQuestionIndex--;
+                currentComparisonQuestion = comparisonQuestionsStorage[CurrentComparisonQuestionIndex];
+            }
+            catch (IndexOutOfRangeException)
+            {
+                Console.WriteLine("Holland test. Comparison index error.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
 
@@ -87,10 +118,21 @@ namespace SpecialtySelectionAssistantLibrary
 
         static public void CreateTest()
         {
-            comparisonQuestionsStorage = generateComparisonQuestions();
-            CurrentComparisonQuestionIndex = 0;
-            currentComparisonQuestion = comparisonQuestionsStorage[CurrentComparisonQuestionIndex];
-            chosenProfessionsTypesStack.Clear();
+            try
+            {
+                comparisonQuestionsStorage = generateComparisonQuestions();
+                CurrentComparisonQuestionIndex = 0;
+                currentComparisonQuestion = comparisonQuestionsStorage[CurrentComparisonQuestionIndex];
+                chosenProfessionsTypesStack.Clear();
+            }
+            catch (IndexOutOfRangeException)
+            {
+                Console.WriteLine("Holland test. Comparison index error.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         static ProfessionPairStorage generateComparisonQuestions()
@@ -109,16 +151,16 @@ namespace SpecialtySelectionAssistantLibrary
 
         static public void skipTest()
         {
-            HollandResult t = new HollandResult();
+            HollandResult skip = new HollandResult();
 
-            t.artistic = 10;
-            t.conventional = 6;
-            t.enterprising = 8;
-            t.intelligent = 2;
-            t.realistic = 0;
-            t.social = 4;
+            skip.artistic = 10;
+            skip.conventional = 6;
+            skip.enterprising = 8;
+            skip.intelligent = 2;
+            skip.realistic = 0;
+            skip.social = 4;
 
-            User.hollandResult = t;
+            User.hollandResult = skip;
         }
 
         static public void addCharacteristicsPoint(string type)
@@ -157,7 +199,7 @@ namespace SpecialtySelectionAssistantLibrary
                     }
                 default:
                     {
-                        /////////UNDER CONSTRUCTION////////////REWORK
+                        Console.WriteLine("Holland test. Add characteristics error.");
                         break;
                     }
             }

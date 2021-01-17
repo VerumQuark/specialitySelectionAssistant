@@ -8,7 +8,7 @@ using System.Text.Json.Serialization;
 
 namespace SpecialtySelectionAssistantLibrary
 {
-    public struct profesion
+    public struct Profesion
     {
         [JsonInclude]
         public string name;
@@ -21,15 +21,15 @@ namespace SpecialtySelectionAssistantLibrary
     public struct ProfessionStrorage
     {
         [JsonInclude]
-        public List<List<profesion>> professions;
+        public List<List<Profesion>> professions;
 
-        public List<profesion> this[int i]
+        public List<Profesion> this[int i]
         {
             get { return professions[i]; }
             set { professions[i] = value; }
         }
 
-        public profesion this[int i, int j]
+        public Profesion this[int i, int j]
         {
             get { return professions[i][j]; }
             set { professions[i][j] = value; }

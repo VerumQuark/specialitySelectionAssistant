@@ -37,9 +37,8 @@ namespace specialitySelectionAssistant
             this.leftProffesionButton = new System.Windows.Forms.Button();
             this.rightProfessionButton = new System.Windows.Forms.Button();
             this.HelpMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tempQuestionNumLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.questionNumLabel = new System.Windows.Forms.Label();
+            this.skipButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nextFormMaterialFlatButton
@@ -110,7 +109,6 @@ namespace specialitySelectionAssistant
             this.rightProffesionMaterialLabel.Size = new System.Drawing.Size(108, 19);
             this.rightProffesionMaterialLabel.TabIndex = 13;
             this.rightProffesionMaterialLabel.Text = "materialLabel2";
-            this.rightProffesionMaterialLabel.Click += new System.EventHandler(this.rightProffesionMaterialLabel_Click);
             // 
             // leftProffesionButton
             // 
@@ -156,33 +154,25 @@ namespace specialitySelectionAssistant
             this.HelpMaterialFlatButton.UseVisualStyleBackColor = true;
             this.HelpMaterialFlatButton.Click += new System.EventHandler(this.HelpMaterialFlatButton_Click);
             // 
-            // label1
+            // questionNumLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(49, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(421, 25);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Оберіть найбільш задовільну професію!";
+            this.questionNumLabel.AutoSize = true;
+            this.questionNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.questionNumLabel.Location = new System.Drawing.Point(53, 109);
+            this.questionNumLabel.Name = "questionNumLabel";
+            this.questionNumLabel.Size = new System.Drawing.Size(70, 25);
+            this.questionNumLabel.TabIndex = 24;
+            this.questionNumLabel.Text = "label1";
             // 
-            // tempQuestionNumLabel
+            // skipButton
             // 
-            this.tempQuestionNumLabel.AutoSize = true;
-            this.tempQuestionNumLabel.Location = new System.Drawing.Point(29, 73);
-            this.tempQuestionNumLabel.Name = "tempQuestionNumLabel";
-            this.tempQuestionNumLabel.Size = new System.Drawing.Size(70, 25);
-            this.tempQuestionNumLabel.TabIndex = 22;
-            this.tempQuestionNumLabel.Text = "label2";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(362, 516);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 20);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "label1";
+            this.skipButton.Location = new System.Drawing.Point(450, 77);
+            this.skipButton.Name = "skipButton";
+            this.skipButton.Size = new System.Drawing.Size(75, 23);
+            this.skipButton.TabIndex = 25;
+            this.skipButton.Text = "skip";
+            this.skipButton.UseVisualStyleBackColor = true;
+            this.skipButton.Click += new System.EventHandler(this.skipButton_Click);
             // 
             // ProfessionsComparisonQuestionForm
             // 
@@ -191,9 +181,8 @@ namespace specialitySelectionAssistant
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1000, 562);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.tempQuestionNumLabel);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.skipButton);
+            this.Controls.Add(this.questionNumLabel);
             this.Controls.Add(this.HelpMaterialFlatButton);
             this.Controls.Add(this.rightProfessionButton);
             this.Controls.Add(this.leftProffesionButton);
@@ -222,8 +211,7 @@ namespace specialitySelectionAssistant
         private System.Windows.Forms.Button leftProffesionButton;
         private System.Windows.Forms.Button rightProfessionButton;
         private MaterialSkin.Controls.MaterialFlatButton HelpMaterialFlatButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label tempQuestionNumLabel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label questionNumLabel;
+        private System.Windows.Forms.Button skipButton;
     }
 }

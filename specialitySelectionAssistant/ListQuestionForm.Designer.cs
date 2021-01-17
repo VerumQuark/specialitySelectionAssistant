@@ -47,7 +47,7 @@ namespace specialitySelectionAssistant
             this.veryLikeMaterialRadioButton.BackColor = System.Drawing.SystemColors.Window;
             this.veryLikeMaterialRadioButton.Depth = 0;
             this.veryLikeMaterialRadioButton.Font = new System.Drawing.Font("Roboto", 10F);
-            this.veryLikeMaterialRadioButton.Location = new System.Drawing.Point(54, 155);
+            this.veryLikeMaterialRadioButton.Location = new System.Drawing.Point(54, 195);
             this.veryLikeMaterialRadioButton.Margin = new System.Windows.Forms.Padding(0);
             this.veryLikeMaterialRadioButton.MouseLocation = new System.Drawing.Point(-1, -1);
             this.veryLikeMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
@@ -66,7 +66,7 @@ namespace specialitySelectionAssistant
             this.ratherSoMaterialRadioButton.BackColor = System.Drawing.SystemColors.Window;
             this.ratherSoMaterialRadioButton.Depth = 0;
             this.ratherSoMaterialRadioButton.Font = new System.Drawing.Font("Roboto", 10F);
-            this.ratherSoMaterialRadioButton.Location = new System.Drawing.Point(54, 205);
+            this.ratherSoMaterialRadioButton.Location = new System.Drawing.Point(54, 245);
             this.ratherSoMaterialRadioButton.Margin = new System.Windows.Forms.Padding(0);
             this.ratherSoMaterialRadioButton.MouseLocation = new System.Drawing.Point(-1, -1);
             this.ratherSoMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
@@ -85,7 +85,7 @@ namespace specialitySelectionAssistant
             this.ratherNotMaterialRadioButton.BackColor = System.Drawing.SystemColors.Window;
             this.ratherNotMaterialRadioButton.Depth = 0;
             this.ratherNotMaterialRadioButton.Font = new System.Drawing.Font("Roboto", 10F);
-            this.ratherNotMaterialRadioButton.Location = new System.Drawing.Point(54, 305);
+            this.ratherNotMaterialRadioButton.Location = new System.Drawing.Point(54, 345);
             this.ratherNotMaterialRadioButton.Margin = new System.Windows.Forms.Padding(0);
             this.ratherNotMaterialRadioButton.MouseLocation = new System.Drawing.Point(-1, -1);
             this.ratherNotMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
@@ -104,7 +104,7 @@ namespace specialitySelectionAssistant
             this.cantAnswerMaterialRadioButton.BackColor = System.Drawing.SystemColors.Window;
             this.cantAnswerMaterialRadioButton.Depth = 0;
             this.cantAnswerMaterialRadioButton.Font = new System.Drawing.Font("Roboto", 10F);
-            this.cantAnswerMaterialRadioButton.Location = new System.Drawing.Point(54, 255);
+            this.cantAnswerMaterialRadioButton.Location = new System.Drawing.Point(54, 295);
             this.cantAnswerMaterialRadioButton.Margin = new System.Windows.Forms.Padding(0);
             this.cantAnswerMaterialRadioButton.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cantAnswerMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
@@ -123,7 +123,7 @@ namespace specialitySelectionAssistant
             this.veryDislikeMaterialRadioButton.BackColor = System.Drawing.SystemColors.Window;
             this.veryDislikeMaterialRadioButton.Depth = 0;
             this.veryDislikeMaterialRadioButton.Font = new System.Drawing.Font("Roboto", 10F);
-            this.veryDislikeMaterialRadioButton.Location = new System.Drawing.Point(54, 355);
+            this.veryDislikeMaterialRadioButton.Location = new System.Drawing.Point(54, 395);
             this.veryDislikeMaterialRadioButton.Margin = new System.Windows.Forms.Padding(0);
             this.veryDislikeMaterialRadioButton.MouseLocation = new System.Drawing.Point(-1, -1);
             this.veryDislikeMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
@@ -195,12 +195,11 @@ namespace specialitySelectionAssistant
             // 
             // listQuestionQuestionLabel
             // 
-            this.listQuestionQuestionLabel.AutoSize = true;
             this.listQuestionQuestionLabel.CausesValidation = false;
             this.listQuestionQuestionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listQuestionQuestionLabel.Location = new System.Drawing.Point(49, 102);
             this.listQuestionQuestionLabel.Name = "listQuestionQuestionLabel";
-            this.listQuestionQuestionLabel.Size = new System.Drawing.Size(620, 25);
+            this.listQuestionQuestionLabel.Size = new System.Drawing.Size(908, 70);
             this.listQuestionQuestionLabel.TabIndex = 22;
             this.listQuestionQuestionLabel.Text = "Чи подобається вам тестувати продукт перед відправкою?";
             // 

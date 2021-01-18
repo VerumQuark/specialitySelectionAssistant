@@ -163,6 +163,7 @@ namespace specialitySelectionAssistant
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(1000, 562);
             this.MinimumSize = new System.Drawing.Size(1000, 562);
             this.Name = "HelpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

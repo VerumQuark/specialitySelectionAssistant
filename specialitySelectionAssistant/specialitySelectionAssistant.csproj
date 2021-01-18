@@ -77,6 +77,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExceptionHandler.cs" />
     <Compile Include="HelpForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,7 +147,6 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\listQuestions.json" />
-    <None Include="Properties\professions.json" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -216,6 +216,72 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\p38.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

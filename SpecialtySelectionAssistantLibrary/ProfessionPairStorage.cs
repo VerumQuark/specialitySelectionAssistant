@@ -8,8 +8,8 @@ namespace SpecialtySelectionAssistantLibrary
 {
      public struct ProfesionPair
     {
-        public profesion firstProfession;
-        public profesion secondProfession;
+        public Profesion firstProfession;
+        public Profesion secondProfession;
 
     }
 

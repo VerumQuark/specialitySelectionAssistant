@@ -73,6 +73,7 @@
     <Compile Include="Facultiy.cs" />
     <Compile Include="FacultiesMinDeviation.cs" />
     <Compile Include="HollandTest.cs" />
+    <Compile Include="JsonSerializationException.cs" />
     <Compile Include="preferredSpecialtiesDeterminant.cs" />
     <Compile Include="ProfessionPairGenerator.cs" />
     <Compile Include="ProfessionPairStorage.cs" />
@@ -83,6 +84,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="RangeException.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserPreferencesTest.cs" />
   </ItemGroup>

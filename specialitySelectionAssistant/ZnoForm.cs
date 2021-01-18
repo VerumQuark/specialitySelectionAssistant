@@ -34,40 +34,47 @@ namespace specialitySelectionAssistant
 
         private void ZnoForm_Load(object sender, EventArgs e)
         {
-            isMandatoryComboboxsEmpty = false;
+            try 
+            { 
+                isMandatoryComboboxsEmpty = false;
 
-            znoSubjects = new List<ZnoSubject>();
+                znoSubjects = new List<ZnoSubject>();
 
-            firstSubjectComboBox.Items.AddRange(Constants.FIRST_ZNO_SUBJECTS);
-            secondSubjectComboBox.Items.AddRange(Constants.SECOND_ZNO_SUBJECTS);
-            thirdSubjectComboBox.Items.AddRange(Constants.THIRD_ZNO_SUBJECTS);
-            fourthSubjectComboBox.Items.AddRange(Constants.OTHER_ZNO_SUBJECTS);
-            fifthSubjectComboBox.Items.AddRange(Constants.OTHER_ZNO_SUBJECTS);
+                firstSubjectComboBox.Items.AddRange(Constants.FIRST_ZNO_SUBJECTS);
+                secondSubjectComboBox.Items.AddRange(Constants.SECOND_ZNO_SUBJECTS);
+                thirdSubjectComboBox.Items.AddRange(Constants.THIRD_ZNO_SUBJECTS);
+                fourthSubjectComboBox.Items.AddRange(Constants.OTHER_ZNO_SUBJECTS);
+                fifthSubjectComboBox.Items.AddRange(Constants.OTHER_ZNO_SUBJECTS);
 
-            foreach (NumericUpDown numericUpDown in this.Controls.OfType<NumericUpDown>())
-            {
-                numericUpDown.Maximum = 200;
-                numericUpDown.Minimum = 100;
-                ((TextBox)numericUpDown.Controls[1]).MaxLength = 3;
+                foreach (NumericUpDown numericUpDown in this.Controls.OfType<NumericUpDown>())
+                {
+                    numericUpDown.Maximum = Constants.MAX_ZNO_POINTS;
+                    numericUpDown.Minimum = Constants.MIN_ZNO_POINTS;
+                    ((TextBox)numericUpDown.Controls[1]).MaxLength = Constants.MAX_ZNO_POINTS_DIGIT_COUNT;
+                }
+
+                comboBoxesArr = new[]
+                {
+                    firstSubjectComboBox,
+                    secondSubjectComboBox,
+                    thirdSubjectComboBox,
+                    fourthSubjectComboBox,
+                    fifthSubjectComboBox
+                };
+
+                numericUpDownsArr = new[]
+                {
+                    firstSubjectPotintsNumericUpDown,
+                    secondSubjectPotintsNumericUpDown,
+                    thirdSubjectPotintsNumericUpDown,
+                    fourthSubjectPotintsNumericUpDown,
+                    fifthSubjectPotintsNumericUpDown
+                };
             }
-
-            comboBoxesArr = new[]
+            catch(Exception ex)
             {
-                firstSubjectComboBox,
-                secondSubjectComboBox,
-                thirdSubjectComboBox,
-                fourthSubjectComboBox,
-                fifthSubjectComboBox
-            };
-
-            numericUpDownsArr = new[]
-            {
-                firstSubjectPotintsNumericUpDown,
-                secondSubjectPotintsNumericUpDown,
-                thirdSubjectPotintsNumericUpDown,
-                fourthSubjectPotintsNumericUpDown,
-                fifthSubjectPotintsNumericUpDown
-            };
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void backMaterialFlatButton_Click(object sender, EventArgs e)
@@ -86,7 +93,7 @@ namespace specialitySelectionAssistant
 
             if (isMandatoryComboboxsEmpty)
             {
-                MessageBox.Show("Оберіть три обов'язкових предмети");
+                MessageBox.Show($"Оберіть {Constants.MANDATORY_SUBJECTS_COUNT} обов'язкових предмети");
                 isMandatoryComboboxsEmpty = false;
             }
             else
@@ -99,15 +106,25 @@ namespace specialitySelectionAssistant
         private void saveZnoSubjects()
         {
             znoSubjects = new List<ZnoSubject>();
-
-            for (int i = 0; i < 3; i++)
+            try
             {
-                checkIsComboBoxEmpty(comboBoxesArr[i]);
+                for (int i = 0; i < Constants.MANDATORY_SUBJECTS_COUNT; i++)
+                {
+                    checkIsComboBoxEmpty(comboBoxesArr[i]);
+                }
+
+                for (int i = 0; i < Constants.SUBJECT_COUNT; i++)
+                {
+                    saveZnoSubject(comboBoxesArr[i], numericUpDownsArr[i]);
+                }
             }
-
-            for (int i = 0; i < 5; i++)
+            catch(IndexOutOfRangeException)
             {
-                saveZnoSubject(comboBoxesArr[i], numericUpDownsArr[i]);
+                MessageBox.Show("Internal error. Required form objects are missing.");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
         }

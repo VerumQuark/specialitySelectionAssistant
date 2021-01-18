@@ -36,6 +36,7 @@ namespace specialitySelectionAssistant
             this.NameMaterialLabel = new MaterialSkin.Controls.MaterialLabel();
             this.nextMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.helpMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
+            this.nameEnterErrorLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ZnoMaterialCheckBox
@@ -106,6 +107,7 @@ namespace specialitySelectionAssistant
             this.NameMaterialSingleLineTextField.Size = new System.Drawing.Size(495, 23);
             this.NameMaterialSingleLineTextField.TabIndex = 4;
             this.NameMaterialSingleLineTextField.UseSystemPasswordChar = false;
+            this.NameMaterialSingleLineTextField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NameMaterialSingleLineTextField_KeyPress);
             // 
             // NameMaterialLabel
             // 
@@ -158,12 +160,23 @@ namespace specialitySelectionAssistant
             this.helpMaterialFlatButton.UseVisualStyleBackColor = true;
             this.helpMaterialFlatButton.Click += new System.EventHandler(this.helpMaterialFlatButton_Click);
             // 
+            // nameEnterErrorLabel
+            // 
+            this.nameEnterErrorLabel.AutoSize = true;
+            this.nameEnterErrorLabel.Location = new System.Drawing.Point(51, 218);
+            this.nameEnterErrorLabel.Name = "nameEnterErrorLabel";
+            this.nameEnterErrorLabel.Size = new System.Drawing.Size(381, 17);
+            this.nameEnterErrorLabel.TabIndex = 8;
+            this.nameEnterErrorLabel.Text = "Можуть бути використані українські символи, \" - \" та \" \' \".";
+            this.nameEnterErrorLabel.Visible = false;
+            // 
             // RegistrationForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.Controls.Add(this.nameEnterErrorLabel);
             this.Controls.Add(this.helpMaterialFlatButton);
             this.Controls.Add(this.nextMaterialFlatButton);
             this.Controls.Add(this.NameMaterialLabel);
@@ -190,6 +203,7 @@ namespace specialitySelectionAssistant
         private MaterialSkin.Controls.MaterialLabel NameMaterialLabel;
         private MaterialSkin.Controls.MaterialFlatButton nextMaterialFlatButton;
         private MaterialSkin.Controls.MaterialFlatButton helpMaterialFlatButton;
+        private System.Windows.Forms.Label nameEnterErrorLabel;
     }
 }
 

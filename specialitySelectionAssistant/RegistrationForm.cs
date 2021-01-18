@@ -27,21 +27,21 @@ namespace specialitySelectionAssistant
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange300, Primary.Orange400, Primary.Orange100, Accent.LightBlue200, TextShade.BLACK);
         }
 
-        private void nextMaterialFlatButton_Click(object sender, EventArgs e)
+        private void NextMaterialFlatButton_Click(object sender, EventArgs e)
         {
             try
             {
-                checkNameField();
+                CheckNameField();
 
                 string name = NameMaterialSingleLineTextField.Text;
                 bool budget = BudgetMaterialCheckBox.Checked;
                 bool contract = ContractMaterialCheckBox.Checked;
                 bool haveZno = ZnoMaterialCheckBox.Checked;
 
-                User.setName(name);
-                preferredSpecialtiesDeterminant.setEducationForm(budget, contract, haveZno);
+                User.SetName(name);
+                PreferredSpecialtiesDeterminant.SetEducationForm(budget, contract, haveZno);
 
-                Navigation.startTest(haveZno, this);
+                Navigation.StartTest(haveZno, this);
             }
             catch(Exception ex)
             {
@@ -49,9 +49,9 @@ namespace specialitySelectionAssistant
             }
         }
 
-        private void helpMaterialFlatButton_Click(object sender, EventArgs e)
+        private void HelpMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            Navigation.toHelpForm(this);
+            Navigation.ToHelpForm(this);
         }
 
         private void NameMaterialSingleLineTextField_KeyPress(object sender, KeyPressEventArgs e)
@@ -61,18 +61,18 @@ namespace specialitySelectionAssistant
 
             if (Regex.IsMatch(inputValue, pattern, RegexOptions.IgnoreCase) == false)
             {
-                addNameBorder(Pens.Red);
+                AddNameBorder(Pens.Red);
                 nameEnterErrorLabel.Visible = true;
                 e.Handled = true;
             }
             else
             {
-                addNameBorder(Pens.White);
+                AddNameBorder(Pens.White);
                 nameEnterErrorLabel.Visible = false;
             }
         }
 
-        private void addNameBorder(Pen pen)
+        private void AddNameBorder(Pen pen)
         {
             Graphics formGraphics;
             formGraphics = this.CreateGraphics();
@@ -85,14 +85,14 @@ namespace specialitySelectionAssistant
             NameMaterialSingleLineTextField.Height + 1); ;
         }
 
-        private void checkNameField()
+        private void CheckNameField()
         {
             string pattern = "^\\s*$";
             string inputValue = NameMaterialSingleLineTextField.Text;
 
             if (Regex.IsMatch(inputValue, pattern, RegexOptions.IgnoreCase))
             {
-                addNameBorder(Pens.Red);
+                AddNameBorder(Pens.Red);
                 throw new Exception("Введіть ПІБ");
             }
         }

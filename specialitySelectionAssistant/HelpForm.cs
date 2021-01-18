@@ -29,9 +29,9 @@ namespace specialitySelectionAssistant
 
         }
 
-        private void backMaterialFlatButton_Click(object sender, EventArgs e)
+        private void BackMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            Navigation.toPrevForm(this);
+            Navigation.ToPrevForm(this);
         }
     }
 }

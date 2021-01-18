@@ -8,21 +8,21 @@ namespace SpecialtySelectionAssistantLibrary
 {
     public struct HollandResult
         {
-            public int realistic { get; set; }
-            public int intelligent { get; set; }
-            public int social { get; set; }
-            public int conventional { get; set; }
-            public int enterprising { get; set; }
-            public int artistic { get; set; }
+            public int Realistic { get; set; }
+            public int Intelligent { get; set; }
+            public int Social { get; set; }
+            public int Conventional { get; set; }
+            public int Enterprising { get; set; }
+            public int Artistic { get; set; }
 
-            public void init()
+            public void Init()
             {
-                realistic = 0;
-                intelligent = 0;
-                social = 0;
-                conventional = 0;
-                enterprising = 0;
-                artistic = 0;
+                Realistic = 0;
+                Intelligent = 0;
+                Social = 0;
+                Conventional = 0;
+                Enterprising = 0;
+                Artistic = 0;
             }
         }
 
@@ -34,11 +34,11 @@ namespace SpecialtySelectionAssistantLibrary
 
         static User()
         {
-            hollandResult.init();
+            hollandResult.Init();
             name = "";
         }
 
-        static public void setName(string nameValue)
+        static public void SetName(string nameValue)
         {
             name = nameValue;
         }

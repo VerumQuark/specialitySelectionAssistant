@@ -57,7 +57,7 @@ namespace specialitySelectionAssistant
             this.helpMaterialFlatButton.TabIndex = 17;
             this.helpMaterialFlatButton.Text = "?";
             this.helpMaterialFlatButton.UseVisualStyleBackColor = true;
-            this.helpMaterialFlatButton.Click += new System.EventHandler(this.helpMaterialFlatButton_Click);
+            this.helpMaterialFlatButton.Click += new System.EventHandler(this.HelpMaterialFlatButton_Click);
             // 
             // titleLabel
             // 
@@ -129,7 +129,7 @@ namespace specialitySelectionAssistant
             this.closeMaterialFlatButton.TabIndex = 27;
             this.closeMaterialFlatButton.Text = "Завершити";
             this.closeMaterialFlatButton.UseVisualStyleBackColor = false;
-            this.closeMaterialFlatButton.Click += new System.EventHandler(this.closeMaterialFlatButton_Click);
+            this.closeMaterialFlatButton.Click += new System.EventHandler(this.CloseMaterialFlatButton_Click);
             // 
             // firstSpecialtyDescriptionLabel
             // 
@@ -207,7 +207,7 @@ namespace specialitySelectionAssistant
             this.Name = "TestResultForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Результати!";
-            this.Load += new System.EventHandler(this.testResultForm_Load);
+            this.Load += new System.EventHandler(this.TestResultForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

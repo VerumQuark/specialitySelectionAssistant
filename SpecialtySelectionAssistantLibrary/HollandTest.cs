@@ -73,7 +73,7 @@ namespace SpecialtySelectionAssistantLibrary
             }
         }
 
-        static public void nextComparisonQuestion()
+        static public void NextComparisonQuestion()
         {
             try
             {
@@ -90,7 +90,7 @@ namespace SpecialtySelectionAssistantLibrary
             }
         }
 
-        static public void prevComparisonQuestion()
+        static public void PrevComparisonQuestion()
         {
             try
             {
@@ -120,7 +120,7 @@ namespace SpecialtySelectionAssistantLibrary
         {
             try
             {
-                comparisonQuestionsStorage = generateComparisonQuestions();
+                comparisonQuestionsStorage = GenerateComparisonQuestions();
                 CurrentComparisonQuestionIndex = 0;
                 currentComparisonQuestion = comparisonQuestionsStorage[CurrentComparisonQuestionIndex];
                 chosenProfessionsTypesStack.Clear();
@@ -135,66 +135,67 @@ namespace SpecialtySelectionAssistantLibrary
             }
         }
 
-        static ProfessionPairStorage generateComparisonQuestions()
+        static ProfessionPairStorage GenerateComparisonQuestions()
         {
             ProfessionPairGenerator professionPairGenerator = new ProfessionPairGenerator();
-            return professionPairGenerator.generatePairs();
+            return professionPairGenerator.GeneratePairs();
         }
 
-        static public void saveTestResult()
+        static public void SaveTestResult()
         {
             foreach(string type in chosenProfessionsTypesStack)
             {
-                addCharacteristicsPoint(type);
+                AddCharacteristicsPoint(type);
             }
         }
 
-        static public void skipTest()
+        static public void SkipTest()
         {
-            HollandResult skip = new HollandResult();
-
-            skip.artistic = 10;
-            skip.conventional = 6;
-            skip.enterprising = 8;
-            skip.intelligent = 2;
-            skip.realistic = 0;
-            skip.social = 4;
+            HollandResult skip = new HollandResult
+            {
+                Artistic = 10,
+                Conventional = 6,
+                Enterprising = 8,
+                Intelligent = 2,
+                Realistic = 0,
+                Social = 4
+            };
 
             User.hollandResult = skip;
         }
 
-        static public void addCharacteristicsPoint(string type)
+        static public void AddCharacteristicsPoint(string type)
         {
             switch (type)
             {
                 case "realistic":
                     {
-                        User.hollandResult.realistic += 1;
+                        User.hollandResult.Realistic += 1;
                         break;
                     }
                 case "intelligent":
                     {
-                        User.hollandResult.intelligent += 1;
+                        User.hollandResult.Intelligent += 1;
                         break;
                     }
                 case "social":
                     {
-                        User.hollandResult.social += 1;
+                        User.hollandResult.Social += 1;
                         break;
                     }
                 case "conventional":
                     {
-                        User.hollandResult.conventional += 1;
+                        User.hollandResult.Conventional += 1;
                         break;
                     }
                 case "enterprising":
                     {
-                        User.hollandResult.enterprising += 1;
+                        User.hollandResult.Enterprising += 1;
                         break;
                     }
                 case "artistic":
                     {
-                        User.hollandResult.artistic += 1;
+                        User.hollandResult.Artistic += 1;
                         break;
                     }
                 default:

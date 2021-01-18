@@ -77,19 +77,19 @@ namespace specialitySelectionAssistant
             }
         }
 
-        private void backMaterialFlatButton_Click(object sender, EventArgs e)
+        private void BackMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            Navigation.toRegistrationForm(this);
+            Navigation.ToRegistrationForm(this);
         }
 
-        private void helpMaterialFlatButton_Click(object sender, EventArgs e)
+        private void HelpMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            Navigation.toHelpForm(this);
+            Navigation.ToHelpForm(this);
         }
 
-        private void nextMaterialFlatButton_Click(object sender, EventArgs e)
+        private void NextMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            saveZnoSubjects();
+            SaveZnoSubjects();
 
             if (isMandatoryComboboxsEmpty)
             {
@@ -98,24 +98,24 @@ namespace specialitySelectionAssistant
             }
             else
             {
-                preferredSpecialtiesDeterminant.setZnoSubjects(znoSubjects);
-                Navigation.toComparisonQuestionForm(this);
+                PreferredSpecialtiesDeterminant.SetZnoSubjects(znoSubjects);
+                Navigation.ToComparisonQuestionForm(this);
             }
         }
 
-        private void saveZnoSubjects()
+        private void SaveZnoSubjects()
         {
             znoSubjects = new List<ZnoSubject>();
             try
             {
                 for (int i = 0; i < Constants.MANDATORY_SUBJECTS_COUNT; i++)
                 {
-                    checkIsComboBoxEmpty(comboBoxesArr[i]);
+                    CheckIsComboBoxEmpty(comboBoxesArr[i]);
                 }
 
                 for (int i = 0; i < Constants.SUBJECT_COUNT; i++)
                 {
-                    saveZnoSubject(comboBoxesArr[i], numericUpDownsArr[i]);
+                    SaveZnoSubject(comboBoxesArr[i], numericUpDownsArr[i]);
                 }
             }
             catch(IndexOutOfRangeException)
@@ -129,17 +129,17 @@ namespace specialitySelectionAssistant
 
         }
 
-        private void checkIsComboBoxEmpty(ComboBox comboBox)
+        private void CheckIsComboBoxEmpty(ComboBox comboBox)
         {
             if (comboBox.Text == "")
             {
-                addBorder(comboBox);
+                AddBorder(comboBox);
 
                 isMandatoryComboboxsEmpty = true;
             }
         }
 
-        private void addBorder(Control comboBox)
+        private void AddBorder(Control comboBox)
         {
             Graphics formGraphics;
             formGraphics = this.CreateGraphics();
@@ -152,41 +152,41 @@ namespace specialitySelectionAssistant
             comboBox.Height + 1);
         }
 
-        private void saveZnoSubject(ComboBox comboBox, NumericUpDown numericUpDown)
+        private void SaveZnoSubject(ComboBox comboBox, NumericUpDown numericUpDown)
         {
-            ZnoSubject znoSubject = new ZnoSubject();
-
-            znoSubject.name = comboBox.Text;
-            znoSubject.points = (int)numericUpDown.Value;
+            ZnoSubject znoSubject = new ZnoSubject
+            {
+                name = comboBox.Text,
+                points = (int)numericUpDown.Value
+            };
 
             znoSubjects.Add(znoSubject);
         }
 
-        private void subjectComboBox_Click(object sender, EventArgs e)
+        private void SubjectComboBox_Click(object sender, EventArgs e)
         {
             ComboBox comboBox = (ComboBox)sender;
             comboBox.DroppedDown = true;
         }
 
-        private void subjectComboBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void SubjectComboBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
         }
 
-        private void subjectPotintsNumericUpDown_KeyUp(object sender, KeyEventArgs e)
+        private void SubjectPotintsNumericUpDown_KeyUp(object sender, KeyEventArgs e)
         {
             NumericUpDown numericUpDown = (NumericUpDown) sender;
-            int value;
-            if (int.TryParse(numericUpDown.Text, out value))
+            if (int.TryParse(numericUpDown.Text, out int value))
             {
                 if (value > 200)
                 {
                     numericUpDown.Text = "200";
-                } 
+                }
             }
         }
 
-        private void subjectPotintsNumericUpDown_Leave(object sender, EventArgs e)
+        private void SubjectPotintsNumericUpDown_Leave(object sender, EventArgs e)
         {
             NumericUpDown numericUpDown = (NumericUpDown)sender;
             if(numericUpDown.Value < 100)

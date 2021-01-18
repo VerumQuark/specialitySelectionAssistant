@@ -13,39 +13,39 @@ namespace specialitySelectionAssistant
     {
         static Form prevForm;
 
-        static public void startTest(bool haveResult, Form form)
+        static public void StartTest(bool haveResult, Form form)
         {
             if (haveResult)
             {
-                changeForm(new ZnoForm(), form);
+                ChangeForm(new ZnoForm(), form);
             }
             else
             {
-                toComparisonQuestionForm(form);
+                ToComparisonQuestionForm(form);
             }
         }
 
-        static public void toRegistrationForm(Form form)
+        static public void ToRegistrationForm(Form form)
         {
-            changeForm(new RegistrationForm(), form);
+            ChangeForm(new RegistrationForm(), form);
         }
 
-        static public void toListQuestionsForm(Form form)
+        static public void ToListQuestionsForm(Form form)
         {
-            changeForm(new ListQuestionForm(), form);
+            ChangeForm(new ListQuestionForm(), form);
         }
 
-        static public void toComparisonQuestionForm(Form form)
+        static public void ToComparisonQuestionForm(Form form)
         {
-            changeForm(new ProfessionsComparisonQuestionForm(), form);
+            ChangeForm(new ProfessionsComparisonQuestionForm(), form);
         }
 
-        static public void toResultForm(Form form)
+        static public void ToResultForm(Form form)
         {
-            changeForm(new TestResultForm(), form);
+            ChangeForm(new TestResultForm(), form);
         }
         
-        static public void toHelpForm(Form form)
+        static public void ToHelpForm(Form form)
         {
             prevForm = form;
 
@@ -54,12 +54,12 @@ namespace specialitySelectionAssistant
             Program.Context.MainForm.Show();
         }
 
-        static public void toPrevForm(Form form)
+        static public void ToPrevForm(Form form)
         {
-            changeForm(prevForm, form);
+            ChangeForm(prevForm, form);
         }
 
-        private static void changeForm(Form formToOpen, Form formToClose)
+        private static void ChangeForm(Form formToOpen, Form formToClose)
         {
             Program.Context.MainForm = formToOpen;
             formToClose.Close();

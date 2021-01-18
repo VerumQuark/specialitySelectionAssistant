@@ -25,25 +25,25 @@ namespace specialitySelectionAssistant
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange300, Primary.Orange400, Primary.Orange100, Accent.LightBlue200, TextShade.BLACK);
         }
 
-        private void testResultForm_Load(object sender, EventArgs e)
+        private void TestResultForm_Load(object sender, EventArgs e)
         {
-            List<Specialty> specialties = preferredSpecialtiesDeterminant.getDetermineSpecialties();
+            List<Specialty> specialties = PreferredSpecialtiesDeterminant.GetDetermineSpecialties();
 
             //REWORK
             firstSpecialtyNameMaterialLabel.Text = specialties[0].name;
             firstSpecialtyDescriptionLabel.Text = specialties[0].description;
-            firstSpecialtyProfessionsLabel.Text = getProfessionsStr(specialties[0].professions);
+            firstSpecialtyProfessionsLabel.Text = GetProfessionsStr(specialties[0].professions);
 
             secondSpecialtyNameMaterialLabel.Text = specialties[1].name;
             secondSpecialtyDescriptionLabel.Text = specialties[1].description;
-            secondSpecialtyProfessionsLabel.Text = getProfessionsStr(specialties[1].professions);
+            secondSpecialtyProfessionsLabel.Text = GetProfessionsStr(specialties[1].professions);
 
             thirdSpecialtyNameMaterialLabel.Text = specialties[2].name;
             thirdSpecialtyDescriptionLabel.Text = specialties[2].description;
-            thirdSpecialtyProfessionsLabel.Text = getProfessionsStr(specialties[2].professions);
+            thirdSpecialtyProfessionsLabel.Text = GetProfessionsStr(specialties[2].professions);
         }
 
-        private string getProfessionsStr(string[] professions)
+        private string GetProfessionsStr(string[] professions)
         {
 
             string specialtyProffesions = "Професії: ";
@@ -59,12 +59,12 @@ namespace specialitySelectionAssistant
             return specialtyProffesions;
         }
 
-        private void helpMaterialFlatButton_Click(object sender, EventArgs e)
+        private void HelpMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            Navigation.toHelpForm(this);
+            Navigation.ToHelpForm(this);
         }
 
-        private void closeMaterialFlatButton_Click(object sender, EventArgs e)
+        private void CloseMaterialFlatButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }

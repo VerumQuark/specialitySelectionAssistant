@@ -58,8 +58,8 @@ namespace specialitySelectionAssistant
             this.veryLikeMaterialRadioButton.TabStop = true;
             this.veryLikeMaterialRadioButton.Text = "Дуже подобається";
             this.veryLikeMaterialRadioButton.UseVisualStyleBackColor = false;
-            this.veryLikeMaterialRadioButton.CheckedChanged += new System.EventHandler(this.veryLikeMaterialRadioButton_CheckedChanged);
-            this.veryLikeMaterialRadioButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.materialRadioButton_KeyUp);
+            this.veryLikeMaterialRadioButton.CheckedChanged += new System.EventHandler(this.VeryLikeMaterialRadioButton_CheckedChanged);
+            this.veryLikeMaterialRadioButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MaterialRadioButton_KeyUp);
             // 
             // ratherSoMaterialRadioButton
             // 
@@ -78,8 +78,8 @@ namespace specialitySelectionAssistant
             this.ratherSoMaterialRadioButton.TabStop = true;
             this.ratherSoMaterialRadioButton.Text = "Скоріш так";
             this.ratherSoMaterialRadioButton.UseVisualStyleBackColor = false;
-            this.ratherSoMaterialRadioButton.CheckedChanged += new System.EventHandler(this.ratherSoMaterialRadioButton_Click);
-            this.ratherSoMaterialRadioButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.materialRadioButton_KeyUp);
+            this.ratherSoMaterialRadioButton.CheckedChanged += new System.EventHandler(this.RatherSoMaterialRadioButton_Click);
+            this.ratherSoMaterialRadioButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MaterialRadioButton_KeyUp);
             // 
             // ratherNotMaterialRadioButton
             // 
@@ -98,8 +98,8 @@ namespace specialitySelectionAssistant
             this.ratherNotMaterialRadioButton.TabStop = true;
             this.ratherNotMaterialRadioButton.Text = "Скоріш ні";
             this.ratherNotMaterialRadioButton.UseVisualStyleBackColor = false;
-            this.ratherNotMaterialRadioButton.CheckedChanged += new System.EventHandler(this.ratherNotMaterialRadioButton_CheckedChanged);
-            this.ratherNotMaterialRadioButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.materialRadioButton_KeyUp);
+            this.ratherNotMaterialRadioButton.CheckedChanged += new System.EventHandler(this.RatherNotMaterialRadioButton_CheckedChanged);
+            this.ratherNotMaterialRadioButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MaterialRadioButton_KeyUp);
             // 
             // cantAnswerMaterialRadioButton
             // 
@@ -118,8 +118,8 @@ namespace specialitySelectionAssistant
             this.cantAnswerMaterialRadioButton.TabStop = true;
             this.cantAnswerMaterialRadioButton.Text = "Не можу відповісти";
             this.cantAnswerMaterialRadioButton.UseVisualStyleBackColor = false;
-            this.cantAnswerMaterialRadioButton.CheckedChanged += new System.EventHandler(this.cantAnswerMaterialRadioButton_CheckedChanged);
-            this.cantAnswerMaterialRadioButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.materialRadioButton_KeyUp);
+            this.cantAnswerMaterialRadioButton.CheckedChanged += new System.EventHandler(this.CantAnswerMaterialRadioButton_CheckedChanged);
+            this.cantAnswerMaterialRadioButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MaterialRadioButton_KeyUp);
             // 
             // veryDislikeMaterialRadioButton
             // 
@@ -138,8 +138,8 @@ namespace specialitySelectionAssistant
             this.veryDislikeMaterialRadioButton.TabStop = true;
             this.veryDislikeMaterialRadioButton.Text = "Дуже не подобається";
             this.veryDislikeMaterialRadioButton.UseVisualStyleBackColor = false;
-            this.veryDislikeMaterialRadioButton.CheckedChanged += new System.EventHandler(this.veryDislikeMaterialRadioButton_CheckedChanged);
-            this.veryDislikeMaterialRadioButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.materialRadioButton_KeyUp);
+            this.veryDislikeMaterialRadioButton.CheckedChanged += new System.EventHandler(this.VeryDislikeMaterialRadioButton_CheckedChanged);
+            this.veryDislikeMaterialRadioButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MaterialRadioButton_KeyUp);
             // 
             // backMaterialFlatButton
             // 
@@ -159,7 +159,7 @@ namespace specialitySelectionAssistant
             this.backMaterialFlatButton.TabIndex = 12;
             this.backMaterialFlatButton.Text = "Назад";
             this.backMaterialFlatButton.UseVisualStyleBackColor = false;
-            this.backMaterialFlatButton.Click += new System.EventHandler(this.backMaterialFlatButton_Click);
+            this.backMaterialFlatButton.Click += new System.EventHandler(this.BackMaterialFlatButton_Click);
             // 
             // nextMaterialFlatButton
             // 
@@ -179,7 +179,7 @@ namespace specialitySelectionAssistant
             this.nextMaterialFlatButton.TabIndex = 11;
             this.nextMaterialFlatButton.Text = "Далі";
             this.nextMaterialFlatButton.UseVisualStyleBackColor = false;
-            this.nextMaterialFlatButton.Click += new System.EventHandler(this.nextMaterialFlatButton_Click);
+            this.nextMaterialFlatButton.Click += new System.EventHandler(this.NextMaterialFlatButton_Click);
             // 
             // helpMaterialFlatButton
             // 
@@ -196,7 +196,7 @@ namespace specialitySelectionAssistant
             this.helpMaterialFlatButton.TabIndex = 17;
             this.helpMaterialFlatButton.Text = "?";
             this.helpMaterialFlatButton.UseVisualStyleBackColor = true;
-            this.helpMaterialFlatButton.Click += new System.EventHandler(this.helpMaterialFlatButton_Click);
+            this.helpMaterialFlatButton.Click += new System.EventHandler(this.HelpMaterialFlatButton_Click);
             // 
             // listQuestionQuestionLabel
             // 
@@ -216,7 +216,7 @@ namespace specialitySelectionAssistant
             this.skipButton.TabIndex = 23;
             this.skipButton.Text = "skip";
             this.skipButton.UseVisualStyleBackColor = true;
-            this.skipButton.Click += new System.EventHandler(this.skipButton_Click);
+            this.skipButton.Click += new System.EventHandler(this.SkipButton_Click);
             // 
             // ListQuestionForm
             // 

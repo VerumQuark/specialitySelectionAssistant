@@ -141,7 +141,7 @@ namespace specialitySelectionAssistant
             this.nextMaterialFlatButton.TabIndex = 6;
             this.nextMaterialFlatButton.Text = "Далі";
             this.nextMaterialFlatButton.UseVisualStyleBackColor = false;
-            this.nextMaterialFlatButton.Click += new System.EventHandler(this.nextMaterialFlatButton_Click);
+            this.nextMaterialFlatButton.Click += new System.EventHandler(this.NextMaterialFlatButton_Click);
             // 
             // helpMaterialFlatButton
             // 
@@ -158,7 +158,7 @@ namespace specialitySelectionAssistant
             this.helpMaterialFlatButton.TabIndex = 7;
             this.helpMaterialFlatButton.Text = "?";
             this.helpMaterialFlatButton.UseVisualStyleBackColor = true;
-            this.helpMaterialFlatButton.Click += new System.EventHandler(this.helpMaterialFlatButton_Click);
+            this.helpMaterialFlatButton.Click += new System.EventHandler(this.HelpMaterialFlatButton_Click);
             // 
             // nameEnterErrorLabel
             // 

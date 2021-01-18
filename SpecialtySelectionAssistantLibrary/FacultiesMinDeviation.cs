@@ -9,9 +9,9 @@ namespace SpecialtySelectionAssistantLibrary
 {
     static public class FacultiesMinDeviation
     {
-        static string jsonString = Encoding.UTF8.GetString(Properties.Resources.faculties);
+        static readonly string jsonString = Encoding.UTF8.GetString(Properties.Resources.faculties);
 
-        static public Faculty getFaculty(HollandResult hollandResult)
+        static public Faculty GetFaculty(HollandResult hollandResult)
         {
             List<Faculty> alterFacultiesStorage;
             alterFacultiesStorage = JsonSerializer.Deserialize<List<Faculty>>(jsonString);
@@ -23,12 +23,12 @@ namespace SpecialtySelectionAssistantLibrary
             {
                 int absDeviation = 0;
 
-                absDeviation += Math.Abs(hollandResult.realistic     - faculty.hollandCharacteristics.realistic);
-                absDeviation += Math.Abs(hollandResult.intelligent   - faculty.hollandCharacteristics.intelligent);
-                absDeviation += Math.Abs(hollandResult.social        - faculty.hollandCharacteristics.social);
-                absDeviation += Math.Abs(hollandResult.conventional  - faculty.hollandCharacteristics.conventional);
-                absDeviation += Math.Abs(hollandResult.enterprising  - faculty.hollandCharacteristics.enterprising);
-                absDeviation += Math.Abs(hollandResult.artistic      - faculty.hollandCharacteristics.artistic);
+                absDeviation += Math.Abs(hollandResult.Realistic     - faculty.hollandCharacteristics.Realistic);
+                absDeviation += Math.Abs(hollandResult.Intelligent   - faculty.hollandCharacteristics.Intelligent);
+                absDeviation += Math.Abs(hollandResult.Social        - faculty.hollandCharacteristics.Social);
+                absDeviation += Math.Abs(hollandResult.Conventional  - faculty.hollandCharacteristics.Conventional);
+                absDeviation += Math.Abs(hollandResult.Enterprising  - faculty.hollandCharacteristics.Enterprising);
+                absDeviation += Math.Abs(hollandResult.Artistic      - faculty.hollandCharacteristics.Artistic);
 
                 if (absDeviation < minAbsDeviation)
                 {

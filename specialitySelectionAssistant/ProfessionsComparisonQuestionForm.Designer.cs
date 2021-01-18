@@ -59,7 +59,7 @@ namespace specialitySelectionAssistant
             this.nextFormMaterialFlatButton.TabIndex = 7;
             this.nextFormMaterialFlatButton.Text = "Далі";
             this.nextFormMaterialFlatButton.UseVisualStyleBackColor = false;
-            this.nextFormMaterialFlatButton.Click += new System.EventHandler(this.nextFormMaterialFlatButton_Click);
+            this.nextFormMaterialFlatButton.Click += new System.EventHandler(this.NextFormMaterialFlatButton_Click);
             // 
             // leftProffesionMaterialLabel
             // 
@@ -120,8 +120,8 @@ namespace specialitySelectionAssistant
             this.leftProffesionButton.Size = new System.Drawing.Size(250, 250);
             this.leftProffesionButton.TabIndex = 14;
             this.leftProffesionButton.UseVisualStyleBackColor = false;
-            this.leftProffesionButton.Click += new System.EventHandler(this.leftProfessionButton_Click);
-            this.leftProffesionButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.leftProffesionButton_KeyUp);
+            this.leftProffesionButton.Click += new System.EventHandler(this.LeftProfessionButton_Click);
+            this.leftProffesionButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.LeftProffesionButton_KeyUp);
             // 
             // rightProfessionButton
             // 
@@ -136,8 +136,8 @@ namespace specialitySelectionAssistant
             this.rightProfessionButton.Size = new System.Drawing.Size(250, 250);
             this.rightProfessionButton.TabIndex = 15;
             this.rightProfessionButton.UseVisualStyleBackColor = false;
-            this.rightProfessionButton.Click += new System.EventHandler(this.rightProfessionButton_Click);
-            this.rightProfessionButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.rightProfessionButton_KeyUp);
+            this.rightProfessionButton.Click += new System.EventHandler(this.RightProfessionButton_Click);
+            this.rightProfessionButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.RightProfessionButton_KeyUp);
             // 
             // HelpMaterialFlatButton
             // 
@@ -174,7 +174,7 @@ namespace specialitySelectionAssistant
             this.skipButton.TabIndex = 25;
             this.skipButton.Text = "skip";
             this.skipButton.UseVisualStyleBackColor = true;
-            this.skipButton.Click += new System.EventHandler(this.skipButton_Click);
+            this.skipButton.Click += new System.EventHandler(this.SkipButton_Click);
             // 
             // ProfessionsComparisonQuestionForm
             // 

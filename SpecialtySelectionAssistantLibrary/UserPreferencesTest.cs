@@ -28,7 +28,7 @@ namespace SpecialtySelectionAssistantLibrary
 
         static public Specialty[] resultSpecialties;
 
-        static public void saveTestResult()
+        static public void SaveTestResult()
         {
             foreach(UserPreference userPreference in userPreferencesStack)
             {
@@ -42,7 +42,7 @@ namespace SpecialtySelectionAssistantLibrary
 
         //static constructor REWORK
 
-        static public void createTest(Faculty facultyValue)
+        static public void CreateTest(Faculty facultyValue)
         {
             faculty = facultyValue;
 
@@ -58,14 +58,14 @@ namespace SpecialtySelectionAssistantLibrary
             userPreferencesStack = new Stack<UserPreference>();
         }
 
-        static public void nextQuestion()
+        static public void NextQuestion()
         {
             CurrentListQuestionIndex++;
             currentSpeciality = faculty.specialties[CurrentSpecialityIndex];
             currentListQuestion = currentSpeciality.questions[CurrentListQuestionIndex];
         }
 
-        static public void prevQuestion()
+        static public void PrevQuestion()
         {
             CurrentListQuestionIndex--;
             currentSpeciality = faculty.specialties[CurrentSpecialityIndex];

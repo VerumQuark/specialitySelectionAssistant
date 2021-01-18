@@ -74,7 +74,7 @@ namespace specialitySelectionAssistant
             this.helpMaterialFlatButton.TabIndex = 17;
             this.helpMaterialFlatButton.Text = "?";
             this.helpMaterialFlatButton.UseVisualStyleBackColor = true;
-            this.helpMaterialFlatButton.Click += new System.EventHandler(this.helpMaterialFlatButton_Click);
+            this.helpMaterialFlatButton.Click += new System.EventHandler(this.HelpMaterialFlatButton_Click);
             // 
             // label1
             // 
@@ -93,8 +93,8 @@ namespace specialitySelectionAssistant
             this.firstSubjectComboBox.Name = "firstSubjectComboBox";
             this.firstSubjectComboBox.Size = new System.Drawing.Size(263, 24);
             this.firstSubjectComboBox.TabIndex = 28;
-            this.firstSubjectComboBox.Click += new System.EventHandler(this.subjectComboBox_Click);
-            this.firstSubjectComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.subjectComboBox_KeyPress);
+            this.firstSubjectComboBox.Click += new System.EventHandler(this.SubjectComboBox_Click);
+            this.firstSubjectComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SubjectComboBox_KeyPress);
             // 
             // materialLabel1
             // 
@@ -129,8 +129,8 @@ namespace specialitySelectionAssistant
             this.secondSubjectComboBox.Name = "secondSubjectComboBox";
             this.secondSubjectComboBox.Size = new System.Drawing.Size(263, 24);
             this.secondSubjectComboBox.TabIndex = 31;
-            this.secondSubjectComboBox.Click += new System.EventHandler(this.subjectComboBox_Click);
-            this.secondSubjectComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.subjectComboBox_KeyPress);
+            this.secondSubjectComboBox.Click += new System.EventHandler(this.SubjectComboBox_Click);
+            this.secondSubjectComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SubjectComboBox_KeyPress);
             // 
             // materialLabel3
             // 
@@ -152,8 +152,8 @@ namespace specialitySelectionAssistant
             this.thirdSubjectComboBox.Name = "thirdSubjectComboBox";
             this.thirdSubjectComboBox.Size = new System.Drawing.Size(263, 24);
             this.thirdSubjectComboBox.TabIndex = 34;
-            this.thirdSubjectComboBox.Click += new System.EventHandler(this.subjectComboBox_Click);
-            this.thirdSubjectComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.subjectComboBox_KeyPress);
+            this.thirdSubjectComboBox.Click += new System.EventHandler(this.SubjectComboBox_Click);
+            this.thirdSubjectComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SubjectComboBox_KeyPress);
             // 
             // materialLabel4
             // 
@@ -175,8 +175,8 @@ namespace specialitySelectionAssistant
             this.fourthSubjectComboBox.Name = "fourthSubjectComboBox";
             this.fourthSubjectComboBox.Size = new System.Drawing.Size(267, 24);
             this.fourthSubjectComboBox.TabIndex = 37;
-            this.fourthSubjectComboBox.Click += new System.EventHandler(this.subjectComboBox_Click);
-            this.fourthSubjectComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.subjectComboBox_KeyPress);
+            this.fourthSubjectComboBox.Click += new System.EventHandler(this.SubjectComboBox_Click);
+            this.fourthSubjectComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SubjectComboBox_KeyPress);
             // 
             // materialLabel9
             // 
@@ -263,8 +263,8 @@ namespace specialitySelectionAssistant
             this.fifthSubjectComboBox.Name = "fifthSubjectComboBox";
             this.fifthSubjectComboBox.Size = new System.Drawing.Size(263, 24);
             this.fifthSubjectComboBox.TabIndex = 56;
-            this.fifthSubjectComboBox.Click += new System.EventHandler(this.subjectComboBox_Click);
-            this.fifthSubjectComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.subjectComboBox_KeyPress);
+            this.fifthSubjectComboBox.Click += new System.EventHandler(this.SubjectComboBox_Click);
+            this.fifthSubjectComboBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SubjectComboBox_KeyPress);
             // 
             // backMaterialFlatButton
             // 
@@ -284,7 +284,7 @@ namespace specialitySelectionAssistant
             this.backMaterialFlatButton.TabIndex = 70;
             this.backMaterialFlatButton.Text = "Назад";
             this.backMaterialFlatButton.UseVisualStyleBackColor = false;
-            this.backMaterialFlatButton.Click += new System.EventHandler(this.backMaterialFlatButton_Click);
+            this.backMaterialFlatButton.Click += new System.EventHandler(this.BackMaterialFlatButton_Click);
             // 
             // nextMaterialFlatButton
             // 
@@ -304,7 +304,7 @@ namespace specialitySelectionAssistant
             this.nextMaterialFlatButton.TabIndex = 69;
             this.nextMaterialFlatButton.Text = "Далі";
             this.nextMaterialFlatButton.UseVisualStyleBackColor = false;
-            this.nextMaterialFlatButton.Click += new System.EventHandler(this.nextMaterialFlatButton_Click);
+            this.nextMaterialFlatButton.Click += new System.EventHandler(this.NextMaterialFlatButton_Click);
             // 
             // firstSubjectPotintsNumericUpDown
             // 
@@ -317,8 +317,8 @@ namespace specialitySelectionAssistant
             this.firstSubjectPotintsNumericUpDown.Name = "firstSubjectPotintsNumericUpDown";
             this.firstSubjectPotintsNumericUpDown.Size = new System.Drawing.Size(62, 22);
             this.firstSubjectPotintsNumericUpDown.TabIndex = 82;
-            this.firstSubjectPotintsNumericUpDown.KeyUp += new System.Windows.Forms.KeyEventHandler(this.subjectPotintsNumericUpDown_KeyUp);
-            this.firstSubjectPotintsNumericUpDown.Leave += new System.EventHandler(this.subjectPotintsNumericUpDown_Leave);
+            this.firstSubjectPotintsNumericUpDown.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SubjectPotintsNumericUpDown_KeyUp);
+            this.firstSubjectPotintsNumericUpDown.Leave += new System.EventHandler(this.SubjectPotintsNumericUpDown_Leave);
             // 
             // secondSubjectPotintsNumericUpDown
             // 
@@ -326,8 +326,8 @@ namespace specialitySelectionAssistant
             this.secondSubjectPotintsNumericUpDown.Name = "secondSubjectPotintsNumericUpDown";
             this.secondSubjectPotintsNumericUpDown.Size = new System.Drawing.Size(62, 22);
             this.secondSubjectPotintsNumericUpDown.TabIndex = 83;
-            this.secondSubjectPotintsNumericUpDown.KeyUp += new System.Windows.Forms.KeyEventHandler(this.subjectPotintsNumericUpDown_KeyUp);
-            this.secondSubjectPotintsNumericUpDown.Leave += new System.EventHandler(this.subjectPotintsNumericUpDown_Leave);
+            this.secondSubjectPotintsNumericUpDown.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SubjectPotintsNumericUpDown_KeyUp);
+            this.secondSubjectPotintsNumericUpDown.Leave += new System.EventHandler(this.SubjectPotintsNumericUpDown_Leave);
             // 
             // thirdSubjectPotintsNumericUpDown
             // 
@@ -335,8 +335,8 @@ namespace specialitySelectionAssistant
             this.thirdSubjectPotintsNumericUpDown.Name = "thirdSubjectPotintsNumericUpDown";
             this.thirdSubjectPotintsNumericUpDown.Size = new System.Drawing.Size(62, 22);
             this.thirdSubjectPotintsNumericUpDown.TabIndex = 84;
-            this.thirdSubjectPotintsNumericUpDown.KeyUp += new System.Windows.Forms.KeyEventHandler(this.subjectPotintsNumericUpDown_KeyUp);
-            this.thirdSubjectPotintsNumericUpDown.Leave += new System.EventHandler(this.subjectPotintsNumericUpDown_Leave);
+            this.thirdSubjectPotintsNumericUpDown.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SubjectPotintsNumericUpDown_KeyUp);
+            this.thirdSubjectPotintsNumericUpDown.Leave += new System.EventHandler(this.SubjectPotintsNumericUpDown_Leave);
             // 
             // fourthSubjectPotintsNumericUpDown
             // 
@@ -344,8 +344,8 @@ namespace specialitySelectionAssistant
             this.fourthSubjectPotintsNumericUpDown.Name = "fourthSubjectPotintsNumericUpDown";
             this.fourthSubjectPotintsNumericUpDown.Size = new System.Drawing.Size(62, 22);
             this.fourthSubjectPotintsNumericUpDown.TabIndex = 85;
-            this.fourthSubjectPotintsNumericUpDown.KeyUp += new System.Windows.Forms.KeyEventHandler(this.subjectPotintsNumericUpDown_KeyUp);
-            this.fourthSubjectPotintsNumericUpDown.Leave += new System.EventHandler(this.subjectPotintsNumericUpDown_Leave);
+            this.fourthSubjectPotintsNumericUpDown.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SubjectPotintsNumericUpDown_KeyUp);
+            this.fourthSubjectPotintsNumericUpDown.Leave += new System.EventHandler(this.SubjectPotintsNumericUpDown_Leave);
             // 
             // fifthSubjectPotintsNumericUpDown
             // 
@@ -353,8 +353,8 @@ namespace specialitySelectionAssistant
             this.fifthSubjectPotintsNumericUpDown.Name = "fifthSubjectPotintsNumericUpDown";
             this.fifthSubjectPotintsNumericUpDown.Size = new System.Drawing.Size(62, 22);
             this.fifthSubjectPotintsNumericUpDown.TabIndex = 86;
-            this.fifthSubjectPotintsNumericUpDown.KeyUp += new System.Windows.Forms.KeyEventHandler(this.subjectPotintsNumericUpDown_KeyUp);
-            this.fifthSubjectPotintsNumericUpDown.Leave += new System.EventHandler(this.subjectPotintsNumericUpDown_Leave);
+            this.fifthSubjectPotintsNumericUpDown.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SubjectPotintsNumericUpDown_KeyUp);
+            this.fifthSubjectPotintsNumericUpDown.Leave += new System.EventHandler(this.SubjectPotintsNumericUpDown_Leave);
             // 
             // ZnoForm
             // 

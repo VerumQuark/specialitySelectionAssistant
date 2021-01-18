@@ -31,13 +31,13 @@ namespace specialitySelectionAssistant
 
         private void ListQuestionForm_Load(object sender, EventArgs e)
         {
-            faculty = FacultiesMinDeviation.getFaculty(User.hollandResult);
-            UserPreferencesTest.createTest(faculty);
+            faculty = FacultiesMinDeviation.GetFaculty(User.hollandResult);
+            UserPreferencesTest.CreateTest(faculty);
 
-            loadQuestion();
+            LoadQuestion();
         }
 
-        private void loadQuestion()
+        private void LoadQuestion()
         {
             string question = UserPreferencesTest.currentListQuestion;
 
@@ -52,22 +52,22 @@ namespace specialitySelectionAssistant
             isAnswerChosen = false;
         }
 
-        private void backMaterialFlatButton_Click(object sender, EventArgs e)
+        private void BackMaterialFlatButton_Click(object sender, EventArgs e)
         {
  
             if (UserPreferencesTest.isFirstQuestion)
             {
-                Navigation.toComparisonQuestionForm(this);
+                Navigation.ToComparisonQuestionForm(this);
             }
             else
             {
                 UserPreferencesTest.userPreferencesStack.Pop();
-                UserPreferencesTest.prevQuestion();
-                loadQuestion();
+                UserPreferencesTest.PrevQuestion();
+                LoadQuestion();
             }
         }
 
-        private void nextMaterialFlatButton_Click(object sender, EventArgs e)
+        private void NextMaterialFlatButton_Click(object sender, EventArgs e)
         {
             if (isAnswerChosen)
             {
@@ -76,14 +76,14 @@ namespace specialitySelectionAssistant
 
                 if (UserPreferencesTest.isLastQuestion)
                 {
-                    UserPreferencesTest.saveTestResult();
-                    preferredSpecialtiesDeterminant.setSpecialties(UserPreferencesTest.resultSpecialties);
-                    Navigation.toResultForm(this);
+                    UserPreferencesTest.SaveTestResult();
+                    PreferredSpecialtiesDeterminant.SetSpecialties(UserPreferencesTest.resultSpecialties);
+                    Navigation.ToResultForm(this);
                 }
                 else
                 {
-                    UserPreferencesTest.nextQuestion();
-                    loadQuestion();
+                    UserPreferencesTest.NextQuestion();
+                    LoadQuestion();
                 }
 
             }
@@ -93,51 +93,53 @@ namespace specialitySelectionAssistant
             }
         }
 
-        private void helpMaterialFlatButton_Click(object sender, EventArgs e)
+        private void HelpMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            Navigation.toHelpForm(this);
+            Navigation.ToHelpForm(this);
         }
 
-        private void materialRadioButton_KeyUp(object sender, KeyEventArgs e)
+        private void MaterialRadioButton_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) nextMaterialFlatButton.PerformClick();
         }
-        private void veryLikeMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
+        private void VeryLikeMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             isAnswerChosen = true;
             chosenUserPreference.preferenceValue = 2;
         }
 
-        private void ratherSoMaterialRadioButton_Click(object sender, EventArgs e)
+        private void RatherSoMaterialRadioButton_Click(object sender, EventArgs e)
         {
             isAnswerChosen = true;
             chosenUserPreference.preferenceValue = 1;
         }
 
-        private void cantAnswerMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
+        private void CantAnswerMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             isAnswerChosen = true;
             chosenUserPreference.preferenceValue = 0;
         }
 
-        private void ratherNotMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
+        private void RatherNotMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             isAnswerChosen = true;
             chosenUserPreference.preferenceValue = -1;
         }
 
-        private void veryDislikeMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
+        private void VeryDislikeMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             isAnswerChosen = true;
             chosenUserPreference.preferenceValue = -2;
         }
 
-        private void skipButton_Click(object sender, EventArgs e)
+        private void SkipButton_Click(object sender, EventArgs e)
         {
             Stack<UserPreference> s = new Stack<UserPreference>();
-            UserPreference u = new UserPreference();
-            u.specialtyIndex = 5;
-            u.preferenceValue = 2;
+            UserPreference u = new UserPreference
+            {
+                specialtyIndex = 5,
+                preferenceValue = 2
+            };
             s.Push(u);
             u.specialtyIndex = 4;
             u.preferenceValue = -1;
@@ -156,9 +158,9 @@ namespace specialitySelectionAssistant
             s.Push(u);
 
             UserPreferencesTest.userPreferencesStack = s;
-            UserPreferencesTest.saveTestResult();
-            preferredSpecialtiesDeterminant.setSpecialties(UserPreferencesTest.resultSpecialties);
-            Navigation.toResultForm(this);
+            UserPreferencesTest.SaveTestResult();
+            PreferredSpecialtiesDeterminant.SetSpecialties(UserPreferencesTest.resultSpecialties);
+            Navigation.ToResultForm(this);
         }
     }
 }

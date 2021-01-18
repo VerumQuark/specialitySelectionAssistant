@@ -41,7 +41,7 @@ namespace specialitySelectionAssistant
                 HollandTest.chosenProfessionsTypesStack.Pop();
             }
             
-            loadQuestion();
+            LoadQuestion();
         }
 
         private void BackMaterialFlatButton_Click(object sender, EventArgs e)
@@ -50,17 +50,17 @@ namespace specialitySelectionAssistant
 
             if (HollandTest.isFirstQuestion)
             {
-                Navigation.toRegistrationForm(this);
+                Navigation.ToRegistrationForm(this);
             }
             else
             {
                 HollandTest.chosenProfessionsTypesStack.Pop();
-                HollandTest.prevComparisonQuestion();
-                loadQuestion();
+                HollandTest.PrevComparisonQuestion();
+                LoadQuestion();
             }
         }
 
-        private void nextFormMaterialFlatButton_Click(object sender, EventArgs e)
+        private void NextFormMaterialFlatButton_Click(object sender, EventArgs e)
         {
             if (isProfessionChosen)
             {
@@ -69,13 +69,13 @@ namespace specialitySelectionAssistant
 
                 if (HollandTest.isLastQuestion)
                 {
-                    HollandTest.saveTestResult();
-                    Navigation.toListQuestionsForm(this);
+                    HollandTest.SaveTestResult();
+                    Navigation.ToListQuestionsForm(this);
                 }
                 else
                 {
-                    HollandTest.nextComparisonQuestion();
-                    loadQuestion();
+                    HollandTest.NextComparisonQuestion();
+                    LoadQuestion();
                 }
                 
             }
@@ -85,17 +85,17 @@ namespace specialitySelectionAssistant
             }
         }
 
-        private void loadQuestion()
+        private void LoadQuestion()
         {
             pairQuestion = HollandTest.currentComparisonQuestion;
 
-            changeProfessions(pairQuestion.firstProfession, leftProffesionMaterialLabel, leftProffesionButton);
-            changeProfessions(pairQuestion.secondProfession, rightProffesionMaterialLabel, rightProfessionButton);
+            ChangeProfessions(pairQuestion.firstProfession, leftProffesionMaterialLabel, leftProffesionButton);
+            ChangeProfessions(pairQuestion.secondProfession, rightProffesionMaterialLabel, rightProfessionButton);
 
             questionNumLabel.Text = $"Питання №{HollandTest.CurrentComparisonQuestionIndex + 1}";
         }
 
-        private void changeProfessions(Profesion profesion, MaterialLabel proffesionLabel, Button proffesionButton)
+        private void ChangeProfessions(Profesion profesion, MaterialLabel proffesionLabel, Button proffesionButton)
         {
             ResourceManager rm = Properties.Resources.ResourceManager;
             Image proffesionImg = (Image)rm.GetObject(profesion.img);
@@ -106,31 +106,25 @@ namespace specialitySelectionAssistant
 
         private void HelpMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            Navigation.toHelpForm(this);
+            Navigation.ToHelpForm(this);
         }
 
-        private void leftProfessionButton_Click(object sender, EventArgs e)
+        private void LeftProfessionButton_Click(object sender, EventArgs e)
         {
             isProfessionChosen = true;
             chosenProfesion = pairQuestion.firstProfession;
         }
 
-        private void rightProfessionButton_Click(object sender, EventArgs e)
+        private void RightProfessionButton_Click(object sender, EventArgs e)
         {
             isProfessionChosen = true;
             chosenProfesion = pairQuestion.secondProfession;
         }
 
-        private void skipButton_Click(object sender, EventArgs e)
+        private void SkipButton_Click(object sender, EventArgs e)
         {
-            HollandTest.skipTest();
-            Navigation.toListQuestionsForm(this);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            HollandTest.skipTest();
-            Navigation.toListQuestionsForm(this);
+            HollandTest.SkipTest();
+            Navigation.ToListQuestionsForm(this);
         }
 
         private void ProfessionsComparisonQuestionForm_KeyUp(object sender, KeyEventArgs e)
@@ -138,12 +132,12 @@ namespace specialitySelectionAssistant
             if (e.KeyCode == Keys.Enter) nextFormMaterialFlatButton.PerformClick();
         }
 
-        private void leftProffesionButton_KeyUp(object sender, KeyEventArgs e)
+        private void LeftProffesionButton_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) nextFormMaterialFlatButton.PerformClick();
         }
 
-        private void rightProfessionButton_KeyUp(object sender, KeyEventArgs e)
+        private void RightProfessionButton_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) nextFormMaterialFlatButton.PerformClick();
         }

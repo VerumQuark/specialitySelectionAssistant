@@ -9,8 +9,8 @@ namespace SpecialtySelectionAssistantLibrary
 {
     class ProfessionPairGenerator
     {
-        string jsonString;
-        ProfessionPairStorage professionPairStorage;
+        readonly string jsonString;
+        readonly ProfessionPairStorage professionPairStorage;
 
         public ProfessionPairGenerator()
         {
@@ -25,7 +25,7 @@ namespace SpecialtySelectionAssistantLibrary
             }
         }
 
-        public ProfessionPairStorage generatePairs()
+        public ProfessionPairStorage GeneratePairs()
         {                
             ProfessionStrorage professionStrorage;
             try
@@ -48,8 +48,8 @@ namespace SpecialtySelectionAssistantLibrary
                         {
                             ProfesionPair tempPair = new ProfesionPair
                             {
-                                firstProfession = getProfession(mainArrIndex, professionStrorage),
-                                secondProfession = getProfession(anotherArrIndex, professionStrorage)
+                                firstProfession = GetProfession(mainArrIndex, professionStrorage),
+                                secondProfession = GetProfession(anotherArrIndex, professionStrorage)
                             };
 
                             professionPairStorage.pairs.Add(tempPair);
@@ -68,7 +68,7 @@ namespace SpecialtySelectionAssistantLibrary
             return professionPairStorage;
         }
 
-        private Profesion getProfession(int arrNum, ProfessionStrorage professionStrorage)
+        private Profesion GetProfession(int arrNum, ProfessionStrorage professionStrorage)
         {
             Profesion profesionElem = new Profesion();
             try

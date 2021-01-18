@@ -109,7 +109,7 @@ namespace specialitySelectionAssistant
             this.backMaterialFlatButton.TabIndex = 71;
             this.backMaterialFlatButton.Text = "Назад";
             this.backMaterialFlatButton.UseVisualStyleBackColor = false;
-            this.backMaterialFlatButton.Click += new System.EventHandler(this.backMaterialFlatButton_Click);
+            this.backMaterialFlatButton.Click += new System.EventHandler(this.BackMaterialFlatButton_Click);
             // 
             // label2
             // 

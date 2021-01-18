@@ -58,7 +58,8 @@ namespace specialitySelectionAssistant
             this.veryLikeMaterialRadioButton.TabStop = true;
             this.veryLikeMaterialRadioButton.Text = "Дуже подобається";
             this.veryLikeMaterialRadioButton.UseVisualStyleBackColor = false;
-            this.veryLikeMaterialRadioButton.Click += new System.EventHandler(this.veryLikeMaterialRadioButton_Click);
+            this.veryLikeMaterialRadioButton.CheckedChanged += new System.EventHandler(this.veryLikeMaterialRadioButton_CheckedChanged);
+            this.veryLikeMaterialRadioButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.materialRadioButton_KeyUp);
             // 
             // ratherSoMaterialRadioButton
             // 
@@ -77,7 +78,8 @@ namespace specialitySelectionAssistant
             this.ratherSoMaterialRadioButton.TabStop = true;
             this.ratherSoMaterialRadioButton.Text = "Скоріш так";
             this.ratherSoMaterialRadioButton.UseVisualStyleBackColor = false;
-            this.ratherSoMaterialRadioButton.Click += new System.EventHandler(this.ratherYesMaterialRadioButton_Click);
+            this.ratherSoMaterialRadioButton.CheckedChanged += new System.EventHandler(this.ratherSoMaterialRadioButton_Click);
+            this.ratherSoMaterialRadioButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.materialRadioButton_KeyUp);
             // 
             // ratherNotMaterialRadioButton
             // 
@@ -96,7 +98,8 @@ namespace specialitySelectionAssistant
             this.ratherNotMaterialRadioButton.TabStop = true;
             this.ratherNotMaterialRadioButton.Text = "Скоріш ні";
             this.ratherNotMaterialRadioButton.UseVisualStyleBackColor = false;
-            this.ratherNotMaterialRadioButton.Click += new System.EventHandler(this.ratherNotMaterialRadioButton_Click);
+            this.ratherNotMaterialRadioButton.CheckedChanged += new System.EventHandler(this.ratherNotMaterialRadioButton_CheckedChanged);
+            this.ratherNotMaterialRadioButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.materialRadioButton_KeyUp);
             // 
             // cantAnswerMaterialRadioButton
             // 
@@ -115,7 +118,8 @@ namespace specialitySelectionAssistant
             this.cantAnswerMaterialRadioButton.TabStop = true;
             this.cantAnswerMaterialRadioButton.Text = "Не можу відповісти";
             this.cantAnswerMaterialRadioButton.UseVisualStyleBackColor = false;
-            this.cantAnswerMaterialRadioButton.Click += new System.EventHandler(this.cantAnswerMaterialRadioButton_Click);
+            this.cantAnswerMaterialRadioButton.CheckedChanged += new System.EventHandler(this.cantAnswerMaterialRadioButton_CheckedChanged);
+            this.cantAnswerMaterialRadioButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.materialRadioButton_KeyUp);
             // 
             // veryDislikeMaterialRadioButton
             // 
@@ -134,7 +138,8 @@ namespace specialitySelectionAssistant
             this.veryDislikeMaterialRadioButton.TabStop = true;
             this.veryDislikeMaterialRadioButton.Text = "Дуже не подобається";
             this.veryDislikeMaterialRadioButton.UseVisualStyleBackColor = false;
-            this.veryDislikeMaterialRadioButton.Click += new System.EventHandler(this.veryDislikeMaterialRadioButton_Click);
+            this.veryDislikeMaterialRadioButton.CheckedChanged += new System.EventHandler(this.veryDislikeMaterialRadioButton_CheckedChanged);
+            this.veryDislikeMaterialRadioButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.materialRadioButton_KeyUp);
             // 
             // backMaterialFlatButton
             // 

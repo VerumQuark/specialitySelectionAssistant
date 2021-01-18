@@ -127,31 +127,35 @@ namespace specialitySelectionAssistant
             Navigation.toResultForm(this);
         }
 
-        private void veryLikeMaterialRadioButton_Click(object sender, EventArgs e)
+        private void materialRadioButton_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) nextMaterialFlatButton.PerformClick();
+        }
+        private void veryLikeMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             isAnswerChosen = true;
             chosenUserPreference.preferenceValue = 2;
         }
 
-        private void ratherYesMaterialRadioButton_Click(object sender, EventArgs e)
+        private void ratherSoMaterialRadioButton_Click(object sender, EventArgs e)
         {
             isAnswerChosen = true;
             chosenUserPreference.preferenceValue = 1;
         }
 
-        private void cantAnswerMaterialRadioButton_Click(object sender, EventArgs e)
+        private void cantAnswerMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             isAnswerChosen = true;
             chosenUserPreference.preferenceValue = 0;
         }
 
-        private void ratherNotMaterialRadioButton_Click(object sender, EventArgs e)
+        private void ratherNotMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             isAnswerChosen = true;
             chosenUserPreference.preferenceValue = -1;
         }
 
-        private void veryDislikeMaterialRadioButton_Click(object sender, EventArgs e)
+        private void veryDislikeMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             isAnswerChosen = true;
             chosenUserPreference.preferenceValue = -2;

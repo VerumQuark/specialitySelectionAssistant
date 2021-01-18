@@ -121,6 +121,7 @@ namespace specialitySelectionAssistant
             this.leftProffesionButton.TabIndex = 14;
             this.leftProffesionButton.UseVisualStyleBackColor = false;
             this.leftProffesionButton.Click += new System.EventHandler(this.leftProfessionButton_Click);
+            this.leftProffesionButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.leftProffesionButton_KeyUp);
             // 
             // rightProfessionButton
             // 
@@ -136,6 +137,7 @@ namespace specialitySelectionAssistant
             this.rightProfessionButton.TabIndex = 15;
             this.rightProfessionButton.UseVisualStyleBackColor = false;
             this.rightProfessionButton.Click += new System.EventHandler(this.rightProfessionButton_Click);
+            this.rightProfessionButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.rightProfessionButton_KeyUp);
             // 
             // HelpMaterialFlatButton
             // 
@@ -198,6 +200,7 @@ namespace specialitySelectionAssistant
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Оберіть найбільш задовільну професію!";
             this.Load += new System.EventHandler(this.ProfessionsComparisonQuestionForm_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ProfessionsComparisonQuestionForm_KeyUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -133,9 +133,19 @@ namespace specialitySelectionAssistant
             Navigation.toListQuestionsForm(this);
         }
 
-        private void tempQuestionNumLabel_Click(object sender, EventArgs e)
+        private void ProfessionsComparisonQuestionForm_KeyUp(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Enter) nextFormMaterialFlatButton.PerformClick();
+        }
 
+        private void leftProffesionButton_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) nextFormMaterialFlatButton.PerformClick();
+        }
+
+        private void rightProfessionButton_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) nextFormMaterialFlatButton.PerformClick();
         }
     }
 }

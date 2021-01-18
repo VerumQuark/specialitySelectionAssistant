@@ -33,7 +33,8 @@ namespace specialitySelectionAssistant
         {
             faculty = FacultiesMinDeviation.getFaculty(User.hollandResult);
             UserPreferencesTest.createTest(faculty);
-            isAnswerChosen = false;
+
+            loadQuestion();
         }
 
         private void loadQuestion()
@@ -97,36 +98,6 @@ namespace specialitySelectionAssistant
             Navigation.toHelpForm(this);
         }
 
-        private void veryLikeMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            isAnswerChosen = true;
-            chosenUserPreference.preferenceValue = 2;
-        }
-
-        private void ratherSoMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            isAnswerChosen = true;
-            chosenUserPreference.preferenceValue = 1;
-        }
-
-        private void cantAnswerMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            isAnswerChosen = true;
-            chosenUserPreference.preferenceValue = 0;
-        }
-
-        private void ratherNotMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            isAnswerChosen = true;
-            chosenUserPreference.preferenceValue = -1;
-        }
-
-        private void veryDislikeMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            isAnswerChosen = true;
-            chosenUserPreference.preferenceValue = -2;
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             Stack<UserPreference> s = new Stack<UserPreference>();
@@ -154,6 +125,36 @@ namespace specialitySelectionAssistant
             UserPreferencesTest.saveTestResult();
             preferredSpecialtiesDeterminant.setSpecialties(UserPreferencesTest.resultSpecialties);
             Navigation.toResultForm(this);
+        }
+
+        private void veryLikeMaterialRadioButton_Click(object sender, EventArgs e)
+        {
+            isAnswerChosen = true;
+            chosenUserPreference.preferenceValue = 2;
+        }
+
+        private void ratherYesMaterialRadioButton_Click(object sender, EventArgs e)
+        {
+            isAnswerChosen = true;
+            chosenUserPreference.preferenceValue = 1;
+        }
+
+        private void cantAnswerMaterialRadioButton_Click(object sender, EventArgs e)
+        {
+            isAnswerChosen = true;
+            chosenUserPreference.preferenceValue = 0;
+        }
+
+        private void ratherNotMaterialRadioButton_Click(object sender, EventArgs e)
+        {
+            isAnswerChosen = true;
+            chosenUserPreference.preferenceValue = -1;
+        }
+
+        private void veryDislikeMaterialRadioButton_Click(object sender, EventArgs e)
+        {
+            isAnswerChosen = true;
+            chosenUserPreference.preferenceValue = -2;
         }
     }
 }

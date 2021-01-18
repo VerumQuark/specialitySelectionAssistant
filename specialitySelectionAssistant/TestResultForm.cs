@@ -45,11 +45,17 @@ namespace specialitySelectionAssistant
 
         private string getProfessionsStr(string[] professions)
         {
-            string specialtyProffesions = "";
-            foreach (string profesion in professions)
+
+            string specialtyProffesions = "Професії: ";
+            int professionLenght = professions.Length - 1;
+
+            for (int i = 0; i < professionLenght; i++)
             {
-                specialtyProffesions += profesion + ", ";
+                specialtyProffesions += professions[i] + ", ";
             }
+
+            specialtyProffesions += professions.Last() + ".";
+
             return specialtyProffesions;
         }
 

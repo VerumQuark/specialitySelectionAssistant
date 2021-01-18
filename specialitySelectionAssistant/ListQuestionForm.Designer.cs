@@ -58,7 +58,7 @@ namespace specialitySelectionAssistant
             this.veryLikeMaterialRadioButton.TabStop = true;
             this.veryLikeMaterialRadioButton.Text = "Дуже подобається";
             this.veryLikeMaterialRadioButton.UseVisualStyleBackColor = false;
-            this.veryLikeMaterialRadioButton.CheckedChanged += new System.EventHandler(this.veryLikeMaterialRadioButton_CheckedChanged);
+            this.veryLikeMaterialRadioButton.Click += new System.EventHandler(this.veryLikeMaterialRadioButton_Click);
             // 
             // ratherSoMaterialRadioButton
             // 
@@ -77,7 +77,7 @@ namespace specialitySelectionAssistant
             this.ratherSoMaterialRadioButton.TabStop = true;
             this.ratherSoMaterialRadioButton.Text = "Скоріш так";
             this.ratherSoMaterialRadioButton.UseVisualStyleBackColor = false;
-            this.ratherSoMaterialRadioButton.CheckedChanged += new System.EventHandler(this.ratherSoMaterialRadioButton_CheckedChanged);
+            this.ratherSoMaterialRadioButton.Click += new System.EventHandler(this.ratherYesMaterialRadioButton_Click);
             // 
             // ratherNotMaterialRadioButton
             // 
@@ -96,7 +96,7 @@ namespace specialitySelectionAssistant
             this.ratherNotMaterialRadioButton.TabStop = true;
             this.ratherNotMaterialRadioButton.Text = "Скоріш ні";
             this.ratherNotMaterialRadioButton.UseVisualStyleBackColor = false;
-            this.ratherNotMaterialRadioButton.CheckedChanged += new System.EventHandler(this.ratherNotMaterialRadioButton_CheckedChanged);
+            this.ratherNotMaterialRadioButton.Click += new System.EventHandler(this.ratherNotMaterialRadioButton_Click);
             // 
             // cantAnswerMaterialRadioButton
             // 
@@ -115,7 +115,7 @@ namespace specialitySelectionAssistant
             this.cantAnswerMaterialRadioButton.TabStop = true;
             this.cantAnswerMaterialRadioButton.Text = "Не можу відповісти";
             this.cantAnswerMaterialRadioButton.UseVisualStyleBackColor = false;
-            this.cantAnswerMaterialRadioButton.CheckedChanged += new System.EventHandler(this.cantAnswerMaterialRadioButton_CheckedChanged);
+            this.cantAnswerMaterialRadioButton.Click += new System.EventHandler(this.cantAnswerMaterialRadioButton_Click);
             // 
             // veryDislikeMaterialRadioButton
             // 
@@ -134,7 +134,7 @@ namespace specialitySelectionAssistant
             this.veryDislikeMaterialRadioButton.TabStop = true;
             this.veryDislikeMaterialRadioButton.Text = "Дуже не подобається";
             this.veryDislikeMaterialRadioButton.UseVisualStyleBackColor = false;
-            this.veryDislikeMaterialRadioButton.CheckedChanged += new System.EventHandler(this.veryDislikeMaterialRadioButton_CheckedChanged);
+            this.veryDislikeMaterialRadioButton.Click += new System.EventHandler(this.veryDislikeMaterialRadioButton_Click);
             // 
             // backMaterialFlatButton
             // 
@@ -201,7 +201,7 @@ namespace specialitySelectionAssistant
             this.listQuestionQuestionLabel.Name = "listQuestionQuestionLabel";
             this.listQuestionQuestionLabel.Size = new System.Drawing.Size(908, 70);
             this.listQuestionQuestionLabel.TabIndex = 22;
-            this.listQuestionQuestionLabel.Text = "Чи подобається вам тестувати продукт перед відправкою?";
+            this.listQuestionQuestionLabel.Text = "тест";
             // 
             // button1
             // 

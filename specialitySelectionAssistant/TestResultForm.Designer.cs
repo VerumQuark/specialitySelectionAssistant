@@ -202,6 +202,7 @@ namespace specialitySelectionAssistant
             this.Controls.Add(this.firstSpecialtyNameMaterialLabel);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.helpMaterialFlatButton);
+            this.MaximumSize = new System.Drawing.Size(1000, 562);
             this.MinimumSize = new System.Drawing.Size(1000, 562);
             this.Name = "TestResultForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

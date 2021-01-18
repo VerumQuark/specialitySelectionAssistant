@@ -173,6 +173,7 @@ namespace specialitySelectionAssistant
             this.Controls.Add(this.ZnoMaterialCheckBox);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(1000, 562);
             this.MinimumSize = new System.Drawing.Size(1000, 562);
             this.Name = "RegistrationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

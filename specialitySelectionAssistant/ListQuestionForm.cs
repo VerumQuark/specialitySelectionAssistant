@@ -98,35 +98,6 @@ namespace specialitySelectionAssistant
             Navigation.toHelpForm(this);
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            Stack<UserPreference> s = new Stack<UserPreference>();
-            UserPreference u = new UserPreference();
-            u.specialtyIndex = 5;
-            u.preferenceValue = 2;
-            s.Push(u);
-            u.specialtyIndex = 4;
-            u.preferenceValue = -1;
-            s.Push(u);
-            u.specialtyIndex = 3;
-            u.preferenceValue = 1;
-            s.Push(u);
-            u.specialtyIndex = 2;
-            u.preferenceValue = -2;
-            s.Push(u);
-            u.specialtyIndex = 1;
-            u.preferenceValue = 0;
-            s.Push(u);
-            u.specialtyIndex = 0;
-            u.preferenceValue = 2;
-            s.Push(u);
-
-            UserPreferencesTest.userPreferencesStack = s;
-            UserPreferencesTest.saveTestResult();
-            preferredSpecialtiesDeterminant.setSpecialties(UserPreferencesTest.resultSpecialties);
-            Navigation.toResultForm(this);
-        }
-
         private void materialRadioButton_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) nextMaterialFlatButton.PerformClick();
@@ -159,6 +130,35 @@ namespace specialitySelectionAssistant
         {
             isAnswerChosen = true;
             chosenUserPreference.preferenceValue = -2;
+        }
+
+        private void skipButton_Click(object sender, EventArgs e)
+        {
+            Stack<UserPreference> s = new Stack<UserPreference>();
+            UserPreference u = new UserPreference();
+            u.specialtyIndex = 5;
+            u.preferenceValue = 2;
+            s.Push(u);
+            u.specialtyIndex = 4;
+            u.preferenceValue = -1;
+            s.Push(u);
+            u.specialtyIndex = 3;
+            u.preferenceValue = 1;
+            s.Push(u);
+            u.specialtyIndex = 2;
+            u.preferenceValue = -2;
+            s.Push(u);
+            u.specialtyIndex = 1;
+            u.preferenceValue = 0;
+            s.Push(u);
+            u.specialtyIndex = 0;
+            u.preferenceValue = 2;
+            s.Push(u);
+
+            UserPreferencesTest.userPreferencesStack = s;
+            UserPreferencesTest.saveTestResult();
+            preferredSpecialtiesDeterminant.setSpecialties(UserPreferencesTest.resultSpecialties);
+            Navigation.toResultForm(this);
         }
     }
 }

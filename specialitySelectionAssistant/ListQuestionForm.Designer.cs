@@ -60,6 +60,7 @@ namespace specialitySelectionAssistant
             this.veryLikeMaterialRadioButton.UseVisualStyleBackColor = false;
             this.veryLikeMaterialRadioButton.CheckedChanged += new System.EventHandler(this.VeryLikeMaterialRadioButton_CheckedChanged);
             this.veryLikeMaterialRadioButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MaterialRadioButton_KeyUp);
+            this.veryLikeMaterialRadioButton.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.veryLikeMaterialRadioButton_PreviewKeyDown);
             // 
             // ratherSoMaterialRadioButton
             // 
@@ -140,6 +141,7 @@ namespace specialitySelectionAssistant
             this.veryDislikeMaterialRadioButton.UseVisualStyleBackColor = false;
             this.veryDislikeMaterialRadioButton.CheckedChanged += new System.EventHandler(this.VeryDislikeMaterialRadioButton_CheckedChanged);
             this.veryDislikeMaterialRadioButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MaterialRadioButton_KeyUp);
+            this.veryDislikeMaterialRadioButton.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.veryDislikeMaterialRadioButton_PreviewKeyDown);
             // 
             // backMaterialFlatButton
             // 
@@ -157,6 +159,7 @@ namespace specialitySelectionAssistant
             this.backMaterialFlatButton.Primary = false;
             this.backMaterialFlatButton.Size = new System.Drawing.Size(59, 36);
             this.backMaterialFlatButton.TabIndex = 12;
+            this.backMaterialFlatButton.TabStop = false;
             this.backMaterialFlatButton.Text = "Назад";
             this.backMaterialFlatButton.UseVisualStyleBackColor = false;
             this.backMaterialFlatButton.Click += new System.EventHandler(this.BackMaterialFlatButton_Click);
@@ -177,6 +180,7 @@ namespace specialitySelectionAssistant
             this.nextMaterialFlatButton.Primary = false;
             this.nextMaterialFlatButton.Size = new System.Drawing.Size(45, 36);
             this.nextMaterialFlatButton.TabIndex = 11;
+            this.nextMaterialFlatButton.TabStop = false;
             this.nextMaterialFlatButton.Text = "Далі";
             this.nextMaterialFlatButton.UseVisualStyleBackColor = false;
             this.nextMaterialFlatButton.Click += new System.EventHandler(this.NextMaterialFlatButton_Click);
@@ -194,6 +198,7 @@ namespace specialitySelectionAssistant
             this.helpMaterialFlatButton.Primary = false;
             this.helpMaterialFlatButton.Size = new System.Drawing.Size(19, 36);
             this.helpMaterialFlatButton.TabIndex = 17;
+            this.helpMaterialFlatButton.TabStop = false;
             this.helpMaterialFlatButton.Text = "?";
             this.helpMaterialFlatButton.UseVisualStyleBackColor = true;
             this.helpMaterialFlatButton.Click += new System.EventHandler(this.HelpMaterialFlatButton_Click);
@@ -214,6 +219,7 @@ namespace specialitySelectionAssistant
             this.skipButton.Name = "skipButton";
             this.skipButton.Size = new System.Drawing.Size(75, 23);
             this.skipButton.TabIndex = 23;
+            this.skipButton.TabStop = false;
             this.skipButton.Text = "skip";
             this.skipButton.UseVisualStyleBackColor = true;
             this.skipButton.Click += new System.EventHandler(this.SkipButton_Click);
@@ -241,6 +247,7 @@ namespace specialitySelectionAssistant
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Оберіть один з варіантів!";
             this.Load += new System.EventHandler(this.ListQuestionForm_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ListQuestionForm_KeyUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 

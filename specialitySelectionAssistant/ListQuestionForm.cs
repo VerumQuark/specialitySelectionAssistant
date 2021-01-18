@@ -34,7 +34,25 @@ namespace specialitySelectionAssistant
             faculty = FacultiesMinDeviation.GetFaculty(User.hollandResult);
             UserPreferencesTest.CreateTest(faculty);
 
+            foreach (Control control in this.Controls)
+            {
+                control.PreviewKeyDown += new PreviewKeyDownEventHandler(control_PreviewKeyDown);
+            }
+
+            foreach(RadioButton radioButton in this.Controls.OfType<RadioButton>())
+            {
+                radioButton.PreviewKeyDown -= control_PreviewKeyDown;
+            }
+
             LoadQuestion();
+        }
+
+        void control_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down || e.KeyCode == Keys.Left || e.KeyCode == Keys.Right)
+            {
+                veryLikeMaterialRadioButton.Focus();
+            }
         }
 
         private void LoadQuestion()
@@ -42,13 +60,13 @@ namespace specialitySelectionAssistant
             string question = UserPreferencesTest.currentListQuestion;
 
             listQuestionQuestionLabel.Text = question;            
-
+            /*
             veryLikeMaterialRadioButton.Checked = false;
             ratherSoMaterialRadioButton.Checked = false;
             cantAnswerMaterialRadioButton.Checked = false;
             ratherNotMaterialRadioButton.Checked = false;
             veryDislikeMaterialRadioButton.Checked = false;
-
+            */
             isAnswerChosen = false;
         }
 
@@ -82,6 +100,7 @@ namespace specialitySelectionAssistant
                 }
                 else
                 {
+                    veryLikeMaterialRadioButton.Focus();
                     UserPreferencesTest.NextQuestion();
                     LoadQuestion();
                 }
@@ -100,7 +119,11 @@ namespace specialitySelectionAssistant
 
         private void MaterialRadioButton_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) nextMaterialFlatButton.PerformClick();
+            if (e.KeyCode == Keys.Enter)
+            {
+                nextMaterialFlatButton.Focus();
+                nextMaterialFlatButton.PerformClick();
+            }
         }
         private void VeryLikeMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
         {
@@ -161,6 +184,29 @@ namespace specialitySelectionAssistant
             UserPreferencesTest.SaveTestResult();
             PreferredSpecialtiesDeterminant.SetSpecialties(UserPreferencesTest.resultSpecialties);
             Navigation.ToResultForm(this);
+        }
+
+        private void veryLikeMaterialRadioButton_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Left)
+            {
+                veryDislikeMaterialRadioButton.Focus();
+                e.IsInputKey = true;
+            }
+        }
+
+        private void veryDislikeMaterialRadioButton_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down || e.KeyCode == Keys.Right)
+            {
+                veryLikeMaterialRadioButton.Focus();
+                e.IsInputKey = true;
+            }
+        }
+
+        private void ListQuestionForm_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) nextMaterialFlatButton.PerformClick();
         }
     }
 }

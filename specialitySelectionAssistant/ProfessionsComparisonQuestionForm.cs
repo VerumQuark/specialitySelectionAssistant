@@ -40,8 +40,21 @@ namespace specialitySelectionAssistant
             {
                 HollandTest.chosenProfessionsTypesStack.Pop();
             }
-            
+
+            foreach (Control control in this.Controls)
+            {
+                control.PreviewKeyDown += new PreviewKeyDownEventHandler(control_PreviewKeyDown);
+            }
+
             LoadQuestion();
+        }
+
+        void control_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down || e.KeyCode == Keys.Left || e.KeyCode == Keys.Right)
+            {
+                e.IsInputKey = true;
+            }
         }
 
         private void BackMaterialFlatButton_Click(object sender, EventArgs e)
@@ -74,6 +87,7 @@ namespace specialitySelectionAssistant
                 }
                 else
                 {
+                    nextFormMaterialFlatButton.Focus();
                     HollandTest.NextComparisonQuestion();
                     LoadQuestion();
                 }

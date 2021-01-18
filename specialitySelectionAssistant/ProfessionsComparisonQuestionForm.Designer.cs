@@ -56,7 +56,8 @@ namespace specialitySelectionAssistant
             this.nextFormMaterialFlatButton.Name = "nextFormMaterialFlatButton";
             this.nextFormMaterialFlatButton.Primary = false;
             this.nextFormMaterialFlatButton.Size = new System.Drawing.Size(45, 36);
-            this.nextFormMaterialFlatButton.TabIndex = 7;
+            this.nextFormMaterialFlatButton.TabIndex = 2;
+            this.nextFormMaterialFlatButton.TabStop = false;
             this.nextFormMaterialFlatButton.Text = "Далі";
             this.nextFormMaterialFlatButton.UseVisualStyleBackColor = false;
             this.nextFormMaterialFlatButton.Click += new System.EventHandler(this.NextFormMaterialFlatButton_Click);
@@ -91,6 +92,7 @@ namespace specialitySelectionAssistant
             this.BackMaterialFlatButton.Primary = false;
             this.BackMaterialFlatButton.Size = new System.Drawing.Size(59, 36);
             this.BackMaterialFlatButton.TabIndex = 10;
+            this.BackMaterialFlatButton.TabStop = false;
             this.BackMaterialFlatButton.Text = "Назад";
             this.BackMaterialFlatButton.UseVisualStyleBackColor = false;
             this.BackMaterialFlatButton.Click += new System.EventHandler(this.BackMaterialFlatButton_Click);
@@ -118,7 +120,7 @@ namespace specialitySelectionAssistant
             this.leftProffesionButton.Location = new System.Drawing.Point(58, 195);
             this.leftProffesionButton.Name = "leftProffesionButton";
             this.leftProffesionButton.Size = new System.Drawing.Size(250, 250);
-            this.leftProffesionButton.TabIndex = 14;
+            this.leftProffesionButton.TabIndex = 0;
             this.leftProffesionButton.UseVisualStyleBackColor = false;
             this.leftProffesionButton.Click += new System.EventHandler(this.LeftProfessionButton_Click);
             this.leftProffesionButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.LeftProffesionButton_KeyUp);
@@ -134,7 +136,7 @@ namespace specialitySelectionAssistant
             this.rightProfessionButton.MinimumSize = new System.Drawing.Size(250, 250);
             this.rightProfessionButton.Name = "rightProfessionButton";
             this.rightProfessionButton.Size = new System.Drawing.Size(250, 250);
-            this.rightProfessionButton.TabIndex = 15;
+            this.rightProfessionButton.TabIndex = 1;
             this.rightProfessionButton.UseVisualStyleBackColor = false;
             this.rightProfessionButton.Click += new System.EventHandler(this.RightProfessionButton_Click);
             this.rightProfessionButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.RightProfessionButton_KeyUp);
@@ -152,6 +154,7 @@ namespace specialitySelectionAssistant
             this.HelpMaterialFlatButton.Primary = false;
             this.HelpMaterialFlatButton.Size = new System.Drawing.Size(19, 36);
             this.HelpMaterialFlatButton.TabIndex = 16;
+            this.HelpMaterialFlatButton.TabStop = false;
             this.HelpMaterialFlatButton.Text = "?";
             this.HelpMaterialFlatButton.UseVisualStyleBackColor = true;
             this.HelpMaterialFlatButton.Click += new System.EventHandler(this.HelpMaterialFlatButton_Click);
@@ -172,6 +175,7 @@ namespace specialitySelectionAssistant
             this.skipButton.Name = "skipButton";
             this.skipButton.Size = new System.Drawing.Size(75, 23);
             this.skipButton.TabIndex = 25;
+            this.skipButton.TabStop = false;
             this.skipButton.Text = "skip";
             this.skipButton.UseVisualStyleBackColor = true;
             this.skipButton.Click += new System.EventHandler(this.SkipButton_Click);

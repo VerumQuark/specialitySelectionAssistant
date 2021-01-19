@@ -143,6 +143,8 @@ namespace SpecialtySelectionAssistantLibrary
 
         static public void SaveTestResult()
         {
+            User.hollandResult = new HollandResult();
+
             foreach(string type in chosenProfessionsTypesStack)
             {
                 AddCharacteristicsPoint(type);

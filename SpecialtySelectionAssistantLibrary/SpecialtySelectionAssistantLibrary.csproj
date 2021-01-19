@@ -94,7 +94,6 @@
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\faculties.json" />
-    <None Include="Properties\listQuestions.json" />
     <None Include="Properties\professions.json" />
   </ItemGroup>
   <ItemGroup>

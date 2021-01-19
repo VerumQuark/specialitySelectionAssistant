@@ -121,9 +121,6 @@
   <data name="faculties" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>faculties.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="listQuestions" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>listQuestions.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="professions" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>professions.json;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

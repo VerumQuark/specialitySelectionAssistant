@@ -17,7 +17,7 @@ namespace specialitySelectionAssistant
     {
         List<ZnoSubject> znoSubjects;
 
-        bool isMandatoryComboboxsEmpty = false;
+        bool isCheckSuccessful;
 
         ComboBox[] comboBoxesArr;
         NumericUpDown[] numericUpDownsArr;
@@ -35,8 +35,8 @@ namespace specialitySelectionAssistant
         private void ZnoForm_Load(object sender, EventArgs e)
         {
             try 
-            { 
-                isMandatoryComboboxsEmpty = false;
+            {
+                isCheckSuccessful = false;
 
                 znoSubjects = new List<ZnoSubject>();
 
@@ -91,12 +91,7 @@ namespace specialitySelectionAssistant
         {
             SaveZnoSubjects();
 
-            if (isMandatoryComboboxsEmpty)
-            {
-                MessageBox.Show($"Оберіть {Constants.MANDATORY_SUBJECTS_COUNT} обов'язкових предмети");
-                isMandatoryComboboxsEmpty = false;
-            }
-            else
+            if (isCheckSuccessful)
             {
                 PreferredSpecialtiesDeterminant.SetZnoSubjects(znoSubjects);
                 Navigation.ToComparisonQuestionForm(this);
@@ -107,16 +102,17 @@ namespace specialitySelectionAssistant
         {
             znoSubjects = new List<ZnoSubject>();
             try
-            {
-                for (int i = 0; i < Constants.MANDATORY_SUBJECTS_COUNT; i++)
-                {
-                    CheckIsComboBoxEmpty(comboBoxesArr[i]);
-                }
+            {                
+                CheckIsZnoEmpty();
+
+                CheckIsZnoDuplicate();
 
                 for (int i = 0; i < Constants.SUBJECT_COUNT; i++)
                 {
                     SaveZnoSubject(comboBoxesArr[i], numericUpDownsArr[i]);
                 }
+
+                isCheckSuccessful = true;
             }
             catch(IndexOutOfRangeException)
             {
@@ -129,14 +125,43 @@ namespace specialitySelectionAssistant
 
         }
 
-        private void CheckIsComboBoxEmpty(ComboBox comboBox)
+        private void CheckIsZnoDuplicate()
+        {
+            var hashset = new HashSet<string>();
+            foreach (ComboBox comboBox in this.Controls.OfType<ComboBox>())
+            {
+                if (comboBox.Text == "") continue;
+                if (!hashset.Add(comboBox.Text))
+                {
+                    throw new ZnoDuplicateException($"Обрані предмети не можуть повторюватись");
+                }
+            }
+        }
+
+        private void CheckIsZnoEmpty()
+        {
+            bool isZnoEmpty = false;
+
+            for (int i = 0; i < Constants.MANDATORY_SUBJECTS_COUNT; i++)
+            {
+                isZnoEmpty = CheckIsComboBoxEmpty(comboBoxesArr[i], isZnoEmpty);
+            }
+            if (isZnoEmpty)
+            {
+                throw new ZnoEmptyException($"Оберіть { Constants.MANDATORY_SUBJECTS_COUNT } обов'язкових предмети");
+            }
+        }
+
+        private bool CheckIsComboBoxEmpty(ComboBox comboBox, bool isZnoEmpty)
         {
             if (comboBox.Text == "")
             {
                 AddBorder(comboBox);
 
-                isMandatoryComboboxsEmpty = true;
+                return true;
             }
+
+            return isZnoEmpty;
         }
 
         private void AddBorder(Control comboBox)

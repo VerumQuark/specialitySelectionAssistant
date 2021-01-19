@@ -13,14 +13,18 @@ namespace SpecialtySelectionAssistantLibrary
             "Українська мова і література"
         };
         static public readonly string[] SECOND_ZNO_SUBJECTS = new string[] {
-            "Математика"
+            "Математика",
+            "Біологія",
+            "Історія України",
+            ""
         };
         static public readonly string[] THIRD_ZNO_SUBJECTS = new string[] {
             "Історія України",
             "Англійська мова",
             "Німецька мова",
             "Французька мова",
-            "Іспанська мова"
+            "Іспанська мова",
+            ""
         };
         static public readonly string[] OTHER_ZNO_SUBJECTS = new string[] {
             "Історія України",
@@ -31,7 +35,9 @@ namespace SpecialtySelectionAssistantLibrary
             "Англійська мова",
             "Німецька мова",
             "Французька мова",
-            "Іспанська мова"
+            "Іспанська мова",
+            "Математика",
+            ""
         };
         static public readonly int MAX_ZNO_POINTS = 200;
         static public readonly int MIN_ZNO_POINTS = 100;

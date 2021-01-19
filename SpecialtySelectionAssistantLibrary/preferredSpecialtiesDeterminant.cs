@@ -146,7 +146,7 @@ namespace SpecialtySelectionAssistantLibrary
             else
             {
                 int i = 0;
-                while (determinedSpecialties.Count <= 3)
+                while (determinedSpecialties.Count < 3)
                 {
                     determinedSpecialties.Add(defaultCheckedSpecialties[i]);
 

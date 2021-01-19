@@ -87,6 +87,8 @@
     <Compile Include="RangeException.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserPreferencesTest.cs" />
+    <Compile Include="ZnoDuplicateException.cs" />
+    <Compile Include="ZnoEmptyException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

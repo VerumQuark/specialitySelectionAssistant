@@ -2,12 +2,12 @@
       {
          "name":"Faculty of Engineering Physics",
          "hollandCharacteristics":{
-            "Realistic":11,
-            "Intelligent":0,
-            "Social":0,
-            "Conventional":7,
-            "Enterprising":0,
-            "Artistic":0
+            "Realistic":10,
+            "Intelligent":4,
+            "Social":3,
+            "Conventional":10,
+            "Enterprising":2,
+            "Artistic":1
          },
          "specialties":[
             {
@@ -129,11 +129,11 @@
       {
          "name":"Faculty of Electrical Engineering",
          "hollandCharacteristics":{
-            "Realistic":7,
-            "Intelligent":1,
-            "Social":0,
+           "Realistic":10,
+            "Intelligent":4,
+            "Social":1,
             "Conventional":10,
-            "Enterprising":1,
+            "Enterprising":4,
             "Artistic":0
          },
          "specialties":[
@@ -294,11 +294,11 @@
       {
          "name":"Faculty of Computer Science and Technology",
          "hollandCharacteristics":{
-            "Realistic":5,
-            "Intelligent":12,
+            "Realistic":7,
+            "Intelligent":10,
             "Social":0,
-            "Conventional":8,
-            "Enterprising":2,
+            "Conventional":9,
+            "Enterprising":4,
             "Artistic":0
          },
          "specialties":[
@@ -460,9 +460,9 @@
          "name":"Faculty of Radio Electronics and Telecommunications",
          "hollandCharacteristics":{
             "Realistic":6,
-            "Intelligent":9,
+            "Intelligent":10,
             "Social":3,
-            "Conventional":9,
+            "Conventional":10,
             "Enterprising":1,
             "Artistic":0
          },
@@ -657,11 +657,11 @@
       {
          "name":"Faculty of Mechanical Engineering",
          "hollandCharacteristics":{
-            "Realistic":12,
-            "Intelligent":4,
+            "Realistic":10,
+            "Intelligent":6,
             "Social":0,
-            "Conventional":11,
-            "Enterprising":3,
+            "Conventional":10,
+            "Enterprising":4,
             "Artistic":0
          },
          "specialties":[
@@ -784,12 +784,12 @@
       {
          "name":"Faculty of Construction, Architecture and Design",
          "hollandCharacteristics":{
-            "Realistic":4,
-            "Intelligent":5,
-            "Social":8,
-            "Conventional":9,
-            "Enterprising":8,
-            "Artistic":12
+            "Realistic":1,
+            "Intelligent":2,
+            "Social":5,
+            "Conventional":7,
+            "Enterprising":5,
+            "Artistic":10
          },
          "specialties":[
             {
@@ -1014,11 +1014,11 @@
       {
          "name":"Faculty of Transport",
          "hollandCharacteristics":{
-            "Realistic":4,
-            "Intelligent":10,
-            "Social":6,
-            "Conventional":12,
-            "Enterprising":4,
+            "Realistic":3,
+            "Intelligent":9,
+            "Social":5,
+            "Conventional":10,
+            "Enterprising":3,
             "Artistic":0
          },
          "specialties":[
@@ -1142,10 +1142,10 @@
          "name":"Faculty of Economics and Management",
          "hollandCharacteristics":{
             "Realistic":0,
-            "Intelligent":4,
-            "Social":8,
-            "Conventional":11,
-            "Enterprising":12,
+            "Intelligent":3,
+            "Social":7,
+            "Conventional":10,
+            "Enterprising":10,
             "Artistic":0
          },
          "specialties":[
@@ -1377,11 +1377,11 @@
          "name":"Faculty of Humanities / Faculty of Social Sciences",
          "hollandCharacteristics":{
             "Realistic":0,
-            "Intelligent":9,
-            "Social":12,
-            "Conventional":3,
-            "Enterprising":11,
-            "Artistic":5
+            "Intelligent":7,
+            "Social":10,
+            "Conventional":1,
+            "Enterprising":10,
+            "Artistic":2
          },
          "specialties":[
             {
@@ -1574,12 +1574,12 @@
       {
          "name":"Faculty of Physical Culture and Sports Management",
          "hollandCharacteristics":{
-            "Realistic":1,
-            "Intelligent":0,
+            "Realistic":5,
+            "Intelligent":1,
             "Social":10,
-            "Conventional":1,
-            "Enterprising":2,
-            "Artistic":1
+            "Conventional":4,
+            "Enterprising":6,
+            "Artistic":4
          },
          "specialties":[
             {
@@ -1696,12 +1696,12 @@
       {
          "name":"Faculty of Law",
          "hollandCharacteristics":{
-            "Realistic":0,
-            "Intelligent":0,
-            "Social":12,
-            "Conventional":1,
-            "Enterprising":12,
-            "Artistic":0
+            "Realistic":2,
+            "Intelligent":2,
+            "Social":10,
+            "Conventional":3,
+            "Enterprising":10,
+            "Artistic":2
          },
          "specialties":[
             {
@@ -1819,10 +1819,10 @@
          "name":"Faculty of International Tourism and Economics",
          "hollandCharacteristics":{
             "Realistic":0,
-            "Intelligent":5,
+            "Intelligent":3,
             "Social":10,
-            "Conventional":8,
-            "Enterprising":12,
+            "Conventional":7,
+            "Enterprising":10,
             "Artistic":0
          },
          "specialties":[

@@ -29,6 +29,8 @@ namespace specialitySelectionAssistant
         {
             List<Specialty> specialties = PreferredSpecialtiesDeterminant.GetDetermineSpecialties();
 
+            titleLabel.Text = $"{User.name}, за результатами тесту вам більш підходять такі спеціальності як:";
+
             //REWORK
             firstSpecialtyNameMaterialLabel.Text = specialties[0].name;
             firstSpecialtyDescriptionLabel.Text = specialties[0].description;

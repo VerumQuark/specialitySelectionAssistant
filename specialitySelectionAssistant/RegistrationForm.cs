@@ -96,5 +96,10 @@ namespace specialitySelectionAssistant
                 throw new Exception("Введіть ПІБ");
             }
         }
+
+        private void NameMaterialSingleLineTextField_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) nextMaterialFlatButton.PerformClick();
+        }
     }
 }

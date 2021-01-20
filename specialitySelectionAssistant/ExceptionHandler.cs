@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace specialitySelectionAssistant
 {
@@ -12,6 +13,13 @@ namespace specialitySelectionAssistant
         static public void HandleException(Exception ex)
         {
             MessageBox.Show(ex.Message);
+            File.AppendAllText("ExceptionLog.txt", ex.ToString());
+        }
+
+        static public void HandleException(Exception ex, string message)
+        {
+            MessageBox.Show(message);
+            File.AppendAllText("ExceptionLog.txt", ex.ToString());
         }
     }
 

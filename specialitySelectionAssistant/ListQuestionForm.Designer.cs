@@ -211,7 +211,7 @@ namespace specialitySelectionAssistant
             this.listQuestionQuestionLabel.Name = "listQuestionQuestionLabel";
             this.listQuestionQuestionLabel.Size = new System.Drawing.Size(908, 70);
             this.listQuestionQuestionLabel.TabIndex = 22;
-            this.listQuestionQuestionLabel.Text = "тест";
+            this.listQuestionQuestionLabel.Text = "Питання";
             // 
             // skipButton
             // 

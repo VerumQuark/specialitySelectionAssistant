@@ -53,7 +53,7 @@ namespace specialitySelectionAssistant
             this.helpMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.helpMaterialFlatButton.Name = "helpMaterialFlatButton";
             this.helpMaterialFlatButton.Primary = false;
-            this.helpMaterialFlatButton.Size = new System.Drawing.Size(21, 36);
+            this.helpMaterialFlatButton.Size = new System.Drawing.Size(19, 36);
             this.helpMaterialFlatButton.TabIndex = 17;
             this.helpMaterialFlatButton.Text = "?";
             this.helpMaterialFlatButton.UseVisualStyleBackColor = true;
@@ -65,7 +65,7 @@ namespace specialitySelectionAssistant
             this.titleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.titleLabel.Location = new System.Drawing.Point(49, 102);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(852, 29);
+            this.titleLabel.Size = new System.Drawing.Size(703, 25);
             this.titleLabel.TabIndex = 23;
             this.titleLabel.Text = "За результатами тесту вам більш підходять такі спеціальності як:";
             // 
@@ -79,9 +79,9 @@ namespace specialitySelectionAssistant
             this.firstSpecialtyNameMaterialLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.firstSpecialtyNameMaterialLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.firstSpecialtyNameMaterialLabel.Name = "firstSpecialtyNameMaterialLabel";
-            this.firstSpecialtyNameMaterialLabel.Size = new System.Drawing.Size(136, 24);
+            this.firstSpecialtyNameMaterialLabel.Size = new System.Drawing.Size(159, 19);
             this.firstSpecialtyNameMaterialLabel.TabIndex = 24;
-            this.firstSpecialtyNameMaterialLabel.Text = "materialLabel1";
+            this.firstSpecialtyNameMaterialLabel.Text = "Перша спеціальність";
             // 
             // secondSpecialtyNameMaterialLabel
             // 
@@ -93,9 +93,9 @@ namespace specialitySelectionAssistant
             this.secondSpecialtyNameMaterialLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.secondSpecialtyNameMaterialLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.secondSpecialtyNameMaterialLabel.Name = "secondSpecialtyNameMaterialLabel";
-            this.secondSpecialtyNameMaterialLabel.Size = new System.Drawing.Size(136, 24);
+            this.secondSpecialtyNameMaterialLabel.Size = new System.Drawing.Size(152, 19);
             this.secondSpecialtyNameMaterialLabel.TabIndex = 25;
-            this.secondSpecialtyNameMaterialLabel.Text = "materialLabel2";
+            this.secondSpecialtyNameMaterialLabel.Text = "Друга спеціальність";
             // 
             // thirdSpecialtyNameMaterialLabel
             // 
@@ -107,9 +107,9 @@ namespace specialitySelectionAssistant
             this.thirdSpecialtyNameMaterialLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.thirdSpecialtyNameMaterialLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.thirdSpecialtyNameMaterialLabel.Name = "thirdSpecialtyNameMaterialLabel";
-            this.thirdSpecialtyNameMaterialLabel.Size = new System.Drawing.Size(136, 24);
+            this.thirdSpecialtyNameMaterialLabel.Size = new System.Drawing.Size(152, 19);
             this.thirdSpecialtyNameMaterialLabel.TabIndex = 26;
-            this.thirdSpecialtyNameMaterialLabel.Text = "materialLabel3";
+            this.thirdSpecialtyNameMaterialLabel.Text = "Третя спеціальність";
             // 
             // closeMaterialFlatButton
             // 
@@ -125,7 +125,7 @@ namespace specialitySelectionAssistant
             this.closeMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.closeMaterialFlatButton.Name = "closeMaterialFlatButton";
             this.closeMaterialFlatButton.Primary = false;
-            this.closeMaterialFlatButton.Size = new System.Drawing.Size(117, 36);
+            this.closeMaterialFlatButton.Size = new System.Drawing.Size(95, 36);
             this.closeMaterialFlatButton.TabIndex = 27;
             this.closeMaterialFlatButton.Text = "Завершити";
             this.closeMaterialFlatButton.UseVisualStyleBackColor = false;
@@ -138,7 +138,7 @@ namespace specialitySelectionAssistant
             this.firstSpecialtyDescriptionLabel.Name = "firstSpecialtyDescriptionLabel";
             this.firstSpecialtyDescriptionLabel.Size = new System.Drawing.Size(787, 39);
             this.firstSpecialtyDescriptionLabel.TabIndex = 28;
-            this.firstSpecialtyDescriptionLabel.Text = "label1";
+            this.firstSpecialtyDescriptionLabel.Text = "опис";
             // 
             // secondSpecialtyDescriptionLabel
             // 
@@ -147,7 +147,7 @@ namespace specialitySelectionAssistant
             this.secondSpecialtyDescriptionLabel.Name = "secondSpecialtyDescriptionLabel";
             this.secondSpecialtyDescriptionLabel.Size = new System.Drawing.Size(787, 39);
             this.secondSpecialtyDescriptionLabel.TabIndex = 29;
-            this.secondSpecialtyDescriptionLabel.Text = "label2";
+            this.secondSpecialtyDescriptionLabel.Text = "опис";
             // 
             // thirdSpecialtyDescriptionLabel
             // 
@@ -156,7 +156,7 @@ namespace specialitySelectionAssistant
             this.thirdSpecialtyDescriptionLabel.Name = "thirdSpecialtyDescriptionLabel";
             this.thirdSpecialtyDescriptionLabel.Size = new System.Drawing.Size(787, 46);
             this.thirdSpecialtyDescriptionLabel.TabIndex = 30;
-            this.thirdSpecialtyDescriptionLabel.Text = "label3";
+            this.thirdSpecialtyDescriptionLabel.Text = "опис";
             // 
             // firstSpecialtyProfessionsLabel
             // 
@@ -165,7 +165,7 @@ namespace specialitySelectionAssistant
             this.firstSpecialtyProfessionsLabel.Name = "firstSpecialtyProfessionsLabel";
             this.firstSpecialtyProfessionsLabel.Size = new System.Drawing.Size(787, 36);
             this.firstSpecialtyProfessionsLabel.TabIndex = 31;
-            this.firstSpecialtyProfessionsLabel.Text = "label1";
+            this.firstSpecialtyProfessionsLabel.Text = "профессії";
             // 
             // secondSpecialtyProfessionsLabel
             // 
@@ -174,7 +174,7 @@ namespace specialitySelectionAssistant
             this.secondSpecialtyProfessionsLabel.Name = "secondSpecialtyProfessionsLabel";
             this.secondSpecialtyProfessionsLabel.Size = new System.Drawing.Size(787, 37);
             this.secondSpecialtyProfessionsLabel.TabIndex = 32;
-            this.secondSpecialtyProfessionsLabel.Text = "label2";
+            this.secondSpecialtyProfessionsLabel.Text = "профессії";
             // 
             // thirdSpecialtyProfessionsLabel
             // 
@@ -183,7 +183,7 @@ namespace specialitySelectionAssistant
             this.thirdSpecialtyProfessionsLabel.Name = "thirdSpecialtyProfessionsLabel";
             this.thirdSpecialtyProfessionsLabel.Size = new System.Drawing.Size(787, 42);
             this.thirdSpecialtyProfessionsLabel.TabIndex = 33;
-            this.thirdSpecialtyProfessionsLabel.Text = "label3";
+            this.thirdSpecialtyProfessionsLabel.Text = "профессії";
             // 
             // TestResultForm
             // 

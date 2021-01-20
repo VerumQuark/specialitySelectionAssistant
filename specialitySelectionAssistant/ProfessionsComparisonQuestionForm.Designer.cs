@@ -55,7 +55,7 @@ namespace specialitySelectionAssistant
             this.nextFormMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.nextFormMaterialFlatButton.Name = "nextFormMaterialFlatButton";
             this.nextFormMaterialFlatButton.Primary = false;
-            this.nextFormMaterialFlatButton.Size = new System.Drawing.Size(45, 36);
+            this.nextFormMaterialFlatButton.Size = new System.Drawing.Size(54, 36);
             this.nextFormMaterialFlatButton.TabIndex = 2;
             this.nextFormMaterialFlatButton.TabStop = false;
             this.nextFormMaterialFlatButton.Text = "Далі";
@@ -66,13 +66,13 @@ namespace specialitySelectionAssistant
             // 
             this.leftProffesionMaterialLabel.AutoSize = true;
             this.leftProffesionMaterialLabel.Depth = 0;
-            this.leftProffesionMaterialLabel.Font = new System.Drawing.Font("Roboto", 11F);
+            this.leftProffesionMaterialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.leftProffesionMaterialLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.leftProffesionMaterialLabel.Location = new System.Drawing.Point(54, 155);
+            this.leftProffesionMaterialLabel.Location = new System.Drawing.Point(115, 155);
             this.leftProffesionMaterialLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.leftProffesionMaterialLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.leftProffesionMaterialLabel.Name = "leftProffesionMaterialLabel";
-            this.leftProffesionMaterialLabel.Size = new System.Drawing.Size(108, 19);
+            this.leftProffesionMaterialLabel.Size = new System.Drawing.Size(172, 29);
             this.leftProffesionMaterialLabel.TabIndex = 9;
             this.leftProffesionMaterialLabel.Text = "materialLabel1";
             // 
@@ -90,7 +90,7 @@ namespace specialitySelectionAssistant
             this.BackMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.BackMaterialFlatButton.Name = "BackMaterialFlatButton";
             this.BackMaterialFlatButton.Primary = false;
-            this.BackMaterialFlatButton.Size = new System.Drawing.Size(59, 36);
+            this.BackMaterialFlatButton.Size = new System.Drawing.Size(71, 36);
             this.BackMaterialFlatButton.TabIndex = 10;
             this.BackMaterialFlatButton.TabStop = false;
             this.BackMaterialFlatButton.Text = "Назад";
@@ -102,13 +102,13 @@ namespace specialitySelectionAssistant
             this.rightProffesionMaterialLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rightProffesionMaterialLabel.AutoSize = true;
             this.rightProffesionMaterialLabel.Depth = 0;
-            this.rightProffesionMaterialLabel.Font = new System.Drawing.Font("Roboto", 11F);
+            this.rightProffesionMaterialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.rightProffesionMaterialLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.rightProffesionMaterialLabel.Location = new System.Drawing.Point(686, 155);
+            this.rightProffesionMaterialLabel.Location = new System.Drawing.Point(614, 155);
             this.rightProffesionMaterialLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.rightProffesionMaterialLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.rightProffesionMaterialLabel.Name = "rightProffesionMaterialLabel";
-            this.rightProffesionMaterialLabel.Size = new System.Drawing.Size(108, 19);
+            this.rightProffesionMaterialLabel.Size = new System.Drawing.Size(172, 29);
             this.rightProffesionMaterialLabel.TabIndex = 13;
             this.rightProffesionMaterialLabel.Text = "materialLabel2";
             // 
@@ -117,7 +117,7 @@ namespace specialitySelectionAssistant
             this.leftProffesionButton.BackColor = System.Drawing.Color.White;
             this.leftProffesionButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("leftProffesionButton.BackgroundImage")));
             this.leftProffesionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.leftProffesionButton.Location = new System.Drawing.Point(58, 195);
+            this.leftProffesionButton.Location = new System.Drawing.Point(119, 195);
             this.leftProffesionButton.Name = "leftProffesionButton";
             this.leftProffesionButton.Size = new System.Drawing.Size(250, 250);
             this.leftProffesionButton.TabIndex = 0;
@@ -131,7 +131,7 @@ namespace specialitySelectionAssistant
             this.rightProfessionButton.BackColor = System.Drawing.Color.White;
             this.rightProfessionButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rightProfessionButton.BackgroundImage")));
             this.rightProfessionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.rightProfessionButton.Location = new System.Drawing.Point(690, 195);
+            this.rightProfessionButton.Location = new System.Drawing.Point(618, 195);
             this.rightProfessionButton.MaximumSize = new System.Drawing.Size(250, 250);
             this.rightProfessionButton.MinimumSize = new System.Drawing.Size(250, 250);
             this.rightProfessionButton.Name = "rightProfessionButton";
@@ -152,7 +152,7 @@ namespace specialitySelectionAssistant
             this.HelpMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.HelpMaterialFlatButton.Name = "HelpMaterialFlatButton";
             this.HelpMaterialFlatButton.Primary = false;
-            this.HelpMaterialFlatButton.Size = new System.Drawing.Size(19, 36);
+            this.HelpMaterialFlatButton.Size = new System.Drawing.Size(21, 36);
             this.HelpMaterialFlatButton.TabIndex = 16;
             this.HelpMaterialFlatButton.TabStop = false;
             this.HelpMaterialFlatButton.Text = "?";
@@ -165,7 +165,7 @@ namespace specialitySelectionAssistant
             this.questionNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.questionNumLabel.Location = new System.Drawing.Point(53, 109);
             this.questionNumLabel.Name = "questionNumLabel";
-            this.questionNumLabel.Size = new System.Drawing.Size(70, 25);
+            this.questionNumLabel.Size = new System.Drawing.Size(87, 29);
             this.questionNumLabel.TabIndex = 24;
             this.questionNumLabel.Text = "label1";
             // 

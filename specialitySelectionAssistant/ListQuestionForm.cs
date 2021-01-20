@@ -80,8 +80,13 @@ namespace specialitySelectionAssistant
 
         private void NextMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            if (isAnswerChosen)
+            try
             {
+                if (isAnswerChosen == false)
+                {
+                    throw new AnswerNotSelectedException("Оберіть один із варіантів");
+                }
+
                 chosenUserPreference.specialtyIndex = UserPreferencesTest.currentSpecialityIndex;
                 UserPreferencesTest.userPreferencesStack.Push(chosenUserPreference);
 
@@ -96,11 +101,10 @@ namespace specialitySelectionAssistant
                     UserPreferencesTest.NextQuestion();
                     LoadQuestion();
                 }
-
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Оберіть один з варіантів");
+                MessageBox.Show(ex.Message);
             }
         }
 

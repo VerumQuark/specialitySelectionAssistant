@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnswerNotSelectedException.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Facultiy.cs" />
     <Compile Include="FacultiesMinDeviation.cs" />

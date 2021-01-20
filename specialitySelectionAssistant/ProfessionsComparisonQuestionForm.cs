@@ -75,8 +75,13 @@ namespace specialitySelectionAssistant
 
         private void NextFormMaterialFlatButton_Click(object sender, EventArgs e)
         {
-            if (isProfessionChosen)
+            try
             {
+                if (isProfessionChosen == false)
+                {
+                    throw new AnswerNotSelectedException("Оберіть одну з професій");
+                }
+
                 isProfessionChosen = false;
                 HollandTest.chosenProfessionsTypesStack.Push(chosenProfesion.type);
 
@@ -91,11 +96,10 @@ namespace specialitySelectionAssistant
                     HollandTest.NextComparisonQuestion();
                     LoadQuestion();
                 }
-
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Оберіть одну з професій");
+                MessageBox.Show(ex.Message);
             }
         }
 

@@ -29,7 +29,7 @@ namespace SpecialtySelectionAssistantLibrary
     static public class User
     {
         static public HollandResult hollandResult;
-        static string name;
+        static public string name;
 
 
         static User()

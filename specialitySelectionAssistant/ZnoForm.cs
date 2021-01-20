@@ -73,7 +73,7 @@ namespace specialitySelectionAssistant
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                ExceptionHandler.HandleException(ex);
             }
         }
 
@@ -114,13 +114,14 @@ namespace specialitySelectionAssistant
 
                 isCheckSuccessful = true;
             }
-            catch(IndexOutOfRangeException)
+            catch(IndexOutOfRangeException ex)
             {
-                MessageBox.Show("Internal error. Required form objects are missing.");
+                string message = "Internal error. Required form objects are missing.";
+                ExceptionHandler.HandleException(ex, message);
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                ExceptionHandler.HandleException(ex);
             }
 
         }

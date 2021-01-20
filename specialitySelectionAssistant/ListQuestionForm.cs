@@ -104,7 +104,7 @@ namespace specialitySelectionAssistant
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                ExceptionHandler.HandleException(ex);
             }
         }
 

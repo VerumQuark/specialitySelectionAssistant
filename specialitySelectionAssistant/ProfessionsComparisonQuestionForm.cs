@@ -99,18 +99,26 @@ namespace specialitySelectionAssistant
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                ExceptionHandler.HandleException(ex);
             }
         }
 
         private void LoadQuestion()
         {
-            pairQuestion = HollandTest.currentComparisonQuestion;
+            try
+            {
+                pairQuestion = HollandTest.currentComparisonQuestion;
 
-            ChangeProfessions(pairQuestion.firstProfession, leftProffesionMaterialLabel, leftProffesionButton);
-            ChangeProfessions(pairQuestion.secondProfession, rightProffesionMaterialLabel, rightProfessionButton);
+                ChangeProfessions(pairQuestion.firstProfession, leftProffesionMaterialLabel, leftProffesionButton);
+                ChangeProfessions(pairQuestion.secondProfession, rightProffesionMaterialLabel, rightProfessionButton);
 
-            questionNumLabel.Text = $"Питання №{HollandTest.CurrentComparisonQuestionIndex + 1}";
+                questionNumLabel.Text = $"Питання №{HollandTest.CurrentComparisonQuestionIndex + 1}";
+            }
+            catch(Exception ex) 
+            {
+                string message = "Неможливо отримати дані. Перевірте цілісність файлів.";
+                ExceptionHandler.HandleException(ex, message);
+            }
         }
 
         private void ChangeProfessions(Profesion profesion, MaterialLabel proffesionLabel, Button proffesionButton)

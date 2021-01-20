@@ -32,7 +32,7 @@ namespace specialitySelectionAssistant
 
         private void ProfessionsComparisonQuestionForm_Load(object sender, EventArgs e)
         {
-            if(HollandTest.isFirstQuestion)
+            if (HollandTest.isFirstQuestion)
             {
                 HollandTest.CreateTest();
             }
@@ -91,7 +91,7 @@ namespace specialitySelectionAssistant
                     HollandTest.NextComparisonQuestion();
                     LoadQuestion();
                 }
-                
+
             }
             else
             {

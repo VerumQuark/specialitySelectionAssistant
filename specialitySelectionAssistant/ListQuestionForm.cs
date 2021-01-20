@@ -60,13 +60,6 @@ namespace specialitySelectionAssistant
             string question = UserPreferencesTest.currentListQuestion;
 
             listQuestionQuestionLabel.Text = question;            
-            /*
-            veryLikeMaterialRadioButton.Checked = false;
-            ratherSoMaterialRadioButton.Checked = false;
-            cantAnswerMaterialRadioButton.Checked = false;
-            ratherNotMaterialRadioButton.Checked = false;
-            veryDislikeMaterialRadioButton.Checked = false;
-            */
             isAnswerChosen = false;
         }
 
@@ -100,7 +93,6 @@ namespace specialitySelectionAssistant
                 }
                 else
                 {
-                    veryLikeMaterialRadioButton.Focus();
                     UserPreferencesTest.NextQuestion();
                     LoadQuestion();
                 }

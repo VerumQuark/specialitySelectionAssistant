@@ -75,6 +75,7 @@
     <Compile Include="FacultiesMinDeviation.cs" />
     <Compile Include="HollandTest.cs" />
     <Compile Include="JsonSerializationException.cs" />
+    <Compile Include="LibraryExceptionHandler.cs" />
     <Compile Include="preferredSpecialtiesDeterminant.cs" />
     <Compile Include="ProfessionPairGenerator.cs" />
     <Compile Include="ProfessionPairStorage.cs" />
@@ -86,6 +87,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="RangeException.cs" />
+    <Compile Include="UnexpectedHollandTypeException.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserPreferencesTest.cs" />
     <Compile Include="ZnoDuplicateException.cs" />

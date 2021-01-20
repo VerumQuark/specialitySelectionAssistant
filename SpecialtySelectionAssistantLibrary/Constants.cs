@@ -9,8 +9,12 @@ namespace SpecialtySelectionAssistantLibrary
     static public class Constants
     {
         static public readonly int COMPARATION_QUESTION_COUNT = 30;
+
+
+
         static public readonly string[] FIRST_ZNO_SUBJECTS = new string[] {
-            "Українська мова і література"
+            "Українська мова і література",
+            ""
         };
         static public readonly string[] SECOND_ZNO_SUBJECTS = new string[] {
             "Математика",

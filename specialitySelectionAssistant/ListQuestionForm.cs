@@ -57,10 +57,18 @@ namespace specialitySelectionAssistant
 
         private void LoadQuestion()
         {
-            string question = UserPreferencesTest.currentListQuestion;
+            try
+            {
+                string question = UserPreferencesTest.currentListQuestion;
 
-            listQuestionQuestionLabel.Text = question;            
-            isAnswerChosen = false;
+                listQuestionQuestionLabel.Text = question;
+                isAnswerChosen = false;
+            }
+            catch (Exception ex)
+            {
+                string message = "Неможливо отримати дані. Перевірте цілісність файлів.";
+                ExceptionHandler.HandleException(ex, message);
+            }
         }
 
         private void BackMaterialFlatButton_Click(object sender, EventArgs e)

@@ -62,13 +62,14 @@ namespace SpecialtySelectionAssistantLibrary
                         currentComparisonQuestionIndex = value;
                     }
                 }
-                catch(RangeException)
+                catch(RangeException ex)
                 {
-                    Console.WriteLine("Holland test.Index assignment error.");
+                    string message = "Holland test. Index assignment error.";
+                    LibraryExceptionHandler.HandleException(ex, message);
                 }
                 catch(Exception ex)
                 {
-                    Console.WriteLine(ex.Message);
+                    LibraryExceptionHandler.HandleException(ex);
                 }
             }
         }
@@ -80,13 +81,14 @@ namespace SpecialtySelectionAssistantLibrary
                 CurrentComparisonQuestionIndex++;
                 currentComparisonQuestion = comparisonQuestionsStorage[CurrentComparisonQuestionIndex];
             }
-            catch (IndexOutOfRangeException)
+            catch (IndexOutOfRangeException ex)
             {
-                Console.WriteLine("Holland test. Comparison index error.");
+                string message = "Holland test. Comparison question index error.";
+                LibraryExceptionHandler.HandleException(ex, message);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                LibraryExceptionHandler.HandleException(ex);
             }
         }
 
@@ -97,13 +99,15 @@ namespace SpecialtySelectionAssistantLibrary
                 CurrentComparisonQuestionIndex--;
                 currentComparisonQuestion = comparisonQuestionsStorage[CurrentComparisonQuestionIndex];
             }
-            catch (IndexOutOfRangeException)
+            catch (IndexOutOfRangeException ex)
             {
-                Console.WriteLine("Holland test. Comparison index error.");
+                string message = "Holland test. Comparison question index error.";
+                LibraryExceptionHandler.HandleException(ex, message);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                LibraryExceptionHandler.HandleException(ex);
             }
         }
 
@@ -125,13 +129,14 @@ namespace SpecialtySelectionAssistantLibrary
                 currentComparisonQuestion = comparisonQuestionsStorage[CurrentComparisonQuestionIndex];
                 chosenProfessionsTypesStack.Clear();
             }
-            catch (IndexOutOfRangeException)
+            catch (IndexOutOfRangeException ex)
             {
-                Console.WriteLine("Holland test. Comparison index error.");
+                string message = "Holland test. Comparison question index error.";
+                LibraryExceptionHandler.HandleException(ex, message);
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                LibraryExceptionHandler.HandleException(ex);
             }
         }
 
@@ -168,43 +173,50 @@ namespace SpecialtySelectionAssistantLibrary
 
         static public void AddCharacteristicsPoint(string type)
         {
-            switch (type)
+            try
             {
-                case "realistic":
-                    {
-                        User.hollandResult.Realistic += 1;
-                        break;
-                    }
-                case "intelligent":
-                    {
-                        User.hollandResult.Intelligent += 1;
-                        break;
-                    }
-                case "social":
-                    {
-                        User.hollandResult.Social += 1;
-                        break;
-                    }
-                case "conventional":
-                    {
-                        User.hollandResult.Conventional += 1;
-                        break;
-                    }
-                case "enterprising":
-                    {
-                        User.hollandResult.Enterprising += 1;
-                        break;
-                    }
-                case "artistic":
-                    {
-                        User.hollandResult.Artistic += 1;
-                        break;
-                    }
-                default:
-                    {
-                        Console.WriteLine("Holland test. Add characteristics error.");
-                        break;
-                    }
+                switch (type)
+                {
+                    case "realistic":
+                        {
+                            User.hollandResult.Realistic += 1;
+                            break;
+                        }
+                    case "intelligent":
+                        {
+                            User.hollandResult.Intelligent += 1;
+                            break;
+                        }
+                    case "social":
+                        {
+                            User.hollandResult.Social += 1;
+                            break;
+                        }
+                    case "conventional":
+                        {
+                            User.hollandResult.Conventional += 1;
+                            break;
+                        }
+                    case "enterprising":
+                        {
+                            User.hollandResult.Enterprising += 1;
+                            break;
+                        }
+                    case "artistic":
+                        {
+                            User.hollandResult.Artistic += 1;
+                            break;
+                        }
+                    default:
+                        {
+                            throw new UnexpectedHollandTypeException("Holland test.Add characteristics error.");
+                        }
+                }
+            }
+            catch(Exception ex)
+            {
+                string message = "Holland test. Add characteristics error.";
+                LibraryExceptionHandler.HandleException(ex, message);
             }
         }
     }

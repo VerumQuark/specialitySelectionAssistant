@@ -31,18 +31,25 @@ namespace specialitySelectionAssistant
 
             titleLabel.Text = $"{User.name}, за результатами тесту вам більш підходять такі спеціальності як:";
 
-            //REWORK
-            firstSpecialtyNameMaterialLabel.Text = specialties[0].name;
-            firstSpecialtyDescriptionLabel.Text = specialties[0].description;
-            firstSpecialtyProfessionsLabel.Text = GetProfessionsStr(specialties[0].professions);
+            try
+            {
+                firstSpecialtyNameMaterialLabel.Text = specialties[0].name;
+                firstSpecialtyDescriptionLabel.Text = specialties[0].description;
+                firstSpecialtyProfessionsLabel.Text = GetProfessionsStr(specialties[0].professions);
 
-            secondSpecialtyNameMaterialLabel.Text = specialties[1].name;
-            secondSpecialtyDescriptionLabel.Text = specialties[1].description;
-            secondSpecialtyProfessionsLabel.Text = GetProfessionsStr(specialties[1].professions);
+                secondSpecialtyNameMaterialLabel.Text = specialties[1].name;
+                secondSpecialtyDescriptionLabel.Text = specialties[1].description;
+                secondSpecialtyProfessionsLabel.Text = GetProfessionsStr(specialties[1].professions);
 
-            thirdSpecialtyNameMaterialLabel.Text = specialties[2].name;
-            thirdSpecialtyDescriptionLabel.Text = specialties[2].description;
-            thirdSpecialtyProfessionsLabel.Text = GetProfessionsStr(specialties[2].professions);
+                thirdSpecialtyNameMaterialLabel.Text = specialties[2].name;
+                thirdSpecialtyDescriptionLabel.Text = specialties[2].description;
+                thirdSpecialtyProfessionsLabel.Text = GetProfessionsStr(specialties[2].professions);
+            }
+            catch(Exception ex)
+            {
+                string message = "Неможливо отримати дані. Перевірте цілісність файлів.";
+                ExceptionHandler.HandleException(ex, message);
+            }
         }
 
         private string GetProfessionsStr(string[] professions)

@@ -66,11 +66,11 @@ namespace specialitySelectionAssistant.Tests.Holland
                 catch(RangeException ex)
                 {
                     string message = "Holland test. Index assignment error.";
-                    LibraryExceptionHandler.HandleException(ex, message);
+                    ExceptionHandler.CriticalException(ex, message);
                 }
                 catch(Exception ex)
                 {
-                    LibraryExceptionHandler.HandleException(ex);
+                    ExceptionHandler.CriticalException(ex);
                 }
             }
         }
@@ -85,11 +85,11 @@ namespace specialitySelectionAssistant.Tests.Holland
             catch (IndexOutOfRangeException ex)
             {
                 string message = "Holland test. Comparison question index error.";
-                LibraryExceptionHandler.HandleException(ex, message);
+                ExceptionHandler.CriticalException(ex, message);
             }
             catch (Exception ex)
             {
-                LibraryExceptionHandler.HandleException(ex);
+                ExceptionHandler.CriticalException(ex);
             }
         }
 
@@ -103,12 +103,12 @@ namespace specialitySelectionAssistant.Tests.Holland
             catch (IndexOutOfRangeException ex)
             {
                 string message = "Holland test. Comparison question index error.";
-                LibraryExceptionHandler.HandleException(ex, message);
+                ExceptionHandler.CriticalException(ex, message);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                LibraryExceptionHandler.HandleException(ex);
+                ExceptionHandler.CriticalException(ex);
             }
         }
 
@@ -133,11 +133,11 @@ namespace specialitySelectionAssistant.Tests.Holland
             catch (IndexOutOfRangeException ex)
             {
                 string message = "Holland test. Comparison question index error.";
-                LibraryExceptionHandler.HandleException(ex, message);
+                ExceptionHandler.CriticalException(ex, message);
             }
             catch (Exception ex)
             {
-                LibraryExceptionHandler.HandleException(ex);
+                ExceptionHandler.CriticalException(ex);
             }
         }
 
@@ -217,7 +217,7 @@ namespace specialitySelectionAssistant.Tests.Holland
             catch(Exception ex)
             {
                 string message = "Holland test. Add characteristics error.";
-                LibraryExceptionHandler.HandleException(ex, message);
+                ExceptionHandler.CriticalException(ex, message);
             }
         }
     }

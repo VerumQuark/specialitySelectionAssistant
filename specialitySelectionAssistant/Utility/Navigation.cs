@@ -65,5 +65,5 @@ namespace specialitySelectionAssistant
             Program.Context.MainForm.Show();
         }
 
-    }/////////REWORK
+    }
 }

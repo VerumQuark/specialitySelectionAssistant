@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
+using specialitySelectionAssistant.Exceptions;
 
 namespace specialitySelectionAssistant.Tests.Holland
 {
@@ -19,9 +20,10 @@ namespace specialitySelectionAssistant.Tests.Holland
                 jsonString = Encoding.UTF8.GetString(Properties.Resources.professions);
                 professionPairStorage = new ProfessionPairStorage();
             }
-            catch
+            catch(Exception ex)
             {
-                Console.WriteLine("Pair generator. Get Json string error");
+                string message = "Pair generator. Get Json string error";
+                ExceptionHandler.CriticalException(ex, message);
             }
         }
 
@@ -60,9 +62,10 @@ namespace specialitySelectionAssistant.Tests.Holland
                 }
 
             }
-            catch
+            catch (Exception ex)
             {
-                Console.WriteLine("Pair generator. Json deserialization error");
+                string message = "Pair generator. Json deserialization error";
+                ExceptionHandler.CriticalException(ex, message);
             }
 
             return professionPairStorage;
@@ -87,12 +90,12 @@ namespace specialitySelectionAssistant.Tests.Holland
             }
             catch(IndexOutOfRangeException ex)
             {
-                Console.WriteLine("Pair generator. IndexOutOfRangeException");
-                Console.WriteLine(ex.Message);
+                string message = "Pair generator. IndexOutOfRangeException";
+                ExceptionHandler.CriticalException(ex, message);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                ExceptionHandler.CriticalException(ex);
             }
             return profesionElem;
         }

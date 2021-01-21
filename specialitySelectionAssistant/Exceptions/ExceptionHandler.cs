@@ -21,6 +21,20 @@ namespace specialitySelectionAssistant.Exceptions
             MessageBox.Show(message);
             File.AppendAllText("ExceptionLog.txt", ex.ToString());
         }
-    }
 
+        static public void CriticalException(Exception ex)
+        {
+            MessageBox.Show("Критическая внутренняя ошибка. Проверьте целостность файлов.");
+            File.AppendAllText("ExceptionLog.txt", ex.ToString());
+            Application.Exit();
+        }
+
+        static public void CriticalException(Exception ex, string message)
+        {
+            MessageBox.Show("Критическая внутренняя ошибка. Проверьте целостность файлов.");
+            MessageBox.Show(message);
+            File.AppendAllText("ExceptionLog.txt", ex.ToString());
+            Application.Exit();
+        }
+    }
 }

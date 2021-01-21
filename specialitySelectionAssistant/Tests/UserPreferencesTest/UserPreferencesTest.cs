@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using specialitySelectionAssistant.Exceptions;
 
 namespace specialitySelectionAssistant.Tests.UserPreference
 {
@@ -28,6 +29,22 @@ namespace specialitySelectionAssistant.Tests.UserPreference
 
         static public Specialty[] resultSpecialties;
 
+        static UserPreferencesTest()
+        {
+            faculty = new Faculty();
+
+            CurrentSpecialityIndex = 0;
+            CurrentListQuestionIndex = 0;
+
+            currentSpeciality = faculty.specialties[CurrentSpecialityIndex];
+            currentListQuestion = currentSpeciality.questions[CurrentListQuestionIndex];
+
+            isFirstQuestion = true;
+            isLastQuestion = false;
+
+            userPreferencesStack = new Stack<UserPreference>();
+        }
+
         static public void SaveTestResult()
         {
             foreach(UserPreference userPreference in userPreferencesStack)
@@ -39,8 +56,6 @@ namespace specialitySelectionAssistant.Tests.UserPreference
 
             resultSpecialties = faculty.specialties;
         }
-
-        //static constructor REWORK
 
         static public void CreateTest(Faculty facultyValue)
         {
@@ -81,14 +96,33 @@ namespace specialitySelectionAssistant.Tests.UserPreference
 
             set
             {
-                if (value >= faculty.specialties.Length)
+                try
                 {
-                    //error
-                    //currentQuestion = 0;
+                    if (value >= faculty.specialties.Length)
+                    {
+                        currentSpecialityIndex = faculty.specialties.Length - 1;
+
+                        throw new RangeException();
+                    }
+                    else if (value < 0)
+                    {
+                        currentSpecialityIndex = 0;
+
+                        throw new RangeException();
+                    }
+                    else
+                    {
+                        currentSpecialityIndex = value;
+                    }
                 }
-                else
+                catch (RangeException ex)
                 {
-                    currentSpecialityIndex = value;
+                    string message = "UserPreferencesTest. Specialty index assignment error.";
+                    ExceptionHandler.CriticalException(ex, message);
+                }
+                catch (Exception ex)
+                {
+                    ExceptionHandler.CriticalException(ex);
                 }
             }
         }
@@ -102,44 +136,57 @@ namespace specialitySelectionAssistant.Tests.UserPreference
 
             set
             {
-                int questionsLenght = faculty.specialties[currentSpecialityIndex].questions.Length;
+                try
+                {
+                    int questionsLenght = faculty.specialties[currentSpecialityIndex].questions.Length;
 
-                if (value > questionsLenght)
-                {
-                    //error
-                    //currentQuestion = 0;
-                }
-                else
-                {
-                    if (value == questionsLenght)
+                    if (value > questionsLenght)
                     {
-                        currentSpecialityIndex++;
-                        currentListQuestionIndex = 0;
-                    }
-                    else if (value < 0)
-                    {
-                        currentSpecialityIndex--;
-                        currentListQuestionIndex = questionsLenght - 1;
+                        currentListQuestionIndex = questionsLenght;
+
+                        throw new RangeException();
                     }
                     else
                     {
-                        currentListQuestionIndex = value;
-                    }
+                        if (value == questionsLenght)
+                        {
+                            currentSpecialityIndex++;
+                            currentListQuestionIndex = 0;
+                        }
+                        else if (value < 0)
+                        {
+                            currentSpecialityIndex--;
+                            currentListQuestionIndex = questionsLenght - 1;
+                        }
+                        else
+                        {
+                            currentListQuestionIndex = value;
+                        }
 
-                    isLastQuestion = false;
-                    isFirstQuestion = false;
+                        isLastQuestion = false;
+                        isFirstQuestion = false;
 
-                    if (currentSpecialityIndex == faculty.specialties.Length - 1 &&
-                      currentListQuestionIndex == faculty.specialties[currentSpecialityIndex].questions.Length - 1)
-                    {
-                        isLastQuestion = true;
-                    }
+                        if (currentSpecialityIndex == faculty.specialties.Length - 1 &&
+                          currentListQuestionIndex == faculty.specialties[currentSpecialityIndex].questions.Length - 1)
+                        {
+                            isLastQuestion = true;
+                        }
 
-                    if (currentSpecialityIndex == 0 &&
-                       currentListQuestionIndex == 0)
-                    {
-                        isFirstQuestion = true;
+                        if (currentSpecialityIndex == 0 &&
+                           currentListQuestionIndex == 0)
+                        {
+                            isFirstQuestion = true;
+                        }
                     }
+                }
+                catch (RangeException ex)
+                {
+                    string message = "UserPreferencesTest. List question index assignment error.";
+                    ExceptionHandler.CriticalException(ex, message);
+                }
+                catch (Exception ex)
+                {
+                    ExceptionHandler.CriticalException(ex);
                 }
             }
         }

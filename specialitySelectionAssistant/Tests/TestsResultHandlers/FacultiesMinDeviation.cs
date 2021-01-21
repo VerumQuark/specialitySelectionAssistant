@@ -4,19 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
+using specialitySelectionAssistant.Exceptions;
 
 namespace specialitySelectionAssistant.Tests
 {
     static public class FacultiesMinDeviation
     {
-        static readonly string jsonString = Encoding.UTF8.GetString(Properties.Resources.faculties);
+        static readonly string jsonString;
+
+        static FacultiesMinDeviation()
+        {
+            try
+            {
+                jsonString = Encoding.UTF8.GetString(Properties.Resources.faculties);
+            }
+            catch (Exception ex)
+            {
+                string message = "FacultiesMinDeviation. Get Json string error";
+                ExceptionHandler.CriticalException(ex, message);
+            }
+        }
 
         static public Faculty GetFaculty(HollandResult hollandResult)
         {
-            List<Faculty> alterFacultiesStorage;
-            alterFacultiesStorage = JsonSerializer.Deserialize<List<Faculty>>(jsonString);
-
             Faculty minAbsDeviationFaculty = new Faculty();
+
+            try
+            {
+                List<Faculty> alterFacultiesStorage;
+                alterFacultiesStorage = JsonSerializer.Deserialize<List<Faculty>>(jsonString);
+
             int minAbsDeviation = int.MaxValue;
 
             foreach (Faculty faculty in alterFacultiesStorage)
@@ -36,6 +53,12 @@ namespace specialitySelectionAssistant.Tests
                     minAbsDeviationFaculty = faculty;
                 }
                     
+            }
+            }
+            catch (Exception ex)
+            {
+                string message = "Pair generator. Json deserialization error";
+                ExceptionHandler.CriticalException(ex, message);
             }
 
             return minAbsDeviationFaculty;

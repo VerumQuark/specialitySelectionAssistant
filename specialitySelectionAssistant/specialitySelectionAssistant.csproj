@@ -105,7 +105,6 @@
     <Compile Include="Utility\Facultiy.cs" />
     <Compile Include="Tests\HollandTest\HollandTest.cs" />
     <Compile Include="Exceptions\JsonSerializationException.cs" />
-    <Compile Include="Exceptions\LibraryExceptionHandler.cs" />
     <Compile Include="Tests\TestsResultHandlers\PreferredSpecialtiesDeterminant.cs" />
     <Compile Include="Tests\HollandTest\ProfessionPairGenerator.cs" />
     <Compile Include="Tests\HollandTest\ProfessionPairStorage.cs" />

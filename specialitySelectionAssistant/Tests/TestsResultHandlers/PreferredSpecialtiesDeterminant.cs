@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using specialitySelectionAssistant.Exceptions;
 
 namespace specialitySelectionAssistant.Tests
 {
@@ -42,7 +43,17 @@ namespace specialitySelectionAssistant.Tests
         static public List<Specialty> GetDetermineSpecialties()
         {
             ConfigureCheck();
-            specialtiesCheking?.Invoke();
+
+            try
+            {
+                specialtiesCheking?.Invoke();
+            }
+            catch(Exception ex)
+            {
+                string message = "PreferredSpecialtiesDeterminant. Check error.";
+                ExceptionHandler.CriticalException(ex, message);
+            }
+
             return determinedSpecialties;
         }
 
@@ -65,15 +76,23 @@ namespace specialitySelectionAssistant.Tests
 
         static void ConfigureCheck()
         {
-            specialtiesCheking = DefaultCheck;
+            try
+            {
+                specialtiesCheking = DefaultCheck;
 
-            if (isBudget == true && isContract == false)
-                specialtiesCheking += BudgetCheck;
+                if (isBudget == true && isContract == false)
+                    specialtiesCheking += BudgetCheck;
 
-            if (isHaveZno)
-                specialtiesCheking += ZnoCheck;
+                if (isHaveZno)
+                    specialtiesCheking += ZnoCheck;
 
-            specialtiesCheking += FillingCheck;
+                specialtiesCheking += FillingCheck;
+            }
+            catch(Exception ex)
+            {
+                string message = "PreferredSpecialtiesDeterminant. Check delegate error.";
+                ExceptionHandler.CriticalException(ex, message);
+            }
         }
         static void DefaultCheck()
         {
@@ -123,6 +142,8 @@ namespace specialitySelectionAssistant.Tests
                         if (subject.isMandatory) break;
                     }
                 }
+
+
                 if(optionalPoints.Count != 0) totalPoints += optionalPoints.Max();
 
                 if (totalPoints * 1.05 >= specialty.ZNO_points)

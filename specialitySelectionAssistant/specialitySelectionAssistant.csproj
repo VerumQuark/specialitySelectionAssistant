@@ -101,19 +101,19 @@
     </Compile>
     <Compile Include="Exceptions\AnswerNotSelectedException.cs" />
     <Compile Include="Utility\Constants.cs" />
-    <Compile Include="TestsResultHandlers\FacultiesMinDeviation.cs" />
+    <Compile Include="Tests\TestsResultHandlers\FacultiesMinDeviation.cs" />
     <Compile Include="Utility\Facultiy.cs" />
-    <Compile Include="HollandTest\HollandTest.cs" />
+    <Compile Include="Tests\HollandTest\HollandTest.cs" />
     <Compile Include="Exceptions\JsonSerializationException.cs" />
     <Compile Include="Exceptions\LibraryExceptionHandler.cs" />
-    <Compile Include="TestsResultHandlers\PreferredSpecialtiesDeterminant.cs" />
-    <Compile Include="HollandTest\ProfessionPairGenerator.cs" />
-    <Compile Include="HollandTest\ProfessionPairStorage.cs" />
-    <Compile Include="HollandTest\ProfessionStrorage.cs" />
+    <Compile Include="Tests\TestsResultHandlers\PreferredSpecialtiesDeterminant.cs" />
+    <Compile Include="Tests\HollandTest\ProfessionPairGenerator.cs" />
+    <Compile Include="Tests\HollandTest\ProfessionPairStorage.cs" />
+    <Compile Include="Tests\HollandTest\ProfessionStrorage.cs" />
     <Compile Include="Exceptions\RangeException.cs" />
     <Compile Include="Exceptions\UnexpectedHollandTypeException.cs" />
     <Compile Include="User\User.cs" />
-    <Compile Include="UserPreferencesTest\UserPreferencesTest.cs" />
+    <Compile Include="Tests\UserPreferencesTest\UserPreferencesTest.cs" />
     <Compile Include="Exceptions\ZnoDuplicateException.cs" />
     <Compile Include="Exceptions\ZnoEmptyException.cs" />
     <Compile Include="Utility\Navigation.cs" />

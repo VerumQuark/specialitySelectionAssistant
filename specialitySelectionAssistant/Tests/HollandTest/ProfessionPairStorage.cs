@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace specialitySelectionAssistant
+namespace specialitySelectionAssistant.Tests.Holland
 {
      public struct ProfesionPair
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace specialitySelectionAssistant
+namespace specialitySelectionAssistant.Exceptions
 {
     class LibraryExceptionHandler
     {

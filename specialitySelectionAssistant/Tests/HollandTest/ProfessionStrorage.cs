@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace specialitySelectionAssistant
+namespace specialitySelectionAssistant.Tests.Holland
 {
     public struct Profesion
     {

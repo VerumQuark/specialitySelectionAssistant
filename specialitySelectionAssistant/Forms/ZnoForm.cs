@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using specialitySelectionAssistant.Exceptions;
+using specialitySelectionAssistant.Tests;
 
 namespace specialitySelectionAssistant
 {

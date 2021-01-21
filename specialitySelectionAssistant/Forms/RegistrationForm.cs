@@ -11,6 +11,8 @@ using System.Threading;
 using MaterialSkin.Controls;
 using MaterialSkin;
 using System.Text.RegularExpressions;
+using specialitySelectionAssistant.Exceptions;
+using specialitySelectionAssistant.Tests;
 
 namespace specialitySelectionAssistant
 {

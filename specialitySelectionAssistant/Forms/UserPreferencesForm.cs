@@ -10,7 +10,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-//using SpecialtySelectionAssistantLibrary;
+using specialitySelectionAssistant.Exceptions;
+using specialitySelectionAssistant.Tests.UserPreference;
+using specialitySelectionAssistant.Tests;
 
 namespace specialitySelectionAssistant
 {

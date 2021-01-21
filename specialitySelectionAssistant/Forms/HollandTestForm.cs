@@ -4,6 +4,8 @@ using System;
 using System.Drawing;
 using System.Resources;
 using System.Windows.Forms;
+using specialitySelectionAssistant.Exceptions;
+using specialitySelectionAssistant.Tests.Holland;
 
 namespace specialitySelectionAssistant
 {

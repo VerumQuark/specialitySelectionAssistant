@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using specialitySelectionAssistant.Exceptions;
 
-namespace specialitySelectionAssistant
+namespace specialitySelectionAssistant.Tests.Holland
 {
     public static class HollandTest
     {

@@ -206,7 +206,7 @@ namespace specialitySelectionAssistant
             this.MinimumSize = new System.Drawing.Size(1000, 562);
             this.Name = "TestResultForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Результати!";
+            this.Text = "F";
             this.Load += new System.EventHandler(this.TestResultForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

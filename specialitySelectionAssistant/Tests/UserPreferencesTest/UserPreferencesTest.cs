@@ -29,48 +29,6 @@ namespace specialitySelectionAssistant.Tests.UserPreference
 
         static public Specialty[] resultSpecialties;
 
-        static public void SaveTestResult()
-        {
-            foreach(UserPreference userPreference in userPreferencesStack)
-            {
-                int specialtyIndex = userPreference.specialtyIndex;
-                int userLikes = userPreference.preferenceValue;
-                faculty.specialties[specialtyIndex].userLikes += userLikes;
-            }
-
-            resultSpecialties = faculty.specialties;
-        }
-
-        static public void CreateTest(Faculty facultyValue)
-        {
-            faculty = facultyValue;
-
-            CurrentSpecialityIndex = 0;
-            CurrentListQuestionIndex = 0;
-
-            currentSpeciality = faculty.specialties[CurrentSpecialityIndex];
-            currentListQuestion = currentSpeciality.questions[CurrentListQuestionIndex];
-
-            isFirstQuestion = true;
-            isLastQuestion = false;
-
-            userPreferencesStack = new Stack<UserPreference>();
-        }
-
-        static public void NextQuestion()
-        {
-            CurrentListQuestionIndex++;
-            currentSpeciality = faculty.specialties[CurrentSpecialityIndex];
-            currentListQuestion = currentSpeciality.questions[CurrentListQuestionIndex];
-        }
-
-        static public void PrevQuestion()
-        {
-            CurrentListQuestionIndex--;
-            currentSpeciality = faculty.specialties[CurrentSpecialityIndex];
-            currentListQuestion = currentSpeciality.questions[CurrentListQuestionIndex];
-        }
-
         static public int CurrentSpecialityIndex
         {
             get
@@ -173,6 +131,85 @@ namespace specialitySelectionAssistant.Tests.UserPreference
                     ExceptionHandler.CriticalException(ex);
                 }
             }
+        }
+
+        static public void NextQuestion()
+        {
+            try
+            {
+                CurrentListQuestionIndex++;
+                currentSpeciality = faculty.specialties[CurrentSpecialityIndex];
+                currentListQuestion = currentSpeciality.questions[CurrentListQuestionIndex];
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                string message = "UserPreferencesTest. Index error.";
+                ExceptionHandler.CriticalException(ex, message);
+            }
+            catch (Exception ex)
+            {
+                ExceptionHandler.CriticalException(ex);
+            }
+        }
+
+        static public void PrevQuestion()
+        {
+            try
+            {
+                CurrentListQuestionIndex--;
+                currentSpeciality = faculty.specialties[CurrentSpecialityIndex];
+                currentListQuestion = currentSpeciality.questions[CurrentListQuestionIndex];
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                string message = "UserPreferencesTest. Index error.";
+                ExceptionHandler.CriticalException(ex, message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                ExceptionHandler.CriticalException(ex);
+            }
+        }
+
+        static public void CreateTest(Faculty facultyValue)
+        {
+            try
+            {
+                faculty = facultyValue;
+
+                CurrentSpecialityIndex = 0;
+                CurrentListQuestionIndex = 0;
+
+                currentSpeciality = faculty.specialties[CurrentSpecialityIndex];
+                currentListQuestion = currentSpeciality.questions[CurrentListQuestionIndex];
+
+                isFirstQuestion = true;
+                isLastQuestion = false;
+
+                userPreferencesStack = new Stack<UserPreference>();
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                string message = "UserPreferencesTest. Index error.";
+                ExceptionHandler.CriticalException(ex, message);
+            }
+            catch (Exception ex)
+            {
+                ExceptionHandler.CriticalException(ex);
+            }
+        }
+
+        static public void SaveTestResult()
+        {
+            foreach(UserPreference userPreference in userPreferencesStack)
+            {
+                int specialtyIndex = userPreference.specialtyIndex;
+                int userLikes = userPreference.preferenceValue;
+                faculty.specialties[specialtyIndex].userLikes += userLikes;
+            }
+
+            resultSpecialties = faculty.specialties;
         }
     }
 }

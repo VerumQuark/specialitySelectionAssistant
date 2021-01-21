@@ -75,6 +75,15 @@ namespace specialitySelectionAssistant.Tests.Holland
             }
         }
 
+        static HollandTest()
+        {
+            isLastQuestion = false;
+            isFirstQuestion = false;
+            chosenProfessionsTypesStack = new Stack<string>();
+
+            CreateTest();
+        }
+
         static public void NextComparisonQuestion()
         {
             try
@@ -110,15 +119,6 @@ namespace specialitySelectionAssistant.Tests.Holland
                 Console.WriteLine(ex.Message);
                 ExceptionHandler.CriticalException(ex);
             }
-        }
-
-        static HollandTest()
-        {
-            isLastQuestion = false;
-            isFirstQuestion = false;
-            chosenProfessionsTypesStack = new Stack<string>();
-
-            CreateTest();
         }
 
         static public void CreateTest()

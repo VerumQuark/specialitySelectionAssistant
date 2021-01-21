@@ -29,22 +29,6 @@ namespace specialitySelectionAssistant.Tests.UserPreference
 
         static public Specialty[] resultSpecialties;
 
-        static UserPreferencesTest()
-        {
-            faculty = new Faculty();
-
-            CurrentSpecialityIndex = 0;
-            CurrentListQuestionIndex = 0;
-
-            currentSpeciality = faculty.specialties[CurrentSpecialityIndex];
-            currentListQuestion = currentSpeciality.questions[CurrentListQuestionIndex];
-
-            isFirstQuestion = true;
-            isLastQuestion = false;
-
-            userPreferencesStack = new Stack<UserPreference>();
-        }
-
         static public void SaveTestResult()
         {
             foreach(UserPreference userPreference in userPreferencesStack)

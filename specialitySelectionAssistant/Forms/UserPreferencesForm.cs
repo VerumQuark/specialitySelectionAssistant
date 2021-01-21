@@ -10,17 +10,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-using SpecialtySelectionAssistantLibrary;
+//using SpecialtySelectionAssistantLibrary;
 
 namespace specialitySelectionAssistant
 {
-    public partial class ListQuestionForm : MaterialForm
+    public partial class UserPreferencesForm : MaterialForm
     {
         Faculty faculty;
         bool isAnswerChosen;
         UserPreference chosenUserPreference;
 
-        public ListQuestionForm()
+        public UserPreferencesForm()
         {
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -29,7 +29,7 @@ namespace specialitySelectionAssistant
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange300, Primary.Orange400, Primary.Orange100, Accent.LightBlue200, TextShade.BLACK);
         }
 
-        private void ListQuestionForm_Load(object sender, EventArgs e)
+        private void UserPreferencesForm_Load(object sender, EventArgs e)
         {
             faculty = FacultiesMinDeviation.GetFaculty(User.hollandResult);
             UserPreferencesTest.CreateTest(faculty);
@@ -76,7 +76,7 @@ namespace specialitySelectionAssistant
  
             if (UserPreferencesTest.isFirstQuestion)
             {
-                Navigation.ToComparisonQuestionForm(this);
+                Navigation.ToHollandTestForm(this);
             }
             else
             {
@@ -208,7 +208,7 @@ namespace specialitySelectionAssistant
             }
         }
 
-        private void ListQuestionForm_KeyUp(object sender, KeyEventArgs e)
+        private void UserPreferencesForm_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) nextMaterialFlatButton.PerformClick();
         }

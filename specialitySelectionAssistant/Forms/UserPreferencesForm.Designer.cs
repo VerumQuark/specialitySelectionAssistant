@@ -1,7 +1,7 @@
 ﻿
 namespace specialitySelectionAssistant
 {
-    partial class ListQuestionForm
+    partial class UserPreferencesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -224,7 +224,7 @@ namespace specialitySelectionAssistant
             this.skipButton.UseVisualStyleBackColor = true;
             this.skipButton.Click += new System.EventHandler(this.SkipButton_Click);
             // 
-            // ListQuestionForm
+            // UserPreferencesForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
@@ -243,11 +243,11 @@ namespace specialitySelectionAssistant
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1000, 562);
             this.MinimumSize = new System.Drawing.Size(1000, 562);
-            this.Name = "ListQuestionForm";
+            this.Name = "UserPreferencesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Оберіть один з варіантів!";
-            this.Load += new System.EventHandler(this.ListQuestionForm_Load);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ListQuestionForm_KeyUp);
+            this.Load += new System.EventHandler(this.UserPreferencesForm_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.UserPreferencesForm_KeyUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 

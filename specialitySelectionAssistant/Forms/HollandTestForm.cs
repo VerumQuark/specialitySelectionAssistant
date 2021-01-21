@@ -1,27 +1,19 @@
 ﻿using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Threading;
-using SpecialtySelectionAssistantLibrary;
 using System.Resources;
+using System.Windows.Forms;
 
 namespace specialitySelectionAssistant
 {
-    public partial class ProfessionsComparisonQuestionForm : MaterialForm
+    public partial class HollandTestForm : MaterialForm
     {
         bool isProfessionChosen = false;
         Profesion chosenProfesion = new Profesion();
         ProfesionPair pairQuestion;
 
-        public ProfessionsComparisonQuestionForm()
+        public HollandTestForm()
         {
             InitializeComponent();
             var materialSkinManager = MaterialSkinManager.Instance;
@@ -30,7 +22,7 @@ namespace specialitySelectionAssistant
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange300, Primary.Orange400, Primary.Orange100, Accent.LightBlue200, TextShade.BLACK);
         }
 
-        private void ProfessionsComparisonQuestionForm_Load(object sender, EventArgs e)
+        private void HollandTestFormForm_Load(object sender, EventArgs e)
         {
             if (HollandTest.isFirstQuestion)
             {
@@ -88,7 +80,7 @@ namespace specialitySelectionAssistant
                 if (HollandTest.isLastQuestion)
                 {
                     HollandTest.SaveTestResult();
-                    Navigation.ToListQuestionsForm(this);
+                    Navigation.ToUserPreferencesForm(this);
                 }
                 else
                 {
@@ -150,10 +142,10 @@ namespace specialitySelectionAssistant
         private void SkipButton_Click(object sender, EventArgs e)
         {
             HollandTest.SkipTest();
-            Navigation.ToListQuestionsForm(this);
+            Navigation.ToUserPreferencesForm(this);
         }
 
-        private void ProfessionsComparisonQuestionForm_KeyUp(object sender, KeyEventArgs e)
+        private void HollandTestForm_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) nextFormMaterialFlatButton.PerformClick();
         }

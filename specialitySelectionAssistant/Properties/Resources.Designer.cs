@@ -61,6 +61,16 @@ namespace specialitySelectionAssistant.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] faculties {
+            get {
+                object obj = ResourceManager.GetObject("faculties", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap p1 {
@@ -437,6 +447,16 @@ namespace specialitySelectionAssistant.Properties {
             get {
                 object obj = ResourceManager.GetObject("p9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] professions {
+            get {
+                object obj = ResourceManager.GetObject("professions", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }

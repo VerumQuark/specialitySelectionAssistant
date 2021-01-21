@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.Threading;
 using MaterialSkin.Controls;
 using MaterialSkin;
-using SpecialtySelectionAssistantLibrary;
 using System.Text.RegularExpressions;
 
 namespace specialitySelectionAssistant

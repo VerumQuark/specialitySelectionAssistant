@@ -1,7 +1,7 @@
 ﻿
 namespace specialitySelectionAssistant
 {
-    partial class ProfessionsComparisonQuestionForm
+    partial class HollandTestForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace specialitySelectionAssistant
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfessionsComparisonQuestionForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HollandTestForm));
             this.nextFormMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.leftProffesionMaterialLabel = new MaterialSkin.Controls.MaterialLabel();
             this.BackMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
@@ -180,7 +180,7 @@ namespace specialitySelectionAssistant
             this.skipButton.UseVisualStyleBackColor = true;
             this.skipButton.Click += new System.EventHandler(this.SkipButton_Click);
             // 
-            // ProfessionsComparisonQuestionForm
+            // HollandTestForm
             // 
             this.AccessibleName = "";
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -200,11 +200,11 @@ namespace specialitySelectionAssistant
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximumSize = new System.Drawing.Size(1000, 562);
             this.MinimumSize = new System.Drawing.Size(1000, 562);
-            this.Name = "ProfessionsComparisonQuestionForm";
+            this.Name = "HollandTestForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Оберіть найбільш задовільну професію!";
-            this.Load += new System.EventHandler(this.ProfessionsComparisonQuestionForm_Load);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ProfessionsComparisonQuestionForm_KeyUp);
+            this.Load += new System.EventHandler(this.HollandTestFormForm_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.HollandTestForm_KeyUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 

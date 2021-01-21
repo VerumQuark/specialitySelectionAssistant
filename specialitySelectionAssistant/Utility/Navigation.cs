@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
-using SpecialtySelectionAssistantLibrary;
 
 namespace specialitySelectionAssistant
 {
@@ -21,7 +20,7 @@ namespace specialitySelectionAssistant
             }
             else
             {
-                ToComparisonQuestionForm(form);
+                ToHollandTestForm(form);
             }
         }
 
@@ -30,14 +29,14 @@ namespace specialitySelectionAssistant
             ChangeForm(new RegistrationForm(), form);
         }
 
-        static public void ToListQuestionsForm(Form form)
+        static public void ToUserPreferencesForm(Form form)
         {
-            ChangeForm(new ListQuestionForm(), form);
+            ChangeForm(new UserPreferencesForm(), form);
         }
 
-        static public void ToComparisonQuestionForm(Form form)
+        static public void ToHollandTestForm(Form form)
         {
-            ChangeForm(new ProfessionsComparisonQuestionForm(), form);
+            ChangeForm(new HollandTestForm(), form);
         }
 
         static public void ToResultForm(Form form)

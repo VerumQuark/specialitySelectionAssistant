@@ -137,7 +137,7 @@ namespace specialitySelectionAssistant
             chosenUserPreference.preferenceValue = 2;
         }
 
-        private void RatherSoMaterialRadioButton_Click(object sender, EventArgs e)
+        private void RatherSoMaterialRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             isAnswerChosen = true;
             chosenUserPreference.preferenceValue = 1;

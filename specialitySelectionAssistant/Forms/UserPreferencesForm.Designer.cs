@@ -38,7 +38,6 @@ namespace specialitySelectionAssistant
             this.nextMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.helpMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.listQuestionQuestionLabel = new System.Windows.Forms.Label();
-            this.skipButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // veryLikeMaterialRadioButton
@@ -213,23 +212,11 @@ namespace specialitySelectionAssistant
             this.listQuestionQuestionLabel.TabIndex = 22;
             this.listQuestionQuestionLabel.Text = "Питання";
             // 
-            // skipButton
-            // 
-            this.skipButton.Location = new System.Drawing.Point(257, 447);
-            this.skipButton.Name = "skipButton";
-            this.skipButton.Size = new System.Drawing.Size(75, 23);
-            this.skipButton.TabIndex = 23;
-            this.skipButton.TabStop = false;
-            this.skipButton.Text = "skip";
-            this.skipButton.UseVisualStyleBackColor = true;
-            this.skipButton.Click += new System.EventHandler(this.SkipButton_Click);
-            // 
             // UserPreferencesForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1000, 562);
-            this.Controls.Add(this.skipButton);
             this.Controls.Add(this.listQuestionQuestionLabel);
             this.Controls.Add(this.helpMaterialFlatButton);
             this.Controls.Add(this.backMaterialFlatButton);
@@ -264,6 +251,5 @@ namespace specialitySelectionAssistant
         private MaterialSkin.Controls.MaterialFlatButton nextMaterialFlatButton;
         private MaterialSkin.Controls.MaterialFlatButton helpMaterialFlatButton;
         private System.Windows.Forms.Label listQuestionQuestionLabel;
-        private System.Windows.Forms.Button skipButton;
     }
 }

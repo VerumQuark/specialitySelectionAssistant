@@ -161,37 +161,6 @@ namespace specialitySelectionAssistant
             chosenUserPreference.preferenceValue = -2;
         }
 
-        private void SkipButton_Click(object sender, EventArgs e)
-        {
-            Stack<UserPreference> s = new Stack<UserPreference>();
-            UserPreference u = new UserPreference
-            {
-                specialtyIndex = 5,
-                preferenceValue = 2
-            };
-            s.Push(u);
-            u.specialtyIndex = 4;
-            u.preferenceValue = -1;
-            s.Push(u);
-            u.specialtyIndex = 3;
-            u.preferenceValue = 1;
-            s.Push(u);
-            u.specialtyIndex = 2;
-            u.preferenceValue = -2;
-            s.Push(u);
-            u.specialtyIndex = 1;
-            u.preferenceValue = 0;
-            s.Push(u);
-            u.specialtyIndex = 0;
-            u.preferenceValue = 2;
-            s.Push(u);
-
-            UserPreferencesTest.userPreferencesStack = s;
-            UserPreferencesTest.SaveTestResult();
-            PreferredSpecialtiesDeterminant.SetSpecialties(UserPreferencesTest.resultSpecialties);
-            Navigation.ToResultForm(this);
-        }
-
         private void veryLikeMaterialRadioButton_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Left)

@@ -38,7 +38,6 @@ namespace specialitySelectionAssistant
             this.rightProfessionButton = new System.Windows.Forms.Button();
             this.HelpMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.questionNumLabel = new System.Windows.Forms.Label();
-            this.skipButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nextFormMaterialFlatButton
@@ -169,17 +168,6 @@ namespace specialitySelectionAssistant
             this.questionNumLabel.TabIndex = 24;
             this.questionNumLabel.Text = "Питання №";
             // 
-            // skipButton
-            // 
-            this.skipButton.Location = new System.Drawing.Point(450, 77);
-            this.skipButton.Name = "skipButton";
-            this.skipButton.Size = new System.Drawing.Size(75, 23);
-            this.skipButton.TabIndex = 25;
-            this.skipButton.TabStop = false;
-            this.skipButton.Text = "skip";
-            this.skipButton.UseVisualStyleBackColor = true;
-            this.skipButton.Click += new System.EventHandler(this.SkipButton_Click);
-            // 
             // HollandTestForm
             // 
             this.AccessibleName = "";
@@ -187,7 +175,6 @@ namespace specialitySelectionAssistant
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1000, 562);
-            this.Controls.Add(this.skipButton);
             this.Controls.Add(this.questionNumLabel);
             this.Controls.Add(this.HelpMaterialFlatButton);
             this.Controls.Add(this.rightProfessionButton);
@@ -220,6 +207,5 @@ namespace specialitySelectionAssistant
         private System.Windows.Forms.Button rightProfessionButton;
         private MaterialSkin.Controls.MaterialFlatButton HelpMaterialFlatButton;
         private System.Windows.Forms.Label questionNumLabel;
-        private System.Windows.Forms.Button skipButton;
     }
 }

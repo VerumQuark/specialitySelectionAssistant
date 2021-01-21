@@ -141,12 +141,6 @@ namespace specialitySelectionAssistant
             chosenProfesion = pairQuestion.secondProfession;
         }
 
-        private void SkipButton_Click(object sender, EventArgs e)
-        {
-            HollandTest.SkipTest();
-            Navigation.ToUserPreferencesForm(this);
-        }
-
         private void HollandTestForm_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) nextFormMaterialFlatButton.PerformClick();

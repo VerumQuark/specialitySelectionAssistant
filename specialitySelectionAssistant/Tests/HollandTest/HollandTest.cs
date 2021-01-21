@@ -157,21 +157,6 @@ namespace specialitySelectionAssistant.Tests.Holland
             }
         }
 
-        static public void SkipTest()
-        {
-            HollandResult skip = new HollandResult
-            {
-                Artistic = 10,
-                Conventional = 6,
-                Enterprising = 8,
-                Intelligent = 2,
-                Realistic = 0,
-                Social = 4
-            };
-
-            User.hollandResult = skip;
-        }
-
         static public void AddCharacteristicsPoint(string type)
         {
             try

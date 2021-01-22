@@ -99,6 +99,7 @@ namespace specialitySelectionAssistant
         }
 
         private void NameMaterialSingleLineTextField_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        
         {
             if (e.KeyCode == Keys.Enter) nextMaterialFlatButton.PerformClick();
         }

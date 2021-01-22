@@ -70,6 +70,9 @@
       <DependentUpon>HelpForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Exceptions\AnswerNotSelectedException.cs" />
+    <Compile Include="Tests\OneIndexTest.cs" />
+    <Compile Include="Tests\Test.cs" />
+    <Compile Include="Tests\TwoIndexTest.cs" />
     <Compile Include="Utility\Constants.cs" />
     <Compile Include="Tests\TestsResultHandlers\FacultiesMinDeviation.cs" />
     <Compile Include="Utility\Facultiy.cs" />
@@ -147,7 +150,6 @@
       <DependentUpon>ZnoForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\faculties.json" />
-    <None Include="Properties\listQuestions.json" />
     <None Include="Properties\professions.json" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

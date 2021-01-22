@@ -13,23 +13,23 @@ namespace specialitySelectionAssistant.Tests.UserPreference
         public int preferenceValue;
     }
 
-    static public class UserPreferencesTest
+     public class UserPreferencesTest : TwoIndexTest<UserPreference>
     {
-        static Faculty faculty;
-        static public Specialty currentSpeciality;
-        static public string currentListQuestion;
+        public override bool isFirstQuestion { get; set; } = false;
+        public override bool isLastQuestion { get; set; } = false;
 
-        static public int currentSpecialityIndex;
-        static public int currentListQuestionIndex;
+        Faculty faculty;
+        public Specialty currentSpeciality;
+        public string currentListQuestion;
 
-        static public bool isFirstQuestion = false;
-        static public bool isLastQuestion = false;
+        public override int currentSpecialityIndex { get; set; }
+        public override int currentListQuestionIndex { get; set; }
 
-        static public Stack<UserPreference> userPreferencesStack;
+        public override Stack<UserPreference> answerStack { get; set; }
 
-        static public Specialty[] resultSpecialties;
+        public Specialty[] resultSpecialties;
 
-        static public int CurrentSpecialityIndex
+        public int CurrentSpecialityIndex
         {
             get
             {
@@ -69,7 +69,7 @@ namespace specialitySelectionAssistant.Tests.UserPreference
             }
         }
 
-        static public int CurrentListQuestionIndex
+        public int CurrentListQuestionIndex
         {
             get
             {
@@ -133,7 +133,7 @@ namespace specialitySelectionAssistant.Tests.UserPreference
             }
         }   
 
-        static public void NextQuestion()
+        public override void NextQuestion()
         {
             try
             {
@@ -152,7 +152,7 @@ namespace specialitySelectionAssistant.Tests.UserPreference
             }
         }
 
-        static public void PrevQuestion()
+        public override void PrevQuestion()
         {
             try
             {
@@ -172,7 +172,7 @@ namespace specialitySelectionAssistant.Tests.UserPreference
             }
         }
 
-        static public void CreateTest(Faculty facultyValue)
+        public override void CreateTest(Faculty facultyValue)
         {
             try
             {
@@ -187,7 +187,7 @@ namespace specialitySelectionAssistant.Tests.UserPreference
                 isFirstQuestion = true;
                 isLastQuestion = false;
 
-                userPreferencesStack = new Stack<UserPreference>();
+                answerStack = new Stack<UserPreference>();
             }
             catch (IndexOutOfRangeException ex)
             {
@@ -200,9 +200,9 @@ namespace specialitySelectionAssistant.Tests.UserPreference
             }
         }
 
-        static public void SaveTestResult()
+        public override void SaveTestResult()
         {
-            foreach(UserPreference userPreference in userPreferencesStack)
+            foreach(UserPreference userPreference in answerStack)
             {
                 int specialtyIndex = userPreference.specialtyIndex;
                 int userLikes = userPreference.preferenceValue;

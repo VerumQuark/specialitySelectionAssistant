@@ -7,19 +7,19 @@ using specialitySelectionAssistant.Exceptions;
 
 namespace specialitySelectionAssistant.Tests.Holland
 {
-    public static class HollandTest
+    public class HollandTest : OneIndexTest<string>
     {
-        static public bool isLastQuestion;
-        static public bool isFirstQuestion;
+        public override bool isLastQuestion { get; set; }
+        public override bool isFirstQuestion { get; set; }
 
-        static ProfessionPairStorage comparisonQuestionsStorage;
-        static public ProfesionPair currentComparisonQuestion;
-        
-        static public Stack<string> chosenProfessionsTypesStack;
+        ProfessionPairStorage comparisonQuestionsStorage;
+        public ProfesionPair currentComparisonQuestion;
 
-        static private int currentComparisonQuestionIndex;
+        public override Stack<string> answerStack { get; set; }
 
-        static public int CurrentComparisonQuestionIndex
+        public override int currentComparisonQuestionIndex { get; set; }
+
+        public int CurrentComparisonQuestionIndex
         {
             get
             {
@@ -75,16 +75,16 @@ namespace specialitySelectionAssistant.Tests.Holland
             }
         }
 
-        static HollandTest()
+        public HollandTest()
         {
             isLastQuestion = false;
             isFirstQuestion = false;
-            chosenProfessionsTypesStack = new Stack<string>();
+            answerStack = new Stack<string>();
 
             CreateTest();
         }
 
-        static public void NextComparisonQuestion()
+        public override void NextQuestion()
         {
             try
             {
@@ -102,7 +102,7 @@ namespace specialitySelectionAssistant.Tests.Holland
             }
         }
 
-        static public void PrevComparisonQuestion()
+        public override void PrevQuestion()
         {
             try
             {
@@ -121,14 +121,14 @@ namespace specialitySelectionAssistant.Tests.Holland
             }
         }
 
-        static public void CreateTest()
+        public override void CreateTest()
         {
             try
             {
                 comparisonQuestionsStorage = GenerateComparisonQuestions();
                 CurrentComparisonQuestionIndex = 0;
                 currentComparisonQuestion = comparisonQuestionsStorage[CurrentComparisonQuestionIndex];
-                chosenProfessionsTypesStack.Clear();
+                answerStack.Clear();
             }
             catch (IndexOutOfRangeException ex)
             {
@@ -141,23 +141,23 @@ namespace specialitySelectionAssistant.Tests.Holland
             }
         }
 
-        static ProfessionPairStorage GenerateComparisonQuestions()
+        ProfessionPairStorage GenerateComparisonQuestions()
         {
             ProfessionPairGenerator professionPairGenerator = new ProfessionPairGenerator();
             return professionPairGenerator.GeneratePairs();
         }
 
-        static public void SaveTestResult()
+        public override void SaveTestResult()
         {
             User.hollandResult = new HollandResult();
 
-            foreach(string type in chosenProfessionsTypesStack)
+            foreach(string type in answerStack)
             {
                 AddCharacteristicsPoint(type);
             }
         }
 
-        static public void AddCharacteristicsPoint(string type)
+        public void AddCharacteristicsPoint(string type)
         {
             try
             {

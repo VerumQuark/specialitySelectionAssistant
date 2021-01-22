@@ -60,6 +60,7 @@ namespace specialitySelectionAssistant
             this.nextFormMaterialFlatButton.Text = "Далі";
             this.nextFormMaterialFlatButton.UseVisualStyleBackColor = false;
             this.nextFormMaterialFlatButton.Click += new System.EventHandler(this.NextFormMaterialFlatButton_Click);
+            this.nextFormMaterialFlatButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Button_KeyDown);
             // 
             // leftProffesionMaterialLabel
             // 
@@ -122,7 +123,7 @@ namespace specialitySelectionAssistant
             this.leftProffesionButton.TabIndex = 0;
             this.leftProffesionButton.UseVisualStyleBackColor = false;
             this.leftProffesionButton.Click += new System.EventHandler(this.LeftProfessionButton_Click);
-            this.leftProffesionButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.LeftProffesionButton_KeyUp);
+            this.leftProffesionButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Button_KeyDown);
             // 
             // rightProfessionButton
             // 
@@ -138,7 +139,7 @@ namespace specialitySelectionAssistant
             this.rightProfessionButton.TabIndex = 1;
             this.rightProfessionButton.UseVisualStyleBackColor = false;
             this.rightProfessionButton.Click += new System.EventHandler(this.RightProfessionButton_Click);
-            this.rightProfessionButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.RightProfessionButton_KeyUp);
+            this.rightProfessionButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Button_KeyDown);
             // 
             // HelpMaterialFlatButton
             // 

@@ -21,6 +21,7 @@ namespace specialitySelectionAssistant
         Faculty faculty;
         bool isAnswerChosen;
         UserPreference chosenUserPreference;
+        UserPreferencesTest UserPreferencesTest;
 
         public UserPreferencesForm()
         {
@@ -34,6 +35,9 @@ namespace specialitySelectionAssistant
         private void UserPreferencesForm_Load(object sender, EventArgs e)
         {
             faculty = FacultiesMinDeviation.GetFaculty(User.hollandResult);
+
+            UserPreferencesTest = new UserPreferencesTest();
+
             UserPreferencesTest.CreateTest(faculty);
 
             foreach (Control control in this.Controls)
@@ -82,7 +86,7 @@ namespace specialitySelectionAssistant
             }
             else
             {
-                UserPreferencesTest.userPreferencesStack.Pop();
+                UserPreferencesTest.answerStack.Pop();
                 UserPreferencesTest.PrevQuestion();
                 LoadQuestion();
             }
@@ -98,7 +102,7 @@ namespace specialitySelectionAssistant
                 }
 
                 chosenUserPreference.specialtyIndex = UserPreferencesTest.currentSpecialityIndex;
-                UserPreferencesTest.userPreferencesStack.Push(chosenUserPreference);
+                UserPreferencesTest.answerStack.Push(chosenUserPreference);
 
                 if (UserPreferencesTest.isLastQuestion)
                 {

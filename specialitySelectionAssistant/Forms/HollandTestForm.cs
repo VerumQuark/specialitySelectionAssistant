@@ -15,6 +15,8 @@ namespace specialitySelectionAssistant
         Profesion chosenProfesion = new Profesion();
         ProfesionPair pairQuestion;
 
+        HollandTest HollandTest = new HollandTest();
+
         public HollandTestForm()
         {
             InitializeComponent();
@@ -32,7 +34,7 @@ namespace specialitySelectionAssistant
             }
             else
             {
-                HollandTest.chosenProfessionsTypesStack.Pop();
+                HollandTest.answerStack.Pop();
             }
 
             foreach (Control control in this.Controls)
@@ -61,8 +63,8 @@ namespace specialitySelectionAssistant
             }
             else
             {
-                HollandTest.chosenProfessionsTypesStack.Pop();
-                HollandTest.PrevComparisonQuestion();
+                HollandTest.answerStack.Pop();
+                HollandTest.PrevQuestion();
                 LoadQuestion();
             }
         }
@@ -77,7 +79,7 @@ namespace specialitySelectionAssistant
                 }
 
                 isProfessionChosen = false;
-                HollandTest.chosenProfessionsTypesStack.Push(chosenProfesion.type);
+                HollandTest.answerStack.Push(chosenProfesion.type);
 
                 if (HollandTest.isLastQuestion)
                 {
@@ -87,7 +89,7 @@ namespace specialitySelectionAssistant
                 else
                 {
                     nextFormMaterialFlatButton.Focus();
-                    HollandTest.NextComparisonQuestion();
+                    HollandTest.NextQuestion();
                     LoadQuestion();
                 }
             }
@@ -146,12 +148,7 @@ namespace specialitySelectionAssistant
             if (e.KeyCode == Keys.Enter) nextFormMaterialFlatButton.PerformClick();
         }
 
-        private void LeftProffesionButton_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter) nextFormMaterialFlatButton.PerformClick();
-        }
-
-        private void RightProfessionButton_KeyUp(object sender, KeyEventArgs e)
+        private void Button_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) nextFormMaterialFlatButton.PerformClick();
         }

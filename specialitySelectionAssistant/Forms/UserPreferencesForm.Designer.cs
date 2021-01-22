@@ -44,6 +44,7 @@ namespace specialitySelectionAssistant
             // 
             this.veryLikeMaterialRadioButton.AutoSize = true;
             this.veryLikeMaterialRadioButton.BackColor = System.Drawing.SystemColors.Window;
+            this.veryLikeMaterialRadioButton.Checked = true;
             this.veryLikeMaterialRadioButton.Depth = 0;
             this.veryLikeMaterialRadioButton.Font = new System.Drawing.Font("Roboto", 10F);
             this.veryLikeMaterialRadioButton.Location = new System.Drawing.Point(54, 195);
@@ -76,7 +77,6 @@ namespace specialitySelectionAssistant
             this.ratherSoMaterialRadioButton.Ripple = true;
             this.ratherSoMaterialRadioButton.Size = new System.Drawing.Size(101, 30);
             this.ratherSoMaterialRadioButton.TabIndex = 1;
-            this.ratherSoMaterialRadioButton.TabStop = true;
             this.ratherSoMaterialRadioButton.Text = "Скоріш так";
             this.ratherSoMaterialRadioButton.UseVisualStyleBackColor = false;
             this.ratherSoMaterialRadioButton.CheckedChanged += new System.EventHandler(this.RatherSoMaterialRadioButton_CheckedChanged);
@@ -97,7 +97,6 @@ namespace specialitySelectionAssistant
             this.ratherNotMaterialRadioButton.Ripple = true;
             this.ratherNotMaterialRadioButton.Size = new System.Drawing.Size(91, 30);
             this.ratherNotMaterialRadioButton.TabIndex = 3;
-            this.ratherNotMaterialRadioButton.TabStop = true;
             this.ratherNotMaterialRadioButton.Text = "Скоріш ні";
             this.ratherNotMaterialRadioButton.UseVisualStyleBackColor = false;
             this.ratherNotMaterialRadioButton.CheckedChanged += new System.EventHandler(this.RatherNotMaterialRadioButton_CheckedChanged);
@@ -118,7 +117,6 @@ namespace specialitySelectionAssistant
             this.cantAnswerMaterialRadioButton.Ripple = true;
             this.cantAnswerMaterialRadioButton.Size = new System.Drawing.Size(158, 30);
             this.cantAnswerMaterialRadioButton.TabIndex = 2;
-            this.cantAnswerMaterialRadioButton.TabStop = true;
             this.cantAnswerMaterialRadioButton.Text = "Не можу відповісти";
             this.cantAnswerMaterialRadioButton.UseVisualStyleBackColor = false;
             this.cantAnswerMaterialRadioButton.CheckedChanged += new System.EventHandler(this.CantAnswerMaterialRadioButton_CheckedChanged);
@@ -139,7 +137,6 @@ namespace specialitySelectionAssistant
             this.veryDislikeMaterialRadioButton.Ripple = true;
             this.veryDislikeMaterialRadioButton.Size = new System.Drawing.Size(170, 30);
             this.veryDislikeMaterialRadioButton.TabIndex = 4;
-            this.veryDislikeMaterialRadioButton.TabStop = true;
             this.veryDislikeMaterialRadioButton.Text = "Дуже не подобається";
             this.veryDislikeMaterialRadioButton.UseVisualStyleBackColor = false;
             this.veryDislikeMaterialRadioButton.CheckedChanged += new System.EventHandler(this.VeryDislikeMaterialRadioButton_CheckedChanged);

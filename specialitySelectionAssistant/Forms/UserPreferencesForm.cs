@@ -53,7 +53,7 @@ namespace specialitySelectionAssistant
         {
             if (e.KeyCode == Keys.Up || e.KeyCode == Keys.Down || e.KeyCode == Keys.Left || e.KeyCode == Keys.Right)
             {
-                veryLikeMaterialRadioButton.Focus();
+                e.IsInputKey = true;
             }
         }
 
@@ -127,7 +127,6 @@ namespace specialitySelectionAssistant
         {
             if (e.KeyCode == Keys.Enter)
             {
-                nextMaterialFlatButton.Focus();
                 nextMaterialFlatButton.PerformClick();
             }
         }

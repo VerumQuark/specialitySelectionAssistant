@@ -131,7 +131,7 @@ namespace specialitySelectionAssistant.Tests.UserPreference
                     ExceptionHandler.CriticalException(ex);
                 }
             }
-        }
+        }   
 
         static public void NextQuestion()
         {

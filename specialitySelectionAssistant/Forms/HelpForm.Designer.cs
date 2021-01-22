@@ -149,7 +149,7 @@ namespace specialitySelectionAssistant
             this.materialLabel5.TabIndex = 74;
             this.materialLabel5.Text = "Для переходу на наступний тест,\r\nтисніть кнопку \"ДАЛІ\" чи Enter.\r\nДля повернення " +
     "на попередню сторінку,\r\nтисніть кнопку \"НАЗАД\".\r\nДля вибору варіанта,\r\nтисніть T" +
-    "ab або лівою кнопкою миші.";
+    "ab або ліву кнопку миші.";
             // 
             // HelpForm
             // 

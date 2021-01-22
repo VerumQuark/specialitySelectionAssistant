@@ -88,7 +88,7 @@ namespace specialitySelectionAssistant
                 }
                 else
                 {
-                    nextFormMaterialFlatButton.Focus();
+                    leftProffesionMaterialLabel.Focus();
                     HollandTest.NextQuestion();
                     LoadQuestion();
                 }
@@ -143,14 +143,25 @@ namespace specialitySelectionAssistant
             chosenProfesion = pairQuestion.secondProfession;
         }
 
-        private void HollandTestForm_KeyUp(object sender, KeyEventArgs e)
+        private void Button_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.PerformClick();
+            if (e.KeyCode == Keys.Enter) nextFormMaterialFlatButton.PerformClick();
+        }
+
+        private void HollandTestForm_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyCode == Keys.Enter) nextFormMaterialFlatButton.PerformClick();
         }
 
-        private void Button_KeyDown(object sender, KeyEventArgs e)
+        private void leftProffesionMaterialLabel_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) nextFormMaterialFlatButton.PerformClick();
+            if (e.KeyCode == Keys.Enter)
+            { 
+                Exception ex = new Exception();
+                ExceptionHandler.HandleException(ex, "Оберіть одну з професій");
+            }
         }
     }
 }

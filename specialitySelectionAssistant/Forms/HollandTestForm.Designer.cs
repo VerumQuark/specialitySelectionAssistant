@@ -60,7 +60,6 @@ namespace specialitySelectionAssistant
             this.nextFormMaterialFlatButton.Text = "Далі";
             this.nextFormMaterialFlatButton.UseVisualStyleBackColor = false;
             this.nextFormMaterialFlatButton.Click += new System.EventHandler(this.NextFormMaterialFlatButton_Click);
-            this.nextFormMaterialFlatButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Button_KeyDown);
             // 
             // leftProffesionMaterialLabel
             // 
@@ -75,6 +74,7 @@ namespace specialitySelectionAssistant
             this.leftProffesionMaterialLabel.Size = new System.Drawing.Size(116, 19);
             this.leftProffesionMaterialLabel.TabIndex = 9;
             this.leftProffesionMaterialLabel.Text = "ліва профессія";
+            this.leftProffesionMaterialLabel.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.leftProffesionMaterialLabel_PreviewKeyDown);
             // 
             // BackMaterialFlatButton
             // 
@@ -123,7 +123,7 @@ namespace specialitySelectionAssistant
             this.leftProffesionButton.TabIndex = 0;
             this.leftProffesionButton.UseVisualStyleBackColor = false;
             this.leftProffesionButton.Click += new System.EventHandler(this.LeftProfessionButton_Click);
-            this.leftProffesionButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Button_KeyDown);
+            this.leftProffesionButton.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Button_PreviewKeyDown);
             // 
             // rightProfessionButton
             // 
@@ -139,7 +139,7 @@ namespace specialitySelectionAssistant
             this.rightProfessionButton.TabIndex = 1;
             this.rightProfessionButton.UseVisualStyleBackColor = false;
             this.rightProfessionButton.Click += new System.EventHandler(this.RightProfessionButton_Click);
-            this.rightProfessionButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Button_KeyDown);
+            this.rightProfessionButton.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Button_PreviewKeyDown);
             // 
             // HelpMaterialFlatButton
             // 
@@ -192,7 +192,7 @@ namespace specialitySelectionAssistant
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Оберіть найбільш задовільну професію!";
             this.Load += new System.EventHandler(this.HollandTestFormForm_Load);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.HollandTestForm_KeyUp);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.HollandTestForm_PreviewKeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

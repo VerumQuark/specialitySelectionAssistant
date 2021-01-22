@@ -108,7 +108,6 @@ namespace specialitySelectionAssistant
             this.NameMaterialSingleLineTextField.TabIndex = 4;
             this.NameMaterialSingleLineTextField.UseSystemPasswordChar = false;
             this.NameMaterialSingleLineTextField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NameMaterialSingleLineTextField_KeyPress);
-            this.NameMaterialSingleLineTextField.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.NameMaterialSingleLineTextField_PreviewKeyDown);
             // 
             // NameMaterialLabel
             // 

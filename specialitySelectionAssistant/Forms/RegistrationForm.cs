@@ -57,6 +57,13 @@ namespace specialitySelectionAssistant
 
         private void NameMaterialSingleLineTextField_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == (char)13)
+            {
+                nextMaterialFlatButton.PerformClick();
+                return;
+            }
+
+
             string pattern = "[А-ЩЬЮЯҐЄІЇа-щьюяґєії\\b'`’ʼ -]";
             string inputValue = e.KeyChar.ToString();
 
@@ -96,12 +103,6 @@ namespace specialitySelectionAssistant
                 AddNameBorder(Pens.Red);
                 throw new Exception("Введіть ПІБ");
             }
-        }
-
-        private void NameMaterialSingleLineTextField_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        
-        {
-            if (e.KeyCode == Keys.Enter) nextMaterialFlatButton.PerformClick();
         }
     }
 }

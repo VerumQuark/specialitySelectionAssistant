@@ -10,8 +10,8 @@ namespace specialitySelectionAssistant.Tests.Holland
 {
     class ProfessionPairGenerator
     {
-        readonly string jsonString;
-        readonly ProfessionPairStorage professionPairStorage;
+        private string jsonString;
+        private ProfessionPairStorage professionPairStorage;
 
         public ProfessionPairGenerator()
         {

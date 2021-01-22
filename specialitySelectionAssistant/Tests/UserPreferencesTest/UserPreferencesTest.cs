@@ -18,12 +18,12 @@ namespace specialitySelectionAssistant.Tests.UserPreference
         public override bool isFirstQuestion { get; set; } = false;
         public override bool isLastQuestion { get; set; } = false;
 
-        Faculty faculty;
+        private Faculty faculty;
         public Specialty currentSpeciality;
         public string currentListQuestion;
 
-        public override int currentSpecialityIndex { get; set; }
-        public override int currentListQuestionIndex { get; set; }
+        public override int _currentSpecialityIndex { get; set; }
+        public override int _currentListQuestionIndex { get; set; }
 
         public override Stack<UserPreference> answerStack { get; set; }
 
@@ -33,7 +33,7 @@ namespace specialitySelectionAssistant.Tests.UserPreference
         {
             get
             {
-                return currentSpecialityIndex;
+                return _currentSpecialityIndex;
             }
 
             set
@@ -42,19 +42,19 @@ namespace specialitySelectionAssistant.Tests.UserPreference
                 {
                     if (value >= faculty.specialties.Length)
                     {
-                        currentSpecialityIndex = faculty.specialties.Length - 1;
+                        _currentSpecialityIndex = faculty.specialties.Length - 1;
 
                         throw new RangeException();
                     }
                     else if (value < 0)
                     {
-                        currentSpecialityIndex = 0;
+                        _currentSpecialityIndex = 0;
 
                         throw new RangeException();
                     }
                     else
                     {
-                        currentSpecialityIndex = value;
+                        _currentSpecialityIndex = value;
                     }
                 }
                 catch (RangeException ex)
@@ -73,18 +73,18 @@ namespace specialitySelectionAssistant.Tests.UserPreference
         {
             get
             {
-                return currentListQuestionIndex;
+                return _currentListQuestionIndex;
             }
 
             set
             {
                 try
                 {
-                    int questionsLenght = faculty.specialties[currentSpecialityIndex].questions.Length;
+                    int questionsLenght = faculty.specialties[_currentSpecialityIndex].questions.Length;
 
                     if (value > questionsLenght)
                     {
-                        currentListQuestionIndex = questionsLenght;
+                        _currentListQuestionIndex = questionsLenght;
 
                         throw new RangeException();
                     }
@@ -92,30 +92,30 @@ namespace specialitySelectionAssistant.Tests.UserPreference
                     {
                         if (value == questionsLenght)
                         {
-                            currentSpecialityIndex++;
-                            currentListQuestionIndex = 0;
+                            _currentSpecialityIndex++;
+                            _currentListQuestionIndex = 0;
                         }
                         else if (value < 0)
                         {
-                            currentSpecialityIndex--;
-                            currentListQuestionIndex = questionsLenght - 1;
+                            _currentSpecialityIndex--;
+                            _currentListQuestionIndex = questionsLenght - 1;
                         }
                         else
                         {
-                            currentListQuestionIndex = value;
+                            _currentListQuestionIndex = value;
                         }
 
                         isLastQuestion = false;
                         isFirstQuestion = false;
 
-                        if (currentSpecialityIndex == faculty.specialties.Length - 1 &&
-                          currentListQuestionIndex == faculty.specialties[currentSpecialityIndex].questions.Length - 1)
+                        if (_currentSpecialityIndex == faculty.specialties.Length - 1 &&
+                            _currentListQuestionIndex == faculty.specialties[_currentSpecialityIndex].questions.Length - 1)
                         {
                             isLastQuestion = true;
                         }
 
-                        if (currentSpecialityIndex == 0 &&
-                           currentListQuestionIndex == 0)
+                        if (_currentSpecialityIndex == 0 &&
+                            _currentListQuestionIndex == 0)
                         {
                             isFirstQuestion = true;
                         }
@@ -170,6 +170,11 @@ namespace specialitySelectionAssistant.Tests.UserPreference
                 Console.WriteLine(ex.Message);
                 ExceptionHandler.CriticalException(ex);
             }
+        }
+
+        public UserPreferencesTest(Faculty facultyValue)
+        {
+            CreateTest(facultyValue);
         }
 
         public override void CreateTest(Faculty facultyValue)

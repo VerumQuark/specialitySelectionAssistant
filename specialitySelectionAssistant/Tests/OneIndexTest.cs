@@ -8,7 +8,7 @@ namespace specialitySelectionAssistant.Tests
 {
     public abstract class OneIndexTest<T> : Test<T>
     {
-       public abstract int currentComparisonQuestionIndex { get; set; }
+       public abstract int _currentComparisonQuestionIndex { get; set; }
        public abstract void CreateTest();
     }
 }

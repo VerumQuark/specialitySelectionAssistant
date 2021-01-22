@@ -36,7 +36,7 @@ namespace specialitySelectionAssistant
         {
             faculty = FacultiesMinDeviation.GetFaculty(User.hollandResult);
 
-            UserPreferencesTest = new UserPreferencesTest();
+            UserPreferencesTest = new UserPreferencesTest(faculty);
 
             UserPreferencesTest.CreateTest(faculty);
 
@@ -101,7 +101,7 @@ namespace specialitySelectionAssistant
                     throw new AnswerNotSelectedException("Оберіть один із варіантів");
                 }
 
-                chosenUserPreference.specialtyIndex = UserPreferencesTest.currentSpecialityIndex;
+                chosenUserPreference.specialtyIndex = UserPreferencesTest.CurrentSpecialityIndex;
                 UserPreferencesTest.answerStack.Push(chosenUserPreference);
 
                 if (UserPreferencesTest.isLastQuestion)

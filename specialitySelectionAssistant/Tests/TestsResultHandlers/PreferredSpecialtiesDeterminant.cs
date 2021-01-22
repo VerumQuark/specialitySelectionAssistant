@@ -15,17 +15,17 @@ namespace specialitySelectionAssistant.Tests
 
     static public class PreferredSpecialtiesDeterminant
     {
-        static bool isBudget;
-        static bool isContract;
-        static bool isHaveZno;
+        static private bool isBudget;
+        static private bool isContract;
+        static private bool isHaveZno;
 
-        static List<ZnoSubject> znoSubjects;
-        static List<Specialty> specialties;
-        static List<Specialty> defaultCheckedSpecialties;
-        static readonly List<Specialty> determinedSpecialties;
+        static private List<ZnoSubject> znoSubjects;
+        static private List<Specialty> specialties;
+        static private List<Specialty> defaultCheckedSpecialties;
+        static private readonly List<Specialty> determinedSpecialties;
 
-        delegate void SpecialtiesCheking();
-        static SpecialtiesCheking specialtiesCheking;
+        private delegate void SpecialtiesCheking();
+        static private SpecialtiesCheking specialtiesCheking;
 
 
         static PreferredSpecialtiesDeterminant()
@@ -74,7 +74,7 @@ namespace specialitySelectionAssistant.Tests
             isHaveZno = isHaveZnoValue;
         }
 
-        static void ConfigureCheck()
+        static private void ConfigureCheck()    
         {
             try
             {
@@ -94,14 +94,14 @@ namespace specialitySelectionAssistant.Tests
                 ExceptionHandler.CriticalException(ex, message);
             }
         }
-        static void DefaultCheck()
+        static private void DefaultCheck()
         {
-            specialties.Sort((x, y) => x.userLikes.CompareTo(y.userLikes));
+            specialties.Sort((x, y) => y.userLikes.CompareTo(x.userLikes));
 
             defaultCheckedSpecialties = specialties;
         }
 
-        static void BudgetCheck()
+        static private void BudgetCheck()
         {
             List<Specialty> checkedSpecialties = new List<Specialty>();
 
@@ -113,7 +113,7 @@ namespace specialitySelectionAssistant.Tests
             specialties = checkedSpecialties;
         }
 
-        static void ZnoCheck()
+        static private void ZnoCheck()
         {
             List<Specialty> checkedSpecialties = new List<Specialty>();
 
@@ -155,7 +155,7 @@ namespace specialitySelectionAssistant.Tests
             specialties = checkedSpecialties;
         }
 
-        static void FillingCheck()
+        static private void FillingCheck()
         {
             if (specialties.Count >= 3)
             {
@@ -166,12 +166,9 @@ namespace specialitySelectionAssistant.Tests
             }
             else
             {
-                int i = 0;
                 while (determinedSpecialties.Count < 3)
                 {
-                    determinedSpecialties.Add(defaultCheckedSpecialties[i]);
-
-                    i++;
+                    determinedSpecialties.Add(defaultCheckedSpecialties[determinedSpecialties.Count]);
                 }
             }
         }

@@ -15,7 +15,12 @@ namespace specialitySelectionAssistant.Tests.Holland
 
     public class ProfessionPairStorage
     {
-        public List<ProfesionPair> pairs = new List<ProfesionPair>();
+        public List<ProfesionPair> pairs;
+
+        public ProfessionPairStorage()
+        {
+            pairs = new List<ProfesionPair>();
+        }
 
         public ProfesionPair this[int i]
         {

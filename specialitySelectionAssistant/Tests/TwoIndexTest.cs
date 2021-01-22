@@ -8,8 +8,8 @@ namespace specialitySelectionAssistant.Tests
 {
     public abstract class TwoIndexTest<T> : Test<T>
     {
-        public abstract int currentSpecialityIndex { get; set; }
-        public abstract int currentListQuestionIndex { get; set; }
+        public abstract int _currentSpecialityIndex { get; set; }
+        public abstract int _currentListQuestionIndex { get; set; }
 
         public abstract void CreateTest(Faculty facultyValue);
     }

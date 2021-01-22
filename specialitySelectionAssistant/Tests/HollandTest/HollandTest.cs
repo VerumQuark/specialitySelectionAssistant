@@ -17,13 +17,13 @@ namespace specialitySelectionAssistant.Tests.Holland
 
         public override Stack<string> answerStack { get; set; }
 
-        public override int currentComparisonQuestionIndex { get; set; }
+        public override int _currentComparisonQuestionIndex { get; set; }
 
         public int CurrentComparisonQuestionIndex
         {
             get
             {
-                return currentComparisonQuestionIndex;
+                return _currentComparisonQuestionIndex;
             }
 
             set
@@ -33,14 +33,14 @@ namespace specialitySelectionAssistant.Tests.Holland
                     if (value >= Constants.COMPARATION_QUESTION_COUNT)
                     {
                         isLastQuestion = true;
-                        currentComparisonQuestionIndex = Constants.COMPARATION_QUESTION_COUNT - 1;
+                        _currentComparisonQuestionIndex = Constants.COMPARATION_QUESTION_COUNT - 1;
 
                         throw new RangeException();
                     }
                     else if(value < 0)
                     {
                         isFirstQuestion = true;
-                        currentComparisonQuestionIndex = 0;
+                        _currentComparisonQuestionIndex = 0;
 
                         throw new RangeException();
                     }
@@ -60,7 +60,7 @@ namespace specialitySelectionAssistant.Tests.Holland
                             isLastQuestion = false;
                         }
 
-                        currentComparisonQuestionIndex = value;
+                        _currentComparisonQuestionIndex = value;
                     }
                 }
                 catch(RangeException ex)
@@ -141,7 +141,7 @@ namespace specialitySelectionAssistant.Tests.Holland
             }
         }
 
-        ProfessionPairStorage GenerateComparisonQuestions()
+        private ProfessionPairStorage GenerateComparisonQuestions()
         {
             ProfessionPairGenerator professionPairGenerator = new ProfessionPairGenerator();
             return professionPairGenerator.GeneratePairs();
@@ -157,7 +157,7 @@ namespace specialitySelectionAssistant.Tests.Holland
             }
         }
 
-        public void AddCharacteristicsPoint(string type)
+        private void AddCharacteristicsPoint(string type)
         {
             try
             {

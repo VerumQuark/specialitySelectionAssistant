@@ -34,7 +34,7 @@ namespace specialitySelectionAssistant.Tests.Holland
             {
                 professionStrorage = JsonSerializer.Deserialize<ProfessionStrorage>(jsonString);
 
-                for (int pairIndex = 0; pairIndex < Constants.COMPARATION_QUESTION_COUNT; pairIndex++)
+                for (int pairIndex = 0; pairIndex < Constants.HOLLAND_QUESTION_COUNT; pairIndex++)
                 {
                     int typeArrCount = 6;
 

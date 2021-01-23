@@ -16,12 +16,12 @@ namespace specialitySelectionAssistant
 {
     public partial class ZnoForm : MaterialForm
     {
-        List<ZnoSubject> znoSubjects;
+        private List<ZnoSubject> znoSubjects;
 
-        bool isCheckSuccessful;
+        private bool isCheckSuccessful;
 
-        ComboBox[] comboBoxesArr;
-        NumericUpDown[] numericUpDownsArr;
+        private ComboBox[] comboBoxesArr;
+        private NumericUpDown[] numericUpDownsArr;
 
         public ZnoForm()
         {

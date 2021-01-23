@@ -169,7 +169,6 @@ namespace specialitySelectionAssistant
             this.Name = "HelpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Довідка";
-            this.Load += new System.EventHandler(this.HelpForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

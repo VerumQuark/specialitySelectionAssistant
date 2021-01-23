@@ -30,10 +30,10 @@ namespace specialitySelectionAssistant.Tests.Holland
             {
                 try
                 {
-                    if (value >= Constants.COMPARATION_QUESTION_COUNT)
+                    if (value >= Constants.HOLLAND_QUESTION_COUNT)
                     {
                         isLastQuestion = true;
-                        _currentComparisonQuestionIndex = Constants.COMPARATION_QUESTION_COUNT - 1;
+                        _currentComparisonQuestionIndex = Constants.HOLLAND_QUESTION_COUNT - 1;
 
                         throw new RangeException();
                     }
@@ -46,7 +46,7 @@ namespace specialitySelectionAssistant.Tests.Holland
                     }
                     else
                     {
-                        if (value == Constants.COMPARATION_QUESTION_COUNT - 1)
+                        if (value == Constants.HOLLAND_QUESTION_COUNT - 1)
                         {
                             isLastQuestion = true;
                         }

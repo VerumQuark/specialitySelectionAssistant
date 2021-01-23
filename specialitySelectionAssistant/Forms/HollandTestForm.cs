@@ -11,11 +11,11 @@ namespace specialitySelectionAssistant
 {
     public partial class HollandTestForm : MaterialForm
     {
-        bool isProfessionChosen = false;
-        Profesion chosenProfesion = new Profesion();
-        ProfesionPair pairQuestion;
+        private bool isProfessionChosen = false;
+        private Profesion chosenProfesion = new Profesion();
+        private ProfesionPair pairQuestion;
 
-        HollandTest HollandTest = new HollandTest();
+        private HollandTest HollandTest = new HollandTest();
 
         public HollandTestForm()
         {
@@ -159,7 +159,7 @@ namespace specialitySelectionAssistant
         {
             if (e.KeyCode == Keys.Enter)
             { 
-                Exception ex = new Exception();
+                Exception ex = new AnswerNotSelectedException();
                 ExceptionHandler.HandleException(ex, "Оберіть одну з професій");
             }
         }

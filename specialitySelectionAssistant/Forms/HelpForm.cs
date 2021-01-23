@@ -24,11 +24,6 @@ namespace specialitySelectionAssistant
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange300, Primary.Orange400, Primary.Orange100, Accent.LightBlue200, TextShade.BLACK);
         }
 
-        private void HelpForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void BackMaterialFlatButton_Click(object sender, EventArgs e)
         {
             Navigation.ToPrevForm(this);

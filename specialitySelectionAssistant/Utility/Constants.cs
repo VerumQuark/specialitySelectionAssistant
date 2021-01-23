@@ -8,7 +8,7 @@ namespace specialitySelectionAssistant
 {
     static public class Constants
     {
-        static public readonly int COMPARATION_QUESTION_COUNT = 30;
+        static public readonly int HOLLAND_QUESTION_COUNT = 30;
 
 
 

@@ -18,10 +18,10 @@ namespace specialitySelectionAssistant
 {
     public partial class UserPreferencesForm : MaterialForm
     {
-        Faculty faculty;
-        bool isAnswerChosen;
-        UserPreference chosenUserPreference;
-        UserPreferencesTest UserPreferencesTest;
+        private Faculty faculty;
+        private bool isAnswerChosen;
+        private UserPreference chosenUserPreference;
+        private UserPreferencesTest UserPreferencesTest;
 
         public UserPreferencesForm()
         {
@@ -82,7 +82,7 @@ namespace specialitySelectionAssistant
  
             if (UserPreferencesTest.isFirstQuestion)
             {
-                Navigation.ToHollandTestForm(this);
+                Navigation.backToHollandTestForm(this);
             }
             else
             {

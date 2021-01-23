@@ -11,6 +11,7 @@ namespace specialitySelectionAssistant
     static class Navigation
     {
         static Form prevForm;
+        static Form hollandForm;
 
         static public void StartTest(bool haveResult, Form form)
         {
@@ -31,12 +32,21 @@ namespace specialitySelectionAssistant
 
         static public void ToUserPreferencesForm(Form form)
         {
-            ChangeForm(new UserPreferencesForm(), form);
+            hollandForm = form;
+
+            Program.Context.MainForm = new UserPreferencesForm();
+            hollandForm.Hide();
+            Program.Context.MainForm.Show();
         }
 
         static public void ToHollandTestForm(Form form)
         {
             ChangeForm(new HollandTestForm(), form);
+        }
+
+        static public void backToHollandTestForm(Form form)
+        {
+            ChangeForm(hollandForm, form);
         }
 
         static public void ToResultForm(Form form)

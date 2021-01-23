@@ -112,7 +112,7 @@ namespace specialitySelectionAssistant.Tests
 
             specialties = checkedSpecialties;
         }
-
+        
         static private void ZnoCheck()
         {
             List<Specialty> checkedSpecialties = new List<Specialty>();

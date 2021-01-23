@@ -10,18 +10,14 @@ namespace specialitySelectionAssistant.Tests.Holland
 {
     public struct Profesion
     {
-        [JsonInclude]
-        public string name;
-        [JsonInclude]
-        public string type;
-        [JsonInclude]
-        public string img;
+        public string name { get; set; }
+        public string type { get; set; }
+        public string img { get; set; }
     }
 
     public struct ProfessionStrorage
     {
-        [JsonInclude]
-        public List<List<Profesion>> professions;
+        public List<List<Profesion>> professions { get; set; }
 
         public List<Profesion> this[int i]
         {
@@ -30,7 +26,7 @@ namespace specialitySelectionAssistant.Tests.Holland
         }
 
         public Profesion this[int i, int j]
-        {
+        {              
             get { return professions[i][j]; }
             set { professions[i][j] = value; }
         }

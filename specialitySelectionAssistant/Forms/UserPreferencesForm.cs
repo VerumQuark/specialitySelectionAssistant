@@ -68,6 +68,13 @@ namespace specialitySelectionAssistant
                 string question = UserPreferencesTest.currentListQuestion;
 
                 listQuestionQuestionLabel.Text = question;
+
+                veryLikeMaterialRadioButton.Checked = false;
+                ratherSoMaterialRadioButton.Checked = false;
+                cantAnswerMaterialRadioButton.Checked = false;
+                ratherNotMaterialRadioButton.Checked = false;
+                veryDislikeMaterialRadioButton.Checked = false;
+
                 isAnswerChosen = false;
             }
             catch (Exception ex)
@@ -182,9 +189,9 @@ namespace specialitySelectionAssistant
             }
         }
 
-        private void UserPreferencesForm_KeyUp(object sender, KeyEventArgs e)
+        private void UserPreferencesForm_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) nextMaterialFlatButton.PerformClick();
+            if (e.KeyChar == (char)13) nextMaterialFlatButton.PerformClick();
         }
     }
 }

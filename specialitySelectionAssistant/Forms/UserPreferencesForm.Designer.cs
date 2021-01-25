@@ -236,7 +236,7 @@ namespace specialitySelectionAssistant
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Оберіть один з варіантів!";
             this.Load += new System.EventHandler(this.UserPreferencesForm_Load);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.UserPreferencesForm_KeyUp);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UserPreferencesForm_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

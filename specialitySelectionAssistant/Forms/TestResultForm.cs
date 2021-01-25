@@ -11,11 +11,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using specialitySelectionAssistant.Exceptions;
 using specialitySelectionAssistant.Tests;
+using System.IO;
 
 namespace specialitySelectionAssistant
 {
     public partial class TestResultForm : MaterialForm
     {
+        private string resultText = "";
         public TestResultForm()
         {
             InitializeComponent();
@@ -51,6 +53,7 @@ namespace specialitySelectionAssistant
                 string message = "Неможливо отримати дані. Перевірте цілісність файлів.";
                 ExceptionHandler.HandleException(ex, message);
             }
+
         }
 
         private string GetProfessionsStr(string[] professions)
@@ -77,6 +80,26 @@ namespace specialitySelectionAssistant
         private void CloseMaterialFlatButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void SaveResultMaterialFlatButton_Click(object sender, EventArgs e)
+        {
+            resultText = "";
+            resultText += $"{titleLabel.Text} \n\n";
+
+            resultText += $"{firstSpecialtyNameMaterialLabel.Text} \n";
+            resultText += $"\t{firstSpecialtyDescriptionLabel.Text} \n";
+            resultText += $"\t{firstSpecialtyProfessionsLabel.Text} \n\n";
+
+            resultText += $"{secondSpecialtyNameMaterialLabel.Text} \n";
+            resultText += $"\t{secondSpecialtyDescriptionLabel.Text} \n";
+            resultText += $"\t{secondSpecialtyProfessionsLabel.Text} \n\n";
+
+            resultText += $"{thirdSpecialtyNameMaterialLabel.Text} \n";
+            resultText += $"\t{thirdSpecialtyDescriptionLabel.Text} \n";
+            resultText += $"\t{thirdSpecialtyProfessionsLabel.Text} \n\n";
+
+            File.WriteAllText("ResultText.txt", resultText);
         }
     }
 }

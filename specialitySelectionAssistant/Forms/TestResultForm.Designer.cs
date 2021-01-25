@@ -41,6 +41,7 @@ namespace specialitySelectionAssistant
             this.firstSpecialtyProfessionsLabel = new System.Windows.Forms.Label();
             this.secondSpecialtyProfessionsLabel = new System.Windows.Forms.Label();
             this.thirdSpecialtyProfessionsLabel = new System.Windows.Forms.Label();
+            this.SaveResultMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // helpMaterialFlatButton
@@ -185,11 +186,32 @@ namespace specialitySelectionAssistant
             this.thirdSpecialtyProfessionsLabel.TabIndex = 33;
             this.thirdSpecialtyProfessionsLabel.Text = "профессії";
             // 
+            // SaveResultMaterialFlatButton
+            // 
+            this.SaveResultMaterialFlatButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveResultMaterialFlatButton.AutoSize = true;
+            this.SaveResultMaterialFlatButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.SaveResultMaterialFlatButton.BackColor = System.Drawing.SystemColors.Window;
+            this.SaveResultMaterialFlatButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.SaveResultMaterialFlatButton.Depth = 0;
+            this.SaveResultMaterialFlatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.SaveResultMaterialFlatButton.Location = new System.Drawing.Point(674, 509);
+            this.SaveResultMaterialFlatButton.Margin = new System.Windows.Forms.Padding(6, 10, 6, 10);
+            this.SaveResultMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.SaveResultMaterialFlatButton.Name = "SaveResultMaterialFlatButton";
+            this.SaveResultMaterialFlatButton.Primary = false;
+            this.SaveResultMaterialFlatButton.Size = new System.Drawing.Size(160, 36);
+            this.SaveResultMaterialFlatButton.TabIndex = 34;
+            this.SaveResultMaterialFlatButton.Text = "зберегти результат";
+            this.SaveResultMaterialFlatButton.UseVisualStyleBackColor = false;
+            this.SaveResultMaterialFlatButton.Click += new System.EventHandler(this.SaveResultMaterialFlatButton_Click);
+            // 
             // TestResultForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.Controls.Add(this.SaveResultMaterialFlatButton);
             this.Controls.Add(this.thirdSpecialtyProfessionsLabel);
             this.Controls.Add(this.secondSpecialtyProfessionsLabel);
             this.Controls.Add(this.firstSpecialtyProfessionsLabel);
@@ -226,5 +248,6 @@ namespace specialitySelectionAssistant
         private System.Windows.Forms.Label firstSpecialtyProfessionsLabel;
         private System.Windows.Forms.Label secondSpecialtyProfessionsLabel;
         private System.Windows.Forms.Label thirdSpecialtyProfessionsLabel;
+        private MaterialSkin.Controls.MaterialFlatButton SaveResultMaterialFlatButton;
     }
 }

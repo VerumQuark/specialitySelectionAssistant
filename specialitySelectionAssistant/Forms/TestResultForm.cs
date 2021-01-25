@@ -99,7 +99,15 @@ namespace specialitySelectionAssistant
             resultText += $"\t{thirdSpecialtyDescriptionLabel.Text} \n";
             resultText += $"\t{thirdSpecialtyProfessionsLabel.Text} \n\n";
 
-            File.WriteAllText("ResultText.txt", resultText);
+            try
+            {
+                File.WriteAllText("ResultText.txt", resultText);
+            }
+            catch(Exception ex)
+            {
+                string message = "Неможливо створити файл.";
+                ExceptionHandler.HandleException(ex, message);
+            }
         }
     }
 }

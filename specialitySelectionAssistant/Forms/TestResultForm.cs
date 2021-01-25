@@ -84,6 +84,8 @@ namespace specialitySelectionAssistant
 
         private void SaveResultMaterialFlatButton_Click(object sender, EventArgs e)
         {
+            string fileName = "ResultText.txt";
+
             resultText = "";
             resultText += $"{titleLabel.Text} \n\n";
 
@@ -101,13 +103,15 @@ namespace specialitySelectionAssistant
 
             try
             {
-                File.WriteAllText("ResultText.txt", resultText);
+                File.WriteAllText(fileName, resultText);
             }
             catch(Exception ex)
             {
                 string message = "Неможливо створити файл.";
                 ExceptionHandler.HandleException(ex, message);
             }
+
+            MessageBox.Show($"Результат збережений у файлі з ім'ям \"{fileName}\"");
         }
     }
 }

@@ -118,7 +118,7 @@ namespace specialitySelectionAssistant
             catch(IndexOutOfRangeException ex)
             {
                 string message = "Internal error. Required form objects are missing.";
-                ExceptionHandler.HandleException(ex, message);
+                ExceptionHandler.CriticalException(ex, message);
             }
             catch(Exception ex)
             {

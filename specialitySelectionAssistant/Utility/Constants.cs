@@ -28,6 +28,7 @@ namespace specialitySelectionAssistant
             "Німецька мова",
             "Французька мова",
             "Іспанська мова",
+            "творчій конкурс",
             ""
         };
         static public readonly string[] OTHER_ZNO_SUBJECTS = new string[] {

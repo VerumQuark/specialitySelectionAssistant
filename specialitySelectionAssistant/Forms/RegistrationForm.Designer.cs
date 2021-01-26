@@ -54,7 +54,7 @@ namespace specialitySelectionAssistant
             this.ZnoMaterialCheckBox.Ripple = true;
             this.ZnoMaterialCheckBox.Size = new System.Drawing.Size(208, 30);
             this.ZnoMaterialCheckBox.TabIndex = 1;
-            this.ZnoMaterialCheckBox.Text = "Маю результаты ЗНО";
+            this.ZnoMaterialCheckBox.Text = "Маю результати ЗНО";
             this.ZnoMaterialCheckBox.UseVisualStyleBackColor = false;
             // 
             // BudgetMaterialCheckBox

@@ -108,7 +108,8 @@ namespace specialitySelectionAssistant
                 ChangeProfessions(pairQuestion.firstProfession, leftProffesionMaterialLabel, leftProffesionButton);
                 ChangeProfessions(pairQuestion.secondProfession, rightProffesionMaterialLabel, rightProfessionButton);
 
-                questionNumLabel.Text = $"Питання №{HollandTest.CurrentComparisonQuestionIndex + 1}";
+                questionNumLabel.Text = $"Питання {HollandTest.CurrentComparisonQuestionIndex + 1}/" +
+                                                $"{Constants.HOLLAND_QUESTION_COUNT}";
             }
             catch(Exception ex) 
             {

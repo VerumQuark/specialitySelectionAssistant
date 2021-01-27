@@ -165,9 +165,9 @@ namespace specialitySelectionAssistant
             this.questionNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.questionNumLabel.Location = new System.Drawing.Point(53, 109);
             this.questionNumLabel.Name = "questionNumLabel";
-            this.questionNumLabel.Size = new System.Drawing.Size(125, 25);
+            this.questionNumLabel.Size = new System.Drawing.Size(144, 25);
             this.questionNumLabel.TabIndex = 24;
-            this.questionNumLabel.Text = "Питання №";
+            this.questionNumLabel.Text = "Питання {}/{}";
             // 
             // HollandTestForm
             // 

@@ -13,6 +13,7 @@ using MaterialSkin;
 using System.Text.RegularExpressions;
 using specialitySelectionAssistant.Exceptions;
 using specialitySelectionAssistant.Tests;
+using specialitySelectionAssistant.Utility;
 
 namespace specialitySelectionAssistant
 {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace specialitySelectionAssistant
+namespace specialitySelectionAssistant.Utility
 {
     static class Navigation
     {

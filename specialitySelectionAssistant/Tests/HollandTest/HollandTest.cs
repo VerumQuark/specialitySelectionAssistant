@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using specialitySelectionAssistant.Exceptions;
+using specialitySelectionAssistant.Utility;
 
 namespace specialitySelectionAssistant.Tests.Holland
 {

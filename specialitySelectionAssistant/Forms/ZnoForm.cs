@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using specialitySelectionAssistant.Exceptions;
 using specialitySelectionAssistant.Tests;
+using specialitySelectionAssistant.Utility;
 
 namespace specialitySelectionAssistant
 {

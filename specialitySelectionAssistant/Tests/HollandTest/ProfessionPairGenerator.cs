@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
 using specialitySelectionAssistant.Exceptions;
+using specialitySelectionAssistant.Utility;
 
 namespace specialitySelectionAssistant.Tests.Holland
 {

@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using specialitySelectionAssistant.Exceptions;
 using specialitySelectionAssistant.Tests;
+using specialitySelectionAssistant.Utility;
 using System.IO;
 
 namespace specialitySelectionAssistant
@@ -30,6 +31,10 @@ namespace specialitySelectionAssistant
 
         private void TestResultForm_Load(object sender, EventArgs e)
         {
+            TestTimer.StopTimer();
+
+            TimerResultLabel.Text = $"Тест пройдено за: {TestTimer.time.ToString("mm:ss")}";
+
             List<Specialty> specialties = PreferredSpecialtiesDeterminant.GetDetermineSpecialties();
 
             titleLabel.Text = $"{User.name}, за результатами тесту вам більш підходять такі спеціальності як:";
@@ -100,6 +105,8 @@ namespace specialitySelectionAssistant
             resultText += $"{thirdSpecialtyNameMaterialLabel.Text} \n";
             resultText += $"\t{thirdSpecialtyDescriptionLabel.Text} \n";
             resultText += $"\t{thirdSpecialtyProfessionsLabel.Text} \n\n";
+
+            resultText += $"{TimerResultLabel.Text}";
 
             try
             {

@@ -29,6 +29,7 @@ namespace specialitySelectionAssistant
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HollandTestForm));
             this.nextFormMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.leftProffesionMaterialLabel = new MaterialSkin.Controls.MaterialLabel();
@@ -38,6 +39,8 @@ namespace specialitySelectionAssistant
             this.rightProfessionButton = new System.Windows.Forms.Button();
             this.HelpMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.questionNumLabel = new System.Windows.Forms.Label();
+            this.TimerLabel = new System.Windows.Forms.Label();
+            this.Timer1000 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // nextFormMaterialFlatButton
@@ -169,6 +172,22 @@ namespace specialitySelectionAssistant
             this.questionNumLabel.TabIndex = 24;
             this.questionNumLabel.Text = "Питання {}/{}";
             // 
+            // TimerLabel
+            // 
+            this.TimerLabel.AutoSize = true;
+            this.TimerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TimerLabel.Location = new System.Drawing.Point(413, 461);
+            this.TimerLabel.Name = "TimerLabel";
+            this.TimerLabel.Size = new System.Drawing.Size(67, 25);
+            this.TimerLabel.TabIndex = 25;
+            this.TimerLabel.Text = "00:00";
+            // 
+            // Timer1000
+            // 
+            this.Timer1000.Enabled = true;
+            this.Timer1000.Interval = 1000;
+            this.Timer1000.Tick += new System.EventHandler(this.Timer1000_Tick);
+            // 
             // HollandTestForm
             // 
             this.AccessibleName = "";
@@ -176,6 +195,7 @@ namespace specialitySelectionAssistant
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.Controls.Add(this.TimerLabel);
             this.Controls.Add(this.questionNumLabel);
             this.Controls.Add(this.HelpMaterialFlatButton);
             this.Controls.Add(this.rightProfessionButton);
@@ -208,5 +228,7 @@ namespace specialitySelectionAssistant
         private System.Windows.Forms.Button rightProfessionButton;
         private MaterialSkin.Controls.MaterialFlatButton HelpMaterialFlatButton;
         private System.Windows.Forms.Label questionNumLabel;
+        private System.Windows.Forms.Label TimerLabel;
+        private System.Windows.Forms.Timer Timer1000;
     }
 }

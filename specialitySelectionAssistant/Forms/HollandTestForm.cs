@@ -6,6 +6,7 @@ using System.Resources;
 using System.Windows.Forms;
 using specialitySelectionAssistant.Exceptions;
 using specialitySelectionAssistant.Tests.Holland;
+using specialitySelectionAssistant.Utility;
 
 namespace specialitySelectionAssistant
 {
@@ -28,6 +29,8 @@ namespace specialitySelectionAssistant
 
         private void HollandTestFormForm_Load(object sender, EventArgs e)
         {
+            TestTimer.StartTimer();
+
             if (HollandTest.isFirstQuestion)
             {
                 HollandTest.CreateTest();
@@ -70,7 +73,7 @@ namespace specialitySelectionAssistant
         }
 
         private void NextFormMaterialFlatButton_Click(object sender, EventArgs e)
-        {
+            {
             try
             {
                 if (isProfessionChosen == false)
@@ -110,6 +113,7 @@ namespace specialitySelectionAssistant
 
                 questionNumLabel.Text = $"Питання {HollandTest.CurrentComparisonQuestionIndex + 1}/" +
                                                 $"{Constants.HOLLAND_QUESTION_COUNT}";
+
             }
             catch(Exception ex) 
             {
@@ -163,6 +167,11 @@ namespace specialitySelectionAssistant
                 Exception ex = new AnswerNotSelectedException();
                 ExceptionHandler.HandleException(ex, "Оберіть одну з професій");
             }
+        }
+
+        private void Timer1000_Tick(object sender, EventArgs e)
+        {
+            TimerLabel.Text = TestTimer.time.ToString("mm:ss");
         }
     }
 }

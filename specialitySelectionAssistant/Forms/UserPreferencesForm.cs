@@ -13,6 +13,7 @@ using System.Threading;
 using specialitySelectionAssistant.Exceptions;
 using specialitySelectionAssistant.Tests.UserPreference;
 using specialitySelectionAssistant.Tests;
+using specialitySelectionAssistant.Utility;
 
 namespace specialitySelectionAssistant
 {
@@ -195,6 +196,11 @@ namespace specialitySelectionAssistant
         private void UserPreferencesForm_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13) nextMaterialFlatButton.PerformClick();
+        }
+
+        private void timer1000_Tick(object sender, EventArgs e)
+        {
+            TimerLabel.Text = TestTimer.time.ToString("mm:ss");
         }
     }
 }

@@ -42,6 +42,7 @@ namespace specialitySelectionAssistant
             this.secondSpecialtyProfessionsLabel = new System.Windows.Forms.Label();
             this.thirdSpecialtyProfessionsLabel = new System.Windows.Forms.Label();
             this.SaveResultMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
+            this.TimerResultLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // helpMaterialFlatButton
@@ -206,11 +207,21 @@ namespace specialitySelectionAssistant
             this.SaveResultMaterialFlatButton.UseVisualStyleBackColor = false;
             this.SaveResultMaterialFlatButton.Click += new System.EventHandler(this.SaveResultMaterialFlatButton_Click);
             // 
+            // TimerResultLabel
+            // 
+            this.TimerResultLabel.AutoSize = true;
+            this.TimerResultLabel.Location = new System.Drawing.Point(173, 522);
+            this.TimerResultLabel.Name = "TimerResultLabel";
+            this.TimerResultLabel.Size = new System.Drawing.Size(130, 13);
+            this.TimerResultLabel.TabIndex = 35;
+            this.TimerResultLabel.Text = "Тест пройдено за: 00:00";
+            // 
             // TestResultForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.Controls.Add(this.TimerResultLabel);
             this.Controls.Add(this.SaveResultMaterialFlatButton);
             this.Controls.Add(this.thirdSpecialtyProfessionsLabel);
             this.Controls.Add(this.secondSpecialtyProfessionsLabel);
@@ -249,5 +260,6 @@ namespace specialitySelectionAssistant
         private System.Windows.Forms.Label secondSpecialtyProfessionsLabel;
         private System.Windows.Forms.Label thirdSpecialtyProfessionsLabel;
         private MaterialSkin.Controls.MaterialFlatButton SaveResultMaterialFlatButton;
+        private System.Windows.Forms.Label TimerResultLabel;
     }
 }

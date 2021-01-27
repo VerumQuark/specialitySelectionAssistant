@@ -29,6 +29,7 @@ namespace specialitySelectionAssistant
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.veryLikeMaterialRadioButton = new MaterialSkin.Controls.MaterialRadioButton();
             this.ratherSoMaterialRadioButton = new MaterialSkin.Controls.MaterialRadioButton();
             this.ratherNotMaterialRadioButton = new MaterialSkin.Controls.MaterialRadioButton();
@@ -39,6 +40,8 @@ namespace specialitySelectionAssistant
             this.helpMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.listQuestionQuestionLabel = new System.Windows.Forms.Label();
             this.QuestionNumberMaterialLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.timer1000 = new System.Windows.Forms.Timer(this.components);
+            this.TimerLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // veryLikeMaterialRadioButton
@@ -219,20 +222,35 @@ namespace specialitySelectionAssistant
             // 
             this.QuestionNumberMaterialLabel.AutoSize = true;
             this.QuestionNumberMaterialLabel.Depth = 0;
-            this.QuestionNumberMaterialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.QuestionNumberMaterialLabel.Font = new System.Drawing.Font("Roboto", 11F);
             this.QuestionNumberMaterialLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.QuestionNumberMaterialLabel.Location = new System.Drawing.Point(50, 72);
             this.QuestionNumberMaterialLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.QuestionNumberMaterialLabel.Name = "QuestionNumberMaterialLabel";
-            this.QuestionNumberMaterialLabel.Size = new System.Drawing.Size(103, 20);
+            this.QuestionNumberMaterialLabel.Size = new System.Drawing.Size(100, 19);
             this.QuestionNumberMaterialLabel.TabIndex = 24;
             this.QuestionNumberMaterialLabel.Text = "Питання {}/{}";
+            // 
+            // timer1000
+            // 
+            this.timer1000.Enabled = true;
+            this.timer1000.Tick += new System.EventHandler(this.timer1000_Tick);
+            // 
+            // TimerLabel
+            // 
+            this.TimerLabel.AutoSize = true;
+            this.TimerLabel.Location = new System.Drawing.Point(436, 458);
+            this.TimerLabel.Name = "TimerLabel";
+            this.TimerLabel.Size = new System.Drawing.Size(44, 17);
+            this.TimerLabel.TabIndex = 25;
+            this.TimerLabel.Text = "00:00";
             // 
             // UserPreferencesForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.Controls.Add(this.TimerLabel);
             this.Controls.Add(this.QuestionNumberMaterialLabel);
             this.Controls.Add(this.listQuestionQuestionLabel);
             this.Controls.Add(this.helpMaterialFlatButton);
@@ -269,5 +287,7 @@ namespace specialitySelectionAssistant
         private MaterialSkin.Controls.MaterialFlatButton helpMaterialFlatButton;
         private System.Windows.Forms.Label listQuestionQuestionLabel;
         private MaterialSkin.Controls.MaterialLabel QuestionNumberMaterialLabel;
+        private System.Windows.Forms.Timer timer1000;
+        private System.Windows.Forms.Label TimerLabel;
     }
 }

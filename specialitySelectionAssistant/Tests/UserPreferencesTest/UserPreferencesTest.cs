@@ -13,7 +13,7 @@ namespace specialitySelectionAssistant.Tests.UserPreference
         public int preferenceValue;
     }
 
-     public class UserPreferencesTest : TwoIndexTest<UserPreference>
+    public class UserPreferencesTest : TwoIndexTest<UserPreference>
     {
         public override bool isFirstQuestion { get; set; } = false;
         public override bool isLastQuestion { get; set; } = false;
@@ -24,6 +24,9 @@ namespace specialitySelectionAssistant.Tests.UserPreference
 
         public override int _currentSpecialityIndex { get; set; }
         public override int _currentListQuestionIndex { get; set; }
+        public override int _currentTotalQuestionNumber { get; set; }
+
+        public override int TotalQuestionCount { get; set; }
 
         public override Stack<UserPreference> answerStack { get; set; }
 
@@ -42,14 +45,10 @@ namespace specialitySelectionAssistant.Tests.UserPreference
                 {
                     if (value >= faculty.specialties.Length)
                     {
-                        _currentSpecialityIndex = faculty.specialties.Length - 1;
-
                         throw new RangeException();
                     }
                     else if (value < 0)
                     {
-                        _currentSpecialityIndex = 0;
-
                         throw new RangeException();
                     }
                     else
@@ -84,21 +83,19 @@ namespace specialitySelectionAssistant.Tests.UserPreference
 
                     if (value > questionsLenght)
                     {
-                        _currentListQuestionIndex = questionsLenght;
-
                         throw new RangeException();
                     }
                     else
                     {
                         if (value == questionsLenght)
                         {
-                            _currentSpecialityIndex++;
                             _currentListQuestionIndex = 0;
+                            _currentSpecialityIndex++;
                         }
                         else if (value < 0)
                         {
-                            _currentSpecialityIndex--;
                             _currentListQuestionIndex = questionsLenght - 1;
+                            _currentSpecialityIndex--;
                         }
                         else
                         {
@@ -131,13 +128,31 @@ namespace specialitySelectionAssistant.Tests.UserPreference
                     ExceptionHandler.CriticalException(ex);
                 }
             }
-        }   
+        }
+
+        public int CurrentTotalQuestionNumber
+        {
+            get => _currentTotalQuestionNumber;
+
+            set
+            {
+                if(value < 0)
+                {
+                    throw new RangeException();
+                }
+                else
+                {
+                    _currentTotalQuestionNumber = value;
+                }
+            }
+        }
 
         public override void NextQuestion()
         {
             try
             {
                 CurrentListQuestionIndex++;
+                CurrentTotalQuestionNumber++;
                 currentSpeciality = faculty.specialties[CurrentSpecialityIndex];
                 currentListQuestion = currentSpeciality.questions[CurrentListQuestionIndex];
             }
@@ -157,6 +172,7 @@ namespace specialitySelectionAssistant.Tests.UserPreference
             try
             {
                 CurrentListQuestionIndex--;
+                CurrentTotalQuestionNumber--;
                 currentSpeciality = faculty.specialties[CurrentSpecialityIndex];
                 currentListQuestion = currentSpeciality.questions[CurrentListQuestionIndex];
             }
@@ -185,6 +201,9 @@ namespace specialitySelectionAssistant.Tests.UserPreference
 
                 CurrentSpecialityIndex = 0;
                 CurrentListQuestionIndex = 0;
+                CurrentTotalQuestionNumber = 1;
+
+                TotalQuestionCount = GetTotalQuestionCount();
 
                 currentSpeciality = faculty.specialties[CurrentSpecialityIndex];
                 currentListQuestion = currentSpeciality.questions[CurrentListQuestionIndex];
@@ -215,6 +234,21 @@ namespace specialitySelectionAssistant.Tests.UserPreference
             }
 
             resultSpecialties = faculty.specialties;
+        }
+
+        private int GetTotalQuestionCount()
+        {
+            int questionCount = 0;
+
+            foreach (Specialty specialty in faculty.specialties)
+            {
+                foreach (string question in specialty.questions)
+                {
+                    questionCount++;
+                }
+            }
+
+            return questionCount;
         }
     }
 }

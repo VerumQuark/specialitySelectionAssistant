@@ -38,6 +38,7 @@ namespace specialitySelectionAssistant
             this.nextMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.helpMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.listQuestionQuestionLabel = new System.Windows.Forms.Label();
+            this.QuestionNumberMaterialLabel = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // veryLikeMaterialRadioButton
@@ -214,11 +215,25 @@ namespace specialitySelectionAssistant
             this.listQuestionQuestionLabel.TabIndex = 22;
             this.listQuestionQuestionLabel.Text = "Питання";
             // 
+            // QuestionNumberMaterialLabel
+            // 
+            this.QuestionNumberMaterialLabel.AutoSize = true;
+            this.QuestionNumberMaterialLabel.Depth = 0;
+            this.QuestionNumberMaterialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.QuestionNumberMaterialLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.QuestionNumberMaterialLabel.Location = new System.Drawing.Point(50, 72);
+            this.QuestionNumberMaterialLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.QuestionNumberMaterialLabel.Name = "QuestionNumberMaterialLabel";
+            this.QuestionNumberMaterialLabel.Size = new System.Drawing.Size(103, 20);
+            this.QuestionNumberMaterialLabel.TabIndex = 24;
+            this.QuestionNumberMaterialLabel.Text = "Питання {}/{}";
+            // 
             // UserPreferencesForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.Controls.Add(this.QuestionNumberMaterialLabel);
             this.Controls.Add(this.listQuestionQuestionLabel);
             this.Controls.Add(this.helpMaterialFlatButton);
             this.Controls.Add(this.backMaterialFlatButton);
@@ -253,5 +268,6 @@ namespace specialitySelectionAssistant
         private MaterialSkin.Controls.MaterialFlatButton nextMaterialFlatButton;
         private MaterialSkin.Controls.MaterialFlatButton helpMaterialFlatButton;
         private System.Windows.Forms.Label listQuestionQuestionLabel;
+        private MaterialSkin.Controls.MaterialLabel QuestionNumberMaterialLabel;
     }
 }

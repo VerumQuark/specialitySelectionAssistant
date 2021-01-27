@@ -69,6 +69,9 @@ namespace specialitySelectionAssistant
 
                 listQuestionQuestionLabel.Text = question;
 
+                QuestionNumberMaterialLabel.Text = $"Питання {UserPreferencesTest.CurrentTotalQuestionNumber}/" +
+                                                           $"{UserPreferencesTest.TotalQuestionCount}";
+
                 veryLikeMaterialRadioButton.Checked = false;
                 ratherSoMaterialRadioButton.Checked = false;
                 cantAnswerMaterialRadioButton.Checked = false;

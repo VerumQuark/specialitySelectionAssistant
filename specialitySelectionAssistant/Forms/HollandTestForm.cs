@@ -62,6 +62,7 @@ namespace specialitySelectionAssistant
 
             if (HollandTest.isFirstQuestion)
             {
+                TestTimer.StopTimer();
                 Navigation.ToRegistrationForm(this);
             }
             else

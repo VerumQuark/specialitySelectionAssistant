@@ -34,6 +34,8 @@ namespace specialitySelectionAssistant.Utility
             cts = new CancellationTokenSource();
             token = cts.Token;
 
+            time = new DateTime();
+
             await foreach (DateTime newTime in TimerRunAsync())
             {
                 time = newTime;

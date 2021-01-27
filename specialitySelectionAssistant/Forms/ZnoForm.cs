@@ -95,7 +95,7 @@ namespace specialitySelectionAssistant
 
             if (isCheckSuccessful)
             {
-                PreferredSpecialtiesDeterminant.SetZnoSubjects(znoSubjects);
+                User.SetZnoSubjects(znoSubjects);
                 Navigation.ToHollandTestForm(this);
             }
         }

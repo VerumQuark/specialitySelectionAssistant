@@ -7,12 +7,6 @@ using specialitySelectionAssistant.Exceptions;
 
 namespace specialitySelectionAssistant.Tests
 {
-    public struct ZnoSubject
-    {
-        public string name;
-        public int points;
-    }
-
     static public class PreferredSpecialtiesDeterminant
     {
         static private bool isBudget;
@@ -20,6 +14,7 @@ namespace specialitySelectionAssistant.Tests
         static private bool isHaveZno;
 
         static private List<ZnoSubject> znoSubjects;
+
         static private List<Specialty> specialties;
         static private List<Specialty> defaultCheckedSpecialties;
         static private readonly List<Specialty> determinedSpecialties;
@@ -30,11 +25,12 @@ namespace specialitySelectionAssistant.Tests
 
         static PreferredSpecialtiesDeterminant()
         {
-            isBudget = false;
-            isContract = false;
-            isHaveZno = false;
+            isBudget = User.isBudget;
+            isContract = User.isContract;
+            isHaveZno = User.isHaveZno;
 
-            znoSubjects = new List<ZnoSubject>();
+            znoSubjects = User.znoSubjects;
+
             specialties = new List<Specialty>();
             determinedSpecialties = new List<Specialty>();
             defaultCheckedSpecialties = new List<Specialty>();
@@ -57,21 +53,9 @@ namespace specialitySelectionAssistant.Tests
             return determinedSpecialties;
         }
 
-        static public void SetZnoSubjects(List<ZnoSubject> znoSubjectsArr)
-        {
-            znoSubjects = new List<ZnoSubject>(znoSubjectsArr);
-        }
-
         static public void SetSpecialties(Specialty[] specialtiesArr)
         {
             specialties = new List<Specialty>(specialtiesArr);
-        }
-
-        static public void SetEducationForm(bool isBudgetValue, bool isContractValue, bool isHaveZnoValue)
-        {
-            isBudget = isBudgetValue;
-            isContract = isContractValue;
-            isHaveZno = isHaveZnoValue;
         }
 
         static private void ConfigureCheck()    

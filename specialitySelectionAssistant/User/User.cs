@@ -3,9 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using specialitySelectionAssistant;
 
 namespace specialitySelectionAssistant
 {
+    public struct ZnoSubject
+    {
+        public string name;
+        public int points;
+    }
+
     public struct HollandResult
         {
             public int Realistic { get; set; }
@@ -31,16 +38,39 @@ namespace specialitySelectionAssistant
         static public HollandResult hollandResult;
         static public string name;
 
+        static public bool isBudget;
+        static public bool isContract;
+        static public bool isHaveZno;
+
+        static public List<ZnoSubject> znoSubjects;
 
         static User()
         {
             hollandResult.Init();
             name = "";
+
+            isBudget = false;
+            isContract = false;
+            isHaveZno = false;
+
+            znoSubjects = new List<ZnoSubject>();
         }
 
         static public void SetName(string nameValue)
         {
             name = nameValue;
+        }
+
+        static public void SetZnoSubjects(List<ZnoSubject> znoSubjectsArr)
+        {
+            znoSubjects = new List<ZnoSubject>(znoSubjectsArr);
+        }
+
+        static public void SetEducationForm(bool isBudgetValue, bool isContractValue, bool isHaveZnoValue)
+        {
+            isBudget = isBudgetValue;
+            isContract = isContractValue;
+            isHaveZno = isHaveZnoValue;
         }
     }
 }

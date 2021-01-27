@@ -41,7 +41,7 @@ namespace specialitySelectionAssistant
                 bool haveZno = ZnoMaterialCheckBox.Checked;
 
                 User.SetName(name);
-                PreferredSpecialtiesDeterminant.SetEducationForm(budget, contract, haveZno);
+                User.SetEducationForm(budget, contract, haveZno);
 
                 Navigation.StartTest(haveZno, this);
             }

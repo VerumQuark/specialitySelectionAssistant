@@ -59,7 +59,7 @@ namespace specialitySelectionAssistant
             catch(Exception ex)
             {
                 string message = "Неможливо отримати дані. Перевірте цілісність файлів.";
-                ExceptionHandler.HandleException(ex, message);
+                ExceptionHandler.CriticalException(ex, message);
             }
 
         }

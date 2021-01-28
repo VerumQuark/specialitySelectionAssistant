@@ -32,10 +32,6 @@ namespace specialitySelectionAssistant.Forms.Controls
             AboutItem.Click += AboutItem_Click;
             CustomMenuStrip.Items.Add(AboutItem);
 
-            ToolStripMenuItem DevelopersItem = new ToolStripMenuItem("Розробники");
-            DevelopersItem.Click += DevelopersItem_Click;
-            CustomMenuStrip.Items.Add(DevelopersItem);
-
             ToolStripMenuItem HelpResultItem = new ToolStripMenuItem("Довідка");
             HelpResultItem.Click += HelpItem_Click;
             CustomMenuStrip.Items.Add(HelpResultItem);
@@ -75,11 +71,6 @@ namespace specialitySelectionAssistant.Forms.Controls
             {
                 ExceptionHandler.HandleException(ex);
             }
-        }
-
-        static private void DevelopersItem_Click(object sender, EventArgs e)
-        {
-            Navigation.ToHelpForm(Program.Context.MainForm);
         }
 
         static private void HelpItem_Click(object sender, EventArgs e)

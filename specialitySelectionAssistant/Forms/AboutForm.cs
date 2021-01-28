@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
+
 using MaterialSkin;
 using specialitySelectionAssistant.Forms.Controls;
 using specialitySelectionAssistant.Utility;

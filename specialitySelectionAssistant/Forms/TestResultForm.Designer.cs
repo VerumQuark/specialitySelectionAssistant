@@ -43,6 +43,7 @@ namespace specialitySelectionAssistant
             this.thirdSpecialtyProfessionsLabel = new System.Windows.Forms.Label();
             this.SaveResultMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.TimerResultLabel = new System.Windows.Forms.Label();
+            this.RepeatTestMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.SuspendLayout();
             // 
             // helpMaterialFlatButton
@@ -210,17 +211,38 @@ namespace specialitySelectionAssistant
             // TimerResultLabel
             // 
             this.TimerResultLabel.AutoSize = true;
-            this.TimerResultLabel.Location = new System.Drawing.Point(173, 522);
+            this.TimerResultLabel.Location = new System.Drawing.Point(291, 522);
             this.TimerResultLabel.Name = "TimerResultLabel";
             this.TimerResultLabel.Size = new System.Drawing.Size(130, 13);
             this.TimerResultLabel.TabIndex = 35;
             this.TimerResultLabel.Text = "Тест пройдено за: 00:00";
+            // 
+            // RepeatTestMaterialFlatButton
+            // 
+            this.RepeatTestMaterialFlatButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.RepeatTestMaterialFlatButton.AutoSize = true;
+            this.RepeatTestMaterialFlatButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.RepeatTestMaterialFlatButton.BackColor = System.Drawing.SystemColors.Window;
+            this.RepeatTestMaterialFlatButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.RepeatTestMaterialFlatButton.Depth = 0;
+            this.RepeatTestMaterialFlatButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.RepeatTestMaterialFlatButton.Location = new System.Drawing.Point(93, 508);
+            this.RepeatTestMaterialFlatButton.Margin = new System.Windows.Forms.Padding(6, 10, 6, 10);
+            this.RepeatTestMaterialFlatButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.RepeatTestMaterialFlatButton.Name = "RepeatTestMaterialFlatButton";
+            this.RepeatTestMaterialFlatButton.Primary = false;
+            this.RepeatTestMaterialFlatButton.Size = new System.Drawing.Size(131, 36);
+            this.RepeatTestMaterialFlatButton.TabIndex = 36;
+            this.RepeatTestMaterialFlatButton.Text = "повторити тест ";
+            this.RepeatTestMaterialFlatButton.UseVisualStyleBackColor = false;
+            this.RepeatTestMaterialFlatButton.Click += new System.EventHandler(this.RepeatTestMaterialFlatButton_Click);
             // 
             // TestResultForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.Controls.Add(this.RepeatTestMaterialFlatButton);
             this.Controls.Add(this.TimerResultLabel);
             this.Controls.Add(this.SaveResultMaterialFlatButton);
             this.Controls.Add(this.thirdSpecialtyProfessionsLabel);
@@ -261,5 +283,6 @@ namespace specialitySelectionAssistant
         private System.Windows.Forms.Label thirdSpecialtyProfessionsLabel;
         private MaterialSkin.Controls.MaterialFlatButton SaveResultMaterialFlatButton;
         private System.Windows.Forms.Label TimerResultLabel;
+        private MaterialSkin.Controls.MaterialFlatButton RepeatTestMaterialFlatButton;
     }
 }

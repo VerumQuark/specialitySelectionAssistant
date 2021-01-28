@@ -17,13 +17,18 @@ namespace specialitySelectionAssistant.Tests
 
         static private List<Specialty> specialties;
         static private List<Specialty> defaultCheckedSpecialties;
-        static private readonly List<Specialty> determinedSpecialties;
+        static private List<Specialty> determinedSpecialties;
 
         private delegate void SpecialtiesCheking();
         static private SpecialtiesCheking specialtiesCheking;
 
 
         static PreferredSpecialtiesDeterminant()
+        {
+            Reset();
+        }
+
+        static public void Reset()
         {
             isBudget = User.isBudget;
             isContract = User.isContract;

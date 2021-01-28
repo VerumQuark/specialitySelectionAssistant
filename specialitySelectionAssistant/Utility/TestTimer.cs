@@ -18,10 +18,7 @@ namespace specialitySelectionAssistant.Utility
 
         static TestTimer()
         {
-            cts = new CancellationTokenSource();
-            token = cts.Token;
-
-            time = new DateTime();
+            Reset();
 
             isTimerRun = false;
         }
@@ -31,10 +28,7 @@ namespace specialitySelectionAssistant.Utility
             if (isTimerRun) return;
             isTimerRun = true;
 
-            cts = new CancellationTokenSource();
-            token = cts.Token;
-
-            time = new DateTime();
+            Reset();
 
             await foreach (DateTime newTime in TimerRunAsync())
             {
@@ -56,6 +50,14 @@ namespace specialitySelectionAssistant.Utility
                 await Task.Delay(1000);
                 yield return time.AddSeconds(1);
             }
+        }
+
+        static public void Reset()
+        {
+            cts = new CancellationTokenSource();
+            token = cts.Token;
+
+            time = new DateTime();
         }
     }
 }

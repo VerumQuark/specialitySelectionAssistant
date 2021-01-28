@@ -46,6 +46,11 @@ namespace specialitySelectionAssistant
 
         static User()
         {
+            Reset();
+        }
+
+        static public void Reset()
+        {
             hollandResult.Init();
             name = "";
 

@@ -120,5 +120,13 @@ namespace specialitySelectionAssistant
 
             MessageBox.Show($"Результат збережений у файлі з ім'ям \"{fileName}\"");
         }
+
+        private void RepeatTestMaterialFlatButton_Click(object sender, EventArgs e)
+        {
+            User.Reset();
+            PreferredSpecialtiesDeterminant.Reset();
+
+            Navigation.ToRegistrationForm(this);
+        }
     }
 }

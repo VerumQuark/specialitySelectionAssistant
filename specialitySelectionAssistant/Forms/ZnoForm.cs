@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using specialitySelectionAssistant.Exceptions;
 using specialitySelectionAssistant.Tests;
 using specialitySelectionAssistant.Utility;
+using specialitySelectionAssistant.Forms.Controls;
 
 namespace specialitySelectionAssistant
 {
@@ -32,6 +33,8 @@ namespace specialitySelectionAssistant
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange300, Primary.Orange400, Primary.Orange100, Accent.LightBlue200, TextShade.BLACK);
+
+            Controls.Add(CustomControlsStorage.GetCustomMenuStrip());
         }
 
         private void ZnoForm_Load(object sender, EventArgs e)

@@ -14,6 +14,7 @@ using specialitySelectionAssistant.Exceptions;
 using specialitySelectionAssistant.Tests.UserPreference;
 using specialitySelectionAssistant.Tests;
 using specialitySelectionAssistant.Utility;
+using specialitySelectionAssistant.Forms.Controls;
 
 namespace specialitySelectionAssistant
 {
@@ -27,10 +28,13 @@ namespace specialitySelectionAssistant
         public UserPreferencesForm()
         {
             InitializeComponent();
+
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange300, Primary.Orange400, Primary.Orange100, Accent.LightBlue200, TextShade.BLACK);
+
+            Controls.Add(CustomControlsStorage.GetCustomMenuStrip());
         }
 
         private void UserPreferencesForm_Load(object sender, EventArgs e)
@@ -71,7 +75,7 @@ namespace specialitySelectionAssistant
                 listQuestionQuestionLabel.Text = question;
 
                 QuestionNumberMaterialLabel.Text = $"Питання {UserPreferencesTest.CurrentTotalQuestionNumber}/" +
-                                                           $"{UserPreferencesTest.TotalQuestionCount}";
+                                                           $"{UserPreferencesTest.TotalQuestionCount} ";
 
                 veryLikeMaterialRadioButton.Checked = false;
                 ratherSoMaterialRadioButton.Checked = false;

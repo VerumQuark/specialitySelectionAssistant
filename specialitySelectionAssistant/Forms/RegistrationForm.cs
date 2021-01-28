@@ -12,8 +12,8 @@ using MaterialSkin.Controls;
 using MaterialSkin;
 using System.Text.RegularExpressions;
 using specialitySelectionAssistant.Exceptions;
-using specialitySelectionAssistant.Tests;
 using specialitySelectionAssistant.Utility;
+using specialitySelectionAssistant.Forms.Controls;
 
 namespace specialitySelectionAssistant
 {
@@ -27,6 +27,8 @@ namespace specialitySelectionAssistant
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange300, Primary.Orange400, Primary.Orange100, Accent.LightBlue200, TextShade.BLACK);
+
+            Controls.Add(CustomControlsStorage.GetCustomMenuStrip());
         }
 
         private void NextMaterialFlatButton_Click(object sender, EventArgs e)

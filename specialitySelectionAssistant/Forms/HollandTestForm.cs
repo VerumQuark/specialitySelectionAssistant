@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using specialitySelectionAssistant.Exceptions;
 using specialitySelectionAssistant.Tests.Holland;
 using specialitySelectionAssistant.Utility;
+using specialitySelectionAssistant.Forms.Controls;
 
 namespace specialitySelectionAssistant
 {
@@ -21,10 +22,13 @@ namespace specialitySelectionAssistant
         public HollandTestForm()
         {
             InitializeComponent();
+
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange300, Primary.Orange400, Primary.Orange100, Accent.LightBlue200, TextShade.BLACK);
+
+            Controls.Add(CustomControlsStorage.GetCustomMenuStrip());
         }
 
         private void HollandTestFormForm_Load(object sender, EventArgs e)

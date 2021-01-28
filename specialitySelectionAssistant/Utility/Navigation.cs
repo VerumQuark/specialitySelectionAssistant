@@ -56,11 +56,12 @@ namespace specialitySelectionAssistant.Utility
         
         static public void ToHelpForm(Form form)
         {
-            prevForm = form;
+            ChangeHelpForm(new HelpForm(), form);
+        }
 
-            Program.Context.MainForm = new HelpForm();
-            prevForm.Hide();
-            Program.Context.MainForm.Show();
+        static public void ToAboutForm(Form form)
+        {
+            ChangeHelpForm(new AboutForm(), form);
         }
 
         static public void ToPrevForm(Form form)
@@ -71,8 +72,18 @@ namespace specialitySelectionAssistant.Utility
         private static void ChangeForm(Form formToOpen, Form formToClose)
         {
             Program.Context.MainForm = formToOpen;
-            formToClose.Close();
             Program.Context.MainForm.Show();
+            formToClose.Close();
+        }
+
+        private static void ChangeHelpForm(Form formToOpen, Form formToHide)
+        {
+            if (formToHide is HelpForm == false &&
+                formToHide is AboutForm == false   ) prevForm = formToHide;
+
+            Program.Context.MainForm = formToOpen;
+            Program.Context.MainForm.Show();
+            formToHide.Hide();
         }
 
     }

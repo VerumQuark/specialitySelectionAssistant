@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using specialitySelectionAssistant.Exceptions;
 using specialitySelectionAssistant.Tests;
 using specialitySelectionAssistant.Utility;
+using specialitySelectionAssistant.Forms.Controls;
 using System.IO;
 
 namespace specialitySelectionAssistant
@@ -27,6 +28,8 @@ namespace specialitySelectionAssistant
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange300, Primary.Orange400, Primary.Orange100, Accent.LightBlue200, TextShade.BLACK);
+
+            Controls.Add(CustomControlsStorage.GetCustomMenuStrip());
         }
 
         private void TestResultForm_Load(object sender, EventArgs e)
@@ -87,7 +90,7 @@ namespace specialitySelectionAssistant
             this.Close();
         }
 
-        private void SaveResultMaterialFlatButton_Click(object sender, EventArgs e)
+        public void SaveResultToFile()
         {
             string fileName = "ResultText.txt";
 
@@ -112,21 +115,13 @@ namespace specialitySelectionAssistant
             {
                 File.WriteAllText(fileName, resultText);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 string message = "Неможливо створити файл.";
                 ExceptionHandler.HandleException(ex, message);
             }
 
             MessageBox.Show($"Результат збережений у файлі з ім'ям \"{fileName}\"");
-        }
-
-        private void RepeatTestMaterialFlatButton_Click(object sender, EventArgs e)
-        {
-            User.Reset();
-            PreferredSpecialtiesDeterminant.Reset();
-
-            Navigation.ToRegistrationForm(this);
         }
     }
 }

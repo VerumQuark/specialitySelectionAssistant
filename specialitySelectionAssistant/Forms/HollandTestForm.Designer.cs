@@ -166,7 +166,7 @@ namespace specialitySelectionAssistant
             // 
             this.questionNumLabel.AutoSize = true;
             this.questionNumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.questionNumLabel.Location = new System.Drawing.Point(53, 109);
+            this.questionNumLabel.Location = new System.Drawing.Point(38, 92);
             this.questionNumLabel.Name = "questionNumLabel";
             this.questionNumLabel.Size = new System.Drawing.Size(144, 25);
             this.questionNumLabel.TabIndex = 24;
@@ -175,8 +175,9 @@ namespace specialitySelectionAssistant
             // TimerLabel
             // 
             this.TimerLabel.AutoSize = true;
+            this.TimerLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(180)))), ((int)(((byte)(76)))));
             this.TimerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TimerLabel.Location = new System.Drawing.Point(413, 461);
+            this.TimerLabel.Location = new System.Drawing.Point(921, 31);
             this.TimerLabel.Name = "TimerLabel";
             this.TimerLabel.Size = new System.Drawing.Size(67, 25);
             this.TimerLabel.TabIndex = 25;

@@ -1,6 +1,4 @@
-﻿using MaterialSkin;
-using MaterialSkin.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,14 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using specialitySelectionAssistant.Utility;
+using MaterialSkin.Controls;
+using MaterialSkin;
 using specialitySelectionAssistant.Forms.Controls;
+using specialitySelectionAssistant.Utility;
 
 namespace specialitySelectionAssistant
 {
-    public partial class HelpForm : MaterialForm
+    public partial class AboutForm : MaterialForm
     {
-        public HelpForm()
+        public AboutForm()
         {
             InitializeComponent();
 
@@ -28,7 +28,7 @@ namespace specialitySelectionAssistant
             this.Controls.Add(CustomControlsStorage.GetCustomMenuStrip());
         }
 
-        private void BackMaterialFlatButton_Click(object sender, EventArgs e)
+        private void backMaterialFlatButton_Click(object sender, EventArgs e)
         {
             Navigation.ToPrevForm(this);
         }

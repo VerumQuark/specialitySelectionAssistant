@@ -41,41 +41,39 @@ namespace specialitySelectionAssistant
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label1.Location = new System.Drawing.Point(49, 102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(331, 50);
+            this.label1.Size = new System.Drawing.Size(411, 159);
             this.label1.TabIndex = 23;
-            this.label1.Text = "Програму розробили студенты\r\nдругого курсу КНТ-139:";
+            this.label1.Text = "Якщо виникли запитання або проблеми, ви можете звернутися до розробників прогами:" +
+    "\r\nСтуденти 2 курсу КНТ-139:";
             // 
             // materialLabel1
             // 
-            this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(50, 192);
+            this.materialLabel1.Location = new System.Drawing.Point(50, 233);
             this.materialLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(120, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(176, 43);
             this.materialLabel1.TabIndex = 24;
-            this.materialLabel1.Text = "Іван Бровченко";
+            this.materialLabel1.Text = "Іван Бровченко\r\njoeykeitak@gmail.com";
             // 
             // materialLabel2
             // 
-            this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(50, 242);
+            this.materialLabel2.Location = new System.Drawing.Point(50, 288);
             this.materialLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(135, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(176, 50);
             this.materialLabel2.TabIndex = 25;
-            this.materialLabel2.Text = "Констянтин Чічук";
+            this.materialLabel2.Text = "Костянтин Чічук\r\nchichukko@gmail.com";
             // 
             // materialLabel3
             // 
@@ -83,13 +81,13 @@ namespace specialitySelectionAssistant
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(50, 292);
+            this.materialLabel3.Location = new System.Drawing.Point(50, 343);
             this.materialLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(145, 19);
+            this.materialLabel3.Size = new System.Drawing.Size(230, 38);
             this.materialLabel3.TabIndex = 26;
-            this.materialLabel3.Text = "Ангеліна Карпенко";
+            this.materialLabel3.Text = "Ангеліна Карпенко\r\nkl2002zp34karpenko@gmail.com";
             // 
             // backMaterialFlatButton
             // 
@@ -114,12 +112,12 @@ namespace specialitySelectionAssistant
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label2.Location = new System.Drawing.Point(552, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(250, 25);
+            this.label2.Size = new System.Drawing.Size(228, 25);
             this.label2.TabIndex = 72;
-            this.label2.Text = "Правило користування:";
+            this.label2.Text = "Правила користування:";
             // 
             // materialLabel4
             // 
@@ -127,29 +125,28 @@ namespace specialitySelectionAssistant
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(50, 340);
+            this.materialLabel4.Location = new System.Drawing.Point(50, 398);
             this.materialLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(110, 19);
+            this.materialLabel4.Size = new System.Drawing.Size(164, 38);
             this.materialLabel4.TabIndex = 73;
-            this.materialLabel4.Text = "Микита Зайко";
+            this.materialLabel4.Text = "Микита Зайко\r\nnik.zayko2@gmail.com";
             // 
             // materialLabel5
             // 
-            this.materialLabel5.AutoSize = true;
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(553, 192);
+            this.materialLabel5.Location = new System.Drawing.Point(553, 233);
             this.materialLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(300, 114);
             this.materialLabel5.TabIndex = 74;
-            this.materialLabel5.Text = "Для переходу на наступний тест,\r\nтисніть кнопку \"ДАЛІ\" чи Enter.\r\nДля повернення " +
-    "на попередню сторінку,\r\nтисніть кнопку \"НАЗАД\".\r\nДля вибору варіанта,\r\nтисніть T" +
-    "ab або ліву кнопку миші.";
+            this.materialLabel5.Text = "Для переходу на наступний тест, тисніть кнопку \"ДАЛІ\" чи Enter.\r\nДля повернення н" +
+    "а попередню сторінку, тисніть кнопку \"НАЗАД\".\r\nДля вибору варіанта, тисніть Tab " +
+    "або ліву кнопку миші.";
             // 
             // HelpForm
             // 

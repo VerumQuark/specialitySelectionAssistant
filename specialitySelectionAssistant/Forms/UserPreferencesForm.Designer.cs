@@ -39,9 +39,9 @@ namespace specialitySelectionAssistant
             this.nextMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.helpMaterialFlatButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.listQuestionQuestionLabel = new System.Windows.Forms.Label();
-            this.QuestionNumberMaterialLabel = new MaterialSkin.Controls.MaterialLabel();
             this.timer1000 = new System.Windows.Forms.Timer(this.components);
             this.TimerLabel = new System.Windows.Forms.Label();
+            this.QuestionNumberMaterialLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // veryLikeMaterialRadioButton
@@ -51,7 +51,7 @@ namespace specialitySelectionAssistant
             this.veryLikeMaterialRadioButton.Checked = true;
             this.veryLikeMaterialRadioButton.Depth = 0;
             this.veryLikeMaterialRadioButton.Font = new System.Drawing.Font("Roboto", 10F);
-            this.veryLikeMaterialRadioButton.Location = new System.Drawing.Point(54, 195);
+            this.veryLikeMaterialRadioButton.Location = new System.Drawing.Point(54, 204);
             this.veryLikeMaterialRadioButton.Margin = new System.Windows.Forms.Padding(0);
             this.veryLikeMaterialRadioButton.MouseLocation = new System.Drawing.Point(-1, -1);
             this.veryLikeMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
@@ -73,7 +73,7 @@ namespace specialitySelectionAssistant
             this.ratherSoMaterialRadioButton.BackColor = System.Drawing.SystemColors.Window;
             this.ratherSoMaterialRadioButton.Depth = 0;
             this.ratherSoMaterialRadioButton.Font = new System.Drawing.Font("Roboto", 10F);
-            this.ratherSoMaterialRadioButton.Location = new System.Drawing.Point(54, 245);
+            this.ratherSoMaterialRadioButton.Location = new System.Drawing.Point(54, 254);
             this.ratherSoMaterialRadioButton.Margin = new System.Windows.Forms.Padding(0);
             this.ratherSoMaterialRadioButton.MouseLocation = new System.Drawing.Point(-1, -1);
             this.ratherSoMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
@@ -93,7 +93,7 @@ namespace specialitySelectionAssistant
             this.ratherNotMaterialRadioButton.BackColor = System.Drawing.SystemColors.Window;
             this.ratherNotMaterialRadioButton.Depth = 0;
             this.ratherNotMaterialRadioButton.Font = new System.Drawing.Font("Roboto", 10F);
-            this.ratherNotMaterialRadioButton.Location = new System.Drawing.Point(54, 345);
+            this.ratherNotMaterialRadioButton.Location = new System.Drawing.Point(54, 354);
             this.ratherNotMaterialRadioButton.Margin = new System.Windows.Forms.Padding(0);
             this.ratherNotMaterialRadioButton.MouseLocation = new System.Drawing.Point(-1, -1);
             this.ratherNotMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
@@ -113,7 +113,7 @@ namespace specialitySelectionAssistant
             this.cantAnswerMaterialRadioButton.BackColor = System.Drawing.SystemColors.Window;
             this.cantAnswerMaterialRadioButton.Depth = 0;
             this.cantAnswerMaterialRadioButton.Font = new System.Drawing.Font("Roboto", 10F);
-            this.cantAnswerMaterialRadioButton.Location = new System.Drawing.Point(54, 295);
+            this.cantAnswerMaterialRadioButton.Location = new System.Drawing.Point(54, 304);
             this.cantAnswerMaterialRadioButton.Margin = new System.Windows.Forms.Padding(0);
             this.cantAnswerMaterialRadioButton.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cantAnswerMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
@@ -133,7 +133,7 @@ namespace specialitySelectionAssistant
             this.veryDislikeMaterialRadioButton.BackColor = System.Drawing.SystemColors.Window;
             this.veryDislikeMaterialRadioButton.Depth = 0;
             this.veryDislikeMaterialRadioButton.Font = new System.Drawing.Font("Roboto", 10F);
-            this.veryDislikeMaterialRadioButton.Location = new System.Drawing.Point(54, 395);
+            this.veryDislikeMaterialRadioButton.Location = new System.Drawing.Point(54, 404);
             this.veryDislikeMaterialRadioButton.Margin = new System.Windows.Forms.Padding(0);
             this.veryDislikeMaterialRadioButton.MouseLocation = new System.Drawing.Point(-1, -1);
             this.veryDislikeMaterialRadioButton.MouseState = MaterialSkin.MouseState.HOVER;
@@ -212,24 +212,11 @@ namespace specialitySelectionAssistant
             // 
             this.listQuestionQuestionLabel.CausesValidation = false;
             this.listQuestionQuestionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listQuestionQuestionLabel.Location = new System.Drawing.Point(49, 102);
+            this.listQuestionQuestionLabel.Location = new System.Drawing.Point(49, 125);
             this.listQuestionQuestionLabel.Name = "listQuestionQuestionLabel";
             this.listQuestionQuestionLabel.Size = new System.Drawing.Size(908, 70);
             this.listQuestionQuestionLabel.TabIndex = 22;
             this.listQuestionQuestionLabel.Text = "Питання";
-            // 
-            // QuestionNumberMaterialLabel
-            // 
-            this.QuestionNumberMaterialLabel.AutoSize = true;
-            this.QuestionNumberMaterialLabel.Depth = 0;
-            this.QuestionNumberMaterialLabel.Font = new System.Drawing.Font("Roboto", 11F);
-            this.QuestionNumberMaterialLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.QuestionNumberMaterialLabel.Location = new System.Drawing.Point(50, 72);
-            this.QuestionNumberMaterialLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.QuestionNumberMaterialLabel.Name = "QuestionNumberMaterialLabel";
-            this.QuestionNumberMaterialLabel.Size = new System.Drawing.Size(100, 19);
-            this.QuestionNumberMaterialLabel.TabIndex = 24;
-            this.QuestionNumberMaterialLabel.Text = "Питання {}/{}";
             // 
             // timer1000
             // 
@@ -239,19 +226,31 @@ namespace specialitySelectionAssistant
             // TimerLabel
             // 
             this.TimerLabel.AutoSize = true;
-            this.TimerLabel.Location = new System.Drawing.Point(436, 458);
+            this.TimerLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(180)))), ((int)(((byte)(76)))));
+            this.TimerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.TimerLabel.Location = new System.Drawing.Point(921, 31);
             this.TimerLabel.Name = "TimerLabel";
-            this.TimerLabel.Size = new System.Drawing.Size(44, 17);
+            this.TimerLabel.Size = new System.Drawing.Size(67, 25);
             this.TimerLabel.TabIndex = 25;
             this.TimerLabel.Text = "00:00";
+            // 
+            // QuestionNumberMaterialLabel
+            // 
+            this.QuestionNumberMaterialLabel.AutoSize = true;
+            this.QuestionNumberMaterialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.QuestionNumberMaterialLabel.Location = new System.Drawing.Point(38, 92);
+            this.QuestionNumberMaterialLabel.Name = "QuestionNumberMaterialLabel";
+            this.QuestionNumberMaterialLabel.Size = new System.Drawing.Size(144, 25);
+            this.QuestionNumberMaterialLabel.TabIndex = 26;
+            this.QuestionNumberMaterialLabel.Text = "Питання {}/{}";
             // 
             // UserPreferencesForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1000, 562);
-            this.Controls.Add(this.TimerLabel);
             this.Controls.Add(this.QuestionNumberMaterialLabel);
+            this.Controls.Add(this.TimerLabel);
             this.Controls.Add(this.listQuestionQuestionLabel);
             this.Controls.Add(this.helpMaterialFlatButton);
             this.Controls.Add(this.backMaterialFlatButton);
@@ -286,8 +285,8 @@ namespace specialitySelectionAssistant
         private MaterialSkin.Controls.MaterialFlatButton nextMaterialFlatButton;
         private MaterialSkin.Controls.MaterialFlatButton helpMaterialFlatButton;
         private System.Windows.Forms.Label listQuestionQuestionLabel;
-        private MaterialSkin.Controls.MaterialLabel QuestionNumberMaterialLabel;
         private System.Windows.Forms.Timer timer1000;
         private System.Windows.Forms.Label TimerLabel;
+        private System.Windows.Forms.Label QuestionNumberMaterialLabel;
     }
 }

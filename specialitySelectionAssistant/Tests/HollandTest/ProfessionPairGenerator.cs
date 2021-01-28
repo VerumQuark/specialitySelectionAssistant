@@ -35,7 +35,7 @@ namespace specialitySelectionAssistant.Tests.Holland
             {
                 professionStrorage = JsonSerializer.Deserialize<ProfessionStrorage>(jsonString);
 
-                for (int pairIndex = 0; pairIndex < Constants.HOLLAND_QUESTION_COUNT; pairIndex++)
+                for (int pairIndex = 0; pairIndex < Constants.HOLLAND_QUESTION_COUNT;)
                 {
                     int typeArrCount = 6;
 
@@ -79,7 +79,7 @@ namespace specialitySelectionAssistant.Tests.Holland
             {
                 var rand = new Random();
 
-                int arrLenght = professionStrorage[arrNum].Count - 1;
+                int arrLenght = professionStrorage[arrNum].Count;
 
                 int professionIndex = rand.Next(0, arrLenght);
 

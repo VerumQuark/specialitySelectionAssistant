@@ -43,6 +43,7 @@ namespace specialitySelectionAssistant.Forms.Controls
         {
             User.Reset();
             PreferredSpecialtiesDeterminant.Reset();
+            TestTimer.StopTimer();
 
             Navigation.ToRegistrationForm(Program.Context.MainForm);
         }
